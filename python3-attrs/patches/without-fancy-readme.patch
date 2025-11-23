@@ -1,6 +1,6 @@
 diff -Naur a/pyproject.toml b/pyproject.toml
---- a/pyproject.toml	2025-03-13 12:00:23.000000000 +0100
-+++ b/pyproject.toml	2025-03-22 16:01:36.405569250 +0100
+--- a/pyproject.toml	2025-10-06 11:22:26.000000000 +0200
++++ b/pyproject.toml	2025-10-25 02:03:16.101971472 +0200
 @@ -1,7 +1,7 @@
  # SPDX-License-Identifier: MIT
  
@@ -17,9 +17,9 @@ diff -Naur a/pyproject.toml b/pyproject.toml
 -dynamic = ["version", "readme"]
 +dynamic = ["version"]
  
- [project.optional-dependencies]
- tests-mypy = [
-@@ -77,82 +77,6 @@
+ [project.urls]
+ Documentation = "https://www.attrs.org/"
+@@ -78,71 +78,6 @@
  [tool.hatch.build.targets.wheel]
  packages = ["src/attr", "src/attrs"]
  
@@ -74,19 +74,9 @@ diff -Naur a/pyproject.toml b/pyproject.toml
 -img = "Tidelift.svg"
 -
 -[[tool.sponcon.sponsors]]
--title = "Klaviyo"
--url = "https://klaviyo.com/"
--img = "Klaviyo.svg"
--
--[[tool.sponcon.sponsors]]
 -title = "Privacy Solutions"
 -url = "https://privacy-solutions.org/"
 -img = "Privacy-Solutions.svg"
--
--[[tool.sponcon.sponsors]]
--title = "emsys renewables"
--url = "https://www.emsys-renewables.com/"
--img = "emsys-renewables.svg"
 -
 -[[tool.sponcon.sponsors]]
 -title = "FilePreviews"
@@ -98,7 +88,6 @@ diff -Naur a/pyproject.toml b/pyproject.toml
 -url = "https://polar.sh/"
 -img = "Polar.svg"
 -
--
+ 
  [tool.pytest.ini_options]
- addopts = ["-ra", "--strict-markers", "--strict-config"]
- xfail_strict = true
+ addopts = [

@@ -3,7 +3,7 @@
 ub_compile \
     -Dothers=enabled \
     -Dbuiltin_loaders=all \
-	-Ddocs=false \
+	-Ddocumentation=false \
 	-Dgtk_doc=false \
 	-Dman=false \
 	-Dinstalled_tests=false

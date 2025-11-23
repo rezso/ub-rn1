@@ -1,7 +1,6 @@
-exiv2-dev
 file-dev
 flac-dev
 gstreamer-dev
-libungif-dev
+libgif-dev
 libvorbis-dev
 poppler-dev

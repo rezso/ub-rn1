@@ -1,13 +1,10 @@
 curl-dev
+docbook-xml
+docbook-xsl
 gobject-introspection-dev
 gperf
 itstool
+libfyaml-dev
 libxml2-dev
 libxmlb-dev
-libyaml-dev
-lmdb-dev
-meson
-protobuf-dev
 vala
-xapian-dev
-xmlto

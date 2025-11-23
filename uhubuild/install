@@ -15,9 +15,6 @@ rmdir "${UB_INSTALLDIR}"/usr/lib/uhubuild/dl
 mkdir -p "${UB_INSTALLDIR}/usr/share/uhubuild"
 cp -a config words "${UB_INSTALLDIR}/usr/share/uhubuild/"
 
-mkdir -p "${UB_INSTALLDIR}/usr/share/bash-completion"
-cp -a bash-completion/completions "${UB_INSTALLDIR}/usr/share/bash-completion/"
-
 # symlinks
 cd "${UB_INSTALLDIR}/usr/bin"
 ln -sf "../lib/uhubuild/uhubuild-build"
@@ -40,7 +37,7 @@ chmod 755 usr/lib/uhubuild/steps/*
 chmod 755 usr/bin/ub_*
 
 # build
-for dist in UBK4 UBK5; do
+for dist in RN1; do
 	for a in 1 2 3 ; do
 		mkdir -p "$UB_INSTALLDIR"/var/uhubuild/"$dist"/amd64/chroot${a}
 	done

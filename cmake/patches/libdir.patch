@@ -1,21 +1,18 @@
 diff -Naur a/Modules/GNUInstallDirs.cmake b/Modules/GNUInstallDirs.cmake
---- a/Modules/GNUInstallDirs.cmake	2024-12-05 14:42:47.000000000 +0100
-+++ b/Modules/GNUInstallDirs.cmake	2024-12-07 23:52:27.969456954 +0100
-@@ -296,9 +296,9 @@
-     elseif(NOT DEFINED __system_type_for_install)
+--- a/Modules/GNUInstallDirs.cmake	2025-09-30 16:48:33.000000000 +0200
++++ b/Modules/GNUInstallDirs.cmake	2025-11-05 14:08:44.057948135 +0100
+@@ -445,7 +445,7 @@
+     elseif(NOT DEFINED system_type)
        # not debian, alpine, arch, or conda so rely on CMAKE_SIZEOF_VOID_P:
        if("${CMAKE_SIZEOF_VOID_P}" EQUAL "8")
--        set(_LIBDIR_DEFAULT "lib64")
-+        set(_LIBDIR_DEFAULT "lib")
-         if(DEFINED _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX)
--          set(__LAST_LIBDIR_DEFAULT "lib64")
-+          set(__LAST_LIBDIR_DEFAULT "lib")
-         endif()
+-        set(${out_var} "lib64")
++        set(${out_var} "lib")
        endif()
      endif()
+   endif()
 diff -Naur a/Modules/Platform/UnixPaths.cmake b/Modules/Platform/UnixPaths.cmake
---- a/Modules/Platform/UnixPaths.cmake	2024-12-05 14:42:47.000000000 +0100
-+++ b/Modules/Platform/UnixPaths.cmake	2024-12-07 23:54:44.013799639 +0100
+--- a/Modules/Platform/UnixPaths.cmake	2025-09-30 16:48:33.000000000 +0200
++++ b/Modules/Platform/UnixPaths.cmake	2025-11-05 14:05:48.117279244 +0100
 @@ -68,7 +68,7 @@
    )
  
@@ -36,9 +33,9 @@ diff -Naur a/Modules/Platform/UnixPaths.cmake b/Modules/Platform/UnixPaths.cmake
 +set_property(GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS FALSE)
 +set_property(GLOBAL PROPERTY FIND_LIBRARY_USE_LIBX32_PATHS FALSE)
 diff -Naur a/Source/cmExportInstallCMakeConfigGenerator.cxx b/Source/cmExportInstallCMakeConfigGenerator.cxx
---- a/Source/cmExportInstallCMakeConfigGenerator.cxx	2024-12-05 14:42:47.000000000 +0100
-+++ b/Source/cmExportInstallCMakeConfigGenerator.cxx	2024-12-08 00:11:57.203952196 +0100
-@@ -166,12 +166,7 @@
+--- a/Source/cmExportInstallCMakeConfigGenerator.cxx	2025-09-30 16:48:33.000000000 +0200
++++ b/Source/cmExportInstallCMakeConfigGenerator.cxx	2025-11-05 14:05:48.117279244 +0100
+@@ -161,12 +161,7 @@
      os << "# Compute the installation prefix relative to this file.\n"
         << "get_filename_component(_IMPORT_PREFIX"
         << " \"${CMAKE_CURRENT_LIST_FILE}\" PATH)\n";

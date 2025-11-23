@@ -1,3 +1,2 @@
-noupdate
 release=$(urllist https://download.qt.io/official_releases/qt/ | grep -E '^(6\.[0-9])' | sort -V | tail -n 1)
 urllist https://download.qt.io/official_releases/qt/$release/ | splitver '^([0-9.]+)' | sort -V | tail -n 1

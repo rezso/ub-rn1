@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-pycryptodomex-${UB_VERSION}.tar.gz pycryptodomex-${UB_VERSION}/
-	https://files.pythonhosted.org/packages/source/p/pycryptodomex/

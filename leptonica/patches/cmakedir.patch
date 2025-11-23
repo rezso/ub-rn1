@@ -1,6 +1,6 @@
 diff -Naur a/CMakeLists.txt b/CMakeLists.txt
---- a/CMakeLists.txt	2024-01-03 01:03:10.000000000 +0100
-+++ b/CMakeLists.txt	2024-02-09 16:19:39.382329566 +0100
+--- a/CMakeLists.txt	2025-09-18 18:24:35.000000000 +0200
++++ b/CMakeLists.txt	2025-10-24 23:03:57.412950363 +0200
 @@ -71,7 +71,7 @@
  option(ENABLE_OPENJPEG "Enable OpenJPEG support" ON)
  
@@ -9,4 +9,4 @@ diff -Naur a/CMakeLists.txt b/CMakeLists.txt
 +    "lib/cmake/Leptonica"
      CACHE STRING "Install destination for CMake package files")
  
- if(NOT SW_BUILD)
+ include(LeptonicaFunc)

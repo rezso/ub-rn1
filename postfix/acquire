@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 postfix-${UB_VERSION}.tar.gz postfix-${UB_VERSION}/
-	https://high5.nl/mirrors/postfix-release/official/
+	https://postfix-mirror.horus-it.com/postfix-release/official/

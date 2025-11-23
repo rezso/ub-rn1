@@ -8,7 +8,8 @@ CFLAGS="-O2 -mtune=generic -fomit-frame-pointer -Wno-error=incompatible-pointer-
 	--datadir=/usr/share/mplayer \
 	--confdir=/etc/mplayer \
 	--codecsdir=/usr/lib/codecs \
-	--disable-ffmpeg_a \
+	--enable-ffmpeg_a \
+	--disable-ffmpeg_so \
 	--disable-termcap \
 	--disable-jack \
 	--enable-runtime-cpudetection \

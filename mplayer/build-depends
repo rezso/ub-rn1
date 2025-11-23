@@ -20,6 +20,7 @@ libdvdnav-dev
 libdvdread-dev
 libfaad2-dev
 libfame-dev
+libgif-dev
 libglvnd-dev
 libgsm-dev
 libjpeg-turbo-dev
@@ -31,7 +32,6 @@ libmodplug-dev
 libogg-dev
 libpng-dev
 libtheora-dev
-libungif-dev
 libv4l-dev
 libva-dev
 libvdpau-dev

@@ -1,3 +1,0 @@
-gnuplot
-webp-pixbuf-loader
-xine-lib

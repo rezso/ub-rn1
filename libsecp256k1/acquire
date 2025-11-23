@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-v${UB_VERSION}.tar.gz secp256k1-${UB_VERSION}/
-	https://github.com/bitcoin-core/secp256k1/archive/refs/tags/

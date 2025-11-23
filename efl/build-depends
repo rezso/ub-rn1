@@ -2,8 +2,8 @@ avahi-dev
 dbus-dev
 glib-dev
 gstreamer-dev
-ibus-dev
 imagemagick
+libgif-dev
 libglvnd-dev
 libinput-dev
 libjpeg-turbo-dev
@@ -13,7 +13,6 @@ librsvg-dev
 libsndfile-dev
 libspectre-dev
 libtiff-dev
-libungif-dev
 libwebp-dev
 libxcomposite-dev
 libxcursor-dev

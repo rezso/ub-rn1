@@ -4,5 +4,4 @@ vim
 qemacs
 yudit
 texstudio
-texmaker
 qxmledit

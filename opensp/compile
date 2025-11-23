@@ -2,4 +2,5 @@
 
 ub_compile \
 	--enable-http \
-	--enable-xml-messages
+	--enable-xml-messages \
+	--disable-doc-build

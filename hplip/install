@@ -18,7 +18,7 @@ cd base
 sed 's%^#!/usr/bin/env python%#!/usr/bin/env python3%' -i *.py
 sed 's%^#!/usr/bin/python%#!/usr/bin/python3%' -i *.py
 
-dirs="copier fax installer pcard prnt scan ui5"
+dirs="copier fax installer prnt scan ui5"
 
 for dir in $dirs;do
 cd ../$dir

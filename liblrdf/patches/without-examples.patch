@@ -1,0 +1,53 @@
+diff -Naur a/configure b/configure
+--- a/configure	2004-11-21 22:34:01.000000000 +0100
++++ b/configure	2025-10-24 23:44:18.471836055 +0200
+@@ -20256,7 +20256,7 @@
+ 
+ 
+ 
+-                                        ac_config_files="$ac_config_files lrdf.pc Makefile src/Makefile examples/Makefile"
++                                        ac_config_files="$ac_config_files lrdf.pc Makefile src/Makefile"
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+ # tests run on this system so they can be shared between configure
+@@ -20816,7 +20816,6 @@
+   "lrdf.pc" ) CONFIG_FILES="$CONFIG_FILES lrdf.pc" ;;
+   "Makefile" ) CONFIG_FILES="$CONFIG_FILES Makefile" ;;
+   "src/Makefile" ) CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
+-  "examples/Makefile" ) CONFIG_FILES="$CONFIG_FILES examples/Makefile" ;;
+   "depfiles" ) CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
+   "config.h" ) CONFIG_HEADERS="$CONFIG_HEADERS config.h" ;;
+   *) { { echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5
+diff -Naur a/configure.ac b/configure.ac
+--- a/configure.ac	2004-11-09 04:12:31.000000000 +0100
++++ b/configure.ac	2025-10-24 23:44:44.615917568 +0200
+@@ -37,4 +37,4 @@
+ AC_SUBST(LIBS)
+ AC_SUBST(LRDF_LIBTOOL_VERSION)
+ 
+-AC_OUTPUT([lrdf.pc Makefile src/Makefile examples/Makefile])
++AC_OUTPUT([lrdf.pc Makefile src/Makefile])
+diff -Naur a/Makefile.am b/Makefile.am
+--- a/Makefile.am	2004-11-09 04:12:31.000000000 +0100
++++ b/Makefile.am	2025-10-24 23:44:52.439941927 +0200
+@@ -7,7 +7,7 @@
+ 
+ EXTRA_DIST = autogen.sh lrdf.i
+ 
+-SUBDIRS = src examples
++SUBDIRS = src
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = lrdf.pc
+diff -Naur a/Makefile.in b/Makefile.in
+--- a/Makefile.in	2004-11-21 22:33:58.000000000 +0100
++++ b/Makefile.in	2025-10-24 23:45:11.095999934 +0200
+@@ -193,7 +193,7 @@
+ 
+ include_HEADERS = lrdf.h lrdf_types.h
+ EXTRA_DIST = autogen.sh lrdf.i
+-SUBDIRS = src examples
++SUBDIRS = src
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = lrdf.pc
+ all: config.h

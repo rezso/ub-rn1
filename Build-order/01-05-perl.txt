@@ -1,4 +1,5 @@
 perl-digest-sha1
+perl-exporter-tiny
 perl-extutils-depends
 perl-extutils-pkgconfig
 perl-file-which

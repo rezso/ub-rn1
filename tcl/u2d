@@ -1,2 +1,1 @@
-noupdate
-# urllist http://www.tcl.tk/software/tcltk/download.html | grep tcl | grep tar | sed s/tcl//g | grep -E '([0-9]\.[0-9]\.)' |sed s/-src.*//g | sort -V | tail -n 1 
+urllist http://www.tcl.tk/software/tcltk/download.html | grep tcl | grep tar | sed s/tcl//g | grep -E '([0-9]\.[0-9]\.)' |sed s/-src.*//g | sort -V | tail -n 1 

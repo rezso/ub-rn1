@@ -1,7 +1,7 @@
 diff -Naur a/unix/Makefile.in b/unix/Makefile.in
 --- a/unix/Makefile.in	2022-10-28 17:19:48.000000000 +0200
 +++ b/unix/Makefile.in	2023-09-21 13:43:41.554199779 +0200
-@@ -900,7 +900,7 @@
+@@ -1021,7 +1021,7 @@
  	done
  	@echo "Installing $(LIB_FILE) to $(DLL_INSTALL_DIR)/"
  	@@INSTALL_LIB@

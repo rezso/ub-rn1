@@ -1,4 +1,4 @@
 #!/bin/sh -eux
 
-rm -f subprojects/*.wrap
+rm -Rf subprojects/*.wrap
 ub_compile

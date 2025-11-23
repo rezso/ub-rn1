@@ -1,6 +1,6 @@
 diff -Naur a/Dbus/interfaces/vala/CMakeLists.txt b/Dbus/interfaces/vala/CMakeLists.txt
 --- a/Dbus/interfaces/vala/CMakeLists.txt	2025-10-01 00:12:11.000000000 +0200
-+++ b/Dbus/interfaces/vala/CMakeLists.txt	2025-10-03 19:58:20.967508828 +0200
++++ b/Dbus/interfaces/vala/CMakeLists.txt	2025-11-05 17:09:17.459612671 +0100
 @@ -62,5 +62,5 @@
  # now we can install vala files.
  add_subdirectory(src)
@@ -11,13 +11,10 @@ diff -Naur a/Dbus/interfaces/vala/CMakeLists.txt b/Dbus/interfaces/vala/CMakeLis
 +# install (FILES  ${CMAKE_CURRENT_BINARY_DIR}/${CDAPPLET}.pc DESTINATION "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}/pkgconfig")
 diff -Naur a/Dbus/interfaces/vala/src/CMakeLists.txt b/Dbus/interfaces/vala/src/CMakeLists.txt
 --- a/Dbus/interfaces/vala/src/CMakeLists.txt	2025-10-01 00:12:11.000000000 +0200
-+++ b/Dbus/interfaces/vala/src/CMakeLists.txt	2025-10-03 19:59:36.667695465 +0200
-@@ -32,9 +32,9 @@
- 
- 
++++ b/Dbus/interfaces/vala/src/CMakeLists.txt	2025-11-05 17:11:16.488075310 +0100
+@@ -34,7 +34,7 @@
  # .so goes with other libs (to be found on runtime)
--install (TARGETS ${CDAPPLET} DESTINATION "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}")
-+# install (TARGETS ${CDAPPLET} DESTINATION "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}")
+ install (TARGETS ${CDAPPLET} DESTINATION "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}")
  # .h goes in the dbus data dir
 -install (FILES ${VALA_SRC_DIR}/${CDAPPLET}.h DESTINATION "${dbusdatadir}")
 +# install (FILES ${VALA_SRC_DIR}/${CDAPPLET}.h DESTINATION "${dbusdatadir}")

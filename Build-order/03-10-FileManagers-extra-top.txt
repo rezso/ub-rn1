@@ -7,7 +7,6 @@ avfs
 worker
 mc
 ytree
-spacefm
 tuxcmd
 tuxcmd-modules
 tuxcmd-modules-unrar

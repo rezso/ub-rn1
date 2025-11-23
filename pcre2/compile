@@ -2,7 +2,7 @@
 
 git clone https://github.com/zherczeg/sljit.git deps/sljit
 cd deps/sljit
-git checkout 8481dde
+git checkout 45f910b
 cd -
 
 ./autogen.sh

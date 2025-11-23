@@ -20,7 +20,7 @@ opts=" \
 export FREETYPE="pkg-config freetype2"
 export BUILD_FREETYPE="pkg-config freetype2"
 
-cp unifont-16.0.02.bdf grub/unifont.bdf
+cp unifont-17.0.03.bdf grub/unifont.bdf
 
 touch grub/grub-core/extra_deps.lst
 

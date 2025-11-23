@@ -1,0 +1,27 @@
+diff -Naur a/poppler-glib.pc.cmake b/poppler-glib.pc.cmake
+--- a/poppler-glib.pc.cmake	2025-10-04 01:04:48.000000000 +0200
++++ b/poppler-glib.pc.cmake	2025-10-28 02:12:39.596324192 +0100
+@@ -6,9 +6,7 @@
+ Description: GLib wrapper for poppler
+ Version: @POPPLER_VERSION@
+ Requires: glib-2.0 >= @GLIB_REQUIRED@ gobject-2.0 >= @GLIB_REQUIRED@ cairo >= @CAIRO_VERSION@
+-Requires.private: gio-2.0 >= @GLIB_REQUIRED@ \
+-                  freetype2 >= @FREETYPE_VERSION@ \
+-                  poppler = @POPPLER_VERSION@
++Requires.private: gio-2.0 >= @GLIB_REQUIRED@ freetype2 >= @FREETYPE_VERSION@ poppler = @POPPLER_VERSION@
+ 
+ Libs: -L${libdir} -lpoppler-glib
+ Cflags: -I${includedir}/poppler/glib
+diff -Naur a/poppler-qt6.pc.cmake b/poppler-qt6.pc.cmake
+--- a/poppler-qt6.pc.cmake	2025-10-04 01:04:48.000000000 +0200
++++ b/poppler-qt6.pc.cmake	2025-10-28 02:12:50.792358597 +0100
+@@ -5,8 +5,7 @@
+ Name: poppler-qt6
+ Description: Qt6 bindings for poppler
+ Version: @POPPLER_VERSION@
+-Requires.private: freetype2 >= @FREETYPE_VERSION@ \
+-                  poppler = @POPPLER_VERSION@
++Requires.private: freetype2 >= @FREETYPE_VERSION@ poppler = @POPPLER_VERSION@
+ 
+ Libs: -L${libdir} -lpoppler-qt6
+ Libs.private: -lQt6Gui -lQt6Core

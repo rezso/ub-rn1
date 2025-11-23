@@ -1,7 +1,7 @@
 gobject-introspection-dev
+libgif-dev
 libjpeg-turbo-dev
 libtiff-dev
-libungif-dev
 libx11-dev
 libxi-dev
 libxslt-dev

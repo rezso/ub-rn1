@@ -4,6 +4,5 @@ glib-dev
 libpng-dev
 libx11-dev
 libxext-dev
-libxml2-dev
 libxrender-dev
 pixman-dev

@@ -299,9 +299,13 @@ sassc
 atk
 fribidi
 pango
-libungif
+libgif
 libwebp
+libseccomp
+bubblewrap
+glycin
 gdk-pixbuf
+webp-pixbuf-loader
 libjxl
 colord
 gtk3

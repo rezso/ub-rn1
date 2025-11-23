@@ -1,9 +1,9 @@
+libgif-dev
 libid3tag-dev
 libjpeg-turbo-dev
 libjxl-dev
 libpng-dev
 libtiff-dev
-libungif-dev
 libx11-dev
 libxext-dev
 libxft-dev

@@ -12,7 +12,7 @@ intltool
 libcanberra-dev
 libgee-dev
 libnotify-dev
-libpeas-dev
+libpeas2-dev
 libwacom-dev
 libwnck-dev
 libxfce4windowing-dev

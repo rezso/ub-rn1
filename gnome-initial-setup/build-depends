@@ -1,6 +1,7 @@
 accountsservice-dev
 cheese-dev
 clutter-gst-dev
+dconf
 gdm-dev
 geoclue-dev
 geocode-glib-dev
@@ -8,7 +9,6 @@ gnome-desktop-dev
 gnome-online-accounts-dev
 gobject-introspection-dev
 gstreamer-dev
-ibus-dev
 itstool
 krb5-dev
 libadwaita-dev

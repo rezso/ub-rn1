@@ -1,0 +1,43 @@
+diff -Naur a/Makefile.am b/Makefile.am
+--- a/Makefile.am	2025-07-18 14:59:36.000000000 +0200
++++ b/Makefile.am	2025-10-31 17:24:18.576738870 +0100
+@@ -249,12 +249,6 @@
+ 
+ selinuxdir = 
+ dist_selinux_DATA = selinux/hplip.te selinux/hplip.fc selinux/hplip.pp selinux/hplip.if selinux/mypol.pp selinux/mypol.te
+-if !HPLIP_CLASS_DRIVER
+-# ptest
+-noinst_PROGRAMS += ptest
+-ptest_SOURCES = pcard/ptest.c pcard/ptest.h pcard/fat.c pcard/fat.h
+-ptest_LDADD = libhpmud.la libhpdiscovery.la
+-endif #!HPLIP_CLASS_DRIVER
+ 
+ # data
+ modelsdir = $(hplipdir)/data/models
+@@ -301,18 +295,7 @@
+ 	data/localization/hplip_pt.ts data/localization/hplip_ru.ts data/localization/hplip_zh.ts
+ endif #!HPLIP_CLASS_DRIVER
+ 
+-# pcard
+ if !HPLIP_CLASS_DRIVER
+-pcarddir = $(hplipdir)/pcard
+-dist_pcard_DATA = pcard/__init__.py pcard/photocard.py
+-
+-# pcardext
+-pcardextdir = $(PYTHONEXECDIR)
+-pcardextdir = $(PYTHONEXECDIR)
+-pcardext_LTLIBRARIES = pcardext.la
+-pcardext_la_LDFLAGS = -module -avoid-version
+-pcardext_la_SOURCES = pcard/pcardext/pcardext.c pcard/fat.c
+-pcardext_la_CFLAGS = -I$(PYTHONINCLUDEDIR)
+ 
+ # prnt
+ prntdir = $(hplipdir)/prnt
+@@ -832,7 +815,6 @@
+ 	rm -rf $(distdir)/data/ps/
+ 	rm -rf $(distdir)/io/
+ 	rm -rf $(distdir)/ip/
+-	rm -rf $(distdir)/pcard/
+ 	rm -rf $(distdir)/plugins/
+ 	rm -rf $(distdir)/protocol/
+ 	rm -rf $(distdir)/testcommon/

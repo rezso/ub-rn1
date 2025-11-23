@@ -1,6 +1,6 @@
 brotli-dev
 gdk-pixbuf-dev
 lcms2-dev
+libgif-dev
 libjpeg-turbo-dev
 libpng-dev
-libungif-dev

@@ -10,6 +10,7 @@ chrony
 dhcpcd
 libnvme
 networkmanager
+libfyaml
 libxmlb
 bind
 openconnect
@@ -24,7 +25,9 @@ gstreamermm
 webkit2gtk-4.1 # gtk3 + libsoup3
 webkitgtk-6.0 # gtk4 + libsoup3
 osinfo-db
+appstream
 libhandy
+libadwaita
 yelp
 gnumeric
 rest
@@ -36,6 +39,7 @@ dialog
 psmisc
 xdialog
 xdm
+fontforge
 fonts-unicode
 lndir
 mdadm
@@ -53,10 +57,8 @@ gtk-stock-icons
 vigra
 libodfgen
 less
-libseccomp
 gtksourceview4
 gtksourceview5
-mplayer
 libmatroska
 libvncserver
 x11vnc
@@ -79,7 +81,6 @@ pipewire
 libportal
 qt5
 qt6
-appstream
 gpsd
 lightdm
 lightdm-qt5-greeter
@@ -98,7 +99,6 @@ fuse-ntfs-3g
 mtools
 xfsprogs
 udisks2
-libadwaita
 gnome-online-accounts
 gvfs
 python3-pyqt-builder
@@ -110,7 +110,6 @@ vlc
 libextractor
 wget
 inkscape
-guile # gnucash
 x.org-xwayland
 libxpresent # metacity, xfwm4, mpv
 clutter-gst

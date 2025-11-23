@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-smplayer-${UB_VERSION}.tar.bz2 smplayer-${UB_VERSION}/
-	https://downloads.sourceforge.net/smplayer/
+v${UB_VERSION}.tar.gz smplayer-${UB_VERSION}/
+	https://github.com/smplayer-dev/smplayer/archive/refs/tags/

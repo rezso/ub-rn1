@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 spectacle-${UB_VERSION}.tar.xz spectacle-${UB_VERSION}/
-	https://download.kde.org/stable/release-service/${UB_VERSION}/src/
+	https://download.kde.org/stable/plasma/${UB_VERSION}/

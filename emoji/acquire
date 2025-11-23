@@ -4,7 +4,7 @@ emoji-sequences.txt
     https://www.unicode.org/Public/${UB_VERSION}/emoji/
 
 emoji-test.txt
-    https://www.unicode.org/Public/${UB_VERSION}/emoji/
+   https://www.unicode.org/Public/${UB_VERSION}/emoji/
 
 emoji-zwj-sequences.txt
     https://www.unicode.org/Public/${UB_VERSION}/emoji/

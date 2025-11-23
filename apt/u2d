@@ -1,2 +1,1 @@
-noupdate
 urllist https://salsa.debian.org/apt-team/apt/-/tags | grep -E '^[0-9]\.' | sort -V | tail -n 1

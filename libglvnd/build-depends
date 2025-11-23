@@ -1,5 +1,3 @@
 libx11-dev
 libxext-dev
-libxml2-dev
-meson
 x.org-proto-dev

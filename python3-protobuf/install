@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-cd python
-python3 setup.py install --root="$UB_INSTALLDIR"

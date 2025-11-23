@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libtatsu-${UB_VERSION}.tar.bz2 libtatsu-${UB_VERSION}/
+	https://github.com/libimobiledevice/libtatsu/releases/download/${UB_VERSION}/

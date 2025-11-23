@@ -2,11 +2,11 @@ dbus-dev
 gobject-introspection-dev
 gstreamer-dev
 libexif-dev
+libgif-dev
 libgxps-dev
 libosinfo-dev
 libseccomp-dev
 libtiff-dev
-libungif-dev
 poppler-glib-dev
 taglib-dev
 totem-plparser-dev

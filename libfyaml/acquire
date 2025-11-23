@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libfyaml-${UB_VERSION}.tar.gz libfyaml-${UB_VERSION}/
+	https://github.com/pantoniou/libfyaml/releases/download/v${UB_VERSION}/

@@ -43,6 +43,7 @@ libxcb-dev
 libxext-dev
 libxfixes-dev
 libzmq-dev
+nasm
 openal-dev
 opencore-amr-dev
 openjpeg-dev
@@ -53,6 +54,5 @@ speex-dev
 x264-dev
 x265-dev
 xvid-dev
-yasm
 zlib-dev
 zvbi-dev

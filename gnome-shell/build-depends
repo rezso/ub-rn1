@@ -11,7 +11,6 @@ gobject-introspection-dev
 gstreamer-dev
 gtk3-dev
 gtk4-dev
-ibus-dev
 krb5-dev
 libcanberra-dev
 libgudev-dev

@@ -1,6 +1,5 @@
 boost-dev
 fontconfig-dev
-ibus-dev
 kded-dev
 kf6-dev
 kirigami-addons-dev
@@ -10,6 +9,7 @@ kwin-dev
 libcanberra-dev
 libevdev-dev
 libksysguard-dev
+libplasma-dev
 libwacom-dev
 libxcb-dev
 libxkbfile-dev

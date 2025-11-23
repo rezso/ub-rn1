@@ -1,5 +1,5 @@
 #!/usr/bin/env dl
 
-${UB_VERSION}.tar.gz dpkg-repack/
+${UB_VERSION}.tar.gz dpkg-repack-${UB_VERSION}/
 	https://codeberg.org/dpkg/dpkg-repack/archive/
 	https://github.com/guillemj/dpkg-repack/archive/refs/tags/

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-caja-dropbox-${UB_VERSION}.tar.xz caja-dropbox-${UB_VERSION}/
-	https://pub.mate-desktop.org/releases/${UB_VERSION_HEAD2}/

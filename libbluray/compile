@@ -1,5 +1,3 @@
 #!/bin/sh -eux
 
-./bootstrap
-ub_compile \
-	--disable-bdjava-jar
+ub_compile

@@ -3,5 +3,4 @@
 ub_compile \
     -Dvapi=true \
     -Dapidocs=false \
-    -Dstemming=false \
-    -Dqt-versions=6
+    -Dstemming=false

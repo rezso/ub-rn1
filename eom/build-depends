@@ -2,6 +2,7 @@ exempi-dev
 gobject-introspection-dev
 gtk3-dev
 gtk3-layer-shell-dev
+imagemagick-dev
 itstool
 lcms2-dev
 libexif-dev

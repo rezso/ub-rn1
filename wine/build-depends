@@ -13,13 +13,13 @@ glu-dev
 gnutls-dev
 gstreamer-dev
 lcms2-dev
+libgif-dev
 libgphoto2-dev
 libgsm-dev
 libjpeg-turbo-dev
 libpcap-dev
 libpng-dev
 libtiff-dev
-libungif-dev
 libv4l-dev
 libx11-dev
 libxcomposite-dev

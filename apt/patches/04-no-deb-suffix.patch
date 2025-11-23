@@ -1,10 +1,10 @@
 diff -Naur a/apt-pkg/deb/dpkgpm.cc b/apt-pkg/deb/dpkgpm.cc
---- a/apt-pkg/deb/dpkgpm.cc	2024-11-22 17:17:41.000000000 +0100
-+++ b/apt-pkg/deb/dpkgpm.cc	2025-05-12 20:48:41.108158127 +0200
-@@ -1878,8 +1878,6 @@
+--- a/apt-pkg/deb/dpkgpm.cc	2025-10-04 14:30:16.000000000 +0200
++++ b/apt-pkg/deb/dpkgpm.cc	2025-10-19 22:28:43.467335217 +0200
+@@ -1877,8 +1877,6 @@
  	       if (I->File[0] != '/')
  		  return _error->Error("Internal Error, Pathname to install is not absolute '%s'",I->File.c_str());
- 	       auto file = flNotDir(I->File);
+ 	       std::string file{flNotDir(I->File)};
 -	       if (flExtension(file) != "deb")
 -		  file.append(".deb");
  	       std::string linkpath;

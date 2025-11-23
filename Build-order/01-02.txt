@@ -29,7 +29,6 @@ libetpan
 libxklavier
 rpm-sequoia
 rpm
-fontforge
 postfix
 apache
 aspell
@@ -114,6 +113,7 @@ libdc1394
 libgphoto2
 libimobiledevice-glue
 libusbmuxd
+libtatsu
 libimobiledevice
 netpbm # lilypond build-depends
 djvulibre

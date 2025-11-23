@@ -1,0 +1,12 @@
+diff -Naur a/src/CMakeLists.txt b/src/CMakeLists.txt
+--- a/src/CMakeLists.txt	2025-10-04 02:28:10.000000000 +0200
++++ b/src/CMakeLists.txt	2025-10-28 22:59:36.949842778 +0100
+@@ -73,7 +73,7 @@
+ if(MSVC)
+   add_compile_options(/W4 /WX)
+ else()
+-  add_compile_options(-Wall -Wextra -Wpedantic -Werror)
++  add_compile_options(-Wall -Wextra -Wpedantic)
+ endif()
+ 
+ add_subdirectory(lib)

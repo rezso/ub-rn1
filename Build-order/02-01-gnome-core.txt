@@ -9,7 +9,6 @@ libgweather
 libgxps
 typescript # gnome-weather
 blueprint-compiler
-glycin
 gnome-autoar
 gnome-video-effects
 libnma
@@ -92,7 +91,6 @@ brasero
 rygel
 gegl
 evolution
-epiphany
 gnome-photos
 gnome-boxes
 eiciel

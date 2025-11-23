@@ -1,6 +1,7 @@
 kf6-dev
 layer-shell-qt-dev
 libkscreen-dev
+libplasma-dev
 plasma-activities-dev
 plasma-activities-stats-dev
 plasma-wayland-protocols

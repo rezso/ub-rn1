@@ -1,0 +1,12 @@
+diff -Naur a/parse.c b/parse.c
+--- a/parse.c	2017-03-20 13:14:08.000000000 +0100
++++ b/parse.c	2025-10-30 02:49:17.225634517 +0100
+@@ -270,7 +270,7 @@
+ }
+ 
+ 
+-#define MODULE_SEPARATOR(c) ((c) == ',' || isspace ((guchar)(c)))
++#define MODULE_SEPARATOR(c) ((c) == ',' || isspace ((guchar)(c)) || (c) == '\\')
+ #define OPERATOR_CHAR(c) ((c) == '<' || (c) == '>' || (c) == '!' || (c) == '=')
+ 
+ /* A module list is a list of modules with optional version specification,

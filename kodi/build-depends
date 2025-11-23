@@ -17,6 +17,7 @@ libcdio-dev
 libdisplay-info-dev
 libdrm-dev
 libfstrcmp-dev
+libgif-dev
 libglvnd-dev
 libinput-dev
 libjpeg-turbo-dev
@@ -26,7 +27,6 @@ libnfs-dev
 libplist-dev
 libpng-dev
 libtinyxml-dev
-libungif-dev
 libva-dev
 libvdpau-dev
 libx11-dev

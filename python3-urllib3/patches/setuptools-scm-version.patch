@@ -1,0 +1,12 @@
+diff -Naur a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml	2025-06-18 15:55:24.000000000 +0200
++++ b/pyproject.toml	2025-10-25 02:24:57.579470668 +0200
+@@ -1,7 +1,7 @@
+ # This file is protected via CODEOWNERS
+ 
+ [build-system]
+-requires = ["hatchling>=1.6.0,<2", "hatch-vcs>=0.4.0,<0.6.0", "setuptools-scm>=8,<9"]
++requires = ["hatchling>=1.6.0,<2", "hatch-vcs>=0.4.0,<0.6.0", "setuptools-scm"]
+ build-backend = "hatchling.build"
+ 
+ [project]

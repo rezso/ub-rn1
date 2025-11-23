@@ -8,8 +8,6 @@ qalculate-gtk
 abevjava
 fet
 qpdfview
-gnucash
-gnucash-doc
 wv
 abiword
 fonts-symbola

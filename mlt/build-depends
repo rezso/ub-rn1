@@ -2,6 +2,7 @@ ffmpeg-dev
 gdk-pixbuf-dev
 jack-dev
 libdv-dev
+libexif-dev
 libsamplerate-dev
 libvdpau-dev
 libvorbis-dev

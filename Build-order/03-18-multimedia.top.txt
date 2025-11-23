@@ -1,4 +1,5 @@
 libfstrcmp
+xine-lib
 fmtools
 fonts-ghostscript-std
 libdispatch
@@ -35,6 +36,7 @@ xine-ui
 cmus
 moc
 handbrake
+mplayer
 mpv
 celluloid
 xawtv

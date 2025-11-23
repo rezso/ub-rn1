@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+knighttime-${UB_VERSION}.tar.xz knighttime-${UB_VERSION}/
+	https://download.kde.org/stable/plasma/${UB_VERSION_HEAD3}/

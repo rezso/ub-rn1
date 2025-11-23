@@ -1,4 +1,7 @@
 #!/usr/bin/env dl
 
-gocr-"$UB_VERSION".tar.gz gocr-"$UB_VERSION"/
-	https://www-e.uni-magdeburg.de/jschulen/ocr/
+#gocr-${UB_VERSION}.tar.gz gocr-${UB_VERSION}/
+#	https://www-e.uni-magdeburg.de/jschulen/ocr/
+
+gocr_${UB_VERSION}.orig.tar.gz gocr-${UB_VERSION}/
+    http://deb.debian.org/debian/pool/main/g/gocr/

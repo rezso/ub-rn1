@@ -1,9 +1,9 @@
 diff -Naur a/methods/gpgv.cc b/methods/gpgv.cc
---- a/methods/gpgv.cc	2024-11-22 17:17:41.000000000 +0100
-+++ b/methods/gpgv.cc	2025-05-12 20:46:23.007550675 +0200
+--- a/methods/gpgv.cc	2025-10-04 14:30:16.000000000 +0200
++++ b/methods/gpgv.cc	2025-10-19 22:24:51.122413396 +0200
 @@ -70,13 +70,13 @@
  
- static constexpr Digest Digests[] = {
+ static constexpr std::array<Digest,12> Digests = {{
     {Digest::State::Untrusted, "Invalid digest"},
 -   {Digest::State::Untrusted, "MD5"},
 -   {Digest::State::Untrusted, "SHA1"},

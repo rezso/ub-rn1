@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+bubblewrap-${UB_VERSION}.tar.xz bubblewrap-${UB_VERSION}/
+	https://github.com/containers/bubblewrap/releases/download/v${UB_VERSION}/

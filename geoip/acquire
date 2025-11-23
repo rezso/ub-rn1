@@ -4,4 +4,9 @@ v${UB_VERSION}.tar.gz geoip-api-c-${UB_VERSION}/
 	https://github.com/maxmind/geoip-api-c/archive/
 
 GeoIP.dat.gz . :data
-https://mailfud.org/geoip-legacy/
+    https://sources.archlinux.org/other/packages/geoip-database/20250129/
+    https://mailfud.org/geoip-legacy/
+
+GeoIPv6.dat.gz . :data
+    https://sources.archlinux.org/other/packages/geoip-database/20250129/
+    https://mailfud.org/geoip-legacy/

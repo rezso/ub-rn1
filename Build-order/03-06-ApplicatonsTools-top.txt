@@ -7,6 +7,7 @@ nload
 qshutdown
 tack
 vbindiff
+gnuplot
 ncdu
 renameutils
 vacation

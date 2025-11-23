@@ -1,5 +1,6 @@
-gnutls-dev
 libffi-dev
 libplist-dev
+libtatsu-dev
 libunistring-dev
 libusbmuxd-dev
+openssl-dev

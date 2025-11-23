@@ -1,0 +1,77 @@
+diff -Naur a/cmake/dependencies.cmake b/cmake/dependencies.cmake
+--- a/cmake/dependencies.cmake	2024-02-18 19:18:26.000000000 +0100
++++ b/cmake/dependencies.cmake	2025-10-31 19:33:35.484806073 +0100
+@@ -7,7 +7,6 @@
+   filesystem
+   iostreams
+   regex
+-  system
+   thread
+   REQUIRED
+ )
+diff -Naur a/src/contrib/CMakeLists.txt b/src/contrib/CMakeLists.txt
+--- a/src/contrib/CMakeLists.txt	2024-02-18 19:18:26.000000000 +0100
++++ b/src/contrib/CMakeLists.txt	2025-10-31 19:36:48.641393051 +0100
+@@ -67,7 +67,6 @@
+     Boost::filesystem
+     Boost::iostreams
+     Boost::regex
+-    Boost::system
+     Boost::thread
+     ZLIB::ZLIB
+     lucene++::lucene++)
+diff -Naur a/src/core/CMakeLists.txt b/src/core/CMakeLists.txt
+--- a/src/core/CMakeLists.txt	2024-02-18 19:18:26.000000000 +0100
++++ b/src/core/CMakeLists.txt	2025-10-31 19:36:56.573417082 +0100
+@@ -57,7 +57,6 @@
+     Boost::filesystem
+     Boost::iostreams
+     Boost::regex
+-    Boost::system
+     Boost::thread
+     ZLIB::ZLIB
+ )
+diff -Naur a/src/demo/deletefiles/CMakeLists.txt b/src/demo/deletefiles/CMakeLists.txt
+--- a/src/demo/deletefiles/CMakeLists.txt	2024-02-18 19:18:26.000000000 +0100
++++ b/src/demo/deletefiles/CMakeLists.txt	2025-10-31 19:36:08.397271024 +0100
+@@ -38,7 +38,6 @@
+     Boost::filesystem
+     Boost::iostreams
+     Boost::regex
+-    Boost::system
+     Boost::thread
+     ZLIB::ZLIB
+     lucene++::lucene++
+diff -Naur a/src/demo/indexfiles/CMakeLists.txt b/src/demo/indexfiles/CMakeLists.txt
+--- a/src/demo/indexfiles/CMakeLists.txt	2024-02-18 19:18:26.000000000 +0100
++++ b/src/demo/indexfiles/CMakeLists.txt	2025-10-31 19:36:30.705338688 +0100
+@@ -39,7 +39,6 @@
+     Boost::filesystem
+     Boost::iostreams
+     Boost::regex
+-    Boost::system
+     Boost::thread
+     ZLIB::ZLIB
+     lucene++::lucene++
+diff -Naur a/src/demo/searchfiles/CMakeLists.txt b/src/demo/searchfiles/CMakeLists.txt
+--- a/src/demo/searchfiles/CMakeLists.txt	2024-02-18 19:18:26.000000000 +0100
++++ b/src/demo/searchfiles/CMakeLists.txt	2025-10-31 19:36:18.185300714 +0100
+@@ -38,7 +38,6 @@
+     Boost::filesystem
+     Boost::iostreams
+     Boost::regex
+-    Boost::system
+     Boost::thread
+     ZLIB::ZLIB
+     lucene++::lucene++
+diff -Naur a/src/test/CMakeLists.txt b/src/test/CMakeLists.txt
+--- a/src/test/CMakeLists.txt	2024-02-18 19:18:26.000000000 +0100
++++ b/src/test/CMakeLists.txt	2025-10-31 19:36:39.701365955 +0100
+@@ -59,7 +59,6 @@
+     Boost::filesystem
+     Boost::iostreams
+     Boost::regex
+-    Boost::system
+     Boost::thread
+     ZLIB::ZLIB
+     gtest_main

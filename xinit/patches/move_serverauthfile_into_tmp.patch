@@ -1,11 +1,11 @@
-diff -Naur a/startx.cpp b/startx.cpp
---- a/startx.cpp	2022-12-03 23:18:43.000000000 +0100
-+++ b/startx.cpp	2022-12-05 12:44:05.151597202 +0100
-@@ -272,7 +272,7 @@
+diff -Naur a/startx.in b/startx.in
+--- a/startx.in	2025-03-09 21:44:26.000000000 +0100
++++ b/startx.in	2025-10-26 19:27:56.600263533 +0100
+@@ -283,7 +283,7 @@
      dummy=0
  
-     XCOMM create a file with auth information for the server. ':0' is a dummy.
--    xserverauthfile=$HOME/.serverauth.$$
+     # create a file with auth information for the server. ':0' is a dummy.
+-    xserverauthfile="$HOME/.serverauth.$$"
 +    xserverauthfile=`mktemp -p /tmp serverauth.XXXXXXXXXX`
      trap "rm -f '$xserverauthfile'" HUP INT QUIT ILL TRAP BUS TERM
      xauth -q -f "$xserverauthfile" << EOF

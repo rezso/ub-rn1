@@ -121,13 +121,6 @@ if [ ! -d third_party/node/linux/node-linux-x64/bin ]; then
 fi
 ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
 
-# rust adler/adler2
-if ! find /usr/lib/rustlib | grep -q adler2; then
-    # Rust 1.86 ships adler2 but we need to change it to adler when
-    # using older Rust versions (idea for this borrowed from Gentoo)
-    sed -i 's/adler2/adler/' build/rust/std/BUILD.gn
-fi
-
 # gn a buildhoz
 # tools/gn/bootstrap/bootstrap.py --build-path=$outdir --gn-gen-args=" ${_flags[@]} "
 

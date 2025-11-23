@@ -1,9 +1,9 @@
 cairo-dev
 emacs
+libgif-dev
 libice-dev
 libjpeg-turbo-dev
 libpng-dev
-libungif-dev
 lua-dev
 ncurses-dev
 pango-dev

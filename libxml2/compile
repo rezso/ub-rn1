@@ -1,9 +1,6 @@
 #!/bin/sh -eux
 
-rm -f meson.build meson_options.txt
-
-pythonver=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+rm -f CMakeLists.txt
 
 ub_compile \
-	-DLIBXML2_WITH_ICU=ON \
-	-DLIBXML2_PYTHON_INSTALL_DIR=/usr/lib/python$pythonver/site-packages
+	-Dlegacy=enabled

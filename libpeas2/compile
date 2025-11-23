@@ -1,7 +1,10 @@
 #!/bin/sh -eux
 
+# -Dvapi=true budgie-desktop igényli
+
 rm -Rf subprojects
 
 ub_compile \
     -Dlua51=false \
+    -Dvapi=true \
 	-Dgtk_doc=false
