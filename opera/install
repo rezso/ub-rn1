@@ -7,8 +7,10 @@ cp -r "$UB_COMPILEDIR"/usr "$UB_INSTALLDIR"/
 
 rm -Rf "$UB_INSTALLDIR"/usr/share/{lintian,menu}
 
-mkdir -p "$UB_INSTALLDIR"/usr/lib/opera/
-cp -r "$UB_INSTALLDIR"/usr/lib/x86_64-linux-gnu/opera "$UB_INSTALLDIR"/usr/lib/
+# mkdir -p "$UB_INSTALLDIR"/usr/lib/opera/
+cp -r "$UB_INSTALLDIR"/usr/lib/x86_64-linux-gnu/opera-stable "$UB_INSTALLDIR"/usr/lib/
+cd "$UB_INSTALLDIR"/usr/lib
+mv opera-stable opera
 rm -Rf "$UB_INSTALLDIR"/usr/lib/x86_64-linux-gnu
 
 ln -sf /usr/lib/opera/opera "$UB_INSTALLDIR"/usr/bin/opera
