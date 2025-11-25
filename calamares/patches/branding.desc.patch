@@ -19,14 +19,14 @@ diff -Naur a/src/branding/default/branding.desc b/src/branding/default/branding.
 -    donateUrl:           https://docs.codeberg.org/improving-codeberg/donate/
 +    productName:         UHU-Linux
 +    shortProductName:    UHU-Linux
-+    version:             UBK5 (NG)
-+    shortVersion:        UBK5
-+    versionedName:       UHU-Linux UBK5 (NG)
-+    shortVersionedName:  UHU-Linux UBK5
++    version:             RN1 (NG)
++    shortVersion:        RN1
++    versionedName:       UHU-Linux RN1 (NG)
++    shortVersionedName:  UHU-Linux RN1
 +    bootloaderEntryName: UHU-Linux
 +    productUrl:          https://rezso.net/
-+    supportUrl:          https://github.com/rezso/ub-ubk5/issues
-+    knownIssuesUrl:      https://github.com/rezso/ub-ubk5/issues
++    supportUrl:          https://github.com/rezso/ub-RN1/issues
++    knownIssuesUrl:      https://github.com/rezso/ub-RN1/issues
  
  # These images are loaded from the branding module directory.
  #
