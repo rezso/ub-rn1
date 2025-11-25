@@ -3,11 +3,10 @@ kf6-dev
 libmtp-dev
 libproxy-dev
 libssh-dev
-openslp-dev
+libtirpc-dev
 phonon-dev
 plasma-activities-dev
 plasma-activities-stats-dev
 qcoro-dev
 qt6-dev
-qt6-qtwebengine-dev
 taglib-dev
