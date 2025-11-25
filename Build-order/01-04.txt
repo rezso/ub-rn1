@@ -7,7 +7,6 @@ pcsc-lite
 cairomm1.0
 cairomm
 libcacard
-libdbi
 opensp
 libofx
 cracklib
