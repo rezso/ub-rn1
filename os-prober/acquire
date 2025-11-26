@@ -1,5 +1,4 @@
 #!/usr/bin/env dl
 
-# os-prober_${UB_VERSION}.tar.xz os-prober-${UB_VERSION}/
-os-prober_${UB_VERSION}.tar.xz work/
+os-prober_${UB_VERSION}.tar.xz os-prober-${UB_VERSION}/
 	https://ftp.debian.org/debian/pool/main/o/os-prober/

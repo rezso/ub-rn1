@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-${UB_VERSION}.tar.gz ubk-wallpapers-${UB_VERSION}/
-    https://github.com/uhulinux/ubk-wallpapers/archive/refs/tags/
+${UB_VERSION}.tar.gz uhu-wallpapers-${UB_VERSION}/
+    https://github.com/rezso/uhu-wallpapers/archive/refs/tags/
