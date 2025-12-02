@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-v${UB_VERSION}.tar.gz brisk-menu-${UB_VERSION}/
-	https://github.com/getsolus/brisk-menu/archive/

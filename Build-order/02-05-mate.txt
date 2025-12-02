@@ -39,8 +39,6 @@ mate-user-guide
 mozo
 mate-applet-lockkeys
 mate-applet-uptime
-mate-menu
 mate-tweak
-brisk-menu
 mate-calc
 mate
