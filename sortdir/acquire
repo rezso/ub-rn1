@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz sortdir-${UB_VERSION}/
-	https://github.com/uhulinux/sortdir/archive/refs/tags/

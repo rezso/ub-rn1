@@ -218,7 +218,6 @@ wayland-protocols
 libunwind
 hunspell-hu
 hunspell
-sortdir
 uhubuild
 debianutils
 ca-certificates
