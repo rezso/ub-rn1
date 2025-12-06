@@ -5,8 +5,7 @@
 ########################################################
 
 prefix="/usr"
-exec_prefix="${prefix}"
-datadir="${datarootdir}"
+datadir="${prefix}/share"
 
 . "${datadir}/grub/grub-mkconfig_lib"
 
