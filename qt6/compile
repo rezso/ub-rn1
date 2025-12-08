@@ -10,16 +10,16 @@ ub_compile \
     -G Ninja \
 	-DQT_QMAKE_TARGET_MKSPEC=linux-g++ \
 	-DCMAKE_INSTALL_PREFIX=/usr \
-    -DINSTALL_ARCHDATADIR=lib/qt6 \
-    -DINSTALL_BINDIR=lib/qt6/bin \
-    -DINSTALL_DATADIR=lib/qt6 \
-    -DINSTALL_DOCDIR=share/doc/qt6 \
-    -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
-    -DINSTALL_INCLUDEDIR=include/qt6 \
-    -DINSTALL_LIBDIR=lib \
-    -DINSTALL_LIBEXECDIR=lib/qt6/libexec \
-    -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
-    -DINSTALL_PUBLICBINDIR=usr/bin \
+    -DINSTALL_ARCHDATADIR=/usr/lib/qt6 \
+    -DINSTALL_BINDIR=/usr/lib/qt6/bin \
+    -DINSTALL_DATADIR=/usr/lib/qt6 \
+    -DINSTALL_DOCDIR=/usr/share/doc/qt6 \
+    -DINSTALL_EXAMPLESDIR=/usr/share/doc/qt6/examples \
+    -DINSTALL_INCLUDEDIR=/usr/include/qt6 \
+    -DINSTALL_LIBDIR=/usr/lib \
+    -DINSTALL_LIBEXECDIR=/usr/lib/qt6/libexec \
+    -DINSTALL_MKSPECSDIR=/usr/lib/qt6/mkspecs \
+    -DINSTALL_PUBLICBINDIR=/usr/bin \
 	-DINSTALL_SYSCONFDIR=/etc/xdg \
 	-DINSTALL_TRANSLATIONSDIR=lib/qt6/translations \
 	\

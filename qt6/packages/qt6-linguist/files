@@ -1,4 +1,6 @@
 @	/usr/bin/linguist6
+@	/usr/bin/lrelease6
+@	/usr/bin/lupdate6
 	/usr/lib/qt6/bin/lconvert
 	/usr/lib/qt6/bin/linguist
 	/usr/lib/qt6/bin/lrelease
