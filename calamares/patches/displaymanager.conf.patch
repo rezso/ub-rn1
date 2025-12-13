@@ -1,0 +1,13 @@
+diff -Naur a/src/modules/displaymanager/displaymanager.conf b/src/modules/displaymanager/displaymanager.conf
+--- a/src/modules/displaymanager/displaymanager.conf	2024-07-03 23:05:30.000000000 +0200
++++ b/src/modules/displaymanager/displaymanager.conf	2024-07-04 16:30:41.382897500 +0200
+@@ -20,9 +20,7 @@
+   - sddm
+   - lightdm
+   - gdm
+-  - mdm
+   - lxdm
+-  - greetd
+ 
+ # Enable the following settings to force a desktop environment
+ # in your displaymanager configuration file. This will attempt
