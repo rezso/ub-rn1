@@ -11,23 +11,3 @@ diff -Naur a/src/modules/displaymanager/displaymanager.conf b/src/modules/displa
  
  # Enable the following settings to force a desktop environment
  # in your displaymanager configuration file. This will attempt
-diff -Naur a/src/modules/displaymanager/main.py b/src/modules/displaymanager/main.py
---- a/src/modules/displaymanager/main.py	2024-07-03 23:05:30.000000000 +0200
-+++ b/src/modules/displaymanager/main.py	2024-07-04 16:30:41.386897515 +0200
-@@ -199,6 +199,7 @@
-     DesktopEnvironment('/usr/bin/cutefish-session', 'cutefish-xsession'),
-     DesktopEnvironment('/usr/bin/river', 'river'),
-     DesktopEnvironment('/usr/bin/Hyprland', 'hyprland'),
-+    DesktopEnvironment('/usr/bin/start-lumina-desktop', 'Lumina-DE'),
- ]
- 
- 
-@@ -979,6 +980,8 @@
-             libcalamares.utils.debug("{!s} selected but not installed".format(dm))
-             if dm in displaymanagers:
-                 displaymanagers.remove(dm)
-+        else:
-+            libcalamares.utils.target_env_call(['systemctl', '-f', 'enable', dm])
- 
-     if not dm_impl:
-         libcalamares.utils.warning(

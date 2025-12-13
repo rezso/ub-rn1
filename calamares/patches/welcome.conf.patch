@@ -1,0 +1,59 @@
+diff -Naur a/src/modules/welcome/welcome.conf b/src/modules/welcome/welcome.conf
+--- a/src/modules/welcome/welcome.conf	2025-07-21 18:32:10.000000000 +0200
++++ b/src/modules/welcome/welcome.conf	2025-12-13 18:56:57.267888699 +0100
+@@ -19,8 +19,8 @@
+ #
+ # The setting can also be a full URL which will then be used
+ # instead of the one from the branding file.
+-showSupportUrl:         true
+-showKnownIssuesUrl:     true
++showSupportUrl:         false
++showKnownIssuesUrl:     false
+ showReleaseNotesUrl:    false
+ # TODO:3.3 Move to branding, keep only a bool here
+ showDonateUrl:          https://kde.org/community/donations/
+@@ -32,10 +32,10 @@
+     # Amount of available disk, in GiB. Floating-point is allowed here.
+     # Note that this does not account for *usable* disk, so it is possible
+     # to satisfy this requirement, yet have no space to install to.
+-    requiredStorage:    5.5
++    requiredStorage:    8.0
+ 
+     # Amount of available RAM, in GiB. Floating-point is allowed here.
+-    requiredRam:        1.0
++    requiredRam:        3.0
+ 
+     # To check for internet connectivity, Calamares does a HTTP GET
+     # on this URL; on success (e.g. HTTP code 200) internet is OK.
+@@ -43,7 +43,7 @@
+     # distribution domain.
+     #
+     # The URL is only used if "internet" is in the *check* list below.
+-    internetCheckUrl:   http://example.com
++    internetCheckUrl:   https://google.com
+     #
+     # This may be a single URL, or a list or URLs, in which case the
+     # URLs will be checked one-by-one; if any of them returns data,
+@@ -83,20 +83,16 @@
+         - storage
+         - ram
+         - power
+-        - internet
+         - root
+         - screen
+-        - "false"
+-        - slow-true
+-        - snark
+     # List conditions that **must** be satisfied (from the list
+     # of conditions, above) for installation to proceed.
+     # If any of these conditions are not met, the user cannot
+     # continue past the welcome page.
+     required:
+-        # - storage
++        - storage
+         - ram
+-        # - root
++        - root
+ 
+ # GeoIP checking
+ #

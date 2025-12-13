@@ -1,6 +1,6 @@
 diff -Naur a/src/modules/packages/packages.conf b/src/modules/packages/packages.conf
---- a/src/modules/packages/packages.conf	2024-04-16 15:46:09.000000000 +0200
-+++ b/src/modules/packages/packages.conf	2024-05-25 20:49:55.925540288 +0200
+--- a/src/modules/packages/packages.conf	2025-07-21 18:32:10.000000000 +0200
++++ b/src/modules/packages/packages.conf	2025-12-13 18:48:10.482730900 +0100
 @@ -36,7 +36,7 @@
  # Not actually a package manager, but suitable for testing:
  #  - dummy       - Dummy manager, only logs
@@ -10,11 +10,10 @@ diff -Naur a/src/modules/packages/packages.conf b/src/modules/packages/packages.
  
  #
  # Often package installation needs an internet connection.
-@@ -202,13 +202,3 @@
- # "binutils", and then a second time for "wget". When installing large numbers
+@@ -203,12 +203,35 @@
  # of packages, this can lead to a considerable time savings.
  #
--operations:
+ operations:
 -  - install:
 -    - vi
 -    - vi-${LOCALE}
@@ -24,3 +23,35 @@ diff -Naur a/src/modules/packages/packages.conf b/src/modules/packages/packages.
 -    - vi
 -    - wget
 -    - binutils
++  - try_remove:
++    - calamares
++    - breeze-icons
++    - karchive
++    - kbookmarks
++    - kcodecs
++    - kcolorscheme
++    - kcompletion
++    - kconfig
++    - kconfigwidgets
++    - kcoreaddons
++    - kcrash
++    - kdbusaddons
++    - kded
++    - kdoctools-lib
++    - kglobalaccel
++    - kguiaddons
++    - ki18n
++    - kiconthemes
++    - kio
++    - kitemviews
++    - kjobwidgets
++    - knotifications
++    - kparts
++    - kservice
++    - kwallet
++    - kwidgetsaddons
++    - kwindowsystem
++    - kxmlgui
++    - libkpmcore
++    - qca
++    - solid
