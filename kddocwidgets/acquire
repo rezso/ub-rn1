@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz KDDockWidgets-${UB_VERSION}/
+	https://github.com/KDAB/KDDockWidgets/archive/refs/tags/

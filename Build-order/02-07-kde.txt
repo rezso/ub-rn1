@@ -20,6 +20,7 @@ freecell-solver # kdegames (kpat)
 black-hole-solver # kdegames (kpat)
 kcolorpicker # gwenview
 kimageannotator # gwenview
+kddocwidgets # kdenlive
 #
 extra-cmake-modules
 attica
