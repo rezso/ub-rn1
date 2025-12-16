@@ -1,3 +1,1 @@
-42        42           -  /var/lib/mysql
-42        42           -  /var/run/mysqld
 -         -          755  /usr/bin/mysqld-ping
