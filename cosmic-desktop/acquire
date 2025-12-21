@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+cosmic-epoch-${UB_VERSION}.tar.gz cosmic-epoch-epoch-${UB_VERSION}/
+	git+https://github.com/pop-os/cosmic-epoch.git@tag:epoch-${UB_VERSION}

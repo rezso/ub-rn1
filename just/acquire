@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz just-${UB_VERSION}/
+	https://github.com/casey/just/archive/refs/tags/

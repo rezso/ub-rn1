@@ -1,0 +1,3 @@
+libseat
+just
+cosmic-desktop
