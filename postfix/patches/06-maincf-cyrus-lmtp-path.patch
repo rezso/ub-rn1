@@ -1,7 +1,7 @@
-diff -Naur orig/conf/main.cf patched/conf/main.cf
---- orig/conf/main.cf	2011-11-17 19:23:48.000000000 +0100
-+++ patched/conf/main.cf	2013-03-18 00:26:00.267902520 +0100
-@@ -479,7 +479,7 @@
+diff -Naur a/conf/main.cf b/conf/main.cf
+--- a/conf/main.cf	2025-12-22 00:02:36.882335521 +0100
++++ b/conf/main.cf	2025-12-22 00:05:39.219121003 +0100
+@@ -487,7 +487,7 @@
  #
  # Cyrus IMAP over LMTP. Specify ``lmtpunix      cmd="lmtpd"
  # listen="/var/imap/socket/lmtp" prefork=0'' in cyrus.conf.

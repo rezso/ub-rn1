@@ -1,7 +1,7 @@
-diff -Naur postfix-3.1.0-orig/conf/main.cf postfix-3.1.0/conf/main.cf
---- postfix-3.1.0-orig/conf/main.cf	2015-04-01 12:56:39.000000000 +0200
-+++ postfix-3.1.0/conf/main.cf	2016-02-25 18:11:07.229280574 +0100
-@@ -427,8 +427,8 @@
+diff -Naur a/conf/main.cf b/conf/main.cf
+--- a/conf/main.cf	2025-10-23 21:51:44.000000000 +0200
++++ b/conf/main.cf	2025-12-21 23:57:35.205031005 +0100
+@@ -436,8 +436,8 @@
  #
  # The home_mailbox parameter specifies the optional pathname of a
  # mailbox file relative to a user's home directory. The default
@@ -12,7 +12,7 @@ diff -Naur postfix-3.1.0-orig/conf/main.cf postfix-3.1.0/conf/main.cf
  #
  #home_mailbox = Mailbox
  #home_mailbox = Maildir/
-@@ -438,7 +438,6 @@
+@@ -447,7 +447,6 @@
  # system type.
  #
  #mail_spool_directory = /var/mail
@@ -20,22 +20,22 @@ diff -Naur postfix-3.1.0-orig/conf/main.cf postfix-3.1.0/conf/main.cf
  
  # The mailbox_command parameter specifies the optional external
  # command to use instead of mailbox delivery. The command is run as
-diff -Naur postfix-3.1.0-orig/html/local.8.html postfix-3.1.0/html/local.8.html
---- postfix-3.1.0-orig/html/local.8.html	2016-02-14 02:32:49.000000000 +0100
-+++ postfix-3.1.0/html/local.8.html	2016-02-25 18:12:43.449281847 +0100
-@@ -585,7 +585,7 @@
+diff -Naur a/html/local.8.html b/html/local.8.html
+--- a/html/local.8.html	2025-01-09 23:18:05.000000000 +0100
++++ b/html/local.8.html	2025-12-21 23:57:35.205031005 +0100
+@@ -599,7 +599,7 @@
         The following are examples; details differ between systems.
         $HOME/.forward, per-user aliasing
         /etc/aliases, system-wide alias database
 -       /var/spool/mail, system mailboxes
 +       /var/mail, system mailboxes
  
- <b>SEE ALSO</b>
+ <b><a name="see_also">SEE ALSO</a></b>
         <a href="qmgr.8.html">qmgr(8)</a>, queue manager
-diff -Naur postfix-3.1.0-orig/man/man8/local.8 postfix-3.1.0/man/man8/local.8
---- postfix-3.1.0-orig/man/man8/local.8	2016-02-14 02:32:47.000000000 +0100
-+++ postfix-3.1.0/man/man8/local.8	2016-02-25 18:14:44.753283453 +0100
-@@ -110,7 +110,7 @@
+diff -Naur a/man/man8/local.8 b/man/man8/local.8
+--- a/man/man8/local.8	2025-01-09 23:18:05.000000000 +0100
++++ b/man/man8/local.8	2025-12-21 23:57:35.205031005 +0100
+@@ -116,7 +116,7 @@
  .ad
  .fi
  The default per\-user mailbox is a file in the UNIX mail spool
@@ -44,7 +44,7 @@ diff -Naur postfix-3.1.0-orig/man/man8/local.8 postfix-3.1.0/man/man8/local.8
  the location can be specified with the \fBmail_spool_directory\fR
  configuration parameter. Specify a name ending in \fB/\fR for
  \fBqmail\fR\-compatible \fBmaildir\fR delivery.
-@@ -615,7 +615,7 @@
+@@ -632,7 +632,7 @@
  The following are examples; details differ between systems.
  $HOME/.forward, per\-user aliasing
  /etc/aliases, system\-wide alias database
@@ -53,10 +53,10 @@ diff -Naur postfix-3.1.0-orig/man/man8/local.8 postfix-3.1.0/man/man8/local.8
  .SH "SEE ALSO"
  .na
  .nf
-diff -Naur postfix-3.1.0-orig/src/local/local.c postfix-3.1.0/src/local/local.c
---- postfix-3.1.0-orig/src/local/local.c	2016-02-14 02:29:26.000000000 +0100
-+++ postfix-3.1.0/src/local/local.c	2016-02-25 18:16:45.745285054 +0100
-@@ -96,7 +96,7 @@
+diff -Naur a/src/local/local.c b/src/local/local.c
+--- a/src/local/local.c	2025-01-09 23:18:05.000000000 +0100
++++ b/src/local/local.c	2025-12-21 23:57:35.213031039 +0100
+@@ -102,7 +102,7 @@
  /* .ad
  /* .fi
  /*	The default per-user mailbox is a file in the UNIX mail spool
@@ -65,7 +65,7 @@ diff -Naur postfix-3.1.0-orig/src/local/local.c postfix-3.1.0/src/local/local.c
  /*	the location can be specified with the \fBmail_spool_directory\fR
  /*	configuration parameter. Specify a name ending in \fB/\fR for
  /*	\fBqmail\fR-compatible \fBmaildir\fR delivery.
-@@ -569,7 +569,7 @@
+@@ -586,7 +586,7 @@
  /*	The following are examples; details differ between systems.
  /*	$HOME/.forward, per-user aliasing
  /*	/etc/aliases, system-wide alias database

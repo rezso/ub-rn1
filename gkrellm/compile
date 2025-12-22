@@ -1,7 +1,3 @@
 #!/bin/sh -eux
 
-export LDFLAGS="-lgmodule-2.0"
-
-ub_compile \
-	PREFIX="/usr" \
-	LOCALEDIR=/usr/share/locale
+ub_compile

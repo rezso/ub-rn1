@@ -1,11 +1,12 @@
-diff -Naurd postfix-2.0.9.orig/conf/main.cf postfix-2.0.9/conf/main.cf
---- postfix-2.0.9.orig/conf/main.cf	2003-02-20 15:44:47.000000000 +0100
-+++ postfix-2.0.9/conf/main.cf	2003-04-22 14:25:28.000000000 +0200
-@@ -460,6 +460,7 @@
+diff -Naur a/conf/main.cf b/conf/main.cf
+--- a/conf/main.cf	2025-12-21 23:57:35.205031005 +0100
++++ b/conf/main.cf	2025-12-22 00:02:36.882335521 +0100
+@@ -467,7 +467,7 @@
+ # IF YOU USE THIS TO DELIVER MAIL SYSTEM-WIDE, YOU MUST SET UP AN
+ # ALIAS THAT FORWARDS MAIL FOR ROOT TO A REAL USER.
  #
- #mailbox_command = /some/where/procmail
- #mailbox_command = /some/where/procmail -a "$EXTENSION"
+-#mailbox_command = /some/where/procmail
 +mailbox_command = /usr/bin/procmail
+ #mailbox_command = /some/where/procmail -a "$EXTENSION"
  
  # The mailbox_transport specifies the optional transport in master.cf
- # to use after processing aliases and .forward files. This parameter

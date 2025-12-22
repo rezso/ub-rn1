@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-inetutils-${UB_VERSION}.tar.xz inetutils-${UB_VERSION}/
+inetutils-${UB_VERSION}.tar.gz inetutils-${UB_VERSION}/
 	https://ftp.gnu.org/gnu/inetutils/

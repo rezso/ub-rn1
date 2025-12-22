@@ -1,7 +1,7 @@
-diff -Naur postfix-2.2.10.orig/postfix-install postfix-2.2.10/postfix-install
---- postfix-2.2.10.orig/postfix-install	2005-02-02 22:39:36.000000000 +0100
-+++ postfix-2.2.10/postfix-install	2006-04-11 14:01:33.000000000 +0200
-@@ -731,22 +731,26 @@
+diff -Naur a/postfix-install b/postfix-install
+--- a/postfix-install	2024-02-19 00:19:11.000000000 +0100
++++ b/postfix-install	2025-12-22 00:12:55.500990470 +0100
+@@ -736,22 +736,26 @@
      # If installing from source code, apply special permissions or ownership.
      # If building a package, don't apply special permissions or ownership.
  
