@@ -1,2 +1,1 @@
-u2d https://download.videolan.org/pub/videolan/vlc/last/
-# u2dsubdir https://download.videolan.org/pub/videolan/vlc/
+urllist https://code.videolan.org/videolan/vlc/-/tags | grep -E '^[0-9]+\.' | sort -V | tail -n 1
