@@ -209,7 +209,6 @@ grub
 libedit
 vala
 libpcap
-umockdev
 json-glib
 libgudev
 libgusb

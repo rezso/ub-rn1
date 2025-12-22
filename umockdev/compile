@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-if [ ! -f .version ]; then
-echo "$UB_VERSION" > .version
-fi
-
-ub_compile

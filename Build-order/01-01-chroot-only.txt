@@ -20,7 +20,6 @@ chrpath
 ckbcomp
 cldr-emoji-annotation
 cmark
-cmocka
 compface
 convmv
 cppunit
