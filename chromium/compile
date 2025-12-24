@@ -77,31 +77,6 @@ gtk_version=4
 icu_use_data_file=false
 ")
 
-# rendszerből használadó libek
-_syslibs=(
-	fontconfig
-	freetype
-	harfbuzz-ng
-#	icu
-	libjpeg
-	libpng
-#	libwebp
-#	libxml
-#	libxslt
-)
-for _lib in $_syslibs libjpeg_turbo; do
-	find . -type f -path "*third_party/$_lib/*" \
-   	\! -path "*third_party/$_lib/chromium/*" \
-	\! -path "*third_party/$_lib/google/*" \
-	\! -path './base/third_party/icu/*' \
-	\! -path './third_party/libxml/*' \
-	\! -path './third_party/pdfium/third_party/freetype/include/pstables.h' \
-	\! -path './third_party/harfbuzz-ng/utils/hb_scoped.h' \
-	\! -path './third_party/crashpad/crashpad/third_party/zlib/zlib_crashpad.h' \
-   	\! -regex '.*\.\(gn\|gni\|isolate\|py\)' \
-	-delete
-done
-
 outdir="../object"
 
 # Allow building against system libraries in official builds
