@@ -18,3 +18,4 @@ pulseaudio-dev
 rust
 systemd-dev
 wayland-dev
+x.org-xwayland
