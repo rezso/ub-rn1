@@ -1,0 +1,12 @@
+diff -Naur a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml	2025-12-21 10:54:12.000000000 +0100
++++ b/pyproject.toml	2025-12-29 01:29:56.526290256 +0100
+@@ -2,8 +2,6 @@
+ requires = [
+ 	"setuptools>=77",
+ 	"setuptools_scm[toml]>=3.4.1",
+-	# jaraco/skeleton#174
+-	"coherent.licensed",
+ ]
+ build-backend = "setuptools.build_meta"
+ 

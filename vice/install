@@ -1,7 +1,3 @@
 #!/bin/sh -eux
 
 make DESTDIR=${UB_INSTALLDIR} realdocdir="/usr/share/doc/vice" install -j1
-
-mkdir -p ${UB_INSTALLDIR}/etc/xdg/menus/applications-merged
-cp ${UB_COMPILEDIR}/src/arch/gtk3/data/unix/vice-org*.desktop ${UB_INSTALLDIR}/usr/share/applications/
-cp ${UB_COMPILEDIR}/src/arch/gtk3/data/unix/vice-org*.directory ${UB_INSTALLDIR}/etc/xdg/menus/applications-merged/

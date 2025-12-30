@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-PyQt5_sip-${UB_VERSION}.tar.gz PyQt5_sip-${UB_VERSION}/
-    https://pypi.python.org/packages/source/P/PyQt5-sip/
+pyqt5_sip-${UB_VERSION}.tar.gz pyqt5_sip-${UB_VERSION}/
+    https://files.pythonhosted.org/packages/1e/4a/195cf4d2a7e1ff480b4cabcd51aa5c0068c03a19a97282317536e4a82e1e/

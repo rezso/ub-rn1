@@ -2,6 +2,6 @@ curl-dev
 icu-dev
 leptonica-dev
 libarchive-dev
+libgif-dev
 libpng-dev
 libtiff-dev
-libungif-dev

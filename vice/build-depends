@@ -7,12 +7,11 @@ flex
 glew-dev
 gtk3-dev
 libevdev-dev
-libjpeg-turbo-dev
 liblame-dev
+libusb-dev
 libvorbis-dev
 libxaw-dev
 mpg123-dev
 pulseaudio-dev
 xa
 xdg-utils
-x.org-font-utils

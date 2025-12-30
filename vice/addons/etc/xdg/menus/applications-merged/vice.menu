@@ -1,0 +1,23 @@
+<!DOCTYPE Menu
+  PUBLIC '-//freedesktop//DTD Menu 1.0//EN'
+  'http://standards.freedesktop.org/menu-spec/menu-1.0.dtd'>
+<Menu>
+	<Name>Applications</Name>
+	<Menu>
+		<Name>Vice</Name>
+		<Directory>vice.directory</Directory>
+		<Include>
+			<Filename>vsid.desktop</Filename>
+			<Filename>x128.desktop</Filename>
+			<Filename>x64.desktop</Filename>
+			<Filename>x64dtv.desktop</Filename>
+			<Filename>x64sc.desktop</Filename>
+			<Filename>xcbm2.desktop</Filename>
+			<Filename>xcbm5x0.desktop</Filename>
+			<Filename>xpet.desktop</Filename>
+			<Filename>xplus4.desktop</Filename>
+			<Filename>xscpu64.desktop</Filename>
+			<Filename>xvic.desktop</Filename>
+		</Include>
+	</Menu>
+</Menu>

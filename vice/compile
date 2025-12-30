@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 
-autoreconf -vif
+# autoreconf -vif
 ub_compile \
 	--libdir=/usr/lib \
 	--enable-x64 \
