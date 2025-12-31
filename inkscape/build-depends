@@ -3,6 +3,7 @@ double-conversion-dev
 gc-dev
 graphicsmagick-dev
 gtkmm3-dev
+gtkmm4-dev
 gtksourceview4-dev
 libgsl-dev
 libjpeg-turbo-dev

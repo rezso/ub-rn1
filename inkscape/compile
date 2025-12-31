@@ -1,15 +1,6 @@
 #!/bin/sh -eux
 
-git clone https://gitlab.com/inkscape/extensions.git share/extensions
-git clone https://gitlab.com/inkscape/themes.git share/themes
-git clone https://gitlab.com/inkscape/lib2geom.git src/3rdparty/2geom
-git clone https://gitlab.com/inkscape/libcroco.git src/3rdparty/libcroco
-cd src/3rdparty/2geom
-git checkout 5957e323
-cd -
-cd src/3rdparty/libcroco
-git checkout ea3de62c
-cd -
+git submodule update --init --recursive
 
 ub_compile \
     -DBUILD_TESTING=OFF \

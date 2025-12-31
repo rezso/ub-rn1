@@ -1,4 +1,7 @@
 #!/usr/bin/env dl
 
-inkscape-INKSCAPE_${UB_VERSION//./_}.tar.bz2 inkscape-INKSCAPE_${UB_VERSION//./_}/
-    https://gitlab.com/inkscape/inkscape/-/archive/INKSCAPE_${UB_VERSION//./_}/
+#inkscape-INKSCAPE_${UB_VERSION//./_}.tar.bz2 inkscape-INKSCAPE_${UB_VERSION//./_}/
+#   https://gitlab.com/inkscape/inkscape/-/archive/INKSCAPE_${UB_VERSION//./_}/
+
+inkscape-INKSCAPE_${UB_VERSION//./_}.tar.gz inkscape-INKSCAPE_${UB_VERSION//./_}/
+    git+https://gitlab.com/inkscape/inkscape@tag:INKSCAPE_${UB_VERSION//./_}
