@@ -1,6 +1,6 @@
 diff -Naur a/pyproject.toml b/pyproject.toml
---- a/pyproject.toml	2025-05-06 18:14:00.000000000 +0200
-+++ b/pyproject.toml	2025-08-01 06:38:25.113641263 +0200
+--- a/pyproject.toml	2025-12-30 16:47:15.000000000 +0100
++++ b/pyproject.toml	2026-01-01 14:44:48.461597897 +0100
 @@ -1,5 +1,5 @@
  [build-system]
 -requires = ["setuptools >= 61.0", "setuptools-scm>=8"]
@@ -8,12 +8,12 @@ diff -Naur a/pyproject.toml b/pyproject.toml
  build-backend = "setuptools.build_meta"
  
  [project]
-@@ -67,8 +67,6 @@
+@@ -72,8 +72,6 @@
      "tools/dumppdf.py",
  ]
  
 -[tool.setuptools_scm]
 -
- [tool.ruff.lint]
- extend-select = [
-     "W",  # pycodestyle warnings
+ [tool.ruff]
+ target-version = "py310"
+ 

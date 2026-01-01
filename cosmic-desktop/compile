@@ -1,22 +1,13 @@
 #!/bin/sh -eux
 
-submodules=$(grep 'path' .gitmodules | sed 's/path = //g')
-for submodule in "${submodules[@]}"; do
-    rm -Rf $submodule
-done
-
-git clone --recurse-submodules https://github.com/pop-os/cosmic-epoch
-
-cp -f justfile cosmic-epoch/justfile
+git submodule update --init --recursive
 
 ln -s /usr/share/doc/Licenses/GPL-3 LICENSE
-
-cd cosmic-epoch
 
 # nincs greetd (https://git.sr.ht/~kennylevinsen/greetd)
 # sed -i '/cosmic-greeter/d' justfile
 rm -Rf cosmic-greeter
-# WIP
+# WIP, many bugs, flatpak requirement
 # sed -i '/cosmic-store/d' justfile
 rm -Rf cosmic-store
 
