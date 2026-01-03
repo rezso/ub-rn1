@@ -4,11 +4,10 @@ git submodule update --init --recursive
 
 ln -s /usr/share/doc/Licenses/GPL-3 LICENSE
 
+patch -Np1 < "$UB_SRCDIR"/patches/store-without-flatpak.patch.skip
+
 # nincs greetd (https://git.sr.ht/~kennylevinsen/greetd)
 # sed -i '/cosmic-greeter/d' justfile
 rm -Rf cosmic-greeter
-# WIP, many bugs, flatpak requirement
-# sed -i '/cosmic-store/d' justfile
-rm -Rf cosmic-store
 
 just build

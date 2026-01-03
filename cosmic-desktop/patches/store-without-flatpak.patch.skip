@@ -1,0 +1,11 @@
+diff -Naur a/cosmic-store/Cargo.toml b/cosmic-store/Cargo.toml
+--- a/cosmic-store/Cargo.toml	2026-01-02 22:47:47.039212843 +0100
++++ b/cosmic-store/Cargo.toml	2026-01-02 22:49:15.467134904 +0100
+@@ -60,7 +60,6 @@
+ default = [
+     "dbus-config",
+     "desktop-systemd-scope",
+-    "flatpak",
+     "logind",
+     "notify",
+     "packagekit",
