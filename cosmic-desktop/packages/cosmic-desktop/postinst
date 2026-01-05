@@ -1,5 +1,5 @@
 #!/bin/sh -eu
 
-getent passwd cosmic-initial-setup >/dev/null || adduser --system --force-badname --quiet \
+getent passwd cosmic-initial-setup >/dev/null || useradd --system --badname --quiet \
     --home /run/cosmic-initial-setup/ --no-create-home --shell /bin/bash cosmic-initial-setup
 exit 0
