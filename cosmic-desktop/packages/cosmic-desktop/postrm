@@ -1,0 +1,6 @@
+#!/bin/sh -e
+
+if getent passwd cosmic-initial-setup >/dev/null && which deluser >/dev/null 2>&1; then
+    deluser --system cosmic-initial-setup || echo "Could not remove cosmic-initial-setup user."
+fi
+exit 0

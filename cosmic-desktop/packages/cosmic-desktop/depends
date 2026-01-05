@@ -1,5 +1,8 @@
 gvfs
+iso-codes
+networkmanager
 nm-applet
+polkit
 sound-theme-freedesktop
 xdg-utils
 x.org-xwayland
