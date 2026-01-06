@@ -1,8 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-    -Dwayland_compositor=true \
-    -Dbuild_tests=false \
-    -Dbuild_examples=false \
-    -Ddocumentation=false \
-    -Dpixbuf_tests=false

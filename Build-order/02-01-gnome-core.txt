@@ -26,7 +26,7 @@ gupnp-dlna
 gupnp-av
 
 gnome-desktop
-cheese
+snapshot
 dconf-editor
 tracker # tinysparql
 eog

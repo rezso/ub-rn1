@@ -1,0 +1,5 @@
+#!/bin/sh -eux
+
+cd snapshot-${UB_VERSION}
+
+ub_install

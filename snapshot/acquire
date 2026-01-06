@@ -1,0 +1,5 @@
+#!/usr/bin/env dl
+
+# snapshot-${UB_VERSION}.tar.xz snapshot-${UB_VERSION}/
+snapshot-${UB_VERSION}.tar.xz
+	https://download.gnome.org/sources/snapshot/${UB_VERSION_HEAD1}/

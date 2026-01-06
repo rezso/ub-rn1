@@ -1,5 +1,4 @@
 accountsservice-dev
-cheese-dev
 colord-gtk-dev
 cups-dev
 dbus-dev
@@ -13,10 +12,12 @@ gsound-dev
 ibus-dev
 krb5-dev
 libgtop2-dev
+libgudev-dev
 libhandy-dev
 libnma-dev
 libpwquality-dev
 libsecret-dev
+libwacom-dev
 libxml2-dev
 modemmanager-dev
 networkmanager-dev

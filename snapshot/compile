@@ -1,0 +1,9 @@
+#!/bin/sh -eux
+
+# vendor alatti Cargo.toml.orig fájlok miatt
+tar xJ -f snapshot-${UB_VERSION}.tar.xz
+cd snapshot-${UB_VERSION}
+cp LICENSE ../LICENSE
+
+ub_compile \
+    -Dx11=enabled

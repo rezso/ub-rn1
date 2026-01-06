@@ -43,7 +43,6 @@ orage
 ristretto
 parole
 gigolo
-xfdashboard
 xfce4-pulseaudio-plugin
 xfce4-cpufreq-plugin
 xfce4-diskperf-plugin

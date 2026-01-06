@@ -112,8 +112,6 @@ wget
 inkscape
 x.org-xwayland
 libxpresent # metacity, xfwm4, mpv
-clutter-gst
-clutter-gtk
 libcanberra
 pavucontrol
 texlive

@@ -119,11 +119,9 @@ netpbm # lilypond build-depends
 djvulibre
 java-jre
 telepathy-glib
-cogl
 libvpx
 gd
 libwmf
-clutter
 parted
 man-db
 plocate
