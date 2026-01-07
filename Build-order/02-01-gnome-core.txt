@@ -24,6 +24,8 @@ gssdp
 gupnp
 gupnp-dlna
 gupnp-av
+gst-plugins-rs # snapshot
+xdg-desktop-portal # snapshot
 
 gnome-desktop
 snapshot

@@ -1,0 +1,8 @@
+#!/bin/sh -eux
+
+ub_compile \
+    -Dflatpak-interfaces=disabled \
+    -Ddocumentation=disabled \
+    -Dman-pages=disabled \
+    -Dtests=disabled \
+    -Dinstalled-tests=false

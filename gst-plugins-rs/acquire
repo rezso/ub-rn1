@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+gst-plugins-rs-${UB_VERSION}.tar.bz2 gst-plugins-rs-${UB_VERSION}/
+	https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/archive/${UB_VERSION}/
