@@ -31,3 +31,4 @@ tlp
 zsh
 optimus-manager
 optimus-manager-qt
+stacer
