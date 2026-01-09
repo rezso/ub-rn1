@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
 if getent passwd cosmic-initial-setup >/dev/null; then
-    userdel --system cosmic-initial-setup || echo "Could not remove cosmic-initial-setup user."
+    userdel cosmic-initial-setup || echo "Could not remove cosmic-initial-setup user."
 fi
 exit 0
