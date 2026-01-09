@@ -1,7 +1,7 @@
 #!/usr/bin/env dl
 
 CAcert.org_root.crt
-	https://www.cacert.org/certs/root.crt
+	https://www.cacert.org/certs/root_X0F.crt
 
-nss-${UB_VERSION//./_}.tar.gz nss-${UB_VERSION//./_}/nss/
+nss-${UB_VERSION}.tar.gz nss-${UB_VERSION}/nss/
 	https://ftp.mozilla.org/pub/security/nss/releases/NSS_${UB_VERSION//./_}_RTM/src/
