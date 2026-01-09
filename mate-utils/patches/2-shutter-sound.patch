@@ -1,0 +1,51 @@
+From f760c0fed9a093412dcff4801c3b6ede8b9c0458 Mon Sep 17 00:00:00 2001
+From: Victor Kareh <vkareh@redhat.com>
+Date: Wed, 20 Aug 2025 00:18:30 -0400
+Subject: [PATCH] mate-screenshot: Toggle shutter sound
+
+This setting allows user to enable/disable the shutter sound when taking
+a screenshot. Default is enabled to maintain current behavior.
+
+Fixes #134
+---
+ mate-screenshot/data/org.mate.screenshot.gschema.xml.in | 5 +++++
+ mate-screenshot/src/mate-screenshot.c                   | 4 +++-
+ 2 files changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/mate-screenshot/data/org.mate.screenshot.gschema.xml.in b/mate-screenshot/data/org.mate.screenshot.gschema.xml.in
+index caaff3412..1af576bfe 100644
+--- a/mate-screenshot/data/org.mate.screenshot.gschema.xml.in
++++ b/mate-screenshot/data/org.mate.screenshot.gschema.xml.in
+@@ -25,5 +25,10 @@
+       <summary>Border Effect</summary>
+       <description>Effect to add to the outside of a border.  Possible values are "shadow", "none", and "border".</description>
+     </key>
++    <key name="enable-sound" type="b">
++      <default>true</default>
++      <summary>Enable sound</summary>
++      <description>Whether to play a sound when taking a screenshot</description>
++    </key>
+   </schema>
+ </schemalist>
+diff --git a/mate-screenshot/src/mate-screenshot.c b/mate-screenshot/src/mate-screenshot.c
+index 9786c9949..b652f79af 100644
+--- a/mate-screenshot/src/mate-screenshot.c
++++ b/mate-screenshot/src/mate-screenshot.c
+@@ -55,6 +55,7 @@
+ #define LAST_SAVE_DIRECTORY_KEY "last-save-directory"
+ #define BORDER_EFFECT_KEY       "border-effect"
+ #define DELAY_KEY               "delay"
++#define ENABLE_SOUND_KEY        "enable-sound"
+ #define CAJA_PREFERENCES_SCHEMA "org.mate.caja.preferences"
+ 
+ enum
+@@ -852,7 +853,8 @@ finish_prepare_screenshot (char *initial_uri, GdkWindow *window, GdkRectangle *r
+       exit (1);
+     }
+ 
+-  play_sound_effect (window);
++  if (g_settings_get_boolean (settings, ENABLE_SOUND_KEY))
++    play_sound_effect (window);
+ 
+   if (noninteractive_clipboard_arg) {
+     save_screenshot_in_clipboard (gdk_window_get_display (window), screenshot);

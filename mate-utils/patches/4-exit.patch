@@ -1,0 +1,49 @@
+From b70d97e762a165828402307bca87221fdfa26d51 Mon Sep 17 00:00:00 2001
+From: Colomban Wendling <cwendling@hypra.fr>
+Date: Wed, 5 Nov 2025 12:22:21 +0100
+Subject: [PATCH] mate-screenshot: Cleanup on SIGINT and SIGTERM again
+
+Cleanly exit on SIGINT and SIGTERM so we can properly cleanup temporary
+files.
+---
+ mate-screenshot/src/mate-screenshot.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+diff --git a/mate-screenshot/src/mate-screenshot.c b/mate-screenshot/src/mate-screenshot.c
+index b652f79a..df203a88 100644
+--- a/mate-screenshot/src/mate-screenshot.c
++++ b/mate-screenshot/src/mate-screenshot.c
+@@ -32,6 +32,8 @@
+ #include <unistd.h>
+ #include <stdlib.h>
+ #include <errno.h>
++#include <signal.h>
++#include <glib-unix.h>
+ #ifdef ENABLE_NLS
+ #include <locale.h>
+ #endif /* ENABLE_NLS */
+@@ -1270,6 +1272,14 @@ loop_dialog_screenshot (void)
+   gtk_main ();
+ }
+ 
++static gboolean
++signal_handler (gpointer data)
++{
++  /* exit cleanly on signals to allow cleaning up temporary files */
++  gtk_main_quit ();
++  return FALSE;
++}
++
+ /* main */
+ int
+ main (int argc, char *argv[])
+@@ -1363,6 +1373,9 @@ main (int argc, char *argv[])
+   if (delay_arg > 0)
+     delay = delay_arg;
+ 
++  g_unix_signal_add (SIGINT, signal_handler, NULL);
++  g_unix_signal_add (SIGTERM, signal_handler, NULL);
++
+   loop_dialog_screenshot();
+ 
+   return EXIT_SUCCESS;
