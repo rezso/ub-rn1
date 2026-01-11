@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-IO-Socket-SSL-${UB_VERSION}.tar.gz IO-Socket-SSL-${UB_VERSION}/
-	https://cpan.metacpan.org/modules/by-module/IO/
+${UB_VERSION}.tar.gz p5-io-socket-ssl-${UB_VERSION}/
+	https://github.com/noxxi/p5-io-socket-ssl/archive/refs/tags/

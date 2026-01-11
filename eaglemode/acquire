@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-eaglemode-${UB_VERSION}.tar.bz2 eaglemode-${UB_VERSION}/
+eaglemode-${UB_VERSION}.tar.xz eaglemode-${UB_VERSION}/
     https://downloads.sourceforge.net/eaglemode/
