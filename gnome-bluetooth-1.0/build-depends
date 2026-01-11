@@ -1,7 +1,0 @@
-gobject-introspection-dev
-gtk3-dev
-itstool
-libcanberra-dev
-libnotify-dev
-systemd-dev
-upower-dev

@@ -1,5 +1,0 @@
-check RUNTIME depends
-
-src/session/budgie-desktop.in: gnome-session
-src/session/budgie-desktop-nm-applet.desktop.in: nm-applet
-gnome-themes-standard
