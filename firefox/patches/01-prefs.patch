@@ -1,6 +1,6 @@
 diff -Naur a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
---- a/browser/app/profile/firefox.js	2025-06-27 15:36:48.000000000 +0200
-+++ b/browser/app/profile/firefox.js	2025-07-05 20:08:57.220439276 +0200
+--- a/browser/app/profile/firefox.js	2026-01-06 01:36:38.000000000 +0100
++++ b/browser/app/profile/firefox.js	2026-01-14 20:14:11.326029989 +0100
 @@ -19,6 +19,12 @@
    #endif
  #endif
@@ -24,7 +24,7 @@ diff -Naur a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
  // Scopes to scan for changes at startup.
  pref("extensions.startupScanScopes", 0);
  
-@@ -280,7 +287,7 @@
+@@ -260,7 +267,7 @@
  pref("browser.compactmode.show", false);
  
  // At startup, check if we're the default browser and prompt user if not.
@@ -33,7 +33,7 @@ diff -Naur a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
  pref("browser.shell.shortcutFavicons",true);
  pref("browser.shell.mostRecentDateSetAsDefault", "");
  pref("browser.shell.skipDefaultBrowserCheckOnFirstRun", true);
-@@ -388,7 +395,7 @@
+@@ -366,7 +373,7 @@
  pref("browser.urlbar.accessibility.tabToSearch.announceResults", true);
  
  // Control autoFill behavior
@@ -42,7 +42,7 @@ diff -Naur a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
  
  // Whether enabling adaptive history autofill.
  pref("browser.urlbar.autoFill.adaptiveHistory.enabled", false);
-@@ -591,7 +598,7 @@
+@@ -595,7 +602,7 @@
  // is longer than this.
  pref("browser.urlbar.maxCharsForSearchSuggestions", 100);
  
@@ -51,7 +51,7 @@ diff -Naur a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
  pref("browser.urlbar.trimHttps", false);
  pref("browser.urlbar.untrimOnUserInteraction.featureGate", false);
  
-@@ -1293,7 +1300,7 @@
+@@ -1377,7 +1384,7 @@
  // 2 and other values, nothing
  pref("browser.backspace_action", 2);
  
@@ -60,7 +60,7 @@ diff -Naur a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
  
  pref("browser.send_pings", false);
  
-@@ -2295,6 +2302,9 @@
+@@ -2415,6 +2422,9 @@
  
  pref("browser.contentblocking.database.enabled", true);
  
