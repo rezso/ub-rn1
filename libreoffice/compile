@@ -40,6 +40,7 @@ export CPPFLAGS=' -DU_USING_ICU_NAMESPACE=1'
     --without-system-clucene \
     --without-system-colamd \
     --without-system-dragonbox \
+    --without-system-fast_float \
     --without-system-frozen \
     --without-system-libabw \
     --without-system-libcdr \
@@ -58,6 +59,7 @@ export CPPFLAGS=' -DU_USING_ICU_NAMESPACE=1'
     --without-system-libstaroffice \
     --without-system-libzmf \
     --without-system-lpsolve \
+    --without-system-md4c \
     --without-system-mdds \
     --without-system-mythes \
     --without-system-orcus \
