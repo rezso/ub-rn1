@@ -1,0 +1,13 @@
+diff -Naur a/debian/synaptic-pkexec b/debian/synaptic-pkexec
+--- a/debian/synaptic-pkexec	2025-04-06 21:13:35.000000000 +0200
++++ b/debian/synaptic-pkexec	2026-01-18 18:22:49.101660313 +0100
+@@ -1,2 +1,9 @@
+ #!/bin/sh
++
++if [ x"${XDG_SESSION_TYPE}" = "xx11" ]; then
+ pkexec "/usr/sbin/synaptic" "$@"
++else
++xhost +si:localuser:root
++pkexec "/usr/sbin/synaptic" "$@"
++xhost -si:localuser:root
++fi

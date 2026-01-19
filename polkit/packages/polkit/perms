@@ -2,6 +2,5 @@
 216       root       700  /etc/polkit-1/rules.d
 216       root       700  /usr/share/polkit-1/rules.d
 216       root       700  /var/lib/polkit-1
-root      root      4755  /usr/bin/pkexec.bin
+root      root      4755  /usr/bin/pkexec
 root      root      4755  /usr/lib/polkit-1/polkit-agent-helper-1
-root      root       755  /usr/bin/pkexec

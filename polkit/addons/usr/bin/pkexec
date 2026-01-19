@@ -1,7 +1,0 @@
-#!/bin/sh
-
-if [ x"${XDG_SESSION_TYPE}" = "xx11" ]; then
-pkexec.bin "$@"
-else
-pkexec.bin env WAYLAND_DISPLAY="$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY" XDG_RUNTIME_DIR=/run/user/0 "$@"
-fi
