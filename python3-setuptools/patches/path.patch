@@ -1,0 +1,9 @@
+diff -Naur a/setuptools/_vendor/bin/wheel b/setuptools/_vendor/bin/wheel
+--- a/setuptools/_vendor/bin/wheel	2026-01-21 10:25:30.000000000 +0100
++++ b/setuptools/_vendor/bin/wheel	2026-01-21 22:04:15.586515429 +0100
+@@ -1,4 +1,4 @@
+-#!/Users/jaraco/code/pypa/setuptools/.tox/vendor/bin/python3
++#!/usr/bin/python3
+ # -*- coding: utf-8 -*-
+ import sys
+ from wheel.cli import main

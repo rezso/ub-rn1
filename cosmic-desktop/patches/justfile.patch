@@ -1,6 +1,6 @@
 diff -Naur a/justfile b/justfile
---- a/justfile	2025-12-31 22:41:47.000000000 +0100
-+++ b/justfile	2026-01-05 04:32:48.600273635 +0100
+--- a/justfile	2026-01-21 13:31:11.000000000 +0100
++++ b/justfile	2026-01-21 13:35:25.815591871 +0100
 @@ -10,7 +10,6 @@
      {{ make }} -C cosmic-comp all
      {{ just }} cosmic-edit/build-release
@@ -9,13 +9,11 @@ diff -Naur a/justfile b/justfile
      {{ just }} cosmic-idle/build-release
      {{ just }} cosmic-initial-setup/build-release
      {{ just }} cosmic-launcher/build-release
-@@ -22,22 +21,20 @@
-     {{ just }} cosmic-screenshot/build-release
+@@ -23,21 +22,19 @@
      {{ just }} cosmic-settings/build-release
      {{ make }} -C cosmic-settings-daemon all
--    {{ just }} cosmic-session/all
+     {{ just }} cosmic-session/build-release
 -    {{ just }} cosmic-store/build-release
-+    {{ just }} cosmic-session/build-release
      {{ just }} cosmic-term/build-release
      {{ make }} -C cosmic-wallpapers all
      {{ make }} -C cosmic-workspaces-epoch all

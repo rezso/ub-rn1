@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-packaging-${UB_VERSION}.tar.gz packaging-${UB_VERSION}/
-	https://pypi.io/packages/source/p/packaging/
+${UB_VERSION}.tar.gz packaging-${UB_VERSION}/
+	https://github.com/pypa/packaging/archive/refs/tags/
