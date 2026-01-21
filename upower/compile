@@ -3,4 +3,5 @@
 ub_compile \
     -Dos_backend=linux \
 	-Dudevrulesdir=/usr/lib/udev/rules.d \
-	-Dgtk-doc=false
+	-Dgtk-doc=false \
+	-Dinstalled_tests=false
