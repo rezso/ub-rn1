@@ -1,8 +1,6 @@
 #!/bin/sh -eux
 
-make \
-	install_prefix="$UB_INSTALLDIR"/ \
-	install
+ub_install
 
 ln -sf graphic-login "$UB_INSTALLDIR"/etc/pam.d/xscreensaver
 

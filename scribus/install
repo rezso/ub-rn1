@@ -4,3 +4,9 @@ ub_install
 
 mkdir -p "$UB_INSTALLDIR"/usr/share/{applications,pixmaps}
 cp scribus.desktop "$UB_INSTALLDIR"/usr/share/applications/
+ln -s /usr/share/scribus/icons/1_7_0/scribus-icon.svg "$UB_INSTALLDIR"/usr/share/pixmaps/scribus.svg
+
+rm -Rf "$UB_INSTALLDIR"/usr/include
+rm -Rf "$UB_INSTALLDIR"/usr/lib/cmake
+rm -Rf "$UB_INSTALLDIR"/usr/license
+rm -f "$UB_INSTALLDIR"/usr/lib/*.a
