@@ -2,8 +2,6 @@
 
 make install
 
-#remove all unnecessary??? python files from /usr/lib
-rm -r "$UB_INSTALLDIR"/usr/lib/
-
-#install desktop file
+# install desktop file and icon
 cp -a canorus.desktop "$UB_INSTALLDIR"/usr/share/applications/
+cp "$UB_INSTALLDIR"/usr/share/{canorus/images/clogosm.png,pixmaps/canorus.png}

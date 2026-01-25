@@ -7,6 +7,7 @@ cmake \
     -DCMAKE_BUILD_TYPE=Release \
 	-DCMAKE_INSTALL_PREFIX="$UB_INSTALLDIR"/usr \
 	-DDEFAULT_DATA_DIR=/usr/share/canorus \
+	-DNO_PYTHON=1 \
 	-DNO_SWIG=ON \
 	.
 make
