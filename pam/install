@@ -2,7 +2,8 @@
 
 ub_install
 
-ln -sf deny-all "$UB_INSTALLDIR"/etc/pam.d/other
+ln -sf system-auth "$UB_INSTALLDIR"/etc/pam.d/system-login
+ln -sf system-auth "$UB_INSTALLDIR"/etc/pam.d/system-local-login
 
 # unix_chkpwd needs setuid bit
 chmod 4755 "$UB_INSTALLDIR"/usr/sbin/unix_chkpwd

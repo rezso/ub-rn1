@@ -1,9 +1,10 @@
 #!/bin/sh -eux
 
-CFLAGS="-fPIC -O2" \
 ub_compile \
-	--sbindir=/usr/sbin \
-	--libdir=/usr/lib \
-	--disable-doc \
-	--disable-nis \
-	--disable-Werror
+	-Ddocs=disabled \
+	-Deconf=disabled \
+	-Delogind=disabled \
+	-Dselinux=disabled \
+	-Dnis=disabled \
+	-Dpam_userdb=disabled \
+	-Dpam_unix=enabled
