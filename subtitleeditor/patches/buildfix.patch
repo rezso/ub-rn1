@@ -1,0 +1,31 @@
+From 3ffdcc787ec6f9d51e9d29f5a1f2dd7b4661cf6d Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Tom=C3=A1=C5=A1=20Hnyk?= <tomashnyk@gmail.com>
+Date: Tue, 27 Jan 2026 20:54:43 +0100
+Subject: [PATCH] Clipboard: Fix compilation failure
+
+---
+ plugins/actions/clipboard/clipboard.cc | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/plugins/actions/clipboard/clipboard.cc b/plugins/actions/clipboard/clipboard.cc
+index 455d4b58..7c26c24b 100644
+--- a/plugins/actions/clipboard/clipboard.cc
++++ b/plugins/actions/clipboard/clipboard.cc
+@@ -136,7 +136,7 @@ class ClipboardPlugin : public Action {
+       // ui
+       Glib::RefPtr<Gtk::UIManager> ui = get_ui_manager();
+ 
+-      ui_id = ui->new_merge_id();
++      ui_id_selection = ui->new_merge_id();
+       ui_id_edit = ui->new_merge_id();
+ 
+       ui->insert_action_group(action_group);
+@@ -722,7 +722,7 @@ class ClipboardPlugin : public Action {
+ 
+       if (flags & PASTE_TIMING_AFTER) {
+          // We use the old selection to know how-to apply the time shift
+-         guint selection_size = subtitles.get_selection().size();
++         auto selection_size = subtitles.get_selection().size();
+ 
+          if (selection_size == 0) {
+             // There're no subtitles, we want to keep the original subtitles times

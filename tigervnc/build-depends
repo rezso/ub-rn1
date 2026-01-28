@@ -1,11 +1,15 @@
+ffmpeg-dev
 fltk-dev
 gnutls-dev
 libjpeg-turbo-dev
 libx11-dev
 libxdamage-dev
 libxext-dev
+libxkbcommon-dev
 libxrandr-dev
 libxrender-dev
 libxtst-dev
 pam-dev
+pipewire-dev
 pixman-dev
+wayland-dev
