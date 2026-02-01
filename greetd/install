@@ -1,0 +1,7 @@
+#!/bin/sh -eux
+
+mkdir -p ${UB_INSTALLDIR}/etc/greetd
+
+cp target/release/{greetd,fakegreet,agreety} ${UB_INSTALLDIR}/usr/bin/
+cp config.toml ${UB_INSTALLDIR}/etc/greetd/
+cp greetd.service ${UB_INSTALLDIR}/usr/lib/systemd/system/greetd.service

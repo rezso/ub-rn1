@@ -1,0 +1,18 @@
+diff -Naur a/log.h b/log.h
+--- a/log.h	2023-03-08 22:40:11.000000000 +0100
++++ b/log.h	2026-02-01 03:20:20.061139660 +0100
+@@ -15,6 +15,14 @@
+ 
+ #include <fstream>
+ 
++// some of your ostream  -  bugs gentoo 904366
++#ifdef USE_CONSOLEKIT
++#include "Ck.h"
++#endif
++#ifdef USE_PAM
++#include "PAM.h"
++#endif
++
+ using namespace std;
+ 
+ class LogUnit

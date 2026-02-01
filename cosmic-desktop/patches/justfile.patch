@@ -1,15 +1,7 @@
 diff -Naur a/justfile b/justfile
---- a/justfile	2026-01-21 13:31:11.000000000 +0100
-+++ b/justfile	2026-01-21 13:35:25.815591871 +0100
-@@ -10,7 +10,6 @@
-     {{ make }} -C cosmic-comp all
-     {{ just }} cosmic-edit/build-release
-     {{ just }} cosmic-files/build-release
--    {{ just }} cosmic-greeter/build-release
-     {{ just }} cosmic-idle/build-release
-     {{ just }} cosmic-initial-setup/build-release
-     {{ just }} cosmic-launcher/build-release
-@@ -23,21 +22,19 @@
+--- a/justfile	2026-01-31 14:09:46.000000000 +0100
++++ b/justfile	2026-01-31 14:11:32.940606113 +0100
+@@ -23,14 +23,13 @@
      {{ just }} cosmic-settings/build-release
      {{ make }} -C cosmic-settings-daemon all
      {{ just }} cosmic-session/build-release
@@ -25,14 +17,7 @@ diff -Naur a/justfile b/justfile
      {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-applets/install
      {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-applibrary/install
      {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-bg/install
-     {{ make }} -C cosmic-comp install DESTDIR={{rootdir}} prefix={{prefix}}
-     {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-edit/install
-     {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-files/install
--    {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-greeter/install
-     {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-icons/install
-     {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-idle/install
-     {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-initial-setup/install
-@@ -51,7 +48,6 @@
+@@ -51,7 +50,6 @@
      {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-settings/install
      {{ make }} -C cosmic-settings-daemon install DESTDIR={{rootdir}} prefix={{prefix}}
      {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-session/install

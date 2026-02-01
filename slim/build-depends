@@ -1,4 +1,7 @@
+freetype2-dev
 libjpeg-turbo-dev
+libpng-dev
+libx11-dev
 libxcrypt-dev
 libxft-dev
 libxmu-dev

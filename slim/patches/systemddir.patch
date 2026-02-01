@@ -1,0 +1,12 @@
+diff -Naur a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2024-01-12 18:07:53.000000000 +0100
++++ b/CMakeLists.txt	2026-02-01 03:23:46.813867979 +0100
+@@ -24,7 +24,7 @@
+ 
+ set(PKGDATADIR "${CMAKE_INSTALL_FULL_DATADIR}/slim")
+ set(SYSCONFDIR "/etc")
+-set(SYSTEMDDIR "/lib/systemd")
++set(SYSTEMDDIR "/usr/lib/systemd")
+ 
+ set(SLIM_DEFINITIONS)
+ if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD" OR

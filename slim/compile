@@ -2,6 +2,7 @@
 
 ub_compile \
     -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+    -DBUILD_SLIMLOCK=ON \
     -DCMAKE_SKIP_RPATH=ON \
     -DUSE_PAM=yes \
     -DUSE_CONSOLEKIT=no

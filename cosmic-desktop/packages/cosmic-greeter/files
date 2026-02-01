@@ -1,0 +1,7 @@
+	/etc/greetd/cosmic-greeter.toml
+	/etc/pam.d
+	/usr/bin/cosmic-greeter*
+	/usr/lib/systemd/system/cosmic-greeter*
+	/usr/lib/sysusers.d/cosmic-greeter.conf
+	/usr/lib/tmpfiles.d/cosmic-greeter.conf
+	/usr/share/dbus-1/system.d/com.system76.CosmicGreeter.conf

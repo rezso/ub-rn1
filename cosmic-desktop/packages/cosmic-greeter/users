@@ -1,0 +1,1 @@
+cosmic-greeter  305  305  -d /var/lib/cosmic-greeter -s /usr/bin/bash

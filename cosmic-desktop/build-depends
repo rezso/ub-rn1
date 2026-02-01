@@ -11,8 +11,8 @@ libseat-dev
 libxkbcommon-dev
 llvm
 mesa-dev
-mold
 nasm
+pam-dev
 pipewire-dev
 pulseaudio-dev
 rust
