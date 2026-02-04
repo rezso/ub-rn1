@@ -1,1 +1,1 @@
-greeter   301  301  -d /tmp -s /usr/bin/bash
+greeter   301   51  -d /tmp -s /usr/bin/bash
