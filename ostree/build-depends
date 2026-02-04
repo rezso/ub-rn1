@@ -1,0 +1,14 @@
+bison
+curl-dev
+docbook-xsl
+e2fsprogs-dev
+flex-dev
+fuse-dev
+glib-dev
+gpgme-dev
+libarchive-dev
+libxml2-dev
+libxslt
+openssl-dev
+systemd-dev
+util-linux-dev

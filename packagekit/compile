@@ -1,0 +1,12 @@
+#!/bin/sh -eux
+
+ub_compile \
+    -Dpackaging_backend=apt \
+    -Dpackagekit_user=root \
+	-Dcron=false \
+	-Dgobject_introspection=false \
+	-Dgstreamer_plugin=false \
+	-Dgtk_doc=false \
+	-Dgtk_module=false \
+	-Dman_pages=false \
+	-Dsystemd=true

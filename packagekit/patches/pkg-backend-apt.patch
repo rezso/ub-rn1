@@ -1,0 +1,49 @@
+diff -Naur a/backends/apt/pk-backend-apt.cpp b/backends/apt/pk-backend-apt.cpp
+--- a/backends/apt/pk-backend-apt.cpp	2026-01-28 20:54:23.000000000 +0100
++++ b/backends/apt/pk-backend-apt.cpp	2026-02-04 04:58:31.046176706 +0100
+@@ -94,27 +94,42 @@
+ PkBitfield pk_backend_get_groups(PkBackend *backend)
+ {
+     return pk_bitfield_from_enums(
++    	PK_GROUP_ENUM_ACCESSIBILITY,
+         PK_GROUP_ENUM_ACCESSORIES,
+         PK_GROUP_ENUM_ADMIN_TOOLS,
++        PK_GROUP_ENUM_COLLECTIONS,
+         PK_GROUP_ENUM_COMMUNICATION,
+-        PK_GROUP_ENUM_DOCUMENTATION,
+         PK_GROUP_ENUM_DESKTOP_GNOME,
+         PK_GROUP_ENUM_DESKTOP_KDE,
+         PK_GROUP_ENUM_DESKTOP_OTHER,
+-        PK_GROUP_ENUM_ELECTRONICS,
++        PK_GROUP_ENUM_DESKTOP_XFCE,
++        PK_GROUP_ENUM_DOCUMENTATION,
++        PK_GROUP_ENUM_EDUCATION,
++    	PK_GROUP_ENUM_ELECTRONICS,
+         PK_GROUP_ENUM_FONTS,
+         PK_GROUP_ENUM_GAMES,
+         PK_GROUP_ENUM_GRAPHICS,
+         PK_GROUP_ENUM_INTERNET,
++    	PK_GROUP_ENUM_LAST,
+         PK_GROUP_ENUM_LEGACY,
+-        PK_GROUP_ENUM_LOCALIZATION,
++    	PK_GROUP_ENUM_LOCALIZATION,
++    	PK_GROUP_ENUM_MAPS,
+         PK_GROUP_ENUM_MULTIMEDIA,
+         PK_GROUP_ENUM_NETWORK,
++    	PK_GROUP_ENUM_NEWEST,
++        PK_GROUP_ENUM_OFFICE,
+         PK_GROUP_ENUM_OTHER,
++    	PK_GROUP_ENUM_POWER_MANAGEMENT,
+         PK_GROUP_ENUM_PROGRAMMING,
+         PK_GROUP_ENUM_PUBLISHING,
++    	PK_GROUP_ENUM_REPOS,
+         PK_GROUP_ENUM_SCIENCE,
++    	PK_GROUP_ENUM_SECURITY,
++        PK_GROUP_ENUM_SERVERS,
+         PK_GROUP_ENUM_SYSTEM,
++     	PK_GROUP_ENUM_UNKNOWN,
++        PK_GROUP_ENUM_VENDOR,
++    	PK_GROUP_ENUM_VIRTUALIZATION,
+         -1);
+ }
+ 

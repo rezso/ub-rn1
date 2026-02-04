@@ -1,0 +1,10 @@
+appstream-dev
+apt-dev
+bash-completion
+glib-dev
+gstreamer-dev
+intltool
+jansson-dev
+polkit-dev
+python3-setuptools
+sqlite-dev

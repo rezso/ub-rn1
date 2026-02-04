@@ -115,3 +115,6 @@ libxpresent # metacity, xfwm4, mpv
 libcanberra
 pavucontrol
 texlive
+ostree
+flatpak
+packagekit
