@@ -1,7 +1,7 @@
 diff -Naur a/common/sections_trans.cc b/common/sections_trans.cc
---- a/common/sections_trans.cc	2023-02-11 10:24:09.000000000 +0100
-+++ b/common/sections_trans.cc	2023-05-22 18:13:25.623095169 +0200
-@@ -8,130 +8,113 @@
+--- a/common/sections_trans.cc	2025-04-06 21:13:35.000000000 +0200
++++ b/common/sections_trans.cc	2026-02-04 02:58:58.644264081 +0100
+@@ -8,130 +8,107 @@
  #include "sections_trans.h"
  
  const char *transtable[][2] = {
@@ -219,17 +219,11 @@ diff -Naur a/common/sections_trans.cc b/common/sections_trans.cc
 +   {"X", _("X Server")},
 +
 +   // desktops
-+   {"BUDGIE", _("Budgie Desktop Environment")},
-+
 +   {"ENLIGHTENMENT", _("Enlightenment Desktop Environment")},
 +
 +   {"GNOME", _("GNOME Desktop Environment")},
 +
 +   {"KDE", _("KDE Desktop Environment")},
-+
-+   {"LUMINA", _("Lumina Desktop Environment")},
-+
-+   {"LXDE", _("LXDE Desktop Environment")},
 +   
 +   {"LXQT", _("LXQt Desktop Environment")},
 +   
@@ -240,8 +234,8 @@ diff -Naur a/common/sections_trans.cc b/common/sections_trans.cc
     // TRANSLATORS: Alias for the Debian package section "non free"
     {"non-free", _("non free")},
 diff -Naur a/po/hu.po b/po/hu.po
---- a/po/hu.po	2023-02-11 10:24:09.000000000 +0100
-+++ b/po/hu.po	2023-05-22 18:18:28.643778012 +0200
+--- a/po/hu.po	2025-04-06 21:13:35.000000000 +0200
++++ b/po/hu.po	2026-02-04 03:01:01.784594093 +0100
 @@ -7,9 +7,9 @@
  msgstr ""
  "Project-Id-Version: synaptic\n"
@@ -255,7 +249,7 @@ diff -Naur a/po/hu.po b/po/hu.po
  "Language-Team: Hungarian <hu@li.org>\n"
  "Language: hu\n"
  "MIME-Version: 1.0\n"
-@@ -17,357 +17,232 @@
+@@ -17,357 +17,220 @@
  "Content-Transfer-Encoding: 8bit\n"
  "Plural-Forms: nplurals=2; plural=n != 1;\n"
  "X-Launchpad-Export-Date: 2013-04-19 04:32+0000\n"
@@ -573,10 +567,6 @@ diff -Naur a/po/hu.po b/po/hu.po
 +
 +#. desktops
 +#: ../common/sections_trans.cc:101
-+msgid "Budgie Desktop Environment"
-+msgstr "Budgie asztali környezet"
-+
-+#: ../common/sections_trans.cc:103
 +msgid "Enlightenment Desktop Environment"
 +msgstr "Enlightenment asztali környezet"
  
@@ -589,7 +579,7 @@ diff -Naur a/po/hu.po b/po/hu.po
 -#: ../common/sections_trans.cc:102
 -msgid "Word Processing"
 -msgstr "Szövegszerkesztés"
-+#: ../common/sections_trans.cc:105
++#: ../common/sections_trans.cc:103
 +msgid "GNOME Desktop Environment"
 +msgstr "GNOME asztali környezet"
  
@@ -597,7 +587,7 @@ diff -Naur a/po/hu.po b/po/hu.po
 -#: ../common/sections_trans.cc:104
 -msgid "Utilities"
 -msgstr "Eszközök"
-+#: ../common/sections_trans.cc:107
++#: ../common/sections_trans.cc:105
 +msgid "KDE Desktop Environment"
 +msgstr "KDE asztali környezet"
  
@@ -620,25 +610,17 @@ diff -Naur a/po/hu.po b/po/hu.po
 -#: ../common/sections_trans.cc:112
 -msgid "Miscellaneous  - Graphical"
 -msgstr "Egyéb - Grafika"
-+#: ../common/sections_trans.cc:109
-+msgid "Lumina Desktop Environment"
-+msgstr "Lumina asztali környezet"
-+
-+#: ../common/sections_trans.cc:111
-+msgid "LXDE Desktop Environment"
-+msgstr "LXDE asztali környezet"
-+
-+#: ../common/sections_trans.cc:113
++#: ../common/sections_trans.cc:107
 +msgid "LXQt Desktop Environment"
 +msgstr "LXQt asztali környezet"
 +
-+#: ../common/sections_trans.cc:115
++#: ../common/sections_trans.cc:109
 +msgid "MATE Desktop Environment"
 +msgstr "MATE asztali környezet"
  
 -#. TRANSLATORS: Alias for the Debian package section "xfce"
 -#: ../common/sections_trans.cc:114
-+#: ../common/sections_trans.cc:117
++#: ../common/sections_trans.cc:111
  msgid "Xfce Desktop Environment"
  msgstr "Xfce asztali környezet"
  
@@ -688,14 +670,14 @@ diff -Naur a/po/hu.po b/po/hu.po
 -
  #. TRANSLATORS: Alias for the Debian package section "non free"
 -#: ../common/sections_trans.cc:135 ../common/sections_trans.cc:152
-+#: ../common/sections_trans.cc:120
++#: ../common/sections_trans.cc:114
  msgid "non free"
  msgstr "nem szabad szoftver"
  
  #. TRANSLATORS: Alias for the Debian package section "contrib"
  #. Free software that depends on non-free software
 -#: ../common/sections_trans.cc:138 ../common/sections_trans.cc:156
-+#: ../common/sections_trans.cc:123
++#: ../common/sections_trans.cc:117
  msgid "contrib"
  msgstr "contrib"
  
@@ -736,7 +718,7 @@ diff -Naur a/po/hu.po b/po/hu.po
  #: ../common/rcdscanner.cc:112 ../common/rcdscanner.cc:162
  #, c-format
  msgid "Failed to open %s.new"
-@@ -537,16 +412,20 @@
+@@ -537,16 +400,20 @@
  "Minden csomag sikeresen telepítve a jelenlegi adathordozóról. A telepítés "
  "folytatásához a következő adathordozóval, zárja be ezt az ablakot."
  
@@ -760,7 +742,7 @@ diff -Naur a/po/hu.po b/po/hu.po
  #, c-format
  msgid ""
  "\n"
-@@ -943,24 +822,37 @@
+@@ -943,24 +810,37 @@
  msgid "Unable to lock the download directory"
  msgstr "Nem tudom zárolni a letöltési könyvtárat"
  
@@ -801,7 +783,7 @@ diff -Naur a/po/hu.po b/po/hu.po
  #: ../common/rpackageview.h:106
  msgid "Sections"
  msgstr "Csoportok"
-@@ -1026,11 +918,15 @@
+@@ -1026,11 +906,15 @@
  msgid "Search Filter"
  msgstr "Keresési szűrő"
  
@@ -818,7 +800,7 @@ diff -Naur a/po/hu.po b/po/hu.po
  #: ../gtk/rgsummarywindow.cc:359
  msgid "Marked Changes"
  msgstr "Kijelölt változtatások"
-@@ -1176,11 +1072,26 @@
+@@ -1176,11 +1060,26 @@
  "Ez általában azt jelenti, hogy egy másik csomagkezelő alkalmazás is fut "
  "(mint az apt-get vagy aptitude). Előbb kérem zárja be az adott alkalmazást."
  
@@ -847,7 +829,7 @@ diff -Naur a/po/hu.po b/po/hu.po
  msgid ""
  "You will not be able to apply any changes, but you can still export the "
  "marked changes or create a download script for them."
-@@ -1635,6 +1546,11 @@
+@@ -1635,6 +1534,11 @@
  msgid "Visit Homepage"
  msgstr "Honlap meglátogatása"
  
