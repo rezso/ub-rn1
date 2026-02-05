@@ -9,6 +9,6 @@ patch -Np1 < "$UB_SRCDIR"/patches/cosmic-greeter-pam.patch.skip
 
 # nincs flatpak
 # sed -i '/cosmic-store/d' justfile
-rm -Rf cosmic-store
+# rm -Rf cosmic-store
 
 just build

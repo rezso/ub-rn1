@@ -1,14 +1,7 @@
 diff -Naur a/justfile b/justfile
---- a/justfile	2026-01-31 14:09:46.000000000 +0100
-+++ b/justfile	2026-01-31 14:11:32.940606113 +0100
-@@ -23,14 +23,13 @@
-     {{ just }} cosmic-settings/build-release
-     {{ make }} -C cosmic-settings-daemon all
-     {{ just }} cosmic-session/build-release
--    {{ just }} cosmic-store/build-release
-     {{ just }} cosmic-term/build-release
-     {{ make }} -C cosmic-wallpapers all
-     {{ make }} -C cosmic-workspaces-epoch all
+--- a/justfile	2026-02-03 21:07:36.000000000 +0100
++++ b/justfile	2026-02-04 02:44:19.694226506 +0100
+@@ -30,7 +30,7 @@
      {{ just }} pop-launcher/build-release
      {{ make }} -C xdg-desktop-portal-cosmic all
  
@@ -17,11 +10,3 @@ diff -Naur a/justfile b/justfile
      {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-applets/install
      {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-applibrary/install
      {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-bg/install
-@@ -51,7 +50,6 @@
-     {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-settings/install
-     {{ make }} -C cosmic-settings-daemon install DESTDIR={{rootdir}} prefix={{prefix}}
-     {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-session/install
--    {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-store/install
-     {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-term/install
-     {{ make }} -C cosmic-wallpapers install DESTDIR={{rootdir}} prefix={{prefix}}
-     {{ make }} -C cosmic-workspaces-epoch install DESTDIR={{rootdir}} prefix={{prefix}}

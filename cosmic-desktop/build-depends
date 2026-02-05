@@ -1,5 +1,6 @@
 dbus-dev
 expat-dev
+flatpak-dev
 fontconfig-dev
 freetype2-dev
 gstreamer-dev
@@ -12,6 +13,7 @@ libxkbcommon-dev
 llvm
 mesa-dev
 nasm
+packagekit-dev
 pam-dev
 pipewire-dev
 pulseaudio-dev
