@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-xorg-cf-files-${UB_VERSION}.tar.xz xorg-cf-files-${UB_VERSION}/
-  https://www.x.org/releases/individual/util/

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-tecla-${UB_VERSION}.tar.xz tecla-${UB_VERSION}/
-	https://download.gnome.org/sources/tecla/${UB_VERSION_HEAD1}/

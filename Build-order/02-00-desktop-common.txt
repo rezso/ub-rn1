@@ -1,0 +1,18 @@
+libei # kwin
+gcr # seahorse
+libpeas # eom, pluma, pluma-plugins
+libpeas2 # liferea
+libgxps # atril, evince
+libnma # nm-applet, networkmanager-pptp, networkmanager-openvpn
+icon-theme-adwaita-legacy # lxqt, xfce
+icon-theme-adwaita # lxqt, xfce
+gnome-themes-extra # xfce4-settings
+gssdp # caja-extensions
+gupnp # caja-extensions
+editorconfig # ktexteditor
+babl # gimp
+gegl # gimp
+dconf-editor # mate-panel
+nm-applet # mate-control-center
+zenity # marco
+evince # geeqie

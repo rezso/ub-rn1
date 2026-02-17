@@ -3,6 +3,7 @@ curl-dev
 dbus-glib-dev
 dhcpcd
 dnsmasq
+docbook-xsl
 gnutls-dev
 gobject-introspection-dev
 iptables
@@ -18,6 +19,7 @@ newt-dev
 nss-dev
 polkit-dev
 ppp-dev
+python3-pygobject
 readline-dev
 systemd-dev
 util-linux-dev

@@ -21,7 +21,6 @@ xman
 paps
 python3-fonttools
 fonts-liberation
-nginx
 fuse-mtpfs
 squid
 fuse-smbnetfs

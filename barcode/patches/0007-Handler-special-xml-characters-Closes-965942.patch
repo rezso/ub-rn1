@@ -1,0 +1,45 @@
+Description: Handle xml special character to fix issue
+Author: Doan Manh <doanvanmanh87@gmail.com>
+Bug-Debian: https://bugs.debian.org/1052977
+Last-Update: 2025-02-25
+---
+--- barcode-0.99.orig/svg.c
++++ barcode-0.99/svg.c
+@@ -65,8 +65,8 @@ int Barcode_svg_print(struct Barcode_Ite
+     double f1, f2, fsav=0;
+     int mode = '-'; /* text below bars */
+     double scalef=1, xpos, x0, y0, yr;
+-    char *ptr;
+-    char c;
++    char *ptr, *xml_c;
++    char c, str_c[2];
+ 
+     if (!bc->partial || !bc->textinfo) {
+ 	bc->error = EINVAL;
+@@ -225,12 +225,23 @@ int Barcode_svg_print(struct Barcode_Ite
+ 		fprintf(stderr, "barcode: impossible data: %s\n", ptr);
+                 continue;
+             }
+-
+-            fprintf(f, "<text x=\"%fpt\" y=\"%fpt\" fill=\"black\" style=\"font-family:Helvetica;font-size:%dpt\">%c</text>\n",
++            switch (c) {
++                case '<': xml_c = "&lt;";break;
++                case '>': xml_c = "&gt;";break;
++                case '&': xml_c = "&amp;";break;
++                case '\'': xml_c = "&apos;";break;
++                case '\"': xml_c = "&quot;"; break;
++                default: 
++                str_c[0] = c;
++                str_c[1] = 0;
++                xml_c = str_c;
++                break;
++            }
++            fprintf(f, "<text x=\"%fpt\" y=\"%fpt\" fill=\"black\" style=\"font-family:Helvetica;font-size:%dpt\">%s</text>\n",
+ 		bc->xoff + f1 * scalef + bc->margin,
+ 		global_height - (mode == '-' ? (double)bc->yoff + bc->margin : (double)bc->yoff + bc->margin+bc->height - 8*scalef),
+                 (int)(f2 * scalef),
+-		c);
++		xml_c);
+ 
+ 	    fsav = f2;
+ 	}

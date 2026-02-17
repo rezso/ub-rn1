@@ -5,7 +5,6 @@ gkrellm-themes
 multitail
 nload
 qshutdown
-tack
 vbindiff
 gnuplot
 ncdu
@@ -47,16 +46,15 @@ mugshot
 mailutils
 fbreader
 redshift
-virt-manager
 intel-gpu-tools
 gparted
 deb-gview
-virt-viewer
 gencfsm
 mencfsm
 blueman
 recoll
+meld
+seahorse
 workrave
-kitty
 fdupes
 czkawka

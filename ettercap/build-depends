@@ -1,7 +1,6 @@
 bison
 curl-dev
 flex
-geoip-dev
 ghostscript-dev
 groff
 gtk3-dev

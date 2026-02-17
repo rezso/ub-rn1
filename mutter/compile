@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	-Dremote_desktop=true \
-	-Dprofiler=false \
-	-Dbash_completion=false \
-	-Dtests=disabled

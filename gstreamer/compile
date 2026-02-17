@@ -3,7 +3,6 @@
 ub_compile \
     -Dpython=enabled \
     -Ddevtools=disabled \
-    -Dvaapi=disabled \
     -Dsharp=disabled \
     -Dgst-examples=disabled \
     -Drs=disabled \

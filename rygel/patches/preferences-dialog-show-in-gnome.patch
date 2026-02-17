@@ -1,9 +1,0 @@
-diff -Naur a/data/rygel-preferences.desktop.in b/data/rygel-preferences.desktop.in
---- a/data/rygel-preferences.desktop.in	2022-09-17 12:44:58.000000000 +0200
-+++ b/data/rygel-preferences.desktop.in	2022-09-19 23:39:59.745295011 +0200
-@@ -8,4 +8,4 @@
- Terminal=false
- Type=Application
- StartupNotify=true
--NotShowIn=GNOME;
-+# NotShowIn=GNOME;

@@ -4,5 +4,5 @@
 #   https://download.kde.org/stable/kaffeine/
 #	https://download.kde.org/stable/kaffeine/${UB_VERSION}/src/
 
-kaffeine-${UB_VERSION}.tar.gz kaffeine-79ded89/
-    git+https://github.com/KDE/kaffeine.git@79ded89
+kaffeine-${UB_VERSION}.tar.gz kaffeine-f7bbbed/
+    git+https://github.com/KDE/kaffeine.git@f7bbbed

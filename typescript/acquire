@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-typescript-${UB_VERSION}.tgz package/
-	https://github.com/microsoft/TypeScript/releases/download/v${UB_VERSION}/

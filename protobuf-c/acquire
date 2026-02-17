@@ -1,7 +1,0 @@
-#!/usr/bin/env dl
-
-v${UB_VERSION}.tar.gz protobuf-c-${UB_VERSION}/
-	https://github.com/protobuf-c/protobuf-c/archive/refs/tags/
-
-#${UB_VERSION}.tar.gz protobuf-c-8c201f6/
-#	git+https://github.com/protobuf-c/protobuf-c.git@8c201f6

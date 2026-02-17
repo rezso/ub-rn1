@@ -1,6 +1,3 @@
 #!/bin/sh -eux
 
-autopoint -f
-intltoolize -f
-autoreconf -vif
 ub_compile

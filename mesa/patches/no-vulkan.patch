@@ -1,0 +1,11 @@
+diff -Naur a/meson.build b/meson.build
+--- a/meson.build	2026-01-23 22:13:52.000000000 +0100
++++ b/meson.build	2026-02-06 20:47:52.110859936 +0100
+@@ -116,7 +116,6 @@
+     'nir',
+     'nouveau',
+     'panfrost',
+-    'zink',
+   ]
+ endif
+ 

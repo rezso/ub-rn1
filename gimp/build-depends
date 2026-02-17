@@ -5,8 +5,7 @@ curl-dev
 dbus-glib-dev
 gegl-dev
 gexiv2-dev
-ghostscript
-gjs-dev
+ghostscript-dev
 glib-networking
 gobject-introspection-dev
 gpm-dev

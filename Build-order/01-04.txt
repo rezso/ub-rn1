@@ -38,9 +38,8 @@ gtk2-engines
 xmessage
 opusfile
 xdg-user-dirs
-xmlrpc-c
+xmlrpc
 strace
-babl
 vpnc
 openvpn
 yelp-xsl

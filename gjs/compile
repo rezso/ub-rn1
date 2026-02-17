@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	-Dreadline=enabled \
-	-Dprofiler=disabled \
-	-Dinstalled_tests=false \
-	-Dskip_gtk_tests=true

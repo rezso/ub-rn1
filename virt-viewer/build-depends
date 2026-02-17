@@ -1,8 +1,0 @@
-cyrus-sasl2-dev
-glib-dev
-gnutls-dev
-gtk3-dev
-gtk-vnc-dev
-libvirt-glib-dev
-libxml2-dev
-spice-gtk-dev

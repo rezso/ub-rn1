@@ -1,1 +1,0 @@
-urllist https://git.sr.ht/~kennylevinsen/greetd/refs | grep '^[0-9]\.' | grep -v 'gz' | sort -V | tail -n1

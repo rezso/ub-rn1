@@ -1,6 +1,0 @@
-gobject-introspection-dev
-gsettings-desktop-schemas
-gtk4-dev
-libadwaita-dev
-libgudev-dev
-python3-pygobject-dev

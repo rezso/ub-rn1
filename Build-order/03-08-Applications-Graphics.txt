@@ -1,5 +1,3 @@
-feh
-jhead
 converseen
 sane-frontends
 simple-scan
@@ -10,7 +8,6 @@ povray
 mtpaint
 gphoto2
 geeqie
-gv
 rawtherapee
 enblend
 hugin

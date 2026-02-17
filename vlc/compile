@@ -16,5 +16,6 @@ ub_compile \
 	--enable-nls \
 	--enable-sftp \
 	--disable-opencv \
+	--disable-upnp \
 	--disable-update-check \
     --enable-qt

@@ -5,6 +5,7 @@
 rm -Rf subprojects
 
 ub_compile \
+	-Dgjs=false \
     -Dlua51=false \
-    -Dvapi=true \
+    -Dvapi=false \
 	-Dgtk_doc=false

@@ -1,9 +1,0 @@
-diff -Naur a/CMakeLists.txt b/CMakeLists.txt
---- a/CMakeLists.txt	2025-03-23 13:13:21.000000000 +0100
-+++ b/CMakeLists.txt	2025-08-03 22:14:51.563589328 +0200
-@@ -1,4 +1,4 @@
--cmake_minimum_required (VERSION 3.1)
-+cmake_minimum_required (VERSION 3.10)
- project(jansson C)
- 
- # Options

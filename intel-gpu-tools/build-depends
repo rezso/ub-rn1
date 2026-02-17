@@ -13,4 +13,4 @@ libxv-dev
 meson
 procps-dev
 systemd-dev
-xmlrpc-c-dev
+xmlrpc-dev

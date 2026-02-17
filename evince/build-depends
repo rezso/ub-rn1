@@ -2,6 +2,7 @@ djvulibre-dev
 gobject-introspection-dev
 gsettings-desktop-schemas
 gspell-dev
+gstreamer-dev
 gtk3-dev
 icon-theme-adwaita
 itstool
@@ -14,8 +15,6 @@ libspectre-dev
 libsynctex-dev
 libtiff-dev
 libxml2-dev
-meson
-nautilus-dev
 openjpeg-dev
 poppler-glib-dev
 yelp-tools

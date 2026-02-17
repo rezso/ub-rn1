@@ -1,7 +1,5 @@
 #!/bin/sh -eux
 
-# xfce: gtk2
-
 export CXXFLAGS+=' -std=c++11'
 NOCONFIGURE=1 ./autogen.sh
 ub_compile \
@@ -9,6 +7,6 @@ ub_compile \
 	--disable-gconf \
 	--disable-xml \
 	--enable-dbus \
-	--enable-gnome3 \
+	--disable-gnome3 \
 	--enable-mate \
 	--enable-xfce

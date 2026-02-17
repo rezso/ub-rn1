@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-blueprint-compiler-${UB_VERSION}.tar.xz blueprint-compiler-${UB_VERSION}/
-	https://download.gnome.org/sources/blueprint-compiler/${UB_VERSION_HEAD2}/

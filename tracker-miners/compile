@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	-Dlandlock=disabled \
-	-Dman=false \
-	-Dfunctional_tests=false

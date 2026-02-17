@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-rm -f pyproject.toml
-
-ub_compile

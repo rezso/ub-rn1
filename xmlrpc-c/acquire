@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-xmlrpc-c-${UB_VERSION}.tgz xmlrpc-c-${UB_VERSION}/
-	https://sourceforge.net/projects/xmlrpc-c/files/Xmlrpc-c%20Super%20Stable/${UB_VERSION}/

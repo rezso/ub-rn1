@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 Net-DNS-${UB_VERSION}.tar.gz Net-DNS-${UB_VERSION}/
-	https://cpan.metacpan.org/modules/by-module/Net/
+	https://cpan.metacpan.org/authors/id/N/NL/NLNETLABS/

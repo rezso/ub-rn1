@@ -1,5 +1,0 @@
-	/usr/include
-	/usr/lib/pkgconfig
-@	/usr/lib/*.so
-	/usr/share/doc/libvirt*/html
-	/usr/share/libvirt/api

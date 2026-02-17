@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz cairo-dock-plug-ins-${UB_VERSION}/
-	https://github.com/Cairo-Dock/cairo-dock-plug-ins/archive/refs/tags/

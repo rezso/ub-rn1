@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-jhead-${UB_VERSION}.tar.gz jhead-${UB_VERSION}/
-	https://www.sentex.net/~mwandel/jhead/

@@ -1,1 +1,0 @@
-gdm       201  201  -d /var/lib/gdm -s /usr/sbin/nologin

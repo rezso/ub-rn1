@@ -1,1 +1,0 @@
-urllist https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/tags | grep -E '^[0-9]+\.' | grep -v '\-' | sort -V | tail -n 1

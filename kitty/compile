@@ -1,3 +1,0 @@
-#!/bin/sh -eux
-
-python3 setup.py linux-package --update-check-interval=0 --ignore-compiler-warnings

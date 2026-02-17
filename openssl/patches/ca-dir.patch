@@ -1,8 +1,8 @@
 diff -Naur a/apps/CA.pl.in b/apps/CA.pl.in
---- a/apps/CA.pl.in	2023-02-07 14:43:33.000000000 +0100
-+++ b/apps/CA.pl.in	2023-03-05 20:10:04.250285301 +0100
-@@ -29,7 +29,7 @@
- my $PKCS12 = "$openssl pkcs12";
+--- a/apps/CA.pl.in	2026-01-27 15:09:55.000000000 +0100
++++ b/apps/CA.pl.in	2026-02-05 19:25:35.059002424 +0100
+@@ -32,7 +32,7 @@
+ my @PKCS12 = (@openssl, "pkcs12");
  
  # Default values for various configuration settings.
 -my $CATOP = "./demoCA";
@@ -11,8 +11,8 @@ diff -Naur a/apps/CA.pl.in b/apps/CA.pl.in
  my $CAREQ = "careq.pem";
  my $CACERT = "cacert.pem";
 diff -Naur a/apps/openssl.cnf b/apps/openssl.cnf
---- a/apps/openssl.cnf	2023-02-07 14:43:33.000000000 +0100
-+++ b/apps/openssl.cnf	2023-03-05 20:08:57.914784053 +0100
+--- a/apps/openssl.cnf	2026-01-27 15:09:55.000000000 +0100
++++ b/apps/openssl.cnf	2026-02-05 19:25:35.059002424 +0100
 @@ -79,7 +79,7 @@
  ####################################################################
  [ CA_default ]

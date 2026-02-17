@@ -1,8 +1,0 @@
-gnome-menus # flashback
-alacarte
-gnome-panel # flashback
-gnome-applets # flashback
-metacity # flashback
-cairo-dock
-cairo-dock-plugins
-gnome-flashback

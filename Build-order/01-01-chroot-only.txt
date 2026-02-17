@@ -30,7 +30,6 @@ diffstat
 dmidecode
 dos2unix
 dosfstools
-dotconf
 double-conversion
 dvd+rw-tools
 emoji
@@ -42,7 +41,6 @@ ffnvcodec-headers
 fftw3
 fping
 ganyremote
-geoip
 glm
 gocr
 hddtemp
@@ -173,6 +171,5 @@ vblade
 vulkan-headers
 wavpack
 wireless-regdb
-xorg-cf-files
 zisofs-tools
 zziplib

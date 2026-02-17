@@ -1,7 +1,7 @@
 diff -Naur a/cmake/install_layout.cmake b/cmake/install_layout.cmake
---- a/cmake/install_layout.cmake	2024-08-05 10:49:38.000000000 +0200
-+++ b/cmake/install_layout.cmake	2024-08-30 19:51:48.401736126 +0200
-@@ -175,29 +175,29 @@
+--- a/cmake/install_layout.cmake	2025-11-13 18:00:48.000000000 +0100
++++ b/cmake/install_layout.cmake	2026-02-05 22:19:08.821662152 +0100
+@@ -176,30 +176,30 @@
  SET(INSTALL_SYSCONFDIR_DEB              "/etc")
  SET(INSTALL_SYSCONF2DIR_DEB             "/etc/mysql/mariadb.conf.d")
  #
@@ -27,7 +27,8 @@ diff -Naur a/cmake/install_layout.cmake b/cmake/install_layout.cmake
  #
  SET(INSTALL_MYSQLDATADIR_DEB            "/var/lib/mysql")
  
- SET(INSTALL_UNIX_ADDRDIR_DEB            "/run/mysqld/mysqld.sock")
+ SET(INSTALL_RUNDATADIR_DEB              "/run/mysqld")
+ SET(INSTALL_UNIX_ADDRDIR_DEB            "${INSTALL_RUNDATADIR_DEB}/mysqld.sock")
 -SET(INSTALL_SYSTEMD_UNITDIR_DEB         "/lib/systemd/system")
 +SET(INSTALL_SYSTEMD_UNITDIR_DEB         "/usr/lib/systemd/system")
  SET(INSTALL_SYSTEMD_SYSUSERSDIR_DEB     "/usr/lib/sysusers.d")
@@ -38,8 +39,8 @@ diff -Naur a/cmake/install_layout.cmake b/cmake/install_layout.cmake
  
  #
 diff -Naur a/libmariadb/cmake/install.cmake b/libmariadb/cmake/install.cmake
---- a/libmariadb/cmake/install.cmake	2024-08-05 10:49:43.000000000 +0200
-+++ b/libmariadb/cmake/install.cmake	2024-08-30 19:48:28.353391169 +0200
+--- a/libmariadb/cmake/install.cmake	2025-11-13 18:00:51.000000000 +0100
++++ b/libmariadb/cmake/install.cmake	2026-02-05 22:16:04.876943005 +0100
 @@ -94,8 +94,8 @@
  # DEB layout
  #
@@ -52,8 +53,8 @@ diff -Naur a/libmariadb/cmake/install.cmake b/libmariadb/cmake/install.cmake
  SET(INSTALL_INCLUDEDIR_DEB "include/mariadb")
  SET(INSTALL_MANDIR_DEB "share/man")
 diff -Naur a/support-files/rpm/my.cnf b/support-files/rpm/my.cnf
---- a/support-files/rpm/my.cnf	2024-08-05 10:49:42.000000000 +0200
-+++ b/support-files/rpm/my.cnf	2024-08-30 19:48:28.353391169 +0200
+--- a/support-files/rpm/my.cnf	2025-11-13 18:00:50.000000000 +0100
++++ b/support-files/rpm/my.cnf	2026-02-05 22:16:04.876943005 +0100
 @@ -7,5 +7,5 @@
  #
  # include *.cnf from the config directory

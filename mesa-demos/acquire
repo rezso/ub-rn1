@@ -1,8 +1,5 @@
 #!/usr/bin/env dl
 
-icon.png
-	https://icons.iconarchive.com/icons/rob-sanders/gear/128/gear-icon.png
-
 mesa-demos-${UB_VERSION}.tar.gz mesa-demos-1e0bf39/
     git+https://salsa.debian.org/xorg-team/app/mesa-demos.git@1e0bf39
 

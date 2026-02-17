@@ -24,6 +24,9 @@ lilypond
 libmp3splt
 radiotray
 radiotray-qt
+gnomeradio
+easytag
+shotwell
 python3-netifaces
 pyradio
 subtitleeditor

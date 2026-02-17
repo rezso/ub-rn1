@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-libvirt-glib-${UB_VERSION}.tar.xz libvirt-glib-${UB_VERSION}/
-	https://libvirt.org/sources/glib/

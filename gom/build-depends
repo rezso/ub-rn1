@@ -1,6 +1,0 @@
-gdk-pixbuf-dev
-gobject-introspection-dev
-itstool
-meson
-python3-pygobject
-sqlite-dev

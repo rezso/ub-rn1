@@ -4,11 +4,8 @@ git submodule update --init --recursive
 
 ln -s /usr/share/doc/Licenses/GPL-3 LICENSE
 
-patch -Np1 < "$UB_SRCDIR"/patches/cosmic-greeter-display-manager.patch.skip
-patch -Np1 < "$UB_SRCDIR"/patches/cosmic-greeter-pam.patch.skip
-
-# nincs flatpak
-# sed -i '/cosmic-store/d' justfile
-# rm -Rf cosmic-store
+# nincs greetd
+sed -i '/cosmic-greeter/d' justfile
+rm -Rf cosmic-greeter
 
 just build

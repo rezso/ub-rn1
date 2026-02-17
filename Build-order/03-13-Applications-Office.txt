@@ -1,6 +1,7 @@
 osm-gps-map
 gramps
 galculator
+glabels
 homebank
 mmex
 zbar

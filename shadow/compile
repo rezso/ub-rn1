@@ -9,6 +9,7 @@ ub_configure \
 	--with-group-name-max-length=32 \
 	--with-gnu-ld \
 	--disable-account-tools-setuid \
+	--disable-logind \
 	--disable-man \
 	--without-audit \
 	--without-libbsd \

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-localsearch-${UB_VERSION}.tar.xz localsearch-${UB_VERSION}/
-    https://download.gnome.org/sources/localsearch/${UB_VERSION_HEAD2}/

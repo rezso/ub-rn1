@@ -1,7 +1,7 @@
 diff -Naur a/src/useradd.c b/src/useradd.c
---- a/src/useradd.c	2025-04-17 03:08:08.351326747 +0200
-+++ b/src/useradd.c	2025-04-17 03:09:32.623528852 +0200
-@@ -171,6 +171,7 @@
+--- a/src/useradd.c	2026-02-05 05:22:52.827225694 +0100
++++ b/src/useradd.c	2026-02-05 05:24:27.823597548 +0100
+@@ -180,6 +180,7 @@
      Mflg = false,		/* do not create user's home directory even if CREATE_HOME is set */
      Nflg = true,		/* do not create a group having the same name as the user, but add the user to def_group (or the group specified with -g) */
      oflg = false,		/* permit non-unique user ID to be specified with -u */
@@ -9,7 +9,7 @@ diff -Naur a/src/useradd.c b/src/useradd.c
      rflg = false,		/* create a system account */
      sflg = false,		/* shell program for new account */
      subvolflg = false,		/* create subvolume home on BTRFS */
-@@ -911,6 +912,7 @@
+@@ -909,6 +910,7 @@
  	(void) fputs (_("  -o, --non-unique              allow to create users with duplicate\n"
  	                "                                (non-unique) UID\n"), usageout);
  	(void) fputs (_("  -p, --password PASSWORD       encrypted password of the new account\n"), usageout);
@@ -17,7 +17,7 @@ diff -Naur a/src/useradd.c b/src/useradd.c
  	(void) fputs (_("  -r, --system                  create a system account\n"), usageout);
  	(void) fputs (_("  -R, --root CHROOT_DIR         directory to chroot into\n"), usageout);
  	(void) fputs (_("  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files\n"), usageout);
-@@ -1163,6 +1165,7 @@
+@@ -1161,6 +1163,7 @@
  			{"no-user-group",  no_argument,       NULL, 'N'},
  			{"non-unique",     no_argument,       NULL, 'o'},
  			{"password",       required_argument, NULL, 'p'},
@@ -25,7 +25,7 @@ diff -Naur a/src/useradd.c b/src/useradd.c
  			{"system",         no_argument,       NULL, 'r'},
  			{"root",           required_argument, NULL, 'R'},
  			{"prefix",         required_argument, NULL, 'P'},
-@@ -1176,7 +1179,7 @@
+@@ -1174,7 +1177,7 @@
  			{NULL, 0, NULL, '\0'}
  		};
  		while ((c = getopt_long (argc, argv,
@@ -34,7 +34,7 @@ diff -Naur a/src/useradd.c b/src/useradd.c
  #ifdef WITH_SELINUX
  		                         "Z:"
  #endif				/* WITH_SELINUX */
-@@ -1357,6 +1360,9 @@
+@@ -1355,6 +1358,9 @@
  				}
  				user_pass = optarg;
  				break;
@@ -44,7 +44,7 @@ diff -Naur a/src/useradd.c b/src/useradd.c
  			case 'r':
  				rflg = true;
  				break;
-@@ -2342,7 +2348,7 @@
+@@ -2364,7 +2370,7 @@
  	fd = open(file, O_CREAT | O_WRONLY | O_TRUNC | O_EXCL, 0);
  	free(file);
  
@@ -53,7 +53,7 @@ diff -Naur a/src/useradd.c b/src/useradd.c
  		perror(_("Creating mailbox file"));
  		return;
  	}
-@@ -2350,8 +2356,8 @@
+@@ -2372,8 +2378,8 @@
  	gid = user_gid;
  	mode = 0600;
  
@@ -64,7 +64,7 @@ diff -Naur a/src/useradd.c b/src/useradd.c
  	{
  		perror(_("Setting mailbox file permissions"));
  	}
-@@ -2515,6 +2521,9 @@
+@@ -2544,6 +2550,9 @@
  	 * Start with a quick check to see if the user exists.
  	 */
  	if (prefix_getpwnam (user_name) != NULL) { /* local, no need for xgetpwnam */
@@ -72,9 +72,9 @@ diff -Naur a/src/useradd.c b/src/useradd.c
 +			exit (E_SUCCESS);
 +		}
  		fprintf (stderr, _("%s: user '%s' already exists\n"), Prog, user_name);
- 		fail_exit (E_NAME_IN_USE);
+ 		fail_exit (E_NAME_IN_USE, process_selinux);
  	}
-@@ -2528,6 +2537,9 @@
+@@ -2557,6 +2566,9 @@
  	if (Uflg) {
  		/* local, no need for xgetgrnam */
  		if (prefix_getgrnam (user_name) != NULL) {
@@ -84,7 +84,7 @@ diff -Naur a/src/useradd.c b/src/useradd.c
  			fprintf (stderr,
  			         _("%s: group %s exists - if you want to add this user to that group, use -g.\n"),
  			         Prog, user_name);
-@@ -2651,10 +2663,12 @@
+@@ -2680,10 +2692,12 @@
  			copy_tree (def_usrtemplate, prefix_user_home, false, true,
  			           (uid_t)-1, user_id, (gid_t)-1, user_gid);
  		} else {

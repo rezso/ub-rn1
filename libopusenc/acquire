@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 libopusenc-${UB_VERSION}.tar.gz libopusenc-${UB_VERSION}/
-	https://archive.mozilla.org/pub/opus/
+	https://github.com/xiph/libopusenc/releases/download/v${UB_VERSION}/

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-dLeyna-v${UB_VERSION}.tar.bz2 dLeyna-v${UB_VERSION}/
-	https://gitlab.gnome.org/World/dLeyna/-/archive/v${UB_VERSION}/

@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	-Dplugin_map=false \
-    -Dplugin_postasa=false

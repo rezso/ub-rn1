@@ -1,9 +1,3 @@
 #!/bin/sh -eux
 
 just install
-
-# cosmic-greeter
-mkdir -p ${UB_INSTALLDIR}/etc/pam.d
-install -Dm0644 cosmic-greeter/debian/cosmic-greeter.service ${UB_INSTALLDIR}/usr/lib/systemd/system/cosmic-greeter.service
-install -Dm0644 cosmic-greeter/debian/cosmic-greeter-daemon.service ${UB_INSTALLDIR}/usr/lib/systemd/system/cosmic-greeter-daemon.service
-install -Dm0644 cosmic-greeter/debian/cosmic-greeter.pam ${UB_INSTALLDIR}/etc/pam.d/cosmic-greeter

@@ -1,15 +1,15 @@
 diff -Naur a/src/useradd.c b/src/useradd.c
---- a/src/useradd.c	2025-04-17 03:01:42.046104190 +0200
-+++ b/src/useradd.c	2025-04-17 03:04:09.034626220 +0200
-@@ -2312,7 +2312,6 @@
+--- a/src/useradd.c	2026-02-05 05:13:59.281134231 +0100
++++ b/src/useradd.c	2026-02-05 05:20:29.570664134 +0100
+@@ -2329,7 +2329,6 @@
  	gid_t         gid;
  	mode_t        mode;
  	const char    *spool;
 -	struct group  *gr;
+ 	bool          process_selinux;
  
- 	if (!strcaseeq(create_mail_spool, "yes"))
- 		return;
-@@ -2348,16 +2347,8 @@
+ 	process_selinux = !flags->chroot && !flags->prefix;
+@@ -2370,16 +2369,8 @@
  		return;
  	}
  

@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-mkdir -p ${UB_INSTALLDIR}/{usr/bin,/usr/lib/node_modules/typescript}
-ln -s /usr/lib/node_modules/typescript/bin/{tsc,tsserver} ${UB_INSTALLDIR}/usr/bin
-rsync -r --exclude=.gitattributes bin lib package.json ${UB_INSTALLDIR}/usr/lib/node_modules/typescript

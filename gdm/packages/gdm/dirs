@@ -1,4 +1,0 @@
-/etc/dconf/db/gdm.d/locks
-/run/gdm
-/usr/share/gdm/autostart/LoginWindow
-/var/log/gdm

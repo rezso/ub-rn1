@@ -2,6 +2,5 @@
 
 ub_install
 
-mv icon.png ${UB_INSTALLDIR}/usr/share/pixmaps/mesa-demos.png
 mkdir -p $UB_INSTALLDIR/usr/share/man/man1
 cp debian/*.1 $UB_INSTALLDIR/usr/share/man/man1/

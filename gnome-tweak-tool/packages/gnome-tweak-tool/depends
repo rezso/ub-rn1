@@ -1,7 +1,0 @@
-gnome-settings-daemon
-gsettings-desktop-schemas
-gtk4
-libadwaita
-libgudev
-nautilus
-python3-pygobject

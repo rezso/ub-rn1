@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz greetd-${UB_VERSION}/
-	https://git.sr.ht/~kennylevinsen/greetd/archive/

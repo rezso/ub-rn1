@@ -2,7 +2,6 @@ brotli-dev
 c-ares-dev
 db4-dev
 flex
-geoip-dev
 gnutls-dev
 krb5-dev
 libcap-dev

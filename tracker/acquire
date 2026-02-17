@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-tinysparql-${UB_VERSION}.tar.xz tinysparql-${UB_VERSION}/
-    https://download.gnome.org/sources/tinysparql/${UB_VERSION_HEAD2}/

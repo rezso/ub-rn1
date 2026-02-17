@@ -1,7 +1,5 @@
 #!/bin/sh -eux
 
-# sed -ri 's/^=item ([0-9]+)/=item C<\1>/' doc/{apps,crypto,ssl}/*.pod
-
 # A -O3 veszélyes
 ub_replace -O3 -O2 Configure
 

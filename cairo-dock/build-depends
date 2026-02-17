@@ -1,9 +1,0 @@
-curl-dev
-dbus-glib-dev
-glu-dev
-gtk3-dev
-libglvnd-dev
-librsvg-dev
-libxml2-dev
-libxtst-dev
-wayland-dev

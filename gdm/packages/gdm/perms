@@ -1,6 +1,0 @@
-201       201       1770  /var/lib/gdm
-201       201        600  /var/lib/gdm/.config/pulse/default.pa
-201       201        700  /var/lib/gdm/.config
-201       201        700  /var/lib/gdm/.config/pulse
-root      201        711  /run/gdm
-root      201        711  /var/log/gdm

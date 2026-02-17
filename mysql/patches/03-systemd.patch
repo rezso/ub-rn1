@@ -1,12 +1,11 @@
 diff -Naur a/cmake/systemd.cmake b/cmake/systemd.cmake
---- a/cmake/systemd.cmake	2024-11-11 08:18:41.000000000 +0100
-+++ b/cmake/systemd.cmake	2025-03-18 02:20:33.509524437 +0100
-@@ -50,8 +50,7 @@
-           SET(SYSTEMD_SCRIPTS ${SYSTEMD_SCRIPTS} galera_new_cluster galera_recovery)
+--- a/cmake/systemd.cmake	2025-11-13 18:00:48.000000000 +0100
++++ b/cmake/systemd.cmake	2026-02-05 22:26:14.163286969 +0100
+@@ -50,7 +50,7 @@
+           SET(SYSTEMD_SCRIPTS ${SYSTEMD_SCRIPTS} galera_recovery)
          ENDIF()
          IF(DEB)
--          SET(SYSTEMD_EXECSTARTPRE "ExecStartPre=+/usr/bin/install -m 755 -o mysql -g root -d /var/run/mysqld")
--          SET(SYSTEMD_EXECSTARTPOST "ExecStartPost=+/etc/mysql/debian-start")
+-          SET(SYSTEMD_EXECSTARTPOST "ExecStartPost=!/etc/mysql/debian-start")
 +          SET(SYSTEMD_EXECSTARTPOST "ExecStartPost=/usr/bin/mysqld-ping")
          ENDIF()
  	IF(URING_FOUND)

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-libvirt-${UB_VERSION}.tar.xz libvirt-${UB_VERSION}/
-	https://libvirt.org/sources/

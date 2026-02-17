@@ -1,8 +1,0 @@
-gobject-introspection-dev
-gperf
-gtk4-dev
-json-glib-dev
-libsoup3-dev
-protobuf-c-dev
-sqlite-dev
-vala

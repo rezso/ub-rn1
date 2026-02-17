@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-gv-${UB_VERSION}.tar.gz gv-${UB_VERSION}/
-	https://ftp.gnu.org/gnu/gv/

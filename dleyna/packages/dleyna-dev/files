@@ -1,4 +1,0 @@
-	/usr/include
-@	/usr/lib/dleyna*/*.so
-	/usr/lib/pkgconfig
-@	/usr/lib/*.so

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-nginx-${UB_VERSION}.tar.gz nginx-${UB_VERSION}/
-	https://nginx.org/download/

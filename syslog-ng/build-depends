@@ -1,9 +1,7 @@
 curl-dev
-geoip-dev
 glib-dev
 json-c-dev
 libcap-dev
-libdbi
 libesmtp-dev
 libnet-dev
 openssl-dev

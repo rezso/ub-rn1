@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-v${UB_VERSION}.tar.gz enchant-${UB_VERSION}/
-	https://github.com/AbiWord/enchant/archive/
+enchant-${UB_VERSION}.tar.gz enchant-${UB_VERSION}/
+	https://github.com/rrthomas/enchant/releases/download/v${UB_VERSION}/

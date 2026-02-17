@@ -2,5 +2,6 @@
 
 ub_compile \
     --disable-doc \
+    --enable-openssl-compatibility \
 	--with-default-trust-store-pkcs11="pkcs11:model=p11-kit-trust;manufacturer=PKCS%2311%20Kit" \
 	--with-default-trust-store-file="/etc/ssl/certs/ca-certificates.crt"

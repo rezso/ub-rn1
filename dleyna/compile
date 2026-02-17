@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-    --wrap-mode=nodownload \
-    -Dman_pages=false \
-    -Ddocs=false

@@ -6,5 +6,4 @@ ub_compile \
 	--enable-iproute2 \
 	--enable-plugins \
 	--enable-systemd \
-    --enable-x509-alt-username \
     --with-crypto-library=openssl
