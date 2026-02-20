@@ -7,3 +7,11 @@ cp -a hu_HU/hu_HU.dic "$UB_INSTALLDIR"/usr/share/hunspell/hu_HU.dic
 
 ln -s hu_HU.aff "$UB_INSTALLDIR"/usr/share/hunspell/default.aff
 ln -s hu_HU.dic "$UB_INSTALLDIR"/usr/share/hunspell/default.dic
+
+# the symlinks
+install -dm755 "$UB_INSTALLDIR/usr/share/myspell/dicts"
+pushd "$UB_INSTALLDIR/usr/share/myspell/dicts"
+    for file in "$UB_INSTALLDIR"/usr/share/hunspell/*; do
+        ln -sv "/usr/share/hunspell/$(basename "$file")" .
+    done
+popd
