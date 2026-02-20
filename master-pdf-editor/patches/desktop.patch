@@ -1,6 +1,6 @@
-diff -Naur a/usr/share/applications/net.code-industry.masterpdfeditor5.desktop b/usr/share/applications/net.code-industry.masterpdfeditor5.desktop
---- a/usr/share/applications/net.code-industry.masterpdfeditor5.desktop	2025-04-03 13:01:13.000000000 +0200
-+++ b/usr/share/applications/net.code-industry.masterpdfeditor5.desktop	2025-04-04 23:16:59.187512098 +0200
+diff -Naur a/masterpdfeditor5.desktop b/masterpdfeditor5.desktop
+--- a/masterpdfeditor5.desktop	2026-02-18 10:03:12.000000000 +0100
++++ b/masterpdfeditor5.desktop	2026-02-20 18:58:26.744385626 +0100
 @@ -1,10 +1,10 @@
  [Desktop Entry]
  Name=Master PDF Editor 5
@@ -14,6 +14,4 @@ diff -Naur a/usr/share/applications/net.code-industry.masterpdfeditor5.desktop b
 +Icon=masterpdfeditor5
  Type=Application
  Categories=Office;Graphics;
--MimeType=application/pdf;application/x-bzpdf;application/x-gzpdf;
-\ Nincs új sor a fájl végén
-+MimeType=application/pdf;application/x-bzpdf;application/x-gzpdf;
+ MimeType=application/pdf;application/x-bzpdf;application/x-gzpdf;
