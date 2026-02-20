@@ -17,6 +17,7 @@ packagekit-dev
 pipewire-dev
 pulseaudio-dev
 rust
+sccache
 systemd-dev
 wayland-dev
 x.org-xwayland

@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz sccache-${UB_VERSION}/
+	https://github.com/mozilla/sccache/archive/refs/tags/

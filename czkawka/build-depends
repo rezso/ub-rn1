@@ -3,3 +3,4 @@ graphene-dev
 gtk4-dev
 meson
 rust
+sccache

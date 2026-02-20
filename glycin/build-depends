@@ -8,4 +8,5 @@ libjxl-dev
 librsvg-dev
 libseccomp-dev
 rust
+sccache
 vala

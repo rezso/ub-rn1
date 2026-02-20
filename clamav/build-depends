@@ -8,4 +8,5 @@ ncurses-dev
 openssl-dev
 pcre2-dev
 rust
+sccache
 systemd-dev

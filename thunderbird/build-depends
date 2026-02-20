@@ -17,6 +17,7 @@ nspr-dev
 nss-dev
 pulseaudio-dev
 rust
+sccache
 sqlite-dev
 startup-notification-dev
 wayland-dev
