@@ -3,6 +3,7 @@ layer-shell-qt-dev
 libkscreen-dev
 libplasma-dev
 libxi-dev
+plasma5support-dev
 qt6-dev
 wayland-dev
 wayland-protocols

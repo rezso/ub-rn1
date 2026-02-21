@@ -2,5 +2,6 @@ gpsd-dev
 kf6-dev
 libplasma-dev
 phonon-dev
+plasma5support-dev
 qt6-dev
 qt6-qtwebengine-dev
