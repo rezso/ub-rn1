@@ -1,18 +1,18 @@
 diff -Naur a/wallpapers/image/imagepackage/contents/config/main.xml b/wallpapers/image/imagepackage/contents/config/main.xml
---- a/wallpapers/image/imagepackage/contents/config/main.xml	2022-10-06 14:39:00.000000000 +0200
-+++ b/wallpapers/image/imagepackage/contents/config/main.xml	2022-10-12 23:45:04.036180891 +0200
-@@ -16,7 +16,7 @@
-     </entry>
-     <entry name="Image" type="String">
-       <label>Wallpaper image path or wallpaper name</label>
+--- a/wallpapers/image/imagepackage/contents/config/main.xml	2026-02-12 11:09:48.000000000 +0100
++++ b/wallpapers/image/imagepackage/contents/config/main.xml	2026-02-21 03:12:48.350927345 +0100
+@@ -26,7 +26,7 @@
+         - if no fragment is specified, plasma will switch between dark and light
+           images depending on the currently used color scheme
+       </tooltip>
 -      <default></default>
 +      <default>/usr/share/backgrounds/UHU/abstract-g985341857.png</default>
      </entry>
      <entry name="PreviewImage" type="String">
        <label>Wallpaper preview image path</label>
 diff -Naur a/wallpapers/image/slideshowpackage/contents/config/main.xml b/wallpapers/image/slideshowpackage/contents/config/main.xml
---- a/wallpapers/image/slideshowpackage/contents/config/main.xml	2022-10-06 14:39:01.000000000 +0200
-+++ b/wallpapers/image/slideshowpackage/contents/config/main.xml	2022-10-12 23:45:26.788289484 +0200
+--- a/wallpapers/image/slideshowpackage/contents/config/main.xml	2026-02-12 11:09:48.000000000 +0100
++++ b/wallpapers/image/slideshowpackage/contents/config/main.xml	2026-02-21 03:13:17.643030977 +0100
 @@ -16,7 +16,7 @@
      </entry>
      <entry name="Image" type="String">

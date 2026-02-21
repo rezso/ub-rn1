@@ -96,6 +96,7 @@ kf6-dev
 
 # plasma
 
+kquickimageeditor # spectacle
 kirigami-addons
 knighttime
 plasma-activities
