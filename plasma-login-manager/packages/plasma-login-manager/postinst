@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ ! -L /etc/systemd/system/display-manager.service ]; then
+systemctl -f enable plasmalogin
+systemctl set-default graphical.target
+fi

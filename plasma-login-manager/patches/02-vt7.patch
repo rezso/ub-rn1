@@ -1,0 +1,12 @@
+diff -Naur a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2026-01-13 14:59:44.000000000 +0100
++++ b/CMakeLists.txt	2026-01-21 18:55:29.197167686 +0100
+@@ -88,7 +88,7 @@
+ set(SYSTEM_CONFIG_DIR           "${CMAKE_INSTALL_PREFIX}/lib/plasmalogin/plasmalogin.conf.d"      CACHE PATH      "Path of the system plasmalogin config directory")
+ set(LOG_FILE                    "${CMAKE_INSTALL_FULL_LOCALSTATEDIR}/log/plasmalogin.log"  CACHE PATH      "Path of the plasmalogin log file")
+ set(DBUS_CONFIG_FILENAME        "org.freedesktop.DisplayManager.conf"               CACHE STRING    "Name of the plasmalogin config file")
+-set(PLASMALOGIN_INITIAL_VT             "1"                                                 CACHE STRING    "Initial tty to use")
++set(PLASMALOGIN_INITIAL_VT             "7"                                                 CACHE STRING    "Initial tty to use")
+ 
+ 
+ # Autodetect UID_MIN and UID_MAX from /etc/login.defs

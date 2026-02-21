@@ -1,0 +1,5 @@
+#!/bin/bash
+
+systemctl -s stop plasmalogin
+systemctl -f disable plasmalogin
+systemctl set-default multi-user.target

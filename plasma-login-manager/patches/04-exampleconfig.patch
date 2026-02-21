@@ -1,0 +1,49 @@
+diff -Naur a/src/daemon/CMakeLists.txt b/src/daemon/CMakeLists.txt
+--- a/src/daemon/CMakeLists.txt	2026-01-27 16:19:06.000000000 +0100
++++ b/src/daemon/CMakeLists.txt	2026-01-31 00:15:40.376404652 +0100
+@@ -58,3 +58,12 @@
+                       PkgConfig::LIBSYSTEMD)
+ 
+ install(TARGETS plasmalogin DESTINATION "${CMAKE_INSTALL_BINDIR}")
++
++# Generate and install the default config file
++add_custom_command(COMMAND plasmalogin --example-config > "${CMAKE_BINARY_DIR}/plasmalogin.conf"
++    OUTPUT "${CMAKE_BINARY_DIR}/plasmalogin.conf"
++    COMMENT "Generate default plasmalogin configuration file"
++    DEPENDS plasmalogin
++)
++add_custom_target(generate_config_file ALL DEPENDS "${CMAKE_BINARY_DIR}/plasmalogin.conf")
++install(FILES "${CMAKE_BINARY_DIR}/plasmalogin.conf" DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/plasmalogin/plasmalogin.conf.d")
+diff -Naur a/src/daemon/DaemonApp.cpp b/src/daemon/DaemonApp.cpp
+--- a/src/daemon/DaemonApp.cpp	2026-01-27 16:19:06.000000000 +0100
++++ b/src/daemon/DaemonApp.cpp	2026-01-31 00:15:40.364404630 +0100
+@@ -16,6 +16,8 @@
+ 
+ #include "DaemonApp.h"
+ 
++#include "Configuration.h"
++#include "Constants.h"
+ #include "DisplayManager.h"
+ #include "SeatManager.h"
+ #include "SignalHandler.h"
+@@ -107,11 +109,19 @@
+     if (arguments.contains(QStringLiteral("--help")) || arguments.contains(QStringLiteral("-h"))) {
+         std::cout << "Usage: plasmalogin [options]\n"
+                   << "Options: \n"
+-                  << "  --test-mode         Start daemon in test mode" << std::endl;
++                  << "  --test-mode         Start daemon in test mode" << std::endl
++                  << "  --example-config    Print the complete current configuration to stdout" << std::endl;
+ 
+         return EXIT_FAILURE;
+     }
+ 
++    // spit a complete config file on stdout and quit on demand
++    if (arguments.contains(QStringLiteral("--example-config"))) {
++        PLASMALOGIN::mainConfig.wipe();
++        QTextStream(stdout) << PLASMALOGIN::mainConfig.toConfigFull();
++        return EXIT_SUCCESS;
++    }
++
+     // create application
+     PLASMALOGIN::DaemonApp app(argc, argv);
+ 

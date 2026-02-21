@@ -145,6 +145,7 @@ spectacle
 plasma-systemmonitor
 plasma-browser-integration
 plasma-disks
+plasma-login-manager
 
 # apps
 

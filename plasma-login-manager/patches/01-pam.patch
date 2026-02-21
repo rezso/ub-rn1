@@ -1,0 +1,43 @@
+diff -Naur a/data/pam/arch/plasmalogin b/data/pam/arch/plasmalogin
+--- a/data/pam/arch/plasmalogin	2026-01-13 14:59:44.000000000 +0100
++++ b/data/pam/arch/plasmalogin	2026-01-21 18:47:12.863420497 +0100
+@@ -3,16 +3,16 @@
+ # SPDX-License-Identifier: CC0-1.0
+ # SPDX-FileCopyrightText: none
+ 
+-auth        include     system-login
++auth        include     system-auth
+ -auth       optional    pam_gnome_keyring.so
+ -auth       optional    pam_kwallet5.so
+ 
+-account     include     system-login
++account     include     system-auth
+ 
+-password    include     system-login
++password    include     system-auth
+ -password   optional    pam_gnome_keyring.so    use_authtok
+ 
+ session     optional    pam_keyinit.so          force revoke
+-session     include     system-login
++session     include     system-auth
+ -session    optional    pam_gnome_keyring.so    auto_start
+ -session    optional    pam_kwallet5.so         auto_start
+diff -Naur a/data/pam/arch/plasmalogin-autologin b/data/pam/arch/plasmalogin-autologin
+--- a/data/pam/arch/plasmalogin-autologin	2026-01-13 14:59:44.000000000 +0100
++++ b/data/pam/arch/plasmalogin-autologin	2026-01-21 18:46:00.075165448 +0100
+@@ -8,10 +8,12 @@
+ auth        required    pam_shells.so
+ auth        required    pam_nologin.so
+ auth        required    pam_permit.so
++auth        [success=1 default=ignore]  pam_succeed_if.so user ingroup users
++auth        required    pam_unix.so
+ -auth       optional    pam_gnome_keyring.so
+ -auth       optional    pam_kwallet5.so
+-account     include     system-local-login
+-password    include     system-local-login
+-session     include     system-local-login
++account     include     system-auth
++password    include     system-auth
++session     include     system-auth
+ -session    optional    pam_gnome_keyring.so auto_start
+ -session    optional    pam_kwallet5.so auto_start

@@ -1,0 +1,1 @@
+plasmalogin  304  304  -d /var/lib/plasmalogin -s /usr/sbin/nologin

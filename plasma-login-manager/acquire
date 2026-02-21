@@ -1,0 +1,7 @@
+#!/usr/bin/env dl
+
+#plasma-login-manager-${UB_VERSION}.tar.xz plasma-login-manager-${UB_VERSION}/
+#	https://download.kde.org/stable/plasma/${UB_VERSION_HEAD3}/
+
+v${UB_VERSION}.tar.gz plasma-login-manager-${UB_VERSION}/
+	https://github.com/KDE/plasma-login-manager/archive/refs/tags/
