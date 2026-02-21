@@ -2,4 +2,5 @@
 
 ub_compile \
     -Dgtk_doc=false \
-    -Ddocumentation=false
+    -Ddocumentation=false \
+    -Dman=false

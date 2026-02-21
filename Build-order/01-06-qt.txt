@@ -18,7 +18,6 @@ openconnect
 libsoup3
 libosinfo
 osinfo-db-tools
-geocode-glib
 geoclue
 ruby
 gstreamer
@@ -48,7 +47,6 @@ xkb-utils
 x.org-utils
 xmldiff
 sox
-libpst
 bogofilter
 highlight
 guile2.2

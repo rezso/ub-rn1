@@ -139,7 +139,6 @@ startup-notification
 libmicrohttpd
 dnsmasq
 libgtop2
-libmediaart
 libdbusmenu-gtk3
 sound-theme-freedesktop
 ppp
