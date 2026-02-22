@@ -1,0 +1,42 @@
+diff -Naur a/gdk-pixbuf/gdk-pixbuf-io.c b/gdk-pixbuf/gdk-pixbuf-io.c
+--- a/gdk-pixbuf/gdk-pixbuf-io.c	2026-01-29 10:07:47.000000000 +0100
++++ b/gdk-pixbuf/gdk-pixbuf-io.c	2026-02-22 03:11:09.897648921 +0100
+@@ -679,8 +679,6 @@
+         load_one_builtin_module (tga);
+         load_one_builtin_module (tiff);
+         load_one_builtin_module (webp);
+-        load_one_builtin_module (xbm);
+-        load_one_builtin_module (xpm);
+ #endif
+ #ifdef INCLUDE_android
+ 	load_one_builtin_module (jpeg);
+@@ -755,8 +753,6 @@
+ module (glycin_tga);
+ module (glycin_tiff);
+ module (glycin_webp);
+-module (glycin_xbm);
+-module (glycin_xpm);
+ 
+ module (android_jpeg);
+ module (android_png);
+@@ -819,8 +815,6 @@
+         try_module (tga,     glycin_tga);
+         try_module (tiff,    glycin_tiff);
+         try_module (webp,    glycin_webp);
+-        try_module (xbm,     glycin_xbm);
+-        try_module (xpm,     glycin_xpm);
+ #endif
+ #ifdef INCLUDE_android
+ 	try_module (jpeg,android_jpeg);
+diff -Naur a/gdk-pixbuf/meson.build b/gdk-pixbuf/meson.build
+--- a/gdk-pixbuf/meson.build	2026-01-29 10:07:47.000000000 +0100
++++ b/gdk-pixbuf/meson.build	2026-02-22 03:06:36.753251277 +0100
+@@ -234,8 +234,6 @@
+     'tga',
+     'tiff',
+     'webp',
+-    'xbm',
+-    'xpm',
+   ]
+   glycin_base_loader_sources = [ 'io-glycin-utils.c' ]
+ 
