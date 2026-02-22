@@ -99,7 +99,6 @@ libsmi
 libsoxr
 libspiro
 libtinyxml
-libupnp
 liburcu
 libutf8proc
 libuv
@@ -131,7 +130,6 @@ poppler-data
 potrace
 pptpclient
 procmail
-protobuf
 psacct
 pugixml
 pwgen

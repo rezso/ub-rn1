@@ -1,8 +1,0 @@
-#!/bin/sh -eux
-
-# rm autogen.sh
-ub_compile \
-	--enable-wayland \
-	--disable-python2 \
-	--disable-gtk2 \
-	--disable-appindicator \

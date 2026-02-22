@@ -16,5 +16,4 @@ libxt-dev
 rest-dev
 sqlite-dev
 systemd-dev
-telepathy-glib-dev
 vala

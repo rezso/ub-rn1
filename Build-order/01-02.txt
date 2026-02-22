@@ -19,7 +19,6 @@ xvinfo
 xcb-util-cursor
 xdpyinfo
 xdriinfo
-libxaw3d
 xfontsel
 xsetroot
 xfd
@@ -118,7 +117,6 @@ libimobiledevice
 netpbm # lilypond build-depends
 djvulibre
 java-jre
-telepathy-glib
 libvpx
 gd
 libwmf

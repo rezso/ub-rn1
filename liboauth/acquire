@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-liboauth-${UB_VERSION}.tar.gz liboauth-${UB_VERSION}/
-	https://downloads.sourceforge.net/liboauth/

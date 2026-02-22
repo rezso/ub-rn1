@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	-Dvapi=true \
-	-Ddocs=false \
-	-Dman=false \
-	-Dtests=false

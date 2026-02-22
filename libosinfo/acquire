@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-libosinfo-${UB_VERSION}.tar.xz libosinfo-${UB_VERSION}/
-	https://releases.pagure.org/libosinfo/

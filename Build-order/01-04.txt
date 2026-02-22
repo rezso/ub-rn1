@@ -12,7 +12,6 @@ libofx
 cracklib
 libpwquality
 mp3info
-liboauth
 libraw
 libpano13
 libva-intel-driver
@@ -56,7 +55,6 @@ gtkmm4
 podofo
 libao
 cdrdao
-colord-gtk
 radeontool
 vbetool
 mesa-demos
@@ -67,11 +65,9 @@ gexiv2
 gspell
 polkit-gnome
 gucharmap
-gtk-vnc
 vte
 xterm
 graphicsmagick
-ibus
 spice-protocol
 libde265
 libv4l

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-libXaw3d-$UB_VERSION.tar.xz libXaw3d-$UB_VERSION/
-	https://www.x.org/releases/individual/lib/

@@ -1,9 +1,0 @@
-cyrus-sasl2-dev
-gnutls-dev
-gobject-introspection-dev
-gtk3-dev
-libunistring-dev
-meson
-pulseaudio-dev
-systemd-dev
-vala
