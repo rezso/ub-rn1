@@ -6,7 +6,7 @@ diff -Naur orig/schemas/org.mate.background.gschema.xml.in patched/schemas/org.m
      </key>
      <key name="picture-filename" type="s">
 -      <default>'@datadir@/backgrounds/mate/desktop/Stripes.png'</default>
-+      <default>'/usr/share/backgrounds/UHU/abstract-g985341857.png'</default>
++      <default>'/usr/share/backgrounds/UHU/abstract-1779632.jpg'</default>
        <summary>Picture Filename</summary>
        <description>File to use for the background image.</description>
      </key>
