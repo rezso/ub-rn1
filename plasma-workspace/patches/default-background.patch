@@ -6,7 +6,7 @@ diff -Naur a/wallpapers/image/imagepackage/contents/config/main.xml b/wallpapers
            images depending on the currently used color scheme
        </tooltip>
 -      <default></default>
-+      <default>/usr/share/backgrounds/UHU/abstract-1779632.jpg</default>
++      <default>/usr/share/backgrounds/UHU/abstract-1779632.png</default>
      </entry>
      <entry name="PreviewImage" type="String">
        <label>Wallpaper preview image path</label>
@@ -18,7 +18,7 @@ diff -Naur a/wallpapers/image/slideshowpackage/contents/config/main.xml b/wallpa
      <entry name="Image" type="String">
        <label>Wallpaper image path or wallpaper name</label>
 -      <default></default>
-+      <default>/usr/share/backgrounds/UHU/abstract-1779632.jpg</default>
++      <default>/usr/share/backgrounds/UHU/abstract-1779632.png</default>
      </entry>
      <entry name="FillMode" type="int">
        <label>Sizing, cropping and positioning of the wallpaper image</label>
