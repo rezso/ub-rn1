@@ -33,7 +33,6 @@ uhu-pixmaps
 clawsker
 dialog
 psmisc
-xdialog
 xdm
 fontforge
 fonts-unicode

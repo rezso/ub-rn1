@@ -31,7 +31,6 @@ xchm
 rdiff-backup
 cifs-utils
 gkrellm
-gtklp
 gammu
 encfs
 simple-screen-recorder

@@ -10,7 +10,6 @@ grsync
 speedtest-cli
 irssi
 stunnel
-gftp
 mtr
 gufw
 fwbuilder

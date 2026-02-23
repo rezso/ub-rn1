@@ -7,6 +7,3 @@ avfs
 worker
 mc
 ytree
-tuxcmd
-tuxcmd-modules
-tuxcmd-modules-unrar

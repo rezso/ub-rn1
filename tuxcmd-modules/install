@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-mkdir -p $UB_INSTALLDIR/usr/lib/tuxcmd
-mv *.so $UB_INSTALLDIR/usr/lib/tuxcmd/

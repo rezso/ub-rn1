@@ -1,1 +1,0 @@
-sflist tuxcmd tuxcmd | sed s/-dev//g | splitver '^tuxcmd-([0*9.]+)' | sort -V | tail -n 1
