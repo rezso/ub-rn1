@@ -1,0 +1,9 @@
+gsettings-desktop-schemas
+mate-desktop
+plasma-workspace
+xfdesktop
+-
+grub
+lightdm-gtk-greeter
+lightdm-qt5-greeter
+calamares

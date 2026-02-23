@@ -10,7 +10,7 @@ diff -Naur a/src/modules/grubcfg/grubcfg.conf b/src/modules/grubcfg/grubcfg.conf
 +    GRUB_GFXPAYLOAD_LINUX: "keep"
      GRUB_TERMINAL_OUTPUT: "console"
      GRUB_DISABLE_RECOVERY: true
-+    GRUB_BACKGROUND: "/usr/share/backgrounds/UHU/uhu-grub-bg.png"
++    GRUB_BACKGROUND: "/usr/share/backgrounds/UHU/uhu-linux-blur.png"
  
  # Set to true to force defaults to be used even when not overwriting
  always_use_defaults: false
