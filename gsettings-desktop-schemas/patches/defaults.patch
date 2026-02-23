@@ -6,7 +6,7 @@ diff -Naur a/schemas/org.gnome.desktop.background.gschema.xml.in b/schemas/org.g
      </key>
      <key name="picture-uri" type="s">
 -      <default>'file://@datadir@/backgrounds/gnome/adwaita-l.jxl'</default>
-+      <default>'file://@datadir@/backgrounds/UHU/uhu_linux_ubk.jpg'</default>
++      <default>'file://@datadir@/backgrounds/UHU/abstract-1779632.png'</default>
        <summary>Picture URI</summary>
        <description>
          URI to use for the background image. Note that the backend only supports
@@ -15,7 +15,7 @@ diff -Naur a/schemas/org.gnome.desktop.background.gschema.xml.in b/schemas/org.g
      </key>
      <key name="picture-uri-dark" type="s">
 -      <default>'file://@datadir@/backgrounds/gnome/adwaita-d.jxl'</default>
-+      <default>'file://@datadir@/backgrounds/UHU/uhu_linux_ubk.jpg'</default>
++      <default>'file://@datadir@/backgrounds/UHU/abstract-1779632.png'</default>
        <summary>Picture URI (dark)</summary>
        <description>
          URI to use for the background image. Note that the backend only supports
@@ -48,7 +48,7 @@ diff -Naur a/schemas/org.gnome.desktop.screensaver.gschema.xml.in b/schemas/org.
      </key>
      <key name="picture-uri" type="s">
 -      <default>'file://@datadir@/backgrounds/gnome/adwaita-timed.xml'</default>
-+      <default>'file://@datadir@/backgrounds/UHU/uhu_linux_ubk.jpg'</default>
++      <default>'file://@datadir@/backgrounds/UHU/abstract-1779632.png'</default>
        <summary>Picture URI</summary>
        <description>
          URI to use for the background image. Note that the backend only supports
