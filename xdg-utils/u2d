@@ -1,1 +1,1 @@
-u2d https://portland.freedesktop.org/download/
+urllist https://gitlab.freedesktop.org/xdg/xdg-utils/-/tags | grep -E '^v[0-9]+\.' | sed -e 's/v//' | sort -V | tail -n 1

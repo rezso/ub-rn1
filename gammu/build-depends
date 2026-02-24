@@ -1,5 +1,6 @@
 bluez-dev
 curl-dev
 glib-dev
+libgudev-dev
 libusb-dev
 systemd-dev

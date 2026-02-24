@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-xdg-utils-${UB_VERSION}.tar.gz xdg-utils-${UB_VERSION}/
-	https://portland.freedesktop.org/download/
+xdg-utils-v${UB_VERSION}.tar.gz xdg-utils-v${UB_VERSION}/
+	https://gitlab.freedesktop.org/xdg/xdg-utils/-/archive/v${UB_VERSION}/
