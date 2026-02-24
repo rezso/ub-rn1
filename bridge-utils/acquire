@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-bridge-utils-${UB_VERSION}.tar.gz bridge-utils-${UB_VERSION}/
-	https://mirrors.edge.kernel.org/pub/linux/utils/net/bridge-utils/

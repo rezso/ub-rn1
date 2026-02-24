@@ -35,12 +35,10 @@ gammu
 encfs
 simple-screen-recorder
 xca
-mount-gtk
 arandr
 clamtk
 testdisk
 lesspipe
-easystroke
 mugshot
 mailutils
 fbreader

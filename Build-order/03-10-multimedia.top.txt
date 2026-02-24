@@ -19,7 +19,6 @@ dvdauthor
 paprefs
 dvdstyler
 vorbis-tools
-dvgrab
 lilypond
 libmp3splt
 radiotray

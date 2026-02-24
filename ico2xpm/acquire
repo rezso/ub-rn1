@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-ico2xpm-${UB_VERSION/./_}-src.tar.gz ico2xpm-${UB_VERSION}/
-	https://downloads.sourceforge.net/ico2xpm/

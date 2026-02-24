@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-dvgrab-${UB_VERSION}.tar.gz dvgrab-${UB_VERSION}/
-	https://downloads.sourceforge.net/kino/

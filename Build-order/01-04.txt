@@ -25,7 +25,6 @@ libvisio
 libwnck
 emacs
 cdrkit
-c++-gtk-utils
 sudo
 usbredir
 xauth
@@ -33,7 +32,6 @@ yaml-cpp
 debhelper
 ebook-tools
 exempi
-gtk2-engines
 xmessage
 opusfile
 xdg-user-dirs
@@ -63,7 +61,6 @@ dconf
 exiv2
 gexiv2
 gspell
-polkit-gnome
 gucharmap
 vte
 xterm

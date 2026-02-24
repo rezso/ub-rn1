@@ -10,9 +10,7 @@ vde
 xcalib
 blktrace
 freeipmi
-pcmciautils
 powertop
-bluez-hcidump
 gptfdisk
 drbd-utils
 gsmartcontrol

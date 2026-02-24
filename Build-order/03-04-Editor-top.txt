@@ -1,7 +1,6 @@
 nano
 tcsh
 vim
-qemacs
 yudit
 texstudio
 qxmledit

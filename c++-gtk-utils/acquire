@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-c++-gtk-utils-${UB_VERSION}.tar.gz c++-gtk-utils-${UB_VERSION}/
-	https://downloads.sourceforge.net/cxx-gtk-utils/

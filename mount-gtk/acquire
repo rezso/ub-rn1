@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-mount-gtk-${UB_VERSION}.tar.gz mount-gtk-${UB_VERSION}/
-	https://downloads.sourceforge.net/mount-gtk/

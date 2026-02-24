@@ -1,7 +1,6 @@
 converseen
 sane-frontends
 simple-scan
-aaphoto
 exif
 evolvotron
 povray
