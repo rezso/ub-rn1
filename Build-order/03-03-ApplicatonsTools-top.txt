@@ -9,7 +9,6 @@ vbindiff
 gnuplot
 ncdu
 renameutils
-vacation
 ocrad
 bleachbit
 lrzip

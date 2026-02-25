@@ -16,7 +16,6 @@ fwbuilder
 wget2
 nmap
 discord
-lftp
 anyremote
 mutt
 libtorrent-rasterbar

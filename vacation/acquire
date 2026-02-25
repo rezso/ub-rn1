@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-vacation-${UB_VERSION}.tar.gz vacation-${UB_VERSION}/
-	https://downloads.sourceforge.net/vacation/

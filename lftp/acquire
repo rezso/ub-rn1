@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-lftp-${UB_VERSION}.tar.xz lftp-${UB_VERSION}/
-	https://lftp.yar.ru/ftp/

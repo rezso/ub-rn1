@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-gentoo-${UB_VERSION}.tar.gz gentoo-${UB_VERSION}/
-	https://download.sourceforge.net/gentoo/

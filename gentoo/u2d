@@ -1,1 +1,0 @@
-sflist gentoo gentoo | sort -V | tail -n 1

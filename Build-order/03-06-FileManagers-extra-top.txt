@@ -2,7 +2,6 @@ nnn
 vifm
 doublecmd
 eaglemode
-gentoo
 avfs
 worker
 mc
