@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-osinfo-db-tools-${UB_VERSION}.tar.xz osinfo-db-tools-${UB_VERSION}/
-	https://releases.pagure.org/libosinfo/
