@@ -1,1 +1,2 @@
-u2d http://www.lua.org/ftp/ lua-
+noupdate: unsupported API changes
+# u2d http://www.lua.org/ftp/ lua-

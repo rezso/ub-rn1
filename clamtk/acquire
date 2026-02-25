@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-clamtk-${UB_VERSION}.tar.xz clamtk-${UB_VERSION}/
-	https://github.com/dave-theunsub/clamtk/releases/download/v${UB_VERSION}/

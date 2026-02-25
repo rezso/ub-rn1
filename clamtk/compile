@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-cd po
-
-for i in *.po; do
-	msgfmt --statistics -o `basename $i .po`.mo $i
-done
-
-cd ..

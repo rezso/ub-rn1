@@ -35,7 +35,6 @@ encfs
 simple-screen-recorder
 xca
 arandr
-clamtk
 testdisk
 lesspipe
 mugshot

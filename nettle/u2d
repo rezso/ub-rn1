@@ -1,1 +1,2 @@
-u2d https://ftp.gnu.org/gnu/nettle/ nettle-
+noupdate: unsupported API changes
+# u2d https://ftp.gnu.org/gnu/nettle/ nettle-
