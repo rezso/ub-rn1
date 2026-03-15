@@ -17,6 +17,5 @@ opus-dev
 opusfile-dev
 pipewire-dev
 qt6-dev
-samba-dev
 sdl2-dev
 wavpack-dev

@@ -26,7 +26,6 @@ luajit-dev
 mesa-dev
 openal-dev
 pulseaudio-dev
-samba-dev
 uchardet-dev
 wayland-dev
 wayland-protocols

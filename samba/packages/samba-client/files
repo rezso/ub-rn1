@@ -1,29 +1,24 @@
 	/usr/bin/net
 	/usr/bin/nmblookup
-	/usr/bin/ntlm_auth
-	/usr/bin/profiles
 	/usr/bin/rpcclient
 	/usr/bin/smbcacls
 	/usr/bin/smbclient
 	/usr/bin/smbcquotas
 	/usr/bin/smbget
+	/usr/bin/smbpasswd
+	/usr/bin/smbspool
 	/usr/bin/smbtar
 	/usr/bin/smbtree
-	/usr/bin/wbinfo
-	/usr/lib/libnss_winbind.so.2
-	/usr/lib/security/pam_smbpass.so
-	/usr/lib/security/pam_winbind.so
-	/usr/share/man/man1/nmblookup.1
-	/usr/share/man/man1/ntlm_auth.1
-	/usr/share/man/man1/profiles.1
-	/usr/share/man/man1/rpcclient.1
-	/usr/share/man/man1/smbcacls.1
-	/usr/share/man/man1/smbclient.1
-	/usr/share/man/man1/smbcquotas.1
-	/usr/share/man/man1/smbget.1
-	/usr/share/man/man1/smbtar.1
-	/usr/share/man/man1/smbtree.1
-	/usr/share/man/man1/wbinfo.1
-	/usr/share/man/man5/smbgetrc.5
-	/usr/share/man/man8/net.8
-	/usr/share/man/man8/winbindd.8
+	/usr/bin/testparm
+	/usr/lib/cups/backend/smb
+	/usr/share/man/man1/nmblookup.1.gz
+	/usr/share/man/man1/rpcclient.1.gz
+	/usr/share/man/man1/smbcacls.1.gz
+	/usr/share/man/man1/smbclient.1.gz
+	/usr/share/man/man1/smbcquotas.1.gz
+	/usr/share/man/man1/smbget.1.gz
+	/usr/share/man/man1/smbtar.1.gz
+	/usr/share/man/man1/smbtree.1.gz
+	/usr/share/man/man7/libsmbclient.7.gz
+	/usr/share/man/man8/net.8.gz
+	/usr/share/man/man8/smbspool.8.gz
