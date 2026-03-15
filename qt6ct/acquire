@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+qt6ct-${UB_VERSION}.tar.bz2 qt6ct-${UB_VERSION}/
+	https://www.opencode.net/trialuser/qt6ct/-/archive/${UB_VERSION}/

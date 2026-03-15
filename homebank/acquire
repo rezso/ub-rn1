@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-homebank-${UB_VERSION}.tar.gz homebank-${UB_VERSION}/
+homebank-${UB_VERSION}.tar.gz homebank-${UB_VERSION}.0/
 	https://www.gethomebank.org/public/sources/

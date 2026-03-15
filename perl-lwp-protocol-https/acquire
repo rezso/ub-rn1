@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-LWP-Protocol-https-${UB_VERSION}.tar.gz LWP-Protocol-https-${UB_VERSION}/
-	https://cpan.metacpan.org/modules/by-module/LWP/
+v${UB_VERSION}.tar.gz LWP-Protocol-https-${UB_VERSION}/
+	https://github.com/libwww-perl/LWP-Protocol-https/archive/refs/tags/

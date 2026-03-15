@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-apt-${UB_VERSION}.tar.gz apt-${UB_VERSION}/
+apt-${UB_VERSION}.tar.bz2 apt-${UB_VERSION}/
 	https://salsa.debian.org/apt-team/apt/-/archive/${UB_VERSION}/

@@ -1,8 +1,10 @@
 #!/bin/sh -eux
 
-rm -f CMakeLists.txt
-NOCONFIGURE=1 ./autogen.sh
+find . -name 'CMakeLists.txt' -delete
 
+chmod +x lib/common/*.py
+
+NOCONFIGURE=1 ./autogen.sh
 export LIBPOSTFIX=/
 export PERL=perl5
 ./configure \

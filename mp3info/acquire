@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-mp3info-${UB_VERSION}.tgz mp3info-${UB_VERSION}/
-	https://www.ibiblio.org/pub/Linux/apps/sound/mp3-utils/mp3info/

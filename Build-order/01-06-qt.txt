@@ -16,13 +16,10 @@ libxmlb
 bind
 openconnect
 libsoup3
-osinfo-db-tools
-geoclue
 ruby
 gstreamer
 webkit2gtk-4.1 # gtk3 + libsoup3
 webkitgtk-6.0 # gtk4 + libsoup3
-osinfo-db
 appstream
 libhandy
 libadwaita
@@ -42,7 +39,6 @@ jfsutils
 xkb-utils
 x.org-utils
 xmldiff
-sox
 bogofilter
 highlight
 guile2.2
@@ -103,6 +99,5 @@ sddm
 python3-pyqt-builder
 python3-pyqt5-sip
 python3-pyqt5
-python3-qtpy
 vlc
 libextractor

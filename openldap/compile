@@ -1,24 +1,15 @@
 #!/bin/sh -eux
 
 ub_compile \
-	--enable-syslog \
-	--enable-dynamic \
-	--enable-ipv6 \
-	--enable-local \
-	\
-	--enable-slapd \
-	--enable-slp \
-	--enable-cleartext \
-	--enable-crypt \
-	--enable-spasswd \
-	--enable-rlookups \
-	\
-	--enable-backends=mod \
-	--enable-mdb \
-	--enable-modules \
-	--enable-perl \
-	\
-	--enable-overlays=mod \
-	\
-	--disable-wt \
-	--without-fetch
+    --enable-dynamic \
+    --enable-syslog \
+    --enable-ipv6 \
+    --enable-local \
+    --enable-crypt \
+    --enable-spasswd \
+    --enable-modules \
+    --enable-backends \
+    --disable-wt \
+    --enable-overlays=mod \
+    --with-cyrus-sasl \
+    --with-threads

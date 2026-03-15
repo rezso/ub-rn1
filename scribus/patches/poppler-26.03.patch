@@ -1,0 +1,15 @@
+diff -Naur a/scribus/plugins/import/pdf/slaoutput.cpp b/scribus/plugins/import/pdf/slaoutput.cpp
+--- a/scribus/plugins/import/pdf/slaoutput.cpp	2026-03-11 01:46:32.466527376 +0100
++++ b/scribus/plugins/import/pdf/slaoutput.cpp	2026-03-11 01:51:32.223696852 +0100
+@@ -884,7 +884,11 @@
+ 					const Ref ref = childRef.getRef();
+ 					radList.append(ref.num);
+ 				}
++#if POPPLER_ENCODED_VERSION >= POPPLER_VERSION_ENCODE(26, 03, 0)
++				QString tmTxt = UnicodeParsedString(annota->getUniqueName());
++#else
+ 				QString tmTxt = UnicodeParsedString(annota->getName());
++#endif
+ 				m_radioMap.insert(tmTxt, radList);
+ 			}
+ 		}

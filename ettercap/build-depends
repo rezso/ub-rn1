@@ -2,7 +2,6 @@ bison
 curl-dev
 flex
 ghostscript-dev
-groff
 gtk3-dev
 harfbuzz-dev
 libnet-dev

@@ -1,0 +1,14 @@
+diff -Naur a/src/uhubuild-build b/src/uhubuild-build
+--- a/src/uhubuild-build	2026-02-17 13:45:17.000000000 +0100
++++ b/src/uhubuild-build	2026-02-20 14:04:00.894060722 +0100
+@@ -112,6 +112,10 @@
+ 	export CCACHE_DISABLE=true
+ fi
+ 
++if [ -x ${UHUBUILD_CHROOTDIR}/usr/bin/rustc -a -x ${UHUBUILD_CHROOTDIR}/usr/bin/sccache ]; then
++    export RUSTC_WRAPPER=/usr/bin/sccache
++fi
++
+ blueecho "Building ${UB_SOURCENAME}-${UB_VERSION}-${UB_RELEASE} for distribution ${UB_DISTRIBUTION}."
+ blueecho "Target binary packages: ${UB_PACKAGES}."
+ 

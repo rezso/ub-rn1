@@ -1,11 +1,12 @@
 diff -Naur a/src/deb/build.c b/src/deb/build.c
---- a/src/deb/build.c	2025-03-09 19:01:08.000000000 +0100
-+++ b/src/deb/build.c	2025-03-18 02:16:48.812521594 +0100
-@@ -618,7 +618,6 @@
-     pkg = check_build_files(ctrldir, dir);
-     if (debar == NULL)
-       debar = gen_dest_pathname_from_pkg(dest, pkg);
--    info(_("building package '%s' in '%s'."), pkg->set->name, debar);
-   }
-   m_output(stdout, _("<standard output>"));
+--- a/src/deb/build.c	2026-01-23 01:47:06.000000000 +0100
++++ b/src/deb/build.c	2026-03-01 14:04:41.591661984 +0100
+@@ -655,8 +655,6 @@
+ 		pkg = check_build_files(ctrldir, dir);
+ 		if (debar == NULL)
+ 			debar = gen_dest_pathname_from_pkg(dest, pkg);
+-		info(_("building package '%s' in '%s'."),
+-		     pkg->set->name, debar);
+ 	}
+ 	m_output(stdout, _("<standard output>"));
  

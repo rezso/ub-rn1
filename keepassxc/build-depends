@@ -3,7 +3,6 @@ botan3-dev
 libgcrypt-dev
 libgpg-error-dev
 libqrencode-dev
-libquazip-dev
 libxtst-dev
 qt5-dev
 readline-dev

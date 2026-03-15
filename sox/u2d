@@ -1,1 +1,0 @@
-sflist sox sox | sort -V | tail -n 1

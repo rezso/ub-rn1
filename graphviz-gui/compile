@@ -1,11 +1,12 @@
 #!/bin/sh -eux
 
-rm -f CMakeLists.txt
-NOCONFIGURE=1 ./autogen.sh
+find . -name 'CMakeLists.txt' -delete
 
-export CFLAGS=`pkg-config pango --cflags`
+chmod +x lib/common/*.py
+
+NOCONFIGURE=1 ./autogen.sh
 export LIBPOSTFIX=/
-ub_compile \
+ub_configure \
 	--enable-ocaml=no \
 	--enable-perl=no \
 	--enable-tk=no \
@@ -13,3 +14,9 @@ ub_compile \
 	--enable-ruby=no \
 	--enable-lua=no \
 	--enable-python=no
+
+cd lib
+ub_compile
+
+cd ../cmd/gvedit
+ub_compile

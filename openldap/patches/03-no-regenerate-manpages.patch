@@ -1,0 +1,29 @@
+diff -Naur a/build/man.mk b/build/man.mk
+--- a/build/man.mk	2026-01-29 23:21:21.000000000 +0100
++++ b/build/man.mk	2026-03-02 20:20:23.274839991 +0100
+@@ -17,25 +17,8 @@
+ #
+ 
+ MANDIR=$(mandir)/man$(MANSECT)
+-TMP_SUFFIX=tmp
+ 
+ all-common:
+-	PAGES=`cd $(srcdir); echo *.$(MANSECT)`; \
+-	for page in $$PAGES; do \
+-		$(SED) -e "s%LDVERSION%$(VERSION)%" \
+-			-e 's%ETCDIR%$(sysconfdir)%g' \
+-			-e 's%LOCALSTATEDIR%$(localstatedir)%' \
+-			-e 's%SYSCONFDIR%$(sysconfdir)%' \
+-			-e 's%DATADIR%$(datadir)%' \
+-			-e 's%SBINDIR%$(sbindir)%' \
+-			-e 's%BINDIR%$(bindir)%' \
+-			-e 's%LIBDIR%$(libdir)%' \
+-			-e 's%LIBEXECDIR%$(libexecdir)%' \
+-			-e 's%MODULEDIR%$(moduledir)%' \
+-			-e 's%RELEASEDATE%$(RELEASEDATE)%' \
+-				$(srcdir)/$$page \
+-			| (cd $(srcdir); $(SOELIM) -) > $$page.$(TMP_SUFFIX); \
+-	done
+ 
+ install-common:
+ 	-$(MKDIR) $(DESTDIR)$(MANDIR)

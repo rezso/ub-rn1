@@ -9,5 +9,4 @@ libvorbis-dev
 libxml2-dev
 qt6-dev
 sdl2-dev
-sox-dev
 x264-dev

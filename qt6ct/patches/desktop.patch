@@ -1,0 +1,13 @@
+diff -Naur a/src/qt6ct/qt6ct.desktop b/src/qt6ct/qt6ct.desktop
+--- a/src/qt6ct/qt6ct.desktop	2025-09-27 16:26:48.000000000 +0200
++++ b/src/qt6ct/qt6ct.desktop	2026-03-08 04:38:28.615710194 +0100
+@@ -39,6 +39,9 @@
+ Comment[he]=כלי תצורה Qt6
+ Name[he]=הגדרות Qt6
+ 
++Comment[hu]=Qt6 beállító eszköz
++Name[hu]=Qt6 beállítások
++
+ Comment[ru]=Программа для настройки Qt6
+ Name[ru]=Настройки Qt6
+ 

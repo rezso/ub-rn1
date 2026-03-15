@@ -1,7 +1,4 @@
 #!/usr/bin/env dl
 
-groff-"$UB_VERSION".tar.gz groff-"$UB_VERSION"/
+groff-${UB_VERSION}.tar.gz groff-${UB_VERSION}/
 	https://ftp.gnu.org/gnu/groff/
-
-groff-utf8.tar.gz .
-	https://www.haible.de/bruno/gnu/

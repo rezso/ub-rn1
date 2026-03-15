@@ -2,5 +2,4 @@ nano
 tcsh
 vim
 yudit
-texstudio
 qxmledit

@@ -269,7 +269,6 @@ glslang # for spirv-tools
 spirv-llvm-translator
 libclc
 ghostscript
-groff
 yasm
 libxcomposite
 libxft

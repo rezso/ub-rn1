@@ -1,17 +1,9 @@
 #!/bin/sh -eux
 
-ub_replace -O3 -O2 configure
-# compile static lib
-./configure \
-	--prefix=/usr
-make
+rm -f CMakeLists.txt
+rm -f contrib/minizip/CMakeLists.txt
 
-# compile shared lib
-./configure \
-	--prefix=/usr \
-	--shared
-make
+ub_compile
 
-# minizip
 cd contrib/minizip
 ub_compile

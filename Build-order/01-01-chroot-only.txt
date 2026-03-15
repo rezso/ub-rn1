@@ -1,6 +1,5 @@
 7zip
 acpid
-adduser
 agedu
 alien
 alsa-lib
@@ -52,6 +51,7 @@ iodine
 iperf
 iw
 jansson
+json-cpp
 kanyremote
 keyutils
 liba52

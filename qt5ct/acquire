@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-qt5ct-${UB_VERSION}.tar.bz2 qt5ct-${UB_VERSION}/
-	https://downloads.sourceforge.net/qt5ct/

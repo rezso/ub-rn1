@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-sed 's| .install-cython ||g' -i Makefile
-make cythonize
-ub_compile

@@ -1,7 +1,6 @@
 cyrus-sasl2-dev
 db4-dev
 gdbm-dev
-groff
 krb5-dev
 libxcrypt-dev
 openslp-dev

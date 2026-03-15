@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-sox-${UB_VERSION}.tar.gz sox-${UB_VERSION}/
-	https://downloads.sourceforge.net/sox/

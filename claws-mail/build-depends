@@ -18,7 +18,6 @@ libgumbo-dev
 libical-dev
 libjpeg-turbo-dev
 libnotify-dev
-liboauth-dev
 librsvg-dev
 libsm-dev
 libxcrypt-dev

@@ -1,6 +1,5 @@
 dbus-dev
 enchant-dev
-geoclue-dev
 gobject-introspection-dev
 gperf
 gstreamer-dev

@@ -1,6 +1,4 @@
 #!/bin/sh -eux
 
-ub_compile
-
-cd groff-utf8
-ub_compile
+ub_compile \
+    --without-gropdf

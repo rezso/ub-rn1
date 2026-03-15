@@ -1,10 +1,10 @@
 diff -Naur a/conf/main.cf b/conf/main.cf
---- a/conf/main.cf	2025-12-22 00:05:39.219121003 +0100
-+++ b/conf/main.cf	2025-12-22 00:07:48.499676630 +0100
-@@ -681,6 +681,18 @@
- # readme_directory: The location of the Postfix README files.
- #
- readme_directory =
+--- a/conf/main.cf	2026-03-10 22:37:31.485463465 +0100
++++ b/conf/main.cf	2026-03-10 22:40:30.037674591 +0100
+@@ -691,3 +691,14 @@
+ meta_directory = /etc/postfix
+ 
+ inet_protocols = ipv4
 +
 +# Greylisting
 +#
@@ -16,13 +16,9 @@ diff -Naur a/conf/main.cf b/conf/main.cf
 +#  reject_unlisted_recipient
 +#  reject_unauth_destination
 +#  check_policy_service unix:private/policy
-+
- inet_protocols = ipv4
- shlib_directory = /usr/lib/postfix/${mail_version}
- meta_directory = /etc/postfix
 diff -Naur a/conf/master.cf b/conf/master.cf
---- a/conf/master.cf	2025-12-22 00:04:18.842775020 +0100
-+++ b/conf/master.cf	2025-12-22 00:07:48.503676647 +0100
+--- a/conf/master.cf	2026-03-10 22:37:18.397438420 +0100
++++ b/conf/master.cf	2026-03-10 22:38:12.553532032 +0100
 @@ -149,3 +149,9 @@
  #mailman   unix  -       n       n       -       -       pipe
  #  flags=FRX user=list argv=/usr/lib/mailman/bin/postfix-to-mailman.py
@@ -35,7 +31,7 @@ diff -Naur a/conf/master.cf b/conf/master.cf
 +#
 diff -Naur a/examples/smtpd-policy/greylist.pl b/examples/smtpd-policy/greylist.pl
 --- a/examples/smtpd-policy/greylist.pl	2007-01-04 23:30:26.000000000 +0100
-+++ b/examples/smtpd-policy/greylist.pl	2025-12-22 00:07:48.503676647 +0100
++++ b/examples/smtpd-policy/greylist.pl	2026-03-10 22:38:12.553532032 +0100
 @@ -73,7 +73,7 @@
  # In case of database corruption, this script saves the database as
  # $database_name.time(), so that the mail system does not get stuck.

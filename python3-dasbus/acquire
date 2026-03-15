@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-v${UB_VERSION}.tar.gz dasbus-${UB_VERSION}/
-	https://github.com/dasbus-project/dasbus/archive/refs/tags/

@@ -3,13 +3,12 @@ libdmtx
 phonon
 qca
 qcoro
-libquazip
 fonts-hack # plasma-integration
 fonts-noto # plasma-integration
 opencv # mlt, kdenlive, digikam
 mlt # kdenlive
 yaz # tellico
-zxing-cpp # kitinerary
+zxing-cpp # prison, spectacle
 plasma-wayland-protocols # kwayland
 xsettingsd # kde-gtk-settings
 qtkeychain
@@ -117,10 +116,11 @@ breeze-gtk
 kde-gtk-config
 kgamma
 libkscreen
+libksysguard
+plasma5support
 kscreen
 kscreenlocker
 ksshaskpass
-libksysguard
 ksystemstats
 kglobalacceld
 kwin
@@ -130,7 +130,6 @@ oxygen
 plasma-nm
 plasma-pa
 plasma-integration
-plasma5support
 plasma-workspace
 kde-cli-tools
 kdeplasma-addons

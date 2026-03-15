@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz jsoncpp-${UB_VERSION}/
+	https://github.com/open-source-parsers/jsoncpp/archive/refs/tags/

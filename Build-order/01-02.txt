@@ -121,6 +121,7 @@ libvpx
 gd
 libwmf
 parted
+groff
 man-db
 plocate
 libdecor

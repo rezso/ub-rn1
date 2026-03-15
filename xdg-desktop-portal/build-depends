@@ -1,6 +1,5 @@
 fuse-dev
 gdk-pixbuf-dev
-geoclue-dev
 gstreamer-dev
 json-glib-dev
 libgudev-dev

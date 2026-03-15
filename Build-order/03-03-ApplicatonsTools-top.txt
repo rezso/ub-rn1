@@ -12,7 +12,7 @@ renameutils
 ocrad
 bleachbit
 lrzip
-qt5ct
+qt6ct
 odt2txt
 pdfminer
 qpdf

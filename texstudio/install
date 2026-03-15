@@ -1,8 +1,0 @@
-#!/bin/sh -eux
-
-ub_install
-
-for _i in 16 22 32 48 64 128; do
-	install -D -m 0644 utilities/texstudio${_i}x${_i}.png \
-		"$UB_INSTALLDIR"/usr/share/icons/hicolor/${_i}x${_i}/apps/texstudio.png
-done
