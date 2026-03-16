@@ -4,4 +4,4 @@ ub_compile \
     -Dprivileged_group=root \
 	-Dgoogle=false \
 	-Donedrive=false \
-	-Dgoa=false
+	-Dgoa=true

@@ -2,6 +2,7 @@ avahi-dev
 fuse-dev
 gcr4-dev
 glib-dev
+gnome-online-accounts-dev
 gsettings-desktop-schemas
 libarchive-dev
 libbluray-dev
