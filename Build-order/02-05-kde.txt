@@ -6,6 +6,7 @@ qcoro
 fonts-hack # plasma-integration
 fonts-noto # plasma-integration
 opencv # mlt, kdenlive, digikam
+libfakekey # kdeconnect
 mlt # kdenlive
 yaz # tellico
 zxing-cpp # prison, spectacle
@@ -91,6 +92,7 @@ ksvg
 purpose
 krunner
 kdav
+kpeople
 kf6-dev
 
 # plasma
@@ -184,6 +186,7 @@ kdegames
 falkon
 skanlite
 kdiff3
+kdeconnect
 kde-apps
 kde
 #
