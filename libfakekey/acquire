@@ -1,0 +1,7 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz libfakekey-${UB_VERSION}/
+	https://github.com/jku/libfakekey/archive/refs/tags/
+
+#libfakekey-0.3.tar.gz libfakekey-${UB_VERSION}/
+#    https://git.yoctoproject.org/libfakekey/snapshot/libfakekey-0.3.tar.gz

@@ -1,0 +1,7 @@
+extra-cmake-modules
+kcontacts-dev
+kcoreaddons-dev
+ki18n-dev
+kitemviews-dev
+kwidgetsaddons-dev
+qt6-dev

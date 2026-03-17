@@ -1,0 +1,5 @@
+#!/bin/sh -eux
+
+ln -s /usr/share/doc/Licenses/GPL-2 LICENSE
+
+ub_compile

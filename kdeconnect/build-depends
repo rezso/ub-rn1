@@ -1,0 +1,9 @@
+dbus-dev
+kf6-dev
+kirigami-addons-dev
+libfakekey-dev
+libxkbcommon-dev
+pulseaudio-qt-dev
+qt6-dev
+wayland-dev
+wayland-protocols
