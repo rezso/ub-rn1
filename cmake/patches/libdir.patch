@@ -1,7 +1,7 @@
 diff -Naur a/Modules/GNUInstallDirs.cmake b/Modules/GNUInstallDirs.cmake
---- a/Modules/GNUInstallDirs.cmake	2025-09-30 16:48:33.000000000 +0200
-+++ b/Modules/GNUInstallDirs.cmake	2025-11-05 14:08:44.057948135 +0100
-@@ -445,7 +445,7 @@
+--- a/Modules/GNUInstallDirs.cmake	2026-03-17 14:29:16.000000000 +0100
++++ b/Modules/GNUInstallDirs.cmake	2026-03-18 01:56:40.655493935 +0100
+@@ -467,7 +467,7 @@
      elseif(NOT DEFINED system_type)
        # not debian, alpine, arch, or conda so rely on CMAKE_SIZEOF_VOID_P:
        if("${CMAKE_SIZEOF_VOID_P}" EQUAL "8")
@@ -11,8 +11,8 @@ diff -Naur a/Modules/GNUInstallDirs.cmake b/Modules/GNUInstallDirs.cmake
      endif()
    endif()
 diff -Naur a/Modules/Platform/UnixPaths.cmake b/Modules/Platform/UnixPaths.cmake
---- a/Modules/Platform/UnixPaths.cmake	2025-09-30 16:48:33.000000000 +0200
-+++ b/Modules/Platform/UnixPaths.cmake	2025-11-05 14:05:48.117279244 +0100
+--- a/Modules/Platform/UnixPaths.cmake	2026-03-17 14:29:16.000000000 +0100
++++ b/Modules/Platform/UnixPaths.cmake	2026-03-18 01:56:40.656157059 +0100
 @@ -68,7 +68,7 @@
    )
  
@@ -33,12 +33,12 @@ diff -Naur a/Modules/Platform/UnixPaths.cmake b/Modules/Platform/UnixPaths.cmake
 +set_property(GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS FALSE)
 +set_property(GLOBAL PROPERTY FIND_LIBRARY_USE_LIBX32_PATHS FALSE)
 diff -Naur a/Source/cmExportInstallCMakeConfigGenerator.cxx b/Source/cmExportInstallCMakeConfigGenerator.cxx
---- a/Source/cmExportInstallCMakeConfigGenerator.cxx	2025-09-30 16:48:33.000000000 +0200
-+++ b/Source/cmExportInstallCMakeConfigGenerator.cxx	2025-11-05 14:05:48.117279244 +0100
-@@ -161,12 +161,7 @@
+--- a/Source/cmExportInstallCMakeConfigGenerator.cxx	2026-03-17 14:29:16.000000000 +0100
++++ b/Source/cmExportInstallCMakeConfigGenerator.cxx	2026-03-18 01:58:47.285317267 +0100
+@@ -162,12 +162,7 @@
      os << "# Compute the installation prefix relative to this file.\n"
-        << "get_filename_component(_IMPORT_PREFIX"
-        << " \"${CMAKE_CURRENT_LIST_FILE}\" PATH)\n";
+           "get_filename_component(_IMPORT_PREFIX"
+           " \"${CMAKE_CURRENT_LIST_FILE}\" PATH)\n";
 -    if (cmHasLiteralPrefix(absDestS, "/lib/") ||
 -        cmHasLiteralPrefix(absDestS, "/lib64/") ||
 -        cmHasLiteralPrefix(absDestS, "/libx32/") ||
