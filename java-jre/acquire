@@ -1,8 +1,8 @@
 #!/usr/bin/env dl
 
-jdk-${UB_VERSION}.tar.gz jdk17u-jdk-${UB_VERSION/+/-}/
-	https://github.com/openjdk/jdk17u/archive/refs/tags/
+jdk${UB_VERSION/./u}-ga.tar.gz jdk8u-jdk${UB_VERSION/./u}-ga/
+    https://github.com/openjdk/jdk8u/archive/refs/tags/
 
 # https://jdk.java.net/archive/
-openjdk-17.0.2_linux-x64_bin.tar.gz	jdk-17.0.2/ :bootjdk
-    https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz
+zulu8.92.0.21-ca-jdk8.0.482-linux_x64.tar.gz zulu8.92.0.21-ca-jdk8.0.482-linux_x64/ :bootjdk
+    https://cdn.azul.com/zulu/bin/

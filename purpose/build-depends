@@ -1,9 +1,12 @@
 extra-cmake-modules
+kcmutils-dev
 kconfig-dev
 kcoreaddons-dev
 ki18n-dev
 kio-dev
 kirigami-dev
+kitemmodels-dev
 knotifications-dev
 nodejs
+prison-dev
 qt6-dev

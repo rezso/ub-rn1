@@ -1,1 +1,1 @@
-u2d https://github.com/openjdk/jdk17u/tags jdk-
+urllist https://github.com/openjdk/jdk8u/tags | grep 'ga' | grep 'tar' | sed -e 's/jdk//' -e 's/u/./' -e 's/-ga//' -e 's/\.tar\.gz//'

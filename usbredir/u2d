@@ -1,1 +1,1 @@
-u2d https://spice-space.org/download/usbredir/
+urllist https://gitlab.freedesktop.org/spice/usbredir/-/tags | grep 'usbredir' | sed -e 's/usbredir-//' | sort -V | tail -n1

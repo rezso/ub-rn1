@@ -1,29 +1,31 @@
-diff -Naur a/make/Install.gmk b/make/Install.gmk
---- a/make/Install.gmk	2022-08-12 22:24:53.000000000 +0200
-+++ b/make/Install.gmk	2023-03-09 17:49:02.469518896 +0100
-@@ -28,16 +28,16 @@
- include $(SPEC)
+diff -Naur a/jdk/make/BuildJdk.gmk b/jdk/make/BuildJdk.gmk
+--- a/jdk/make/BuildJdk.gmk	2026-01-14 05:15:56.000000000 +0100
++++ b/jdk/make/BuildJdk.gmk	2026-03-23 06:00:35.347566785 +0100
+@@ -119,19 +119,19 @@
+ 	+$(MAKE) -f SignJars.gmk
  
  BINARIES := $(notdir $(wildcard $(JDK_IMAGE_DIR)/bin/*))
--INSTALLDIR := openjdk-$(VERSION_SHORT)
+-INSTALLDIR := openjdk-$(RELEASE)
 +INSTALLDIR := java
  
  # Install the jdk image, in a very crude way. Not taking into
  # account, how to install properly on macosx or windows etc.
  install:
 -	echo Installing jdk image into $(INSTALL_PREFIX)/jvm/$(INSTALLDIR)
--	echo and creating $(words $(BINARIES)) links from $(INSTALL_PREFIX)/bin into the jdk.
++	echo Installing jdk image into $(DESTDIR)$(INSTALL_PREFIX)/lib/$(INSTALLDIR)
+ 	echo and creating $(words $(BINARIES)) links from $(INSTALL_PREFIX)/bin into the jdk.
 -	$(MKDIR) -p $(INSTALL_PREFIX)/jvm/$(INSTALLDIR)
 -	$(RM) -r $(INSTALL_PREFIX)/jvm/$(INSTALLDIR)/*
 -	$(CP) -rp $(JDK_IMAGE_DIR)/* $(INSTALL_PREFIX)/jvm/$(INSTALLDIR)
 -	$(MKDIR) -p $(INSTALL_PREFIX)/bin
 -	$(RM) $(addprefix $(INSTALL_PREFIX)/bin/, $(BINARIES))
 -	$(foreach b, $(BINARIES), $(LN) -s $(INSTALL_PREFIX)/jvm/$(INSTALLDIR)/bin/$b $(INSTALL_PREFIX)/bin/$b &&) true
-+	echo Installing jdk image into $(DESTDIR)$(INSTALL_PREFIX)/lib/$(INSTALLDIR)
-+	echo and creating $(words $(BINARIES)) links from $(DESTDIR)$(INSTALL_PREFIX)/bin into the jdk.
 +	$(MKDIR) -p $(DESTDIR)$(INSTALL_PREFIX)/lib/$(INSTALLDIR)
 +	$(RM) -r $(DESTDIR)$(INSTALL_PREFIX)/lib/$(INSTALLDIR)/*
 +	$(CP) -rp $(JDK_IMAGE_DIR)/* $(DESTDIR)$(INSTALL_PREFIX)/lib/$(INSTALLDIR)
 +	$(MKDIR) -p $(DESTDIR)$(INSTALL_PREFIX)/bin
 +	$(RM) $(addprefix $(DESTDIR)$(INSTALL_PREFIX)/bin/, $(BINARIES))
 +	$(foreach b, $(BINARIES), $(LN) -s $(DESTDIR)$(INSTALL_PREFIX)/lib/$(INSTALLDIR)/bin/$b $(DESTDIR)$(INSTALL_PREFIX)/bin/$b &&) true
+ 
+ # The all target builds the JDK, but not the images
+ all: jdk
