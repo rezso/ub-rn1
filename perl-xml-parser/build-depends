@@ -1,2 +1,4 @@
 expat-dev
 perl-dev
+perl-file-sharedir
+perl-file-sharedir-install

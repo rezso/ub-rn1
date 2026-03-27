@@ -1,0 +1,55 @@
+diff -Naur a/Makefile.PL b/Makefile.PL
+--- a/Makefile.PL	2020-10-21 08:00:45.000000000 +0200
++++ b/Makefile.PL	2026-03-27 22:51:43.465372471 +0100
+@@ -9,23 +9,12 @@
+ 
+ BEGIN
+ {
+-    unless (grep { $_ eq "." } @INC)
+-    {
+-        use lib ".";
+-    }
++    eval "use File::ShareDir::Install;";
++    $@ and eval "use lib qw,inc/File-ShareDir-Install,; use File::ShareDir::Install;";
++    $@ and die $@;
+ }
+ 
+-use inc::latest 'File::ShareDir::Install';
+-File::ShareDir::Install->import('0.03', 'install_share');
+-
+-if (inc::latest->can("write"))
+-{
+-    inc::latest->write("inc");
+-    for my $mod (inc::latest->loaded_modules)
+-    {
+-        inc::latest->bundle_module($mod, "inc");
+-    }
+-}
++use File::ShareDir::Install 0.03;
+ 
+ install_share 'share';
+ 
+@@ -42,10 +31,6 @@
+     'ExtUtils::MakeMaker'     => 0,
+     'File::ShareDir::Install' => '0.13'
+ );
+-my %BUNDLE_CONFIGURE_DEPS = (
+-    'inc::latest'             => '0.500',
+-    'File::ShareDir::Install' => '0.08',
+-);
+ my %TEST_DEPS = (
+     'Test::More' => '0.90',
+     'File::Path' => '2.08',
+@@ -80,12 +65,10 @@
+                     'Test::Pod::Coverage'                 => 0,
+                     'Test::Pod::Spelling::CommonMistakes' => 0,
+                     'Test::Spelling'                      => 0,
+-                    %BUNDLE_CONFIGURE_DEPS,
+                 },
+             },
+             configure => {
+                 requires   => {%BUILD_DEPS},
+-                recommends => {%BUNDLE_CONFIGURE_DEPS}
+             },
+             build => {requires => {%BUILD_DEPS}},
+             test  => {

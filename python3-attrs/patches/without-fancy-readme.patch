@@ -1,6 +1,6 @@
 diff -Naur a/pyproject.toml b/pyproject.toml
---- a/pyproject.toml	2025-10-06 11:22:26.000000000 +0200
-+++ b/pyproject.toml	2025-10-25 02:03:16.101971472 +0200
+--- a/pyproject.toml	2026-03-19 15:06:02.000000000 +0100
++++ b/pyproject.toml	2026-03-27 23:02:06.087962543 +0100
 @@ -1,7 +1,7 @@
  # SPDX-License-Identifier: MIT
  
@@ -19,7 +19,7 @@ diff -Naur a/pyproject.toml b/pyproject.toml
  
  [project.urls]
  Documentation = "https://www.attrs.org/"
-@@ -78,71 +78,6 @@
+@@ -78,82 +78,6 @@
  [tool.hatch.build.targets.wheel]
  packages = ["src/attr", "src/attrs"]
  
@@ -74,6 +74,11 @@ diff -Naur a/pyproject.toml b/pyproject.toml
 -img = "Tidelift.svg"
 -
 -[[tool.sponcon.sponsors]]
+-title = "Kraken Tech"
+-url = "https://kraken.tech/"
+-img = "Kraken.svg"
+-
+-[[tool.sponcon.sponsors]]
 -title = "Privacy Solutions"
 -url = "https://privacy-solutions.org/"
 -img = "Privacy-Solutions.svg"
@@ -84,10 +89,16 @@ diff -Naur a/pyproject.toml b/pyproject.toml
 -img = "FilePreviews.svg"
 -
 -[[tool.sponcon.sponsors]]
+-title = "TestMu AI"
+-url = "https://www.testmuai.com/?utm_medium=sponsor&utm_source=structlog"
+-img = "TestMu-AI.svg"
+-
+-[[tool.sponcon.sponsors]]
 -title = "Polar"
 -url = "https://polar.sh/"
 -img = "Polar.svg"
 -
- 
+-
  [tool.pytest.ini_options]
  addopts = [
+   "-ra",

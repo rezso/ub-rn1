@@ -53,11 +53,14 @@ findutils
 procps
 gdbm
 perl
+perl-inc-latest
 perl-module-build
 perl-module-build-tiny
 perl-extutils-config
 perl-extutils-helpers
 perl-extutils-installpaths
+perl-file-sharedir-install
+perl-file-sharedir
 perl-xml-parser
 perl-locale-gettext
 perl-http-date

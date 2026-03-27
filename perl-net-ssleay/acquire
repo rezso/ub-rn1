@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-Net-SSLeay-${UB_VERSION}.tar.gz Net-SSLeay-${UB_VERSION}/
-	https://cpan.metacpan.org/modules/by-module/Net/
+${UB_VERSION}.tar.gz p5-net-ssleay-${UB_VERSION}/
+	https://github.com/radiator-software/p5-net-ssleay/archive/refs/tags/

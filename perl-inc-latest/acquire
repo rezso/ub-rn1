@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+inc-latest-${UB_VERSION}.tar.gz inc-latest-${UB_VERSION}/
+	https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/

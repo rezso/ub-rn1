@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+File-ShareDir-Install-${UB_VERSION}.tar.gz File-ShareDir-Install-${UB_VERSION}/
+	https://cpan.metacpan.org/authors/id/E/ET/ETHER/

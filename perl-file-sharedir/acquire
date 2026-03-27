@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz File-ShareDir-${UB_VERSION}/
+	https://github.com/perl5-utils/File-ShareDir/archive/refs/tags/
