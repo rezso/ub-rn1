@@ -1,7 +1,7 @@
 #!/bin/sh -eux
 
 rm -Rf texmf-dist/doc
-rm -Rf texmf-dist/scripts/context/stubs/{mswin,source,win64}
+rm -Rf texmf-dist/scripts/context/stubs/{mswin,win64}
 
 mkdir build
 cd build

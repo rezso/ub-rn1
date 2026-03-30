@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# texconfig rehash
 mktexlsr
 fmtutil-sys --all
-# mtxrun --generate
+updmap-sys --quiet --nohash
+# exit 0
