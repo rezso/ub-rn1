@@ -1,0 +1,2 @@
+root      root      4755  /usr/lib/chromium/chrome-sandbox
+root      root       755  /usr/bin/ungoogled-chromium

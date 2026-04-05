@@ -1,0 +1,13 @@
+diff -Naur a/chrome/browser/component_updater/screen_ai_component_installer.cc b/chrome/browser/component_updater/screen_ai_component_installer.cc
+--- a/chrome/browser/component_updater/screen_ai_component_installer.cc	2025-07-28 22:04:51.000000000 +0200
++++ b/chrome/browser/component_updater/screen_ai_component_installer.cc	2025-08-04 23:46:09.958666750 +0200
+@@ -120,8 +120,7 @@
+ void ManageScreenAIComponentRegistration(ComponentUpdateService* cus,
+                                          PrefService* local_state) {
+   if (screen_ai::ScreenAIInstallState::ShouldInstall(local_state)) {
+-    RegisterScreenAIComponent(cus);
+-    return;
++    // don't register the screenn ai service 
+   }
+ 
+   // Clean up.

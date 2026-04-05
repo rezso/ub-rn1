@@ -33,3 +33,4 @@ firefox
 thunderbird
 seamonkey
 chromium
+ungoogled-chromium
