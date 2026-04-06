@@ -20,7 +20,6 @@ cldr-emoji-annotation
 cmark
 compface
 convmv
-cppunit
 cron # pam
 ddrescue
 detox

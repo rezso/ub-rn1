@@ -1,3 +1,4 @@
-libxaw-dev
+libx11-dev
 libxkbfile-dev
 libxrandr-dev
+xkeyboard-config

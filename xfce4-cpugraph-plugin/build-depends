@@ -2,6 +2,5 @@ libsm-dev
 libxfce4ui-dev
 libxfce4util-dev
 perl-xml-parser
-startup-notification-dev
 xcb-util-dev
 xfce4-panel-dev

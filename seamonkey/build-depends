@@ -19,7 +19,6 @@ pulseaudio-dev
 rust
 sccache
 sqlite-dev
-startup-notification-dev
 wayland-dev
 yasm
 zip

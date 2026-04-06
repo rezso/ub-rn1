@@ -11,6 +11,7 @@ libpciaccess-dev
 libxrandr-dev
 libxv-dev
 meson
+pciutils-dev
 procps-dev
 systemd-dev
 xmlrpc-dev

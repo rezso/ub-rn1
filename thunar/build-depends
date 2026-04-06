@@ -10,7 +10,6 @@ libxfce4util-dev
 libxinerama-dev
 libxt-dev
 pcre-dev
-startup-notification-dev
 systemd-dev
 xcb-util-dev
 xfce4-panel-dev

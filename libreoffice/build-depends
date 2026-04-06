@@ -50,6 +50,5 @@ python3-lxml
 python3-setuptools
 qt6-dev
 sane-backends-dev
-startup-notification-dev
 unixodbc-dev
 zip

@@ -7,4 +7,5 @@ export CPPFLAGS="$FLAGS"
 export CFLAGS="$FLAGS"
 
 ub_compile \
-	--disable-werror
+	--disable-werror \
+	--disable-tests

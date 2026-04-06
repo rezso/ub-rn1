@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-cppunit-${UB_VERSION}.tar.gz cppunit-${UB_VERSION}/
-	https://dev-www.libreoffice.org/src/

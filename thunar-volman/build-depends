@@ -10,6 +10,5 @@ libusb-dev
 libxfce4ui-dev
 perl-xml-parser
 popt-dev
-startup-notification-dev
 systemd-dev
 xcb-util-dev

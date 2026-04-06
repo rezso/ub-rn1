@@ -6,4 +6,5 @@ export CXXFLAGS="$FLAGS"
 export CPPFLAGS="$FLAGS"
 export CFLAGS="$FLAGS"
 
-ub_compile
+ub_compile \
+	--disable-tests

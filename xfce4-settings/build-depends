@@ -12,7 +12,6 @@ libxinerama-dev
 libxkbfile-dev
 libxklavier-dev
 libxrandr-dev
-startup-notification-dev
 upower-dev
 xcb-util-dev
 xfconf-dev

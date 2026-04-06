@@ -7,7 +7,6 @@ libxinerama-dev
 libxml2-dev
 libxtst-dev
 perl-xml-parser
-startup-notification-dev
 xcb-util-dev
 xfce4-panel-dev
 xfconf-dev

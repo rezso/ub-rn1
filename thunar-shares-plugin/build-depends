@@ -1,7 +1,6 @@
 dbus-glib-dev
 libjpeg-turbo-dev
 libsm-dev
-startup-notification-dev
 thunar-dev
 xcb-util-dev
 xfconf-dev

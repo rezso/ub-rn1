@@ -7,7 +7,6 @@ libxext-dev
 libxfce4ui-dev
 libxfce4util-dev
 polkit-dev
-startup-notification-dev
 upower-dev
 xcb-util-dev
 xfce4-panel-dev
