@@ -2,7 +2,6 @@ argon2-dev
 avahi-dev
 bison
 boost-dev
-cppunit-dev
 cups-dev
 curl-dev
 dbus-glib-dev
@@ -38,7 +37,6 @@ libxslt-dev
 libxt-dev
 libxtst-dev
 mdds
-mysql-dev
 neon-dev
 nspr-dev
 nss-dev

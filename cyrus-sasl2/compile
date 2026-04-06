@@ -1,13 +1,13 @@
 #!/bin/sh -eux
 
-export CPPFLAGS="-I/usr/include/mariadb"
 # NOCONFIGURE=1 ./autogen.sh
 ub_compile \
 	--enable-srp \
 	--enable-srp-setpass \
 	--disable-krb4 \
 	--with-dblib=berkeley \
-	--enable-sql \
+	--disable-sql \
+	--without-mysql \
 	--without-pgsql \
 	--without-sqlite \
 	--with-ldap \
