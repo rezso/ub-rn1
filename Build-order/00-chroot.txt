@@ -161,7 +161,7 @@ libxshmfence
 libxcursor
 libxscrnsaver
 libevent
-mysql
+mariadb
 libusb
 libevdev
 lynx

@@ -1,3 +1,4 @@
+	/usr/bin/mariadb-config
 	/usr/bin/mariadb_config
 	/usr/bin/mysql_config
 	/usr/include
