@@ -133,7 +133,6 @@ rinutils
 rkhunter
 rpcsvc-proto
 sdparm
-setuser
 sg3-utils
 sipcalc
 sleuthkit

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz setuser-${UB_VERSION}/
-	https://github.com/uhulinux/setuser/archive/refs/tags/
