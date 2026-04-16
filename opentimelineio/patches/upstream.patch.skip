@@ -1,0 +1,189 @@
+From 3a635fa97a798832a3bcec6963159638106bdd7b Mon Sep 17 00:00:00 2001
+From: Jean-Francois Panisset <panisset@gmail.com>
+Date: Tue, 7 Apr 2026 15:36:56 -0700
+Subject: [PATCH] Use installed pybind11 and other CMake fixes (#2009)
+
+* Use installed pybind11 and other CMake fixes
+
+- Adds OTIO_FIND_PYBIND11 configuration option to tell CMake
+to look for a pre-installed pybind11 instead of using the
+vendored copy. Follows existing pattern for Imath and rapidjson dependencies.
+[Issue #2006](https://github.com/AcademySoftwareFoundation/OpenTimelineIO/issues/2006).
+
+- A couple of bugfixes in src/deps/CMakeLists.txt
+  - checking for empty submodule directories was broken
+  - rapidjson subdmodule would not get built
+
+- Generated CMake files get installed in
+/usr/local/lib/cmake/opentime and opentimelineio
+instead of /usr/local/share/opentime and opentimelineio which
+is what the CMake documentation suggests.
+[Issue #2008](https://github.com/AcademySoftwareFoundation/OpenTimelineIO/issues/2008).
+
+Signed-off-by: Jean-Francois Panisset <panisset@gmail.com>
+
+* Don't try to build rapidjson
+
+rapidjson as a submodule won't build in our environment due
+to old CMake version requirements, and since it's a header-only
+library, we only need the headers to be present to allow
+opentimelineio to build.
+
+Signed-off-by: Jean-Francois Panisset <panisset@gmail.com>
+
+---------
+
+Signed-off-by: Jean-Francois Panisset <panisset@gmail.com>
+---
+ CMakeLists.txt                    | 11 +++++++++++
+ src/deps/CMakeLists.txt           | 28 +++++++++++++++++++++++++---
+ src/opentime/CMakeLists.txt       |  6 +++---
+ src/opentimelineio/CMakeLists.txt |  6 +++---
+ 4 files changed, 42 insertions(+), 9 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index e56177348..faf69c35e 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -38,6 +38,7 @@ option(OTIO_DEPENDENCIES_INSTALL      "Install OTIO's C++ header dependencies (I
+ option(OTIO_INSTALL_PYTHON_MODULES    "Install OTIO pure Python modules/files" ON)
+ option(OTIO_INSTALL_COMMANDLINE_TOOLS "Install the OTIO command line tools" ON)
+ option(OTIO_FIND_IMATH                "Find Imath using find_package" OFF)
++option(OTIO_FIND_PYBIND11             "Find pybind11 using find_package" OFF)
+ option(OTIO_FIND_RAPIDJSON            "Find RapidJSON using find_package" OFF)
+ set(OTIO_PYTHON_INSTALL_DIR "" CACHE STRING "Python installation dir (such as the site-packages dir)")
+ 
+@@ -258,6 +259,16 @@ else()
+     include_directories("${PROJECT_SOURCE_DIR}/src/deps/Imath/src")
+ endif()
+ 
++#----- pybind11
++if(OTIO_FIND_PYBIND11)
++    find_package(pybind11 REQUIRED)
++    if (pybind11_FOUND)
++        message(STATUS "Found pybind11 at ${pybind11_CONFIG}")
++    endif()
++else()
++    message(STATUS "Using src/deps/pybind11 by default")
++endif()
++
+ #----- RapidJSON
+ 
+ if(OTIO_FIND_RAPIDJSON)
+diff --git a/src/deps/CMakeLists.txt b/src/deps/CMakeLists.txt
+index efb5b5bd6..97e41d8ab 100644
+--- a/src/deps/CMakeLists.txt
++++ b/src/deps/CMakeLists.txt
+@@ -4,14 +4,21 @@
+ #----- Other dependencies
+ 
+ # detect if the submodules haven't been updated
+-set(DEPS_SUBMODULES pybind11)
++if(NOT OTIO_FIND_PYBIND11 AND OTIO_PYTHON_INSTALL)
++    # pybind11 only needed when building Python bindings
++    set(DEPS_SUBMODULES ${DEPS_SUBMODULES} pybind11)
++endif()
++
++if(NOT OTIO_FIND_IMATH)
++    set(DEPS_SUBMODULES ${DEPS_SUBMODULES} Imath)
++endif()
+ 
+ if(NOT OTIO_FIND_RAPIDJSON)
+     set(DEPS_SUBMODULES ${DEPS_SUBMODULES} rapidjson)
+ endif()
+ 
+ foreach(submodule IN LISTS DEPS_SUBMODULES)
+-    file(GLOB SUBMOD_CONTENTS ${submodule})
++    file(GLOB SUBMOD_CONTENTS "${submodule}/*")
+     list(LENGTH SUBMOD_CONTENTS SUBMOD_CONTENT_LEN)
+     if(SUBMOD_CONTENT_LEN EQUAL 0)
+         message(
+@@ -21,10 +28,25 @@ foreach(submodule IN LISTS DEPS_SUBMODULES)
+     endif()
+ endforeach()
+ 
+-if(OTIO_PYTHON_INSTALL)
++if(NOT OTIO_FIND_PYBIND11 AND OTIO_PYTHON_INSTALL)
++    # pybind11 only needed when building Python bindings
+     add_subdirectory(pybind11)
+ endif()
+ 
++# Calling add_subdirectory(rapidjson) will try to build subcomponents
++# such as example/CMakeLists.txt which has not been updated for CMake
++# 4.0 compatibility and will break our builds. rapidjson is a header
++# only library, code in src/opentimelineio/ only needs it to be present
++# to pick up the headers.
++# If building rapidjson ends up required, the CMake variables:
++#
++# RAPIDJSON_BUILD_DOC
++# RAPIDJSON_BUILD_EXAMPLES
++# RAPIDJSON_BUILD_TESTS
++#
++# coud be overriden from ON to OFF to avoid trying to build
++# subcomponents we don't need.
++
+ if(NOT OTIO_FIND_IMATH)
+     # preserve BUILD_SHARED_LIBS options for this project, but set it off for Imath
+     option(BUILD_SHARED_LIBS "Build shared libraries" ON)
+diff --git a/src/opentime/CMakeLists.txt b/src/opentime/CMakeLists.txt
+index 47e50b40f..4f071060e 100644
+--- a/src/opentime/CMakeLists.txt
++++ b/src/opentime/CMakeLists.txt
+@@ -64,7 +64,7 @@ if(OTIO_CXX_INSTALL)
+             RUNTIME DESTINATION "${OTIO_RESOLVED_CXX_DYLIB_INSTALL_DIR}")
+ 
+     install(EXPORT OpenTimeTargets
+-            DESTINATION "${OTIO_RESOLVED_CXX_INSTALL_DIR}/share/opentime"
++            DESTINATION "${OTIO_RESOLVED_CXX_INSTALL_DIR}/lib/cmake/opentime"
+             NAMESPACE OTIO:: )
+ 
+     include(CMakePackageConfigHelpers)
+@@ -72,7 +72,7 @@ if(OTIO_CXX_INSTALL)
+         ${CMAKE_CURRENT_SOURCE_DIR}/OpenTimeConfig.cmake.in
+         ${CMAKE_CURRENT_BINARY_DIR}/OpenTimeConfig.cmake
+         INSTALL_DESTINATION
+-            ${OTIO_RESOLVED_CXX_INSTALL_DIR}/share/opentime
++            ${OTIO_RESOLVED_CXX_INSTALL_DIR}/lib/cmake/opentime
+         NO_SET_AND_CHECK_MACRO
+         NO_CHECK_REQUIRED_COMPONENTS_MACRO
+     )
+@@ -87,7 +87,7 @@ if(OTIO_CXX_INSTALL)
+             ${CMAKE_CURRENT_BINARY_DIR}/OpenTimeConfig.cmake
+             ${CMAKE_CURRENT_BINARY_DIR}/OpenTimeConfigVersion.cmake
+         DESTINATION
+-            ${OTIO_RESOLVED_CXX_INSTALL_DIR}/share/opentime
++            ${OTIO_RESOLVED_CXX_INSTALL_DIR}/lib/cmake/opentime
+     )
+ endif()
+ 
+diff --git a/src/opentimelineio/CMakeLists.txt b/src/opentimelineio/CMakeLists.txt
+index 86759ca27..607cb6dec 100644
+--- a/src/opentimelineio/CMakeLists.txt
++++ b/src/opentimelineio/CMakeLists.txt
+@@ -142,7 +142,7 @@ if(OTIO_CXX_INSTALL)
+            RUNTIME DESTINATION "${OTIO_RESOLVED_CXX_DYLIB_INSTALL_DIR}")
+ 
+     install(EXPORT OpenTimelineIOTargets
+-           DESTINATION "${OTIO_RESOLVED_CXX_INSTALL_DIR}/share/opentimelineio"
++           DESTINATION "${OTIO_RESOLVED_CXX_INSTALL_DIR}/lib/cmake/opentimelineio"
+            NAMESPACE OTIO:: )
+ 
+     include(CMakePackageConfigHelpers)
+@@ -150,7 +150,7 @@ if(OTIO_CXX_INSTALL)
+         ${CMAKE_CURRENT_SOURCE_DIR}/OpenTimelineIOConfig.cmake.in
+         ${CMAKE_CURRENT_BINARY_DIR}/OpenTimelineIOConfig.cmake
+         INSTALL_DESTINATION
+-            ${OTIO_RESOLVED_CXX_INSTALL_DIR}/share/opentimelineio
++            ${OTIO_RESOLVED_CXX_INSTALL_DIR}/lib/cmake/opentimelineio
+         NO_SET_AND_CHECK_MACRO
+         NO_CHECK_REQUIRED_COMPONENTS_MACRO
+     )
+@@ -165,6 +165,6 @@ if(OTIO_CXX_INSTALL)
+             ${CMAKE_CURRENT_BINARY_DIR}/OpenTimelineIOConfig.cmake
+             ${CMAKE_CURRENT_BINARY_DIR}/OpenTimelineIOConfigVersion.cmake
+         DESTINATION
+-            ${OTIO_RESOLVED_CXX_INSTALL_DIR}/share/opentimelineio
++            ${OTIO_RESOLVED_CXX_INSTALL_DIR}/lib/cmake/opentimelineio
+     )
+ endif()
+

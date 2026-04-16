@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz OpenTimelineIO-${UB_VERSION}/
+    https://github.com/AcademySoftwareFoundation/OpenTimelineIO/archive/refs/tags/

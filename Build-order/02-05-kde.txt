@@ -21,6 +21,7 @@ black-hole-solver # kdegames (kpat)
 kcolorpicker # gwenview
 kimageannotator # gwenview
 kddocwidgets # kdenlive
+opentimelineio # kdenlive
 #
 extra-cmake-modules
 attica

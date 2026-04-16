@@ -1,6 +1,8 @@
 dbus-dev
 kf6-dev
 kirigami-addons-dev
+libei-dev
+libevdev-dev
 libfakekey-dev
 libxkbcommon-dev
 pulseaudio-qt-dev

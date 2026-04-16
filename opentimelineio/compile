@@ -1,0 +1,9 @@
+#!/bin/sh -eux
+
+git clone https://github.com/Tencent/rapidjson.git src/deps/rapidjson
+git clone https://github.com/AcademySoftwareFoundation/Imath src/deps/Imath
+
+ub_compile \
+    -DOTIO_PYTHON_INSTALL=OFF \
+    -DOTIO_INSTALL_PYTHON_MODULES=OFF \
+    -DOTIO_INSTALL_COMMANDLINE_TOOLS=OFF
