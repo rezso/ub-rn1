@@ -1,5 +1,4 @@
 #!/usr/bin/env dl
 
-mpc-${UB_VERSION}.tar.gz mpc-${UB_VERSION}/
-	https://www.multiprecision.org/mpc/download/
+mpc-${UB_VERSION}.tar.xz mpc-${UB_VERSION}/
 	https://ftp.gnu.org/gnu/mpc/
