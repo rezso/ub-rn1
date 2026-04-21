@@ -1,29 +1,24 @@
 diff -Naur a/Makefile b/Makefile
---- a/Makefile	2025-02-12 18:23:25.000000000 +0100
-+++ b/Makefile	2025-02-27 00:03:41.879208171 +0100
-@@ -11,13 +11,14 @@
- # ADD_CFLAGS: Add -DVI_KEYS if you want vi-cursor-keys
- #
- 
--DESTDIR     = /usr
-+DESTDIR     =
-+PREFIX      = /usr
+--- a/Makefile	2026-04-21 09:20:22.000000000 +0200
++++ b/Makefile	2026-04-21 10:56:44.563822231 +0200
+@@ -13,9 +13,10 @@
  
  ADD_CFLAGS  = # -DVI_KEYS
  
+-DESTDIR     = /usr
 -BINDIR      = $(DESTDIR)/bin
 -MANDIR      = $(DESTDIR)/share/man/man1
--MANESDIR    = $(DESTDIR)/share/man/es/man1
++DESTDIR     =
++PREFIX      = /usr
 +BINDIR      = $(DESTDIR)$(PREFIX)/bin
 +MANDIR      = $(DESTDIR)$(PREFIX)/share/man/man1
-+MANESDIR    = $(DESTDIR)$(PREFIX)/share/man/es/man1
  
  
  # Uncomment the lines for your system (default is linux)
-@@ -29,7 +30,7 @@
- #CLOCK	    = -DCLOCK_SUPPORT # Experimental!
+@@ -26,7 +27,7 @@
+ COLOR       = -DCOLOR_SUPPORT 
  READLINE    = -DREADLINE_SUPPORT
- CFLAGS      += -D_GNU_SOURCE $(COLOR) $(CLOCK) $(READLINE) $(ADD_CFLAGS)
+ CFLAGS      += -D_GNU_SOURCE $(COLOR) $(READLINE) $(ADD_CFLAGS)
 -LDFLAGS     += -lncurses -ltinfo -lreadline
 +LDFLAGS     += -lncursesw -lreadline
  

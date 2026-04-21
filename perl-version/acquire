@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 version-${UB_VERSION}.tar.gz version-${UB_VERSION}/
-	https://cpan.metacpan.org/modules/by-module/version/
+	https://cpan.metacpan.org/authors/id/L/LE/LEONT/
