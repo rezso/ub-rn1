@@ -41,7 +41,7 @@ x.org-utils
 xmldiff
 bogofilter
 highlight
-guile2.2
+guile30
 gtk-stock-icons
 vigra
 libodfgen

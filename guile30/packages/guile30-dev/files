@@ -1,4 +1,4 @@
-	/usr/bin/guile-config2.2
+	/usr/bin/*-config
 	/usr/include
 	/usr/lib/pkgconfig
 @	/usr/lib/*.so
