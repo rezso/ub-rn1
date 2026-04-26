@@ -242,7 +242,6 @@ libfontenc
 mkfontscale
 fonttosfnt
 mkfontdir
-x.org-font-utils
 libxfont2
 bdftopcf
 libxdamage
