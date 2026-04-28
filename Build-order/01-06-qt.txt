@@ -36,8 +36,6 @@ fonts-unicode
 mdadm
 squashfs-tools
 jfsutils
-xkb-utils
-x.org-utils
 xmldiff
 bogofilter
 highlight

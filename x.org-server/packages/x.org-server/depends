@@ -1,4 +1,3 @@
-fonts-x.org-base
-xkbutils
+setxkbmap
+xkbcomp
 xkeyboard-config
-x.org-server-utils

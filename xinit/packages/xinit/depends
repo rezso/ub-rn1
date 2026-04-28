@@ -8,7 +8,6 @@ xbindkeys
 xhost
 xmodmap
 x.org-server
-x.org-server-utils
 xrandr
 xrdb
 xsetroot
