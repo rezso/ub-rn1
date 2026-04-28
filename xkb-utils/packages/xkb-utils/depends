@@ -1,5 +1,0 @@
-setxkbmap >=
-xkbcomp >=
-xkbevd >=
-xkbprint >=
-xkbutils >=
