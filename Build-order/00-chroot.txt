@@ -103,7 +103,6 @@ libpng
 libtool
 licenses
 m4
-openslp
 openssl
 patch
 popt

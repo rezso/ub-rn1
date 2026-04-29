@@ -90,10 +90,8 @@ libsoxr
 libspiro
 libtinyxml
 liburcu
-libutf8proc
 libuv
 libvisual
-libx86
 libx86mu
 libytnef
 libzip

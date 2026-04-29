@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-libx86_${UB_VERSION}+ds1.orig.tar.gz libx86-${UB_VERSION}/
-	https://deb.debian.org/debian/pool/main/libx/libx86/

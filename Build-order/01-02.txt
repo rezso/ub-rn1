@@ -11,7 +11,6 @@ xlsfonts
 xprop
 xwininfo
 librevenge
-libxxf86dga
 setxkbmap
 xev
 xkbevd
@@ -99,7 +98,6 @@ tesseract
 libplist
 libdv
 raptor2
-liblrdf
 zvbi
 libbluray
 libofa
@@ -126,7 +124,6 @@ fltk
 openexr
 imagemagick
 libisofs
-libopusenc
 libgee
 libindicator3
 liblangtag
