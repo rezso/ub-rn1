@@ -38,6 +38,7 @@ ncurses
 readline
 bash
 lzip
+ed
 bc
 mold
 binutils
