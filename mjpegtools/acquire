@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-mjpegtools-${UB_VERSION}.tar.gz mjpegtools-${UB_VERSION}/
-	https://downloads.sourceforge.net/mjpeg/

@@ -36,7 +36,6 @@ opusfile
 xdg-user-dirs
 xmlrpc
 strace
-vpnc
 openvpn
 yelp-xsl
 yelp-tools
@@ -66,7 +65,6 @@ graphicsmagick
 spice-protocol
 libde265
 libv4l
-mjpegtools
 openal
 mpg123
 srt

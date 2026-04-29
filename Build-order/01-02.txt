@@ -100,7 +100,6 @@ libplist
 libdv
 raptor2
 liblrdf
-vcdimager
 zvbi
 libbluray
 libofa

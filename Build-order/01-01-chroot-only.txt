@@ -118,7 +118,6 @@ perl-parse-yapp
 pkcs11-helper
 poppler-data
 potrace
-pptpclient
 procmail
 psacct
 pugixml
@@ -138,7 +137,6 @@ symlinks
 sysklogd
 taglib
 time
-toolame
 tree
 trunc
 tslib

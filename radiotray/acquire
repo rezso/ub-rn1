@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-radiotray-${UB_VERSION}.tar.gz radiotray-023358a/
-	git+https://github.com/lubosz/radiotray.git@023358a

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-toolame-${UB_VERSION/./}.tgz toolame-${UB_VERSION/./}/
-	https://download.sourceforge.net/toolame/

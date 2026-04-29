@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-opus-tools-${UB_VERSION}.tar.gz opus-tools-${UB_VERSION}/
-	https://downloads.xiph.org/releases/opus/

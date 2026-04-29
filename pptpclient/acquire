@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-pptp-${UB_VERSION}.tar.gz pptp-${UB_VERSION}/
-	https://download.sourceforge.net/pptpclient/

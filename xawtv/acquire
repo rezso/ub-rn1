@@ -1,6 +1,0 @@
-#!/usr/bin/env dl
-
-xawtv-${UB_VERSION}.tar.bz2 xawtv-${UB_VERSION}/
-	https://linuxtv.org/downloads/xawtv/
-	https://dl.bytesex.org/releases/xawtv/
-	https://dl.bytesex.org/cvs-snapshots/

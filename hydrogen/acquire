@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION/~/-}.tar.gz hydrogen-${UB_VERSION/~/-}/
-	https://github.com/hydrogen-music/hydrogen/archive/

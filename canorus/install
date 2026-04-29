@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-make install
-
-# install desktop file and icon
-cp -a canorus.desktop "$UB_INSTALLDIR"/usr/share/applications/
-cp "$UB_INSTALLDIR"/usr/share/{canorus/images/clogosm.png,pixmaps/canorus.png}

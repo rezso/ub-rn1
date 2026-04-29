@@ -5,9 +5,7 @@ ncftp
 fetchmail
 whois
 ufw
-nrpe
 grsync
-irssi
 stunnel
 mtr
 gufw
@@ -16,7 +14,6 @@ wget2
 nmap
 discord
 anyremote
-mutt
 libtorrent-rasterbar
 qbittorrent
 libtorrent

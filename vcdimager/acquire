@@ -1,5 +1,0 @@
-#!/usr/bin/env dl
-
-vcdimager-"$UB_VERSION".tar.gz vcdimager-"$UB_VERSION"/
-	https://ftp.gnu.org/gnu/vcdimager/
-	https://www.vcdimager.org/pub/vcdimager/vcdimager-0.7/

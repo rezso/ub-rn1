@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--with-libquicktime \
-	--with-libdv \
-	--enable-largefile
