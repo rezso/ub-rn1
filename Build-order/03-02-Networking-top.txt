@@ -7,7 +7,6 @@ whois
 ufw
 nrpe
 grsync
-speedtest-cli
 irssi
 stunnel
 mtr

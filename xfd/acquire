@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-xfd-${UB_VERSION}.tar.gz xfd-${UB_VERSION}/
-  https://www.x.org/releases/individual/app/

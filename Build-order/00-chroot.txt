@@ -38,7 +38,6 @@ ncurses
 readline
 bash
 lzip
-ed
 bc
 mold
 binutils
@@ -240,8 +239,6 @@ libxkbfile
 x.org-font-util
 libfontenc
 mkfontscale
-fonttosfnt
-mkfontdir
 libxfont2
 bdftopcf
 libxdamage
@@ -341,7 +338,6 @@ pinentry
 libsecret
 net-snmp
 pcre2
-sysfsutils
 rrdtool
 lmsensors
 libva

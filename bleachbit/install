@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-make \
-prefix=/usr \
-DESTDIR=${UB_INSTALLDIR} \
-install

@@ -19,9 +19,7 @@ xvinfo
 xcb-util-cursor
 xdpyinfo
 xdriinfo
-xfontsel
 xsetroot
-xfd
 gyp
 nss
 libetpan

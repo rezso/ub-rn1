@@ -5,7 +5,6 @@ nodejs
 libproxy
 glib-networking
 wpasupplicant
-iwd
 chrony
 dhcpcd
 gpsd
@@ -28,7 +27,6 @@ rest
 wxwidgets
 uhu-pixmaps
 clawsker
-dialog
 psmisc
 xdm
 fontforge

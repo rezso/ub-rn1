@@ -1,6 +1,5 @@
 7zip
 acpid
-agedu
 alien
 alsa-lib
 argon2
@@ -40,7 +39,6 @@ fping
 ganyremote
 glm
 hddtemp
-hdparm
 hwdata
 hyphen
 hyphen-hu
@@ -51,7 +49,6 @@ iperf
 iw
 jansson
 json-cpp
-kanyremote
 keyutils
 liba52
 libasyncns
@@ -132,8 +129,6 @@ recode
 rinutils
 rkhunter
 rpcsvc-proto
-sdparm
-sg3-utils
 sipcalc
 sleuthkit
 smartmontools

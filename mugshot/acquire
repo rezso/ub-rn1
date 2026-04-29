@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-mugshot-${UB_VERSION}.tar.gz mugshot-mugshot-${UB_VERSION}/
-	https://github.com/bluesabre/mugshot/archive/

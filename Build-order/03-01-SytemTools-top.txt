@@ -23,7 +23,6 @@ plymouth
 usb-modeswitch-data
 usb-modeswitch
 clamav
-qlam
 pinentry-qt
 tlp
 zsh

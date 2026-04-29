@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-iwd-${UB_VERSION}.tar.xz iwd-${UB_VERSION}/
-	https://mirrors.edge.kernel.org/pub/linux/network/wireless/

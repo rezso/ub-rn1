@@ -1,19 +1,15 @@
 ansifilter
-nrg2iso
 keepassxc
 gkrellm-themes
 multitail
 nload
 qshutdown
-vbindiff
 gnuplot
 ncdu
 renameutils
 ocrad
-bleachbit
 lrzip
 qt6ct
-odt2txt
 pdfminer
 qpdf
 pdfmixtool
@@ -22,7 +18,6 @@ tmux
 dateutils
 vdpauinfo
 fonts-terminus
-nfoview
 xorriso
 lshw
 hardinfo
@@ -37,7 +32,6 @@ xca
 arandr
 testdisk
 lesspipe
-mugshot
 mailutils
 fbreader
 redshift

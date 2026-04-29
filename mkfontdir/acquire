@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-mkfontdir-${UB_VERSION}.tar.gz mkfontdir-${UB_VERSION}/
-  https://www.x.org/releases/individual/app/
