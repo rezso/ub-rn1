@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz flameshot-${UB_VERSION}/
+	https://github.com/flameshot-org/flameshot/archive/refs/tags/

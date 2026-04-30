@@ -29,6 +29,7 @@ gammu
 encfs
 sirikali
 simple-screen-recorder
+flameshot
 xca
 arandr
 testdisk
