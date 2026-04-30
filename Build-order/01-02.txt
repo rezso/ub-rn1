@@ -110,7 +110,7 @@ libusbmuxd
 libtatsu
 libimobiledevice
 netpbm # lilypond build-depends
-djvulibre
+libdjvulibre
 java-jre
 libvpx
 gd
