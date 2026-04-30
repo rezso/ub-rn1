@@ -13,6 +13,7 @@ networkmanager
 libfyaml
 libxmlb
 bind
+vpnc
 openconnect
 libsoup3
 ruby

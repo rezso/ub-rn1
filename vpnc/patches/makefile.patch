@@ -1,0 +1,25 @@
+diff -Naur a/Makefile b/Makefile
+--- a/Makefile	2008-11-19 21:36:12.000000000 +0100
++++ b/Makefile	2024-12-29 22:28:53.151834504 +0100
+@@ -20,7 +20,7 @@
+ # $Id: Makefile 312 2008-06-15 18:09:42Z Joerg Mayer $
+ 
+ DESTDIR=
+-PREFIX=/usr/local
++PREFIX=/usr
+ ETCDIR=/etc/vpnc
+ BINDIR=$(PREFIX)/bin
+ SBINDIR=$(PREFIX)/sbin
+@@ -53,10 +53,10 @@
+ CC=gcc
+ CFLAGS ?= -O3 -g
+ CFLAGS += -W -Wall -Wmissing-declarations -Wwrite-strings
+-CFLAGS +=  $(shell libgcrypt-config --cflags)
++CFLAGS +=  $(shell pkg-config --cflags libgcrypt)
+ CPPFLAGS += -DVERSION=\"$(VERSION)\" $(OPENSSL_GPL_VIOLATION)
+ LDFLAGS ?= -g
+-LDFLAGS += $(shell libgcrypt-config --libs) $(OPENSSLLIBS)
++LDFLAGS += $(shell pkg-config --libs libgcrypt) $(OPENSSLLIBS)
+ 
+ ifeq ($(shell uname -s), SunOS)
+ LDFLAGS += -lnsl -lresolv -lsocket
