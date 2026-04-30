@@ -1,4 +1,4 @@
 #!/bin/sh -eux
 
 ub_compile \
-	--disable-appindicator
+    -DBUILD_WITH_QT6=ON

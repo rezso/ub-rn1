@@ -27,6 +27,7 @@ cifs-utils
 gkrellm
 gammu
 encfs
+sirikali
 simple-screen-recorder
 xca
 arandr
@@ -38,8 +39,6 @@ redshift
 intel-gpu-tools
 gparted
 deb-gview
-gencfsm
-mencfsm
 blueman
 recoll
 meld

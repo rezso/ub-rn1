@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-qmake-qt5 MolchEncfsManager.pro
-ub_compile
