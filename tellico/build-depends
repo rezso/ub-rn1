@@ -9,6 +9,5 @@ libxslt-dev
 poppler-qt6-dev
 qt6-dev
 qt6-qtwebengine-dev
-qtkeychain-dev
 taglib-dev
 yaz-dev

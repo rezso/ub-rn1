@@ -2,5 +2,4 @@ kf6-dev
 python3-dev
 qt6-dev
 qt6-qtwebengine-dev
-qtkeychain-dev
 xcb-util-dev

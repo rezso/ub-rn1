@@ -33,7 +33,6 @@ plasma-wayland-protocols
 polkit-qt-dev
 qcoro-dev
 qt6-dev
-qtkeychain-dev
 wayland-dev
 wayland-protocols
 xcb-util-cursor-dev
