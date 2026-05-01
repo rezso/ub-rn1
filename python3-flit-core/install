@@ -1,5 +1,6 @@
 #!/bin/sh -eux
 
+cd flit_core
 pythonver=$(python3 -V | sed 's/Python /python/' | sed s/\.\..$//)
 sitedir=${UB_INSTALLDIR}/usr/lib/${pythonver}/site-packages
 mkdir -p $sitedir
