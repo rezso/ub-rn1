@@ -1,0 +1,34 @@
+diff -Naur a/config/session.conf b/config/session.conf
+--- a/config/session.conf	2026-04-20 10:13:34.000000000 +0200
++++ b/config/session.conf	2026-05-07 22:55:51.686436459 +0200
+@@ -1,4 +1,5 @@
+ [General]
++window_manager=kwin
+ leave_confirmation=true
+ 
+ [Environment]
+diff -Naur a/startlxqt.in b/startlxqt.in
+--- a/startlxqt.in	2026-04-20 10:13:34.000000000 +0200
++++ b/startlxqt.in	2026-05-07 22:58:45.398793101 +0200
+@@ -43,6 +43,11 @@
+ fi
+ mkdir -p "$XDG_DESKTOP_DIR"
+ 
++# set environment variables for new units started by user service manager
++if command -v systemctl >/dev/null; then
++    systemctl --user import-environment XDG_CURRENT_DESKTOP
++fi
++
+ # Clean up after GDM (GDM sets the number of desktops to one)
+ xprop -root -remove _NET_NUMBER_OF_DESKTOPS -remove _NET_DESKTOP_NAMES -remove _NET_CURRENT_DESKTOP 2> /dev/null
+ 
+@@ -53,9 +58,6 @@
+     fi
+ fi
+ 
+-# Qt4 platform plugin
+-export QT_PLATFORM_PLUGIN=lxqt
+-
+ # Qt5 platform plugin
+ export QT_QPA_PLATFORMTHEME=lxqt
+ 
