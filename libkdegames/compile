@@ -3,7 +3,6 @@
 for i in *; do
 	cd $i
 	ub_compile \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
 	-DBUILD_TESTING=OFF
 	cd ..
 done

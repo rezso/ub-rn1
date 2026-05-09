@@ -1,8 +1,8 @@
 cairo-dev
-djvulibre-dev
 fftw3-dev
 graphviz-dev
 lcms2-dev
+libdjvulibre-dev
 libjpeg-turbo-dev
 libjxl-dev
 liblqr-dev

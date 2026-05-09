@@ -1,8 +1,8 @@
 chmlib-dev
-djvulibre-dev
 ebook-tools-dev
 freetype2-dev
 kf6-dev
+libdjvulibre-dev
 libspectre-dev
 libzip-dev
 phonon-dev
