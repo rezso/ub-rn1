@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz pexpect-${UB_VERSION}/
-	https://github.com/pexpect/pexpect/archive/refs/tags/

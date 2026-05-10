@@ -18,7 +18,6 @@ python3-distutils-extra
 python3-dnspython
 python3-idna
 python3-incremental
-python3-mutagen
 python3-pyasn1
 python3-pycparser
 python3-pyxdg
@@ -46,7 +45,6 @@ python3-hyperlink
 python3-zope.interface
 python3-pyhamcrest
 python3-ptyprocess
-python3-pexpect
 python3-reportlab
 python3-cffi
 python3-setuptools-rust
@@ -69,5 +67,4 @@ python3-cryptography
 python3-pyopenssl
 python3-service-identity
 python3-twisted
-python3-multidict
 python3-future
