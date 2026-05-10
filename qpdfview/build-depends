@@ -1,6 +1,6 @@
 cups-dev
-djvulibre-dev
 file-dev
+libdjvulibre-dev
 libspectre-dev
 poppler-qt6-dev
 qt6-dev

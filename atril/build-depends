@@ -1,9 +1,9 @@
 caja-dev
 dbus-dev
-djvulibre-dev
 gobject-introspection-dev
 gtk3-dev
 itstool
+libdjvulibre-dev
 libgxps-dev
 libkpathsea-dev
 libsecret-dev
