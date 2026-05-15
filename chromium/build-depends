@@ -5,7 +5,6 @@ curl-dev
 dbus-dev
 expat-dev
 freetype2-dev
-gn
 gperf
 gtk4-dev
 harfbuzz-dev
