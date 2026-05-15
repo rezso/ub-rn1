@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	-Drelease-file=/etc/os-release \
-	-Dshutdown-tty=/dev/tty63 \
-	-Dsystemd-integration=true

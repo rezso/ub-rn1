@@ -19,7 +19,6 @@ xsensors
 open-vm-tools
 hwinfo
 libva-utils
-plymouth
 usb-modeswitch-data
 usb-modeswitch
 clamav

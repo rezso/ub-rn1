@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-plymouth-${UB_VERSION}.tar.xz plymouth-${UB_VERSION}/
-	https://www.freedesktop.org/software/plymouth/releases/
