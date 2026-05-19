@@ -1,0 +1,19 @@
+diff -Naur a/services/plugins/dndcp/Makefile.am b/services/plugins/dndcp/Makefile.am
+--- a/services/plugins/dndcp/Makefile.am	2026-05-14 06:59:48.000000000 +0200
++++ b/services/plugins/dndcp/Makefile.am	2026-05-19 22:26:35.241089254 +0200
+@@ -23,6 +23,7 @@
+ plugin_LTLIBRARIES = libdndcp.la
+ 
+ libdndcp_la_CPPFLAGS =
++libdndcp_la_CPPFLAGS += -I$(top_srcdir)/lib/include
+ libdndcp_la_CPPFLAGS += @GTK_CPPFLAGS@
+ libdndcp_la_CPPFLAGS += @PLUGIN_CPPFLAGS@
+ libdndcp_la_CPPFLAGS += -I$(top_srcdir)/services/plugins/dndcp/dnd
+@@ -31,7 +32,6 @@
+ libdndcp_la_CPPFLAGS += -I$(top_srcdir)/services/plugins/dndcp/stringxx
+ libdndcp_la_CPPFLAGS += -I$(top_srcdir)/services/plugins/dndcp/xutils
+ 
+-libdndcp_la_CPPFLAGS += -I$(top_srcdir)/include
+ libdndcp_la_CPPFLAGS += @XDR_CPPFLAGS@
+ 
+ # Passing C++ related flags to CPPFLAGS generates error.

@@ -4,6 +4,5 @@ export CUSTOM_PROCPS_NAME=procps
 
 ub_compile \
     --without-kernel-modules \
-    --without-gtkmm3 \
     --disable-containerinfo \
     --disable-vgauth
