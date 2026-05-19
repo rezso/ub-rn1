@@ -1,0 +1,12 @@
+diff -Naur a/build/config/rust.gni b/build/config/rust.gni
+--- a/build/config/rust.gni	2026-03-30 22:27:54.000000000 +0200
++++ b/build/config/rust.gni	2026-04-03 11:09:41.113562763 +0200
+@@ -140,7 +140,7 @@
+ # `rustc_nightly_capability = false` will make the build avoid the use of
+ # Rust nightly features. There are no bots that test this and there is no
+ # guarantee it will work, but we accept patches for this configuration.
+-rustc_nightly_capability = use_chromium_rust_toolchain || build_with_chromium
++rustc_nightly_capability = true
+ 
+ # Platform support for the Rust toolchain.
+ chromium_toolchain_supports_platform = !is_wasm

@@ -86,28 +86,32 @@ sed -i 's/OFFICIAL_BUILD/GOOGLE_CHROME_BUILD/' tools/generate_shim_headers/gener
 sed "s|//third_party/usb_ids/usb.ids|/usr/share/hwdata/usb.ids|g" -i services/device/public/cpp/usb/BUILD.gn
 
 # Link to system tools required by the build
+if [ ! -d third_party/gperf/cipd/bin ]; then
+    mkdir -p third_party/gperf/cipd/bin
+fi
 if [ ! -d third_party/node/linux/node-linux-x64/bin ]; then
     mkdir -p third_party/node/linux/node-linux-x64/bin
 fi
 if [ ! -d third_party/rust-toolchain/bin ]; then
     mkdir -p third_party/rust-toolchain/bin
 fi
+ln -sf /usr/bin/gperf third_party/gperf/cipd/bin/gperf
 ln -sf /usr/bin/node third_party/node/linux/node-linux-x64/bin/node
 ln -sf /usr/bin/rustc third_party/rust-toolchain/bin/rustc
 
 # gn a buildhoz
-tools/gn/bootstrap/bootstrap.py --build-path=$outdir --gn-gen-args=" ${_flags[@]} "
+# tools/gn/bootstrap/bootstrap.py --build-path=$outdir --gn-gen-args=" ${_flags[@]} "
 
 # extra flags
 export LDFLAGS+="-Wl,-rpath,/usr/lib/chromium/ -Wl,--no-keep-memory"
 
 # build options: az --args utáni sorok nem kezdődhetnek tab karakterrel!
 # $outdir/gn gen $outdir -v --args=" ${_flags[@]} " --script-executable=/usr/bin/python3
-$outdir/gn gen $outdir --args="${_flags[*]}"
+gn gen $outdir --args="${_flags[*]}"
 
 # gn args list - kihagyható, de segít a lehetséges opciók megadásához
 # $outdir/gn args --list $UB_COMPILEDIR/$outdir > $UB_COMPILEDIR/$outdir/gn-args-full.list
-$outdir/gn args --list $outdir > $outdir/gn-args-full.list
+gn args --list $outdir > $outdir/gn-args-full.list
 
 # ninja
 LC_ALL=C ninja -j $jobs -C $outdir -v pdf chrome chrome_sandbox chromedriver.unstripped

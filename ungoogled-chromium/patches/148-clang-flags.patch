@@ -1,0 +1,83 @@
+diff -Naur a/build/config/BUILDCONFIG.gn b/build/config/BUILDCONFIG.gn
+--- a/build/config/BUILDCONFIG.gn	2026-05-01 19:13:59.000000000 +0200
++++ b/build/config/BUILDCONFIG.gn	2026-05-11 19:19:26.316744268 +0200
+@@ -362,7 +362,6 @@
+   "//build/config/compiler:no_unresolved_symbols",
+   "//build/config/compiler:runtime_library",
+   "//build/config/compiler:sanitize_c_array_bounds",
+-  "//build/config/compiler:sanitize_return",
+   "//build/config/compiler:thin_archive",
+   "//build/config/compiler:thinlto_optimize_default",
+   "//build/config/compiler:tot_warnings",
+diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
+--- a/build/config/compiler/BUILD.gn	2026-05-10 23:22:07.672577852 +0200
++++ b/build/config/compiler/BUILD.gn	2026-05-12 14:58:44.885974572 +0200
+@@ -625,13 +625,6 @@
+       ]
+     }
+ 
+-    # The performance improvement does not seem worth the risk. See
+-    # https://crbug.com/484082200 for background and https://crrev.com/c/7593035
+-    # for discussion.
+-    if (!is_wasm) {
+-      cflags += [ "-fno-lifetime-dse" ]
+-    }
+-
+     # TODO(hans): Remove this once Clang generates better optimized debug info
+     # by default. https://crbug.com/765793
+     cflags += [
+@@ -1902,40 +1895,6 @@
+ # See also: https://crbug.com/40891132#comment10
+ config("sanitize_c_array_bounds") {
+   if (!is_ubsan && is_clang && !(is_asan && target_cpu == "x86")) {
+-    cflags = [
+-      "-fsanitize=array-bounds",
+-      "-fsanitize-trap=array-bounds",
+-
+-      # Some code users feature detection to determine if UBSAN (or any
+-      # sanitizer) is enabled, they then do expensive debug like operations. We
+-      # want to suppress this behaviour since we want to keep performance costs
+-      # as low as possible while having these checks.
+-      "-fsanitize-ignore-for-ubsan-feature=array-bounds",
+-
+-      # Because we've enabled array-bounds sanitizing we also want to suppress
+-      # the related warning about "unsafe-buffer-usage-in-static-sized-array",
+-      # since we know that the array bounds sanitizing will catch any out-of-
+-      # bounds accesses.
+-      "-Wno-unsafe-buffer-usage-in-static-sized-array",
+-    ]
+-  }
+-}
+-
+-# Enable UBSan subset to ensure we always hit `return` statement in non-void
+-# functions (https://crbug.com/489565636). This is equivalent to inserting
+-# `NOTREACHED()` at the end of such functions.
+-config("sanitize_return") {
+-  if (!is_ubsan && is_clang) {
+-    cflags = [
+-      "-fsanitize=return",
+-      "-fsanitize-trap=return",
+-
+-      # Some code users feature detection to determine if UBSAN (or any
+-      # sanitizer) is enabled, they then do expensive debug like operations. We
+-      # want to suppress this behaviour since we want to keep performance costs
+-      # as low as possible while having these checks.
+-      "-fsanitize-ignore-for-ubsan-feature=return",
+-    ]
+   }
+ }
+ 
+diff -Naur a/v8/BUILD.gn b/v8/BUILD.gn
+--- a/v8/BUILD.gn	2026-05-01 19:13:59.000000000 +0200
++++ b/v8/BUILD.gn	2026-05-13 02:49:54.861674506 +0200
+@@ -1796,10 +1796,6 @@
+ 
+   if (is_clang) {
+     cflags += [ "-Wunreachable-code" ]
+-    if (v8_current_cpu != "ppc64" && v8_current_cpu != "s390x") {
+-      cflags += [ "-Wlifetime-safety-permissive" ]
+-    }
+-
+     if ((v8_current_cpu != "x64" && v8_current_cpu != "ia32") ||
+         target_os == "chromeos") {
+       # On arm/arm64, `pc` and `sp` are register names but are also very often

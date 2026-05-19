@@ -86,8 +86,8 @@ sed -i 's/OFFICIAL_BUILD/GOOGLE_CHROME_BUILD/' tools/generate_shim_headers/gener
 sed "s|//third_party/usb_ids/usb.ids|/usr/share/hwdata/usb.ids|g" -i services/device/public/cpp/usb/BUILD.gn
 
 # Ungoogled Chromium changes
- _ungoogled_repo="ungoogle"
- _utils="${_ungoogled_repo}/utils"
+_ungoogled_repo="ungoogle"
+_utils="${_ungoogled_repo}/utils"
 echo 'Pruning binaries'
 python "$_utils/prune_binaries.py" ./ "$_ungoogled_repo/pruning.list" || echo "some errors"
 echo 'Applying patches'
@@ -100,10 +100,18 @@ python "$_utils/domain_substitution.py" apply -r "$_ungoogled_repo/domain_regex.
 readarray -t -O ${#_flags[@]} _flags < "${_ungoogled_repo}/flags.gn"
 
 # Link to system tools required by the build
+if [ ! -d third_party/gperf/cipd/bin ]; then
+    mkdir -p third_party/gperf/cipd/bin
+fi
 if [ ! -d third_party/node/linux/node-linux-x64/bin ]; then
     mkdir -p third_party/node/linux/node-linux-x64/bin
 fi
+if [ ! -d third_party/rust-toolchain/bin ]; then
+    mkdir -p third_party/rust-toolchain/bin
+fi
+ln -sf /usr/bin/gperf third_party/gperf/cipd/bin/gperf
 ln -sf /usr/bin/node third_party/node/linux/node-linux-x64/bin/node
+ln -sf /usr/bin/rustc third_party/rust-toolchain/bin/rustc
 
 # gn a buildhoz
 # tools/gn/bootstrap/bootstrap.py --build-path=$outdir --gn-gen-args=" ${_flags[@]} "
