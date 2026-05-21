@@ -19,6 +19,7 @@ cldr-emoji-annotation
 cmark
 compface
 convmv
+cpufetch
 cron # pam
 ddrescue
 detox
