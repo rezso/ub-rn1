@@ -1,6 +1,6 @@
 diff -Naur a/MANIFEST.in b/MANIFEST.in
 --- a/MANIFEST.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/MANIFEST.in	2026-04-26 03:47:20.621228946 +0200
++++ b/MANIFEST.in	2026-05-24 14:55:23.548419001 +0200
 @@ -0,0 +1,24 @@
 +include CHANGELOG.rst
 +include CONTRIBUTING.rst
@@ -28,16 +28,15 @@ diff -Naur a/MANIFEST.in b/MANIFEST.in
 +exclude release.py .readthedocs.yml ci-constraints-requirements.txt mypy.ini
 diff -Naur a/pyproject.toml b/pyproject.toml
 --- a/pyproject.toml	2006-07-24 03:21:28.000000000 +0200
-+++ b/pyproject.toml	2026-04-26 03:57:04.793627137 +0200
-@@ -2,17 +2,11 @@
++++ b/pyproject.toml	2026-05-24 14:56:42.649212428 +0200
+@@ -2,16 +2,11 @@
  # These requirements must be kept sync with the requirements in
  # ./.github/requirements/build-requirements.{in,txt}
  requires = [
 -    "maturin>=1.9.4,<2,!=1.12.0",
 -
 -    # Must be kept in sync with `project.dependencies`
--    "cffi>=1.14; platform_python_implementation != 'PyPy' and python_version == '3.8'",
--    "cffi>=2.0.0; platform_python_implementation != 'PyPy' and python_version >= '3.9'",
+-    "cffi>=2.0.0; platform_python_implementation != 'PyPy'",
 -    # Used by cffi (which import distutils, and in Python 3.12, distutils has
 -    # been removed from the stdlib, but installing setuptools puts it back) as
 -    # well as our build.rs for the rust/cffi bridge.
@@ -51,7 +50,7 @@ diff -Naur a/pyproject.toml b/pyproject.toml
  
  [project]
  name = "cryptography"
-@@ -106,40 +100,19 @@
+@@ -103,40 +98,19 @@
      "click >=8.0.1",
  ]
  
