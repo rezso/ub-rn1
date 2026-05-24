@@ -1,3 +1,6 @@
 #!/bin/sh -eux
 
+unset PERL_MB_OPT PERL5LIB PERL_LOCAL_LIB_ROOT
+export PERL_MM_USE_DEFAULT=1 MODULEBUILDRC=/dev/null
+
 ub_compile

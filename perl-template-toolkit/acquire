@@ -1,5 +1,4 @@
 #!/usr/bin/env dl
 
 Template-Toolkit-${UB_VERSION}.tar.gz Template-Toolkit-${UB_VERSION}/
-	https://www.cpan.org/modules/by-module/Template/
-	https://www.template-toolkit.org/download/
+	https://cpan.metacpan.org/authors/id/T/TO/TODDR/

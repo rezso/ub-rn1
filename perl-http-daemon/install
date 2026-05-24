@@ -1,3 +1,5 @@
 #!/bin/sh -eux
 
-make DESTDIR=$UB_INSTALLDIR install
+unset PERL5LIB PERL_LOCAL_LIB_ROOT
+
+./Build install --installdirs=vendor --destdir="$UB_INSTALLDIR"
