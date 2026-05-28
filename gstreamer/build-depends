@@ -41,7 +41,6 @@ libid3tag-dev
 libiec61883-dev
 libjpeg-turbo-dev
 liblame-dev
-liblrdf-dev
 libmad-dev
 libmms-dev
 libmodplug-dev
@@ -67,7 +66,6 @@ libxcrypt-dev
 libxml2-dev
 libxv-dev
 mesa-dev
-mjpegtools-dev
 mpg123-dev
 nasm
 neon-dev
