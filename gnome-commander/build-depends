@@ -1,0 +1,9 @@
+exiv2-dev
+gobject-introspection-dev
+gtk4-dev
+itstool
+libgsf-dev
+poppler-glib-dev
+rust
+taglib-dev
+vte-dev
