@@ -6,4 +6,3 @@ avfs
 worker
 mc
 ytree
-gnome-commander
