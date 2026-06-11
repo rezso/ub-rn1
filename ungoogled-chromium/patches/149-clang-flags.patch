@@ -1,0 +1,83 @@
+diff -Naur a/build/config/BUILDCONFIG.gn b/build/config/BUILDCONFIG.gn
+--- a/build/config/BUILDCONFIG.gn	2026-05-29 01:24:11.000000000 +0200
++++ b/build/config/BUILDCONFIG.gn	2026-06-05 23:03:14.115087068 +0200
+@@ -371,7 +371,6 @@
+   "//build/config/compiler:no_unresolved_symbols",
+   "//build/config/compiler:runtime_library",
+   "//build/config/compiler:sanitize_c_array_bounds",
+-  "//build/config/compiler:sanitize_return",
+   "//build/config/compiler:thin_archive",
+   "//build/config/compiler:thinlto_optimize_default",
+   "//build/config/compiler:tot_warnings",
+diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
+--- a/build/config/compiler/BUILD.gn	2026-05-29 01:24:11.000000000 +0200
++++ b/build/config/compiler/BUILD.gn	2026-06-06 01:06:37.079267797 +0200
+@@ -588,12 +588,6 @@
+   if (is_clang) {
+     # Flags for diagnostics.
+     cflags += [ "-fcolor-diagnostics" ]
+-    if (!is_win) {
+-      cflags += [ "-fdiagnostics-show-inlining-chain" ]
+-    } else {
+-      # Combine after https://github.com/llvm/llvm-project/pull/192241
+-      cflags += [ "/clang:-fdiagnostics-show-inlining-chain" ]
+-    }
+     if (diagnostics_print_source_range_info && !is_win) {
+       cflags += [ "-fdiagnostics-print-source-range-info" ]
+     }
+@@ -624,13 +618,6 @@
+       ]
+     }
+ 
+-    # The performance improvement does not seem worth the risk. See
+-    # https://crbug.com/484082200 for background and https://crrev.com/c/7593035
+-    # for discussion.
+-    if (!is_wasm) {
+-      cflags += [ "-fno-lifetime-dse" ]
+-    }
+-
+     # TODO(hans): Remove this once Clang generates better optimized debug info
+     # by default. https://crbug.com/765793
+     cflags += [
+@@ -1911,7 +1898,7 @@
+ # See also: https://crbug.com/40891132#comment10
+ ubsan_hardening("c_array_bounds") {
+   sanitizer = "array-bounds"
+-  condition = !(is_asan && target_cpu == "x86")
++  condition = false
+ 
+   # Because we've enabled array-bounds sanitizing we also want to suppress
+   # the related warning about "unsafe-buffer-usage-in-static-sized-array",
+@@ -1924,7 +1911,7 @@
+ # functions (https://crbug.com/489565636). This is equivalent to inserting
+ # `NOTREACHED()` at the end of such functions.
+ ubsan_hardening("return") {
+-  sanitizer = "return"
++  sanitizer = false
+ }
+ 
+ config("rustc_revision") {
+@@ -2259,9 +2246,6 @@
+ 
+       # TODO(crbug.com/432275627): Fix and re-enable.
+       "-Wno-uninitialized-const-pointer",
+-
+-      # TODO(crbug.com/495753203): Fix and re-enable.
+-      "-Wno-unused-but-set-global",
+     ]
+ 
+     cflags_cc += [
+diff -Naur a/v8/BUILD.gn b/v8/BUILD.gn
+--- a/v8/BUILD.gn	2026-06-05 23:05:02.571341952 +0200
++++ b/v8/BUILD.gn	2026-06-05 22:56:23.262440905 +0200
+@@ -1796,10 +1796,6 @@
+ 
+   if (is_clang) {
+     cflags += [ "-Wunreachable-code" ]
+-    if (v8_current_cpu != "ppc64" && v8_current_cpu != "s390x") {
+-      cflags += [ "-Wlifetime-safety-permissive" ]
+-    }
+-
+     if ((v8_current_cpu != "x64" && v8_current_cpu != "ia32") ||
+         target_os == "chromeos") {
+       # On arm/arm64, `pc` and `sp` are register names but are also very often
