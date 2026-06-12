@@ -34,7 +34,6 @@ fontforge
 fonts-unicode
 mdadm
 squashfs-tools
-jfsutils
 xmldiff
 bogofilter
 highlight

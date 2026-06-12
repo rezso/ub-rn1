@@ -125,7 +125,6 @@ openexr
 imagemagick
 libisofs
 libgee
-libindicator3
 liblangtag
 liblensfun
 startup-notification

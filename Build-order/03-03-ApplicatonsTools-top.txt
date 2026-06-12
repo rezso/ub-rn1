@@ -35,7 +35,6 @@ arandr
 testdisk
 lesspipe
 mailutils
-fbreader
 redshift
 intel-gpu-tools
 gparted
@@ -44,6 +43,5 @@ blueman
 recoll
 meld
 seahorse
-workrave
 fdupes
 czkawka

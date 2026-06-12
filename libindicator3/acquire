@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-libindicator-${UB_VERSION}.tar.gz libindicator-${UB_VERSION}/
-	https://launchpad.net/libindicator/${UB_VERSION_HEAD2}/${UB_VERSION}/+download/

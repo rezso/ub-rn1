@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-iodine-${UB_VERSION/~/-}.tar.gz iodine-${UB_VERSION/~/-}/
-	https://code.kryo.se/iodine/

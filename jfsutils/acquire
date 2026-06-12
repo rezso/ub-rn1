@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-jfsutils-${UB_VERSION}.tar.gz jfsutils-${UB_VERSION}/
-	https://jfs.sourceforge.net/project/pub/

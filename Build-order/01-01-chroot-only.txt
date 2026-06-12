@@ -21,7 +21,6 @@ compface
 convmv
 cpufetch
 cron # pam
-ddrescue
 detox
 diffstat
 dmidecode
@@ -45,7 +44,6 @@ hyphen
 hyphen-hu
 id3lib
 inxi
-iodine
 iperf
 iw
 jansson
