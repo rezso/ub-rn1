@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-openldap-${UB_VERSION}.tgz openldap-${UB_VERSION}/
-    https://www.openldap.org/software/download/OpenLDAP/openldap-release/

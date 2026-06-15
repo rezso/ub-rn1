@@ -1,1 +1,1 @@
-u2d https://github.com/ArtifexSoftware/ghostpdl-downloads/tags/ gs | sed -e "s/\b[0-9][0-9]/&./g" | sed -e "s/\b[0-9][0-9]/&./g" | sed -e "s/\.\./\./"
+curl -k -s https://raw.githubusercontent.com/ArtifexSoftware/ghostpdl-downloads/refs/heads/master/README.md | grep 'gs[0-9]' | sed 's/.*gs//g' | sed 's/\///g'

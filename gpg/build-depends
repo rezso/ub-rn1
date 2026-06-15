@@ -6,5 +6,4 @@ libgpg-error-dev
 libksba-dev
 libusb-dev
 npth-dev
-openldap-dev
 readline-dev

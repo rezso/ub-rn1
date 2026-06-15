@@ -1,8 +1,6 @@
-cyrus-sasl2-dev
 db4-dev
 gdbm-dev
 krb5-dev
 libnsl-dev
-openldap-dev
 openssl-dev
 pcre2-dev

@@ -2,4 +2,5 @@
 
 rm -f CMakeLists.txt
 export CFLAGS="-U_FORTIFY_SOURCE"
-ub_compile
+ub_compile \
+	--disable-tests

@@ -11,7 +11,6 @@ libarchive-dev
 libxslt
 lmdb-dev
 ncurses-dev
-openldap-dev
 openssl-dev
 pam-dev
 perl-json

@@ -1,0 +1,12 @@
+diff -Naur a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml	2025-03-05 20:51:17.000000000 +0100
++++ b/pyproject.toml	2026-06-13 19:23:43.770788873 +0200
+@@ -33,7 +33,7 @@
+ jinja2 = "jinja2.ext:babel_extract[i18n]"
+ 
+ [build-system]
+-requires = ["flit_core<4"]
++requires = ["flit_core"]
+ build-backend = "flit_core.buildapi"
+ 
+ [tool.flit.module]

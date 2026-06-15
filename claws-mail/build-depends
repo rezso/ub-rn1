@@ -1,7 +1,6 @@
 bogofilter
 compface
 curl-dev
-cyrus-sasl2-dev
 db4-dev
 dbus-glib-dev
 enchant-dev

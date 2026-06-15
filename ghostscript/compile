@@ -9,7 +9,6 @@ ub_configure \
 	--with-drivers=ALL \
 	--with-fontpath="/usr/share/fonts/ghostscript:/usr/share/fonts/Type1:/usr/share/fonts/truetype" \
 	--enable-fontconfig \
-	--enable-freetype \
 	--enable-openjpeg \
 	--with-system-libtiff \
 	--disable-compile-inits \

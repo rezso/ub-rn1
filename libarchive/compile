@@ -2,4 +2,5 @@
 
 rm -Rf build/autoconf
 rm -f build/autogen.sh
-ub_compile
+ub_compile \
+	-DENABLE_TEST=OFF

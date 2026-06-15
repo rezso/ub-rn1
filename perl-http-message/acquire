@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-HTTP-Message-${UB_VERSION}.tar.gz HTTP-Message-${UB_VERSION}/
-	https://cpan.metacpan.org/modules/by-module/HTTP/
+v${UB_VERSION}.tar.gz HTTP-Message-${UB_VERSION}/
+	https://github.com/libwww-perl/HTTP-Message/archive/refs/tags/

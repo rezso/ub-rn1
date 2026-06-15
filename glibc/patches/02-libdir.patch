@@ -1,7 +1,7 @@
 diff -Naur a/aclocal.m4 b/aclocal.m4
---- a/aclocal.m4	2024-07-21 18:33:37.000000000 +0200
-+++ b/aclocal.m4	2025-05-09 20:40:09.201193779 +0200
-@@ -306,10 +306,10 @@
+--- a/aclocal.m4	2025-07-28 20:22:55.000000000 +0200
++++ b/aclocal.m4	2026-06-12 23:41:09.852501954 +0200
+@@ -316,10 +316,10 @@
  [test -n "$libc_cv_slibdir" ||
  case "$prefix" in
  /usr | /usr/)
@@ -16,8 +16,8 @@ diff -Naur a/aclocal.m4 b/aclocal.m4
      libc_cv_complocaledir='${exec_prefix}/lib/locale'
    fi
 diff -Naur a/sysdeps/unix/sysv/linux/x86_64/64/configure b/sysdeps/unix/sysv/linux/x86_64/64/configure
---- a/sysdeps/unix/sysv/linux/x86_64/64/configure	2024-07-21 18:33:37.000000000 +0200
-+++ b/sysdeps/unix/sysv/linux/x86_64/64/configure	2025-05-09 20:40:09.205193794 +0200
+--- a/sysdeps/unix/sysv/linux/x86_64/64/configure	2025-07-28 20:22:55.000000000 +0200
++++ b/sysdeps/unix/sysv/linux/x86_64/64/configure	2026-06-12 23:41:09.853200572 +0200
 @@ -4,10 +4,10 @@
  test -n "$libc_cv_slibdir" ||
  case "$prefix" in
@@ -33,8 +33,8 @@ diff -Naur a/sysdeps/unix/sysv/linux/x86_64/64/configure b/sysdeps/unix/sysv/lin
      libc_cv_complocaledir='${exec_prefix}/lib/locale'
    fi
 diff -Naur a/sysdeps/unix/sysv/linux/x86_64/64/configure.ac b/sysdeps/unix/sysv/linux/x86_64/64/configure.ac
---- a/sysdeps/unix/sysv/linux/x86_64/64/configure.ac	2024-07-21 18:33:37.000000000 +0200
-+++ b/sysdeps/unix/sysv/linux/x86_64/64/configure.ac	2025-05-09 20:40:09.205193794 +0200
+--- a/sysdeps/unix/sysv/linux/x86_64/64/configure.ac	2025-07-28 20:22:55.000000000 +0200
++++ b/sysdeps/unix/sysv/linux/x86_64/64/configure.ac	2026-06-12 23:41:09.853659630 +0200
 @@ -1,4 +1,4 @@
  GLIBC_PROVIDES dnl See aclocal.m4 in the top level source directory.
  # Local configure fragment for sysdeps/unix/sysv/linux/x86_64/64.
@@ -42,8 +42,8 @@ diff -Naur a/sysdeps/unix/sysv/linux/x86_64/64/configure.ac b/sysdeps/unix/sysv/
 -LIBC_SLIBDIR_RTLDDIR([lib64], [lib64])
 +LIBC_SLIBDIR_RTLDDIR([lib], [lib])
 diff -Naur a/sysdeps/unix/sysv/linux/x86_64/ldd-rewrite.sed b/sysdeps/unix/sysv/linux/x86_64/ldd-rewrite.sed
---- a/sysdeps/unix/sysv/linux/x86_64/ldd-rewrite.sed	2024-07-21 18:33:37.000000000 +0200
-+++ b/sysdeps/unix/sysv/linux/x86_64/ldd-rewrite.sed	2025-05-09 20:42:28.473679933 +0200
+--- a/sysdeps/unix/sysv/linux/x86_64/ldd-rewrite.sed	2025-07-28 20:22:55.000000000 +0200
++++ b/sysdeps/unix/sysv/linux/x86_64/ldd-rewrite.sed	2026-06-12 23:43:50.224138905 +0200
 @@ -1 +1 @@
--s_^\(RTLDLIST=\)\(.*lib\)\(\|64\|x32\)\(/[^/]*\)\(-x86-64\|-x32\)\(\.so\.[0-9.]*\)[ 	]*$_\1"\2\4\6 \264\4-x86-64\6 \2x32\4-x32\6"_
+-s_^\(RTLDLIST=\)\(.*lib\)\(\|64\|x32\)\(/[^/]*\)\(-x86-64\|-x32\)\(\.so\.[0-9.]*\)[ 	]*$_\1"\264\4-x86-64\6 \2\4\6 \2x32\4-x32\6"_
 +s_^\(RTLDLIST=\)\(.*lib\)\(\|64\|x32\)\(/[^/]*\)\(-x86-64\|-x32\)\(\.so\.[0-9.]*\)[ 	]*$_\1"\2\4-x86-64\6 \2\4\6 \2x32\4-x32\6"_

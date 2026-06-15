@@ -2,4 +2,4 @@
 
 ub_compile \
     -DWITH_GSSAPI=OFF \
-    -DWITH_GCRYPT=ON
+    -DWITH_GCRYPT=OFF

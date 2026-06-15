@@ -18,5 +18,4 @@ ub_compile \
 	-Dlmsensors=enabled \
 	-Dtools=all \
 	-Db_ndebug=true \
-	-Db_lto=true \
 	-Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc

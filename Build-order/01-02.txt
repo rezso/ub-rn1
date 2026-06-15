@@ -11,7 +11,6 @@ xlsfonts
 xprop
 xwininfo
 librevenge
-setxkbmap
 xev
 xkbevd
 xvinfo
@@ -116,7 +115,6 @@ libvpx
 gd
 libwmf
 parted
-groff
 man-db
 plocate
 libdecor

@@ -7,7 +7,6 @@ curl-dev
 dbus-glib-dev
 expat-dev
 flex
-fonts-x.org-ttf
 glew-dev
 glm-dev
 glu-dev
@@ -41,7 +40,6 @@ neon-dev
 nspr-dev
 nss-dev
 openjpeg-dev
-openldap-dev
 perl-archive-zip
 python3-dev
 python3-lxml

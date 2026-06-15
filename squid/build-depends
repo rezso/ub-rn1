@@ -1,6 +1,4 @@
-cyrus-sasl2
 krb5-dev
 libcap-dev
 libxml2-dev
-openldap-dev
 openssl-dev

@@ -11,7 +11,6 @@ libsecret-dev
 libsm-dev
 libsoup3-dev
 meson
-openldap-dev
 openssh
 openssh-common
 vala

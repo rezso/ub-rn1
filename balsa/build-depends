@@ -16,6 +16,5 @@ libsecret-dev
 libxshmfence-dev
 meson
 networkmanager-dev
-openldap-dev
 openssl-dev
 webkit2gtk-4.1-dev

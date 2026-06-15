@@ -1,7 +1,7 @@
 diff -Naur a/cmake/install_layout.cmake b/cmake/install_layout.cmake
---- a/cmake/install_layout.cmake	2025-11-13 18:00:48.000000000 +0100
-+++ b/cmake/install_layout.cmake	2026-02-05 22:19:08.821662152 +0100
-@@ -176,30 +176,30 @@
+--- a/cmake/install_layout.cmake	2026-05-26 21:21:05.000000000 +0200
++++ b/cmake/install_layout.cmake	2026-06-13 16:34:55.135094221 +0200
+@@ -181,20 +181,20 @@
  SET(INSTALL_SYSCONFDIR_DEB              "/etc")
  SET(INSTALL_SYSCONF2DIR_DEB             "/etc/mysql/mariadb.conf.d")
  #
@@ -13,8 +13,8 @@ diff -Naur a/cmake/install_layout.cmake b/cmake/install_layout.cmake
  #
 -SET(INSTALL_DOCDIR_DEB                  "share/doc")
 -SET(INSTALL_DOCREADMEDIR_DEB            "share/doc")
-+SET(INSTALL_DOCDIR_DEB                  "share/doc/mysql")
-+SET(INSTALL_DOCREADMEDIR_DEB            "share/doc/mysql")
++SET(INSTALL_DOCDIR_DEB                  "share/doc/mariadb")
++SET(INSTALL_DOCREADMEDIR_DEB            "share/doc/mariadb")
  SET(INSTALL_MANDIR_DEB                  "share/man")
  SET(INSTALL_INFODIR_DEB                 "share/info")
  #
@@ -26,21 +26,18 @@ diff -Naur a/cmake/install_layout.cmake b/cmake/install_layout.cmake
  SET(INSTALL_SUPPORTFILESDIR_DEB         "share/mariadb")
  #
  SET(INSTALL_MYSQLDATADIR_DEB            "/var/lib/mysql")
- 
- SET(INSTALL_RUNDATADIR_DEB              "/run/mysqld")
- SET(INSTALL_UNIX_ADDRDIR_DEB            "${INSTALL_RUNDATADIR_DEB}/mysqld.sock")
--SET(INSTALL_SYSTEMD_UNITDIR_DEB         "/lib/systemd/system")
-+SET(INSTALL_SYSTEMD_UNITDIR_DEB         "/usr/lib/systemd/system")
+@@ -204,7 +204,7 @@
+ SET(INSTALL_SYSTEMD_UNITDIR_DEB         "/usr/lib/systemd/system")
  SET(INSTALL_SYSTEMD_SYSUSERSDIR_DEB     "/usr/lib/sysusers.d")
  SET(INSTALL_SYSTEMD_TMPFILESDIR_DEB     "/usr/lib/tmpfiles.d")
--SET(INSTALL_PAMDIR_DEB                  "/lib/${CMAKE_CXX_LIBRARY_ARCHITECTURE}/security")
+-SET(INSTALL_PAMDIR_DEB                  "/usr/lib/${CMAKE_CXX_LIBRARY_ARCHITECTURE}/security")
 +SET(INSTALL_PAMDIR_DEB                  "/usr/lib/security")
  SET(INSTALL_PAMDATADIR_DEB              "/etc/security")
  
  #
 diff -Naur a/libmariadb/cmake/install.cmake b/libmariadb/cmake/install.cmake
---- a/libmariadb/cmake/install.cmake	2025-11-13 18:00:51.000000000 +0100
-+++ b/libmariadb/cmake/install.cmake	2026-02-05 22:16:04.876943005 +0100
+--- a/libmariadb/cmake/install.cmake	2026-05-26 21:21:08.000000000 +0200
++++ b/libmariadb/cmake/install.cmake	2026-06-13 16:32:08.537006112 +0200
 @@ -94,8 +94,8 @@
  # DEB layout
  #
@@ -53,8 +50,8 @@ diff -Naur a/libmariadb/cmake/install.cmake b/libmariadb/cmake/install.cmake
  SET(INSTALL_INCLUDEDIR_DEB "include/mariadb")
  SET(INSTALL_MANDIR_DEB "share/man")
 diff -Naur a/support-files/rpm/my.cnf b/support-files/rpm/my.cnf
---- a/support-files/rpm/my.cnf	2025-11-13 18:00:50.000000000 +0100
-+++ b/support-files/rpm/my.cnf	2026-02-05 22:16:04.876943005 +0100
+--- a/support-files/rpm/my.cnf	2026-05-26 21:21:07.000000000 +0200
++++ b/support-files/rpm/my.cnf	2026-06-13 16:32:08.537227323 +0200
 @@ -7,5 +7,5 @@
  #
  # include *.cnf from the config directory

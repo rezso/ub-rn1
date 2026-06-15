@@ -3,7 +3,6 @@ attr-dev
 bison
 bluez-dev
 curl-dev
-cyrus-sasl2-dev
 e2fsprogs-dev
 flex
 glib-dev

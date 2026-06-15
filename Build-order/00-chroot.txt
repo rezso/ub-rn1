@@ -177,8 +177,6 @@ gobject-introspection
 glib
 dbus-glib
 krb5
-openldap
-cyrus-sasl2
 triehash
 xxhash
 gnutls
@@ -278,7 +276,6 @@ xkbcomp
 xkbutils
 xkeyboard-config
 mtdev
-fonts-x.org
 libxkbcommon
 iceauth
 sessreg
@@ -338,6 +335,7 @@ pinentry
 libsecret
 net-snmp
 pcre2
+groff
 rrdtool
 lmsensors
 libva
@@ -349,6 +347,7 @@ lua
 rust-bindgen
 mesa
 libxcvt
+setxkbmap
 x.org-server
 egl-wayland
 x.org-input-libinput

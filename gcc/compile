@@ -33,7 +33,6 @@ export CXXFLAGS="$OPT_FLAGS"
     --disable-libstdcxx-pch \
     --disable-multilib \
     --disable-werror \
-    --with-diagnostics-color=always \
 	--with-build-config=bootstrap-lto \
 	--with-linker-hash-style=gnu \
 	--with-system-zlib \

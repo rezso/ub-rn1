@@ -1,8 +1,0 @@
-	/etc/openldap/schema
-	/etc/openldap/slapd.ldif*
-	/usr/libexec/slapd
-	/usr/lib/systemd/system/slapd.service
-	/usr/sbin/slap*
-	/usr/share/man/man5/slap*
-	/usr/share/man/man8/slap*
-	/var/lib/openldap-data
