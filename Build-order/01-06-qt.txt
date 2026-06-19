@@ -1,6 +1,5 @@
 icon-naming-utils
 wget
-spamassassin
 nodejs
 libproxy
 glib-networking
@@ -31,7 +30,6 @@ clawsker
 psmisc
 xdm
 fontforge
-fonts-unicode
 mdadm
 squashfs-tools
 xmldiff

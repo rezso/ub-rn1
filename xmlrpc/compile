@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 
-export CFLAGS+="-O2 -fPIC"
+export CFLAGS+="-O2 -fPIC -std=c11 -w -D_GNU_SOURCE -D_DEFAULT_SOURCE"
 
 ./configure \
     --prefix=/usr \

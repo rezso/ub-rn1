@@ -7,6 +7,8 @@
 	--with-sockets-dir=/run/samba \
 	--without-ad-dc \
 	--without-gpgme \
+	--without-ldap \
+	--without-ads \
 	--systemd-install-services \
 	--disable-rpath-install \
 	--private-libraries='!ldb' \

@@ -1,6 +1,8 @@
 #!/bin/sh -eux
 
+ICAL_LIBS="-lical -licalvcal" \
 ub_compile \
 	--enable-tools \
 	--enable-cups \
-	--enable-library
+	--enable-library \
+	--enable-deprecated

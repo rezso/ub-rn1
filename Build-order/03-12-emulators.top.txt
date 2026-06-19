@@ -2,16 +2,13 @@ xa # vice
 iasl # bochs, virtualbox
 icoutils # q4wine
 z81
-libspectrum
 spectemu
 q4wine
 bochs
 hatari
 tigervnc
-fuse-utils
 dosbox
 plus4emu
-free-unix-spectrum-emulator
 ep128emu
 vice
 qemu

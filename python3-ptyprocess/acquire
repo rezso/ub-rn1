@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-ptyprocess-${UB_VERSION}.tar.gz ptyprocess-${UB_VERSION}/
-	https://pypi.org/packages/source/p/ptyprocess/

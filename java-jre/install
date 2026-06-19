@@ -1,12 +1,10 @@
 #!/bin/sh -eux
 
 mkdir -p ${UB_INSTALLDIR}/usr/lib/java
+cd ${UB_COMPILEDIR}/build/linux-x86_64-server-release/images
+mv jre ${UB_INSTALLDIR}/usr/lib/java/
 
-ub_install
-
-find ${UB_INSTALLDIR}/usr -iname '*.jar' -exec chmod ugo+r {} \;
-chmod ugo+r ${UB_INSTALLDIR}/usr/lib/java/lib/ct.sym
-
-find ${UB_INSTALLDIR}/usr -iname '*.diz' -delete
 find ${UB_INSTALLDIR}/usr -iname '*.debuginfo' -delete
 find ${UB_INSTALLDIR}/usr -iname '*.so' -exec chmod +x {} \;
+
+ln -s ${UB_INSTALLDIR}/usr/lib/java/jre/bin/java ${UB_INSTALLDIR}/usr/bin/java

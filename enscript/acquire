@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-enscript-${UB_VERSION}.tar.gz enscript-${UB_VERSION}/
-	https://ftp.gnu.org/gnu/enscript/

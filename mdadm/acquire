@@ -1,5 +1,4 @@
 #!/usr/bin/env dl
 
-mdadm-"$UB_VERSION".tar.gz mdadm-"$UB_VERSION"/
-	https://kernel.org/pub/linux/utils/raid/mdadm/
-	https://www.cse.unsw.edu.au/~neilb/source/mdadm/
+mdadm-"$UB_VERSION".tar.gz mdadm-mdadm-"$UB_VERSION"/
+	https://github.com/md-raid-utilities/mdadm/archive/refs/tags/

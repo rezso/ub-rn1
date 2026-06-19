@@ -1,5 +1,4 @@
 #!/bin/sh -eux
 
-export CFLAGS="-fPIC"
-
+export CFLAGS="-fPIC -std=gnu17"
 ub_compile

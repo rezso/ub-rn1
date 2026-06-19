@@ -2,7 +2,5 @@
 
 ub_compile \
     -DCMAKE_INSTALL_LIBDIR=/usr/lib \
-    -DENABLE_GTK_DOC=OFF \
-    -DICAL_GLIB_VAPI=true \
-    -DSHARED_ONLY=true \
-    -DGOBJECT_INTROSPECTION=True
+    -DLIBICAL_GLIB_BUILD_DOCS=False \
+    -DLIBICAL_JAVA_BINDINGS=False

@@ -17,6 +17,7 @@
 	/usr/lib/pkgconfig
 	/usr/lib/*.prl
 	/usr/lib/qt6/bin/androiddeployqt
+	/usr/lib/qt6/bin/androiddeployqt6
 	/usr/lib/qt6/bin/androidtestrunner
 	/usr/lib/qt6/bin/balsam
 	/usr/lib/qt6/bin/meshdebug

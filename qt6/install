@@ -21,8 +21,13 @@ install -Dm644 $UB_COMPILEDIR/qttools/src/qdbus/qdbusviewer/images/qdbusviewer-1
 for tool in androiddeployqt assistant cooker designer linguist lrelease lupdate pixeltool qdbus \
     qdbusviewer qdistancefieldgenerator qdoc qmake qml qmleasing qmlls qmlpreview qmlscene qtdiag \
     qtplugininfo; do
+    if [ ! -L ${UB_INSTALLDIR}/usr/bin/${tool}6 ]; then
     ln -s /usr/lib/qt6/bin/${tool} ${UB_INSTALLDIR}/usr/bin/${tool}6
+    fi
 done
+
+rm -f ${UB_INSTALLDIR}/usr/bin/QtWebEngineProcess6
+ln -sf /usr/lib/qt6/libexec/QtWebEngineProcess ${UB_INSTALLDIR}/usr/bin/QtWebEngineProcess6
 
 rm -Rf "$UB_INSTALLDIR"/usr/lib/objects-Release
 rm -Rf "$UB_INSTALLDIR"/usr/lib/cmake/Qt6/{macos,ios}

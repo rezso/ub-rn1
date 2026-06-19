@@ -1,5 +1,4 @@
 alsa-lib-dev
-audiofile-dev
 jack-dev
 libglvnd-dev
 libusb-compat-dev

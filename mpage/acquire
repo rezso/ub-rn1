@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-mpage-${UB_VERSION}.tgz ./mpage-${UB_VERSION}/
-	https://www.mesa.nl/pub/mpage/

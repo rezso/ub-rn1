@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 libgd-${UB_VERSION}.tar.xz libgd-${UB_VERSION}/
-	https://bitbucket.org/libgd/gd-libgd/downloads/
+	https://github.com/libgd/libgd/releases/download/gd-${UB_VERSION}/

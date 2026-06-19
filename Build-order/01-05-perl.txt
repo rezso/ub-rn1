@@ -36,8 +36,6 @@ perl-mail-dkim
 perl-mail-spf
 perl-archive-zip
 perl-path-tiny # fortune
-perl-db-file # spamassassin
-perl-ip-country # spamassassin
 perl-appconfig # freecell-solver
 perl-template-toolkit # freecell-solver
 perl-class-method-modifiers # perl-moo/freecell-solver

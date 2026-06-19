@@ -1,3 +1,4 @@
+@	/usr/bin/QtWebEngineProcess6
 	/usr/lib/libQt6WebEngine*.so.*
 	/usr/lib/qt6/libexec/QtWebEngineProcess
 	/usr/lib/qt6/libexec/qwebengine_convert_dict

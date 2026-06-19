@@ -50,7 +50,6 @@ gtkmm3
 gtkmm4
 podofo
 libao
-cdrdao
 radeontool
 mesa-demos
 xscreensaver

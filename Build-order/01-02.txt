@@ -108,7 +108,6 @@ libimobiledevice-glue
 libusbmuxd
 libtatsu
 libimobiledevice
-netpbm # lilypond build-depends
 libdjvulibre
 java-jre
 libvpx

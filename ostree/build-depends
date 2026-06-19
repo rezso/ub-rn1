@@ -1,5 +1,6 @@
 bison
 curl-dev
+docbook-xml
 docbook-xsl
 e2fsprogs-dev
 flex-dev

@@ -1,7 +1,0 @@
-for dir in `urllist https://unifoundry.com/pub/unifont/ | grep ^unifont | sort -Vr`;do
-ver=$(u2d https://unifoundry.com/pub/unifont/$dir unifont-)
-if [ "$ver" ];then
-echo $ver
-exit 0
-fi
-done

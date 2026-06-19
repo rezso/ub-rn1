@@ -5,7 +5,6 @@ alsa-lib
 argon2
 autoconf2.13
 at # bison, flex
-audiofile
 barcode
 botan3
 cabextract
@@ -84,7 +83,6 @@ libpipeline
 libraw1394
 libsigc++2
 libsigc++3
-libsmi
 libsoxr
 libspiro
 libtinyxml
@@ -102,7 +100,6 @@ lsof
 luajit
 man-pages
 memtest86+
-mpage
 muparser
 neofetch
 nspr
@@ -116,7 +113,6 @@ pkcs11-helper
 poppler-data
 potrace
 procmail
-psacct
 pugixml
 pwgen
 qtilitools

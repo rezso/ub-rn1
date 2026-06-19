@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-libsmi-${UB_VERSION}.tar.gz libsmi-${UB_VERSION}/
-	https://www.ibr.cs.tu-bs.de/projects/libsmi/download/

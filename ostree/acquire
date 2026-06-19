@@ -1,4 +1,7 @@
 #!/usr/bin/env dl
 
-v${UB_VERSION}.tar.gz ostree-${UB_VERSION}/
-	https://github.com/ostreedev/ostree/archive/
+libostree-${UB_VERSION}.tar.xz libostree-${UB_VERSION}/
+    https://github.com/ostreedev/ostree/releases/download/v${UB_VERSION}/
+
+#v${UB_VERSION}.tar.gz ostree-${UB_VERSION}/
+#	https://github.com/ostreedev/ostree/archive/

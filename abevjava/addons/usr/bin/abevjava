@@ -1,8 +1,0 @@
-#!/bin/sh
-
-export KRDIR=$HOME/abevjava/eKuldes
-export PATH=$PATH:/usr/lib/java/jre/bin
-
-cd /usr/lib/abevjava
-java -Xms128M -Xmx256M -jar boot.jar
-java -Xms128M -Xmx256M -jar -DentityExpansionLimit=256000 abevjava.jar cfg=cfg.enyk "$1" "$2" "$3"

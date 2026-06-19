@@ -26,7 +26,6 @@ libytnef-dev
 networkmanager-dev
 perl-dev
 poppler-glib-dev
-spamassassin
 sqlite-dev
 startup-notification-dev
 webkit2gtk-4.1-dev

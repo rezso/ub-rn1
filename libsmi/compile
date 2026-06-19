@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-export LIBTOOL=/usr/bin/libtool
-autoreconf -vif
-ub_compile

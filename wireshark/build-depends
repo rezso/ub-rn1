@@ -9,7 +9,6 @@ libgcrypt-dev
 liblz4-dev
 libnl-dev
 libpcap-dev
-libsmi-dev
 libssh-dev
 libxslt-dev
 openssl-dev

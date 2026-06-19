@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 strace-${UB_VERSION}.tar.xz strace-${UB_VERSION}/
-	https://downloads.sourceforge.net/strace/
+	https://github.com/strace/strace/releases/download/v${UB_VERSION}/

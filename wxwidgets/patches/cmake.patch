@@ -1,0 +1,12 @@
+diff -Naur a/build/cmake/wxWidgetsConfig.cmake.in b/build/cmake/wxWidgetsConfig.cmake.in
+--- a/build/cmake/wxWidgetsConfig.cmake.in	2026-02-28 13:50:12.000000000 +0100
++++ b/build/cmake/wxWidgetsConfig.cmake.in	2026-06-18 01:44:43.160287818 +0200
+@@ -169,7 +169,7 @@
+ endif()
+ 
+ # make sure Threads targets are available
+-find_dependency(Threads)
++# find_dependency(Threads)
+ 
+ # if no components are specified in find_package, check all of them
+ if(NOT @PROJECT_NAME@_FIND_COMPONENTS)

@@ -3,7 +3,6 @@ flex-dev
 fontforge
 fonts-ghostscript-std
 guile30-dev
-netpbm
 pango-dev
 python3-dev
 texinfo

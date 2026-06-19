@@ -1,10 +1,13 @@
 #!/bin/sh -eux
 
+# CCARGS="-DNO_EAI -DUSE_CYRUS_SASL -DUSE_SASL_AUTH -DHAS_PCRE=2 -DUSE_TLS -DMAX_DYNAMIC_MAPS -I/usr/include/sasl -I/usr/include/openssl" \
+# AUXLIBS="-lgdbm -lsasl2 -lz -lm -lssl -lcrypto -lpcre2-8"
+
 mv AAAREADME README
 
 make tidy
 make makefiles \
-	CCARGS="-DNO_EAI -DUSE_CYRUS_SASL -DUSE_SASL_AUTH -DHAS_PCRE=2 -DHAS_LDAP -DUSE_TLS -DMAX_DYNAMIC_MAPS -I/usr/include/sasl -I/usr/include/openssl" \
+	CCARGS="-DHAS_PCRE=2 -DUSE_TLS -DMAX_DYNAMIC_MAPS -I/usr/include/openssl" \
 	OPT="-O2" \
-	AUXLIBS="-lgdbm -lldap -llber -lsasl2 -lz -lm -lssl -lcrypto -lpcre2-8"
+	AUXLIBS="-lgdbm -lz -lm -lssl -lcrypto -lpcre2-8"
 make

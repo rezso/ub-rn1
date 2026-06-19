@@ -44,7 +44,6 @@ python3-asn1-modules
 python3-hyperlink
 python3-zope.interface
 python3-pyhamcrest
-python3-ptyprocess
 python3-reportlab
 python3-cffi
 python3-setuptools-rust

@@ -1,1 +1,1 @@
-sflist strace strace | sort -V | tail -n 1
+u2d https://github.com/strace/strace/tags v
