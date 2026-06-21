@@ -3,6 +3,7 @@
 # luajit kell
 
 ub_compile \
+    -Dc_std=gnu99 \
 	-Dwl=true \
 	-Dfb=true \
 	-Dbuild-examples=false \

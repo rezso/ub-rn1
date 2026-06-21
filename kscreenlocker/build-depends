@@ -2,7 +2,9 @@ kf6-dev
 layer-shell-qt-dev
 libkscreen-dev
 libplasma-dev
+libxi-dev
 pam-dev
 qt6-dev
 systemd
 wayland-dev
+xcb-util-dev

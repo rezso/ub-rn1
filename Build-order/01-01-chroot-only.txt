@@ -145,6 +145,7 @@ unrar
 upx
 vblade
 vulkan-headers
+vulkan-loader
 wavpack
 wireless-regdb
 zisofs-tools

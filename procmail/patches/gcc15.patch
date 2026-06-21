@@ -1,7 +1,24 @@
+From d2ba70c1aba9dbe6136f853eb9393296003aa676 Mon Sep 17 00:00:00 2001
+From: "Stephen R. van den Berg" <srb@cuci.nl>
+Date: Tue, 19 May 2026 16:58:52 +0200
+Subject: [PATCH] More compatible with newer C standards, autodetect
+ compatibility flag for gcc.
+
+---
+ initmake     |  12 +++-
+ src/autoconf | 180 ++++++++++++++++++++++++++-------------------------
+ 2 files changed, 102 insertions(+), 90 deletions(-)
+
 diff --git a/initmake b/initmake
-index b901add..703d651 100755
+index b901add..b12a587 100755
 --- a/initmake
 +++ b/initmake
+@@ -1,4 +1,4 @@
+-#! /bin/sh
++#!/bin/sh
+ :
+ # Copyright (c) 1992-1999, S.R. van den Berg, The Netherlands
+ #$Id$
 @@ -124,7 +124,7 @@ else
  fi
  
@@ -20,19 +37,24 @@ index b901add..703d651 100755
  { struct stat buf;return!&buf;
  }
  HERE
+@@ -220,6 +220,12 @@ case "$CFLAGS1" in
+      fi;;
+ esac
+ 
++# See if we can add this, to ensure the link-tests work in one go.
++$RM _autotst.$O
++$cc -c -std=gnu89 $CFLAGS \
++  _autotst.c && #>$DEVNULL 2>&1 &&
++ CFLAGS=" -std=gnu89 $CFLAGS "
++
+ LDFLAGSC=""
+ 
+ if test -f _autotst.$O || $cc -c $CFLAGS1 $CFLAGS _autotst.c >_autotst.rrr 2>&1
 diff --git a/src/autoconf b/src/autoconf
-index 7c46487..97c0bce 100755
+index 7c46487..dff1f64 100755
 --- a/src/autoconf
 +++ b/src/autoconf
-@@ -363,6 +363,7 @@ cat >_autotst.c <<HERE
- #include <unistd.h>		/* getpid() getppid() */
- #endif
- #include <stdio.h>
-+#include <stdlib.h>
- #include <time.h>
- #include <fcntl.h>
- #include <signal.h>		/* SIGKILL */
-@@ -416,6 +417,16 @@ cat >_autotst.c <<HERE
+@@ -416,12 +416,22 @@ cat >_autotst.c <<HERE
  int dolock,child[NR_of_forks],timeout,fdcollect;
  char dirlocktest[]="_locktest";
  
@@ -49,7 +71,14 @@ index 7c46487..97c0bce 100755
  void stimeout()
  { timeout=1;close(fdcollect);killchildren();
  }
-@@ -437,7 +448,79 @@ unsigned sfork()
+ 
+ void Terminate()
+-{ stimeout();exit(1);
++{ stimeout();_exit(1);
+ }
+ 
+ static unsigned long seed;
+@@ -437,7 +447,79 @@ unsigned sfork()
    return pid;
  }
  
@@ -62,7 +91,7 @@ index 7c46487..97c0bce 100755
 +static off_t oldlockoffset;
 +#endif
 +
-+int fdlock(int fd)
++int fdlock(fd) int fd;
 +{ int i;unsigned gobble[GOBBLE>>2];
 +  for(i=GOBBLE>>2;i;gobble[--i]=~(unsigned)0);		 /* SunOS crash test */
 +  oldfdlock=fd;fd=0;
@@ -90,12 +119,6 @@ index 7c46487..97c0bce 100755
 +     fd=1;
 +#endif
 +  return fd;
-+}
-+
-+int sfdlock(int fd)
-+{ int i;unsigned gobble[GOBBLE>>2];
-+  for(i=GOBBLE>>2;i;gobble[--i]=~(unsigned)0);		 /* SunOS crash test */
-+  return fdlock(fd);
 +}
 +
 +int fdunlock()
@@ -126,11 +149,37 @@ index 7c46487..97c0bce 100755
 +  return i;
 +}
 +
-+int main(argc,argv)int argc;char*argv[];
++int sfdlock(fd) int fd;
++{ int i;unsigned gobble[GOBBLE>>2];
++  for(i=GOBBLE>>2;i;gobble[--i]=~(unsigned)0);		 /* SunOS crash test */
++  return fdlock(fd);
++}
++
++int main(argc,argv) int argc; char*argv[];
  { int goodlock,testlock,i,pip[2],pipw[2];time_t otimet;unsigned dtimet;
    static char filename[]="_locktst.l0";
    close(0);goodlock=0;testlock=FIRST_lock;signal(SIGPIPE,SIG_DFL);
-@@ -576,88 +659,6 @@ skip_tests:
+@@ -517,7 +599,7 @@ which program, XX indicates a lock conflict or failure\n");
+ 		 sleep(SLEEP_retreat);
+ 	    }
+ 	 }
+-	signal(SIGTERM,Terminate);
++	signal(SIGTERM, (void*)Terminate);
+ 	;{ unsigned char lckdfil[NR_of_lockfiles],curflag;
+ 	   int j,ppid;			       /* give all children a chance */
+ 	   ppid=getppid();
+@@ -530,7 +612,9 @@ which program, XX indicates a lock conflict or failure\n");
+ 	   countlocks=MIN_locks;close(pip[1]);close(pipw[1]);
+ 	   for(j=NR_of_lockfiles;lckdfil[--j]=0,j;);
+ 	   timeout=0;sleep(1);read(pipw[0],&curflag,1);close(pipw[0]);
+-	   kill(ppid,SIGKILL);fdcollect=pip[0];signal(SIGALRM,stimeout);
++	   kill(ppid, SIGKILL);
++           fdcollect = pip[0];
++           signal(SIGALRM, (void*)stimeout);
+ 	   dtimet=(time((time_t*)0)-otimet)*GROW+TIME_OUT_SEC;
+ 	   do
+ 	    { unlink("_locktst.alive");alarm(dtimet+2);		 /* watchdog */
+@@ -576,88 +660,6 @@ skip_tests:
    puts("Kernel-locking tests completed.");fprintf(stderr,"\n");
    return EXIT_SUCCESS;
  }
@@ -219,24 +268,23 @@ index 7c46487..97c0bce 100755
  HERE
  
  if $MAKE _autotst >_autotst.rrr 2>&1
-@@ -1033,6 +1034,10 @@ cat >_autotst.c <<HERE
- #ifndef NO_COMSAT
- #include "network.h"
- #endif
+@@ -1185,6 +1187,9 @@ cat >_autotst.c <<\HERE
+ #define BENCHSIZE	16384
+ #define GRANULARITY	64		    /* maximal benchmark granularity */
+ #include "sublib.c"
++#ifndef STRING_H_MISSING
 +#include <string.h>
-+#include <unistd.h>
-+int setrgid();
-+int setresgid();
- int main(){char a[2];
-  endpwent();endgrent();memmove(a,"0",1);bcopy("0",a,1);strcspn(a,"0");
-  strtol("0",(char**)0,10);strchr("0",'0');strpbrk(a,"0");rename(a,"0");
-@@ -1059,7 +1064,7 @@ echo 'Testing for memmove, strchr, strpbrk, strcspn, strtol, strstr,'
- echo '	rename, setrgid, setegid, pow, opendir, mkdir, waitpid, fsync,'
- echo '	ftruncate, strtod, strncasecmp, strerror, strlcat,'
- echo '	memset, bzero, and _exit'
--if $MAKE _autotst.$O >$DEVNULL 2>&1
-+if $MAKE _autotst.$O >_autotst.rrr 2>&1
- then
- :
- else
-
++#endif
+ #ifndef NO_COMSAT
+ #include "network.h"					 /* also for ntohs() */
+ #endif
+@@ -1192,7 +1197,8 @@ cat >_autotst.c <<\HERE
+ #ifdef BENCHSIZE
+ #undef strstr						  /* from includes.h */
+ #undef free						     /* from shell.h */
+-unsigned long dobench(strstr,iter,haystack)char*(*const strstr)();
++unsigned long dobench(strstr,iter,haystack)
++ char *(*const strstr)();
+  unsigned long iter;const char*const haystack;
+ { unsigned long to;
+   to=(unsigned long)clock();

@@ -1,4 +1,7 @@
 #!/usr/bin/env dl
 
-chmlib-${UB_VERSION}.tar.gz chmlib-${UB_VERSION}/
-	https://www.jedrea.com/chmlib/
+chmlib_${UB_VERSION}a.orig.tar.gz chmlib-${UB_VERSION}/
+    https://deb.debian.org/debian/pool/main/c/chmlib/
+
+#chmlib-${UB_VERSION}.tar.gz chmlib-${UB_VERSION}/
+#	https://www.jedrea.com/chmlib/

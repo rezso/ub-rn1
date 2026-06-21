@@ -1,7 +1,9 @@
 kf6-dev
+kirigami-addons-dev
 libplasma-dev
 openconnect-dev
 qca-dev
 qcoro-dev
 qt6-dev
 qt6-qtwebengine-dev
+qtkeychain-dev

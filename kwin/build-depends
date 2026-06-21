@@ -25,6 +25,7 @@ pipewire-dev
 plasma-activities-dev
 plasma-wayland-protocols
 qt6-dev
+vulkan-loader-dev
 wayland-dev
 wayland-protocols
 xcb-util-cursor-dev
