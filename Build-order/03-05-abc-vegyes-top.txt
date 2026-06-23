@@ -5,7 +5,6 @@ icewm
 fish
 fonts-libertine
 htop
-mpage
 rar
 screen
 vnstat

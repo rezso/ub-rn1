@@ -73,6 +73,7 @@ export CPPFLAGS=' -DU_USING_ICU_NAMESPACE=1'
     --disable-dbgutil \
     --disable-debug \
     --disable-odk \
+    --disable-ldap \
     --disable-firebird-sdbc \
     --disable-mariadb-sdbc \
     --disable-postgresql-sdbc \

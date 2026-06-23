@@ -4,7 +4,6 @@ simple-scan
 exif
 evolvotron
 povray
-mtpaint
 gphoto2
 geeqie
 rawtherapee

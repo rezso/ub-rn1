@@ -2,5 +2,7 @@
 
 ub_install
 
+rm -Rf "$UB_INSTALLDIR"/usr/include
+
 # compat symlink
 ln -s xdelta3 "$UB_INSTALLDIR"/usr/bin/xdelta

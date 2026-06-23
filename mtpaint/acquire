@@ -1,7 +1,0 @@
-#!/usr/bin/env dl
-
-#mtpaint-${UB_VERSION}.tar.bz2 mtpaint-${UB_VERSION}/
-#	https://downloads.sourceforge.net/mtpaint/
-
-mtpaint-${UB_VERSION}.tar.gz mtPaint-f37cf09/
-	git+https://github.com/wjaguar/mtPaint.git@f37cf09

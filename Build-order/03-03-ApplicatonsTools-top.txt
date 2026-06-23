@@ -17,7 +17,6 @@ units
 tmux
 dateutils
 vdpauinfo
-fonts-terminus
 xorriso
 lshw
 hardinfo

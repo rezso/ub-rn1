@@ -1,4 +1,5 @@
 krb5-dev
 libcap-dev
+libxcrypt-dev
 libxml2-dev
 openssl-dev

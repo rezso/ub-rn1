@@ -1,6 +1,5 @@
 alsa-lib-dev
 aom-dev
-audiofile-dev
 dav1d-dev
 faac-dev
 ffmpeg-dev
@@ -53,7 +52,6 @@ pulseaudio-dev
 samba-dev
 sdl-dev
 speex-dev
-toolame
 x264-dev
 x265-dev
 xvid-dev

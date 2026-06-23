@@ -1,6 +1,5 @@
 alsa-lib-dev
 alsa-utils
-audiofile-dev
 bison
 cups-dev
 dbus-dev

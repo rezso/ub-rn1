@@ -1,1 +1,2 @@
-sflist fetchmail branch_6.4 | parsever | sort -V | tail -n 1
+noupdate
+#urllist https://gitlab.com/fetchmail/fetchmail/-/tags | grep -E '^[0-9]+\.' | sort -V | tail -n 1

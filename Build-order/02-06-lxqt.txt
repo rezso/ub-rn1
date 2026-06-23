@@ -4,6 +4,9 @@ menu-cache
 libfm # +menu-cache
 menu-cache
 #
+openbox
+obconf-qt
+#
 libdbusmenu-lxqt
 lxqt-build-tools
 libqtxdg

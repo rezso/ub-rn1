@@ -1,0 +1,220 @@
+diff -Naur a/configure.ac b/configure.ac
+--- a/configure.ac	2026-02-18 14:29:52.000000000 +0100
++++ b/configure.ac	2026-06-22 13:01:05.426546661 +0200
+@@ -1291,6 +1291,11 @@
+ 
+ dnl libical ********************************************************************
+ PKG_CHECK_MODULES(LIBICAL, libical >= 2.0, HAVE_LIBICAL=yes, HAVE_LIBICAL=no)
++if test x"$HAVE_LIBICAL" = xyes; then
++	PKG_CHECK_MODULES(LIBICAL, libical >= 4.0, [
++			AC_DEFINE(HAVE_LIBICAL_V4, 1, [Define if libical v4 is detected.])
++		], [ ])
++fi
+ AC_SUBST(LIBICAL_CFLAGS)
+ AC_SUBST(LIBICAL_LIBS)
+ 
+diff -Naur a/src/plugins/vcalendar/vcal_folder.c b/src/plugins/vcalendar/vcal_folder.c
+--- a/src/plugins/vcalendar/vcal_folder.c	2026-02-16 10:55:19.000000000 +0100
++++ b/src/plugins/vcalendar/vcal_folder.c	2026-06-22 13:03:12.531747497 +0200
+@@ -536,7 +536,11 @@
+ 	while (evt) {
+ 		icalproperty *prop;
+ 		icalproperty *rprop = icalcomponent_get_first_property(evt, ICAL_RRULE_PROPERTY);
++#ifdef HAVE_LIBICAL_V4
++		struct icalrecurrencetype* recur;
++#else
+ 		struct icalrecurrencetype recur;
++#endif
+         	struct icaltimetype next;
+         	icalrecur_iterator* ritr = NULL;
+ 		EventTime days;
+@@ -559,7 +563,12 @@
+ 			gchar *orig_uid = NULL;
+ 			gchar *uid = g_strdup(icalproperty_get_uid(prop));
+ 			IcalFeedData *data = icalfeeddata_new(
+-						icalcomponent_new_clone(evt), NULL);
++#ifdef HAVE_LIBICAL_V4
++						icalcomponent_clone(evt),
++#else
++						icalcomponent_new_clone(evt),
++#endif
++						NULL);
+ 			int i = 0;
+ 			orig_uid = g_strdup(uid);
+ 
+@@ -610,7 +619,11 @@
+ 				struct icaldurationtype ical_dur;
+ 				struct icaltimetype dtstart = icaltime_null_time();
+ 				struct icaltimetype dtend = icaltime_null_time();
++#ifdef HAVE_LIBICAL_V4
++				evt = icalcomponent_clone(evt);
++#else
+ 				evt = icalcomponent_new_clone(evt);
++#endif
+ 				prop = icalcomponent_get_first_property(evt, ICAL_RRULE_PROPERTY);
+ 				if (prop) {
+ 					icalcomponent_remove_property(evt, prop);
+@@ -626,7 +639,11 @@
+ 					dtend = icalproperty_get_dtend(prop);
+ 				else
+ 					debug_print("event has no DTEND!\n");
++#ifdef HAVE_LIBICAL_V4
++				ical_dur = icalduration_from_times(dtend, dtstart);
++#else
+ 				ical_dur = icaltime_subtract(dtend, dtstart);
++#endif
+ 				next = icalrecur_iterator_next(ritr);
+ 				if (!icaltime_is_null_time(next) &&
+ 				    !icaltime_is_null_time(dtstart) && i < 100) {
+@@ -635,8 +652,11 @@
+ 
+ 					prop = icalcomponent_get_first_property(evt, ICAL_DTEND_PROPERTY);
+ 					if (prop)
++#ifdef HAVE_LIBICAL_V4
++						icalproperty_set_dtend(prop, icalduration_extend(next, ical_dur));
++#else
+ 						icalproperty_set_dtend(prop, icaltime_add(next, ical_dur));
+-
++#endif
+ 					prop = icalcomponent_get_first_property(evt, ICAL_UID_PROPERTY);
+ 					uid = g_strdup_printf("%s-%d", orig_uid, i);
+ 					icalproperty_set_uid(prop, uid);
+@@ -770,7 +790,11 @@
+ 			if ((status == ICAL_PARTSTAT_ACCEPTED
+ 			     || status == ICAL_PARTSTAT_TENTATIVE) 
+ 			    && event->recur && *(event->recur)) {
++#ifdef HAVE_LIBICAL_V4
++				struct icalrecurrencetype* recur;
++#else
+         			struct icalrecurrencetype recur;
++#endif
+         			struct icaltimetype dtstart;
+         			struct icaltimetype next;
+         			icalrecur_iterator* ritr;
+@@ -779,14 +803,21 @@
+ 				int i = 0;
+ 
+ 				debug_print("dumping recurring events from main event %s\n", d);
++#ifdef HAVE_LIBICAL_V4
++				recur = icalrecurrencetype_new_from_string(event->recur);
++#else
+         			recur = icalrecurrencetype_from_string(event->recur);
++#endif
+ 				dtstart = icaltime_from_string(event->dtstart);
+ 
+ 				duration = icaltime_as_timet(icaltime_from_string(event->dtend))
+ 							    - icaltime_as_timet(icaltime_from_string(event->dtstart));
+ 
++#ifdef HAVE_LIBICAL_V4
++				ical_dur = icaldurationtype_from_seconds(duration);
++#else
+ 				ical_dur = icaldurationtype_from_int(duration);
+-
++#endif
+         			ritr = icalrecur_iterator_new(recur, dtstart);
+ 
+ 				next = icalrecur_iterator_next(ritr); /* skip first one */
+@@ -799,7 +830,12 @@
+ 					gchar *uid = g_strdup_printf("%s-%d", event->uid, i);
+ 					new_start = icaltime_as_ical_string(next);
+ 					new_end = icaltime_as_ical_string(
+-							icaltime_add(next, ical_dur));
++#ifdef HAVE_LIBICAL_V4
++							icalduration_extend(next, ical_dur)
++#else
++							icaltime_add(next, ical_dur)
++#endif
++							);
+ 					debug_print("adding with start/end %s:%s\n", new_start, new_end);
+ 					nevent = vcal_manager_new_event(uid, event->organizer, event->orgname, 
+ 								event->location, event->summary, event->description, 
+@@ -825,6 +861,9 @@
+ 					i++;
+ 				}
+ 				icalrecur_iterator_free(ritr);
++#ifdef HAVE_LIBICAL_V4
++				icalrecurrencetype_unref(recur);
++#endif
+ 			}
+ 		} else {
+ 			vcal_manager_free_event(event);
+@@ -2379,7 +2418,11 @@
+ 			if (prop) {
+ 				itt = icalproperty_get_dtstart(prop);
+ 				icalproperty_free(prop);
++#ifdef HAVE_LIBICAL_V4
++				dtend = g_strdup(icaltime_as_ical_string(icalduration_extend(itt,duration)));
++#else
+ 				dtend = g_strdup(icaltime_as_ical_string(icaltime_add(itt,duration)));
++#endif
+ 				TO_UTF8(dtend);
+ 			}
+ 		}
+@@ -2434,8 +2477,13 @@
+ 	}
+ 	GET_PROP(comp, prop, ICAL_RRULE_PROPERTY);
+ 	if (prop) {
++#ifdef HAVE_LIBICAL_V4
++		struct icalrecurrencetype* rrule = icalproperty_get_rrule(prop);
++		recur = g_strdup(icalrecurrencetype_as_string(rrule));		
++#else
+ 		struct icalrecurrencetype rrule = icalproperty_get_rrule(prop);
+ 		recur = g_strdup(icalrecurrencetype_as_string(&rrule));
++#endif
+ 		TO_UTF8(recur);
+ 		icalproperty_free(prop);
+ 	}
+diff -Naur a/src/plugins/vcalendar/vcal_manager.c b/src/plugins/vcalendar/vcal_manager.c
+--- a/src/plugins/vcalendar/vcal_manager.c	2024-08-28 17:44:56.000000000 +0200
++++ b/src/plugins/vcalendar/vcal_manager.c	2026-06-22 13:16:21.833348891 +0200
+@@ -1,6 +1,6 @@
+ /*
+  * Claws Mail -- a GTK based, lightweight, and fast e-mail client
+- * Copyright (C) 1999-2023 the Claws Mail team and Colin Leroy <colin@colino.net>
++ * Copyright (C) 1999-2026 the Claws Mail team and Colin Leroy <colin@colino.net>
+  *
+  * This program is free software; you can redistribute it and/or modify
+  * it under the terms of the GNU General Public License as published by
+@@ -401,8 +401,12 @@
+ 	icalcomponent_add_property(ievent,
+ 		icalproperty_vanew_dtend((icaltime_from_string(event->dtend)), (void*)0));
+ 	if (event->recur && *(event->recur)) {
+-		icalcomponent_add_property(ievent,
++        icalcomponent_add_property(ievent,
++#ifdef HAVE_LIBICAL_V4
++			icalproperty_vanew_rrule((icalrecurrencetype_new_from_string(event->recur)), (void*)0));
++#else
+ 			icalproperty_vanew_rrule((icalrecurrencetype_from_string(event->recur)), (void*)0));
++#endif
+ 	}
+ 	icalcomponent_add_property(ievent,
+ 		icalproperty_new_description(event->description));
+@@ -689,9 +693,11 @@
+ 	icalproperty *prop;
+ 	icalcomponent *ievent = NULL;
+ 	int i = 0;
+-
++#ifdef HAVE_LIBICAL_V4
++	ievent = icalcomponent_clone(event);
++#else
+ 	ievent = icalcomponent_new_clone(event);
+-
++#endif
+ 	prop = icalcomponent_get_first_property(ievent, ICAL_UID_PROPERTY);
+ 	if (prop) {
+ 		gchar *sanitized_uid = g_strdup(icalproperty_get_uid(prop));
+diff -Naur a/src/plugins/vcalendar/vcal_meeting_gtk.c b/src/plugins/vcalendar/vcal_meeting_gtk.c
+--- a/src/plugins/vcalendar/vcal_meeting_gtk.c	2026-03-08 14:44:56.000000000 +0100
++++ b/src/plugins/vcalendar/vcal_meeting_gtk.c	2026-06-22 13:01:05.435007802 +0200
+@@ -2110,7 +2110,11 @@
+ 	
+ 		ipt.start = icaltime_from_string(event->dtstart);
+ 		ipt.end = icaltime_from_string(event->dtend);
++#ifdef HAVE_LIBICAL_V4
++		ipt.duration = icalduration_from_times(ipt.end, ipt.start);
++#else
+ 		ipt.duration = icaltime_subtract(ipt.end, ipt.start);
++#endif
+ 		if (icaltime_as_timet(ipt.start) <= icaltime_as_timet(itt_end) 
+ 		 && icaltime_as_timet(ipt.end) >= icaltime_as_timet(itt_start)) {
+ 			prop = icalproperty_new_freebusy(ipt);

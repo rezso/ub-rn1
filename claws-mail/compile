@@ -5,6 +5,7 @@ if [ ! -f version ]; then
 fi
 
 # NOCONFIGURE=1 ./autogen.sh
+autoreconf -vif
 
 ub_compile \
     --enable-crash-dialog \
@@ -12,7 +13,6 @@ ub_compile \
     --disable-ldap \
     --disable-jpilot \
     --disable-bsfilter-plugin \
-    --disable-gdata-plugin \
     --disable-python-plugin \
     --disable-spamassassin-plugin
 # ub_make -C po claws-mail.pot update-po

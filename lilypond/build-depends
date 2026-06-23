@@ -2,6 +2,7 @@ bison
 flex-dev
 fontforge
 fonts-ghostscript-std
+gmp-dev
 guile30-dev
 pango-dev
 python3-dev

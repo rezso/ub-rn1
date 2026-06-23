@@ -35,7 +35,6 @@ libfaad2
 ffnvcodec-headers
 fftw3
 fping
-ganyremote
 glm
 hddtemp
 hwdata

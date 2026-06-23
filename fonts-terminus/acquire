@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-terminus-font-${UB_VERSION}.tar.gz terminus-font-${UB_VERSION}/
-    https://sourceforge.net/projects/terminus-font/files/terminus-font-{$UB_VERSION_HEAD2}/

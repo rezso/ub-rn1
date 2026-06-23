@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-# dpkg-deb -xv "$UB_COMPILEDIR"/discord.deb "$UB_COMPILEDIR"
-cp -a "$UB_COMPILEDIR"/usr/. "$UB_INSTALLDIR"/usr/
-
-rm -Rf "$UB_INSTALLDIR"/usr/share/lintian
-
-# patchelf
-find "${UB_INSTALLDIR}"/usr/share/discord -type f -exec patchelf --set-interpreter /usr/lib/ld-linux-x86-64.so.2 &> /dev/null {} \;

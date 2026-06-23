@@ -15,7 +15,6 @@ paprefs
 dvdstyler
 vorbis-tools
 lilypond
-libmp3splt
 easytag
 shotwell
 python3-netifaces
@@ -35,8 +34,6 @@ celluloid
 avidemux
 waylandpp
 kodi
-mp3splt
-mp3splt-gtk
 xmms2
 oscam
 w-scan

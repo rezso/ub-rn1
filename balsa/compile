@@ -1,13 +1,4 @@
 #!/bin/sh -eux
 
 ub_compile \
-	-Dgnome-desktop=false \
-    -Dautocrypt=true \
-    -Dcanberra=true \
-    -Dcompface=true \
-    -Dgss=true \
-    -Dhtml-widget=webkit2 \
-    -Dspell-checker=gtkspell \
-    -Dldap=true \
-    -Dlibsecret=true \
-    -Dgtksourceview=true
+	-Dgnome-desktop=false

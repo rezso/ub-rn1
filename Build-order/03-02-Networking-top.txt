@@ -12,8 +12,6 @@ gufw
 fwbuilder
 wget2
 nmap
-discord
-anyremote
 libtorrent-rasterbar
 qbittorrent
 libtorrent

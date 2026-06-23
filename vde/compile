@@ -1,5 +1,6 @@
 #!/bin/sh -eux
 
+export CFLAGS+=' -std=gnu17'
 ub_compile \
 	--libexecdir=/usr/lib/vde2 \
 	--enable-experimental

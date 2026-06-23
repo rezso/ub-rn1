@@ -1,0 +1,35 @@
+diff -Nur orig/data/autostart/autostart.in mod/data/autostart/autostart.in
+--- orig/data/autostart/autostart.in	2022-11-25 20:13:49.454614732 +0100
++++ mod/data/autostart/autostart.in	2022-11-26 15:57:50.116244598 +0100
+@@ -15,3 +15,31 @@
+ # If you want to use XFCE config tools...
+ #
+ #xfce-mcs-manager &
++
++# polkit ügynök választék, ki kell választani azt, amelyik van. Csak egy lehet!
++#/usr/libexec/lxpolkit &
++#/usr/libexec/polkit-gnome-authentication-agent-1 &
++#/usr/libexec/polkit-mate-authentication-agent-1 &
++#/usr/lib/libexec/polkit-kde-authentication-agent-1 &
++
++# panelek
++#pekwm_panel &
++fbpanel &
++#mate-panel &
++#lxpanel &
++#gnome-panel &
++#xfce4-panel &
++
++# rendszertálcák
++#trayer &
++#tint2 &
++
++# háttérképek
++#feh --bg-scale /usr/share/backgrounds/UHU/ubk4.png
++
++# képernyővédő
++#xscreensaver &
++
++# nm-applet a panelekre, ha nincs ott
++#sleep 1 &&
++#nm-applet &
