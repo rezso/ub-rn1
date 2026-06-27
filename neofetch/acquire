@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-neofetch-${UB_VERSION}.tar.gz neofetch-ccd5d9f/
-	git+https://github.com/dylanaraps/neofetch.git@ccd5d9f

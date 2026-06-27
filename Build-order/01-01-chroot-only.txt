@@ -100,7 +100,6 @@ luajit
 man-pages
 memtest86+
 muparser
-neofetch
 nspr
 opencore-amr
 opus
