@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+encodings-${UB_VERSION}.tar.gz encodings-${UB_VERSION}/
+    https://xorg.freedesktop.org/archive/individual/font/
