@@ -1,0 +1,17 @@
+dbus-dev
+dconf-dev
+efl-dev
+freetype2-dev
+glib-dev
+hwdata
+imagemagick-dev
+libdrm-dev
+libelf-dev
+libva-dev
+libvdpau-dev
+libxcb-dev
+libxrandr-dev
+mesa-dev
+pulseaudio-dev
+sqlite-dev
+wayland-dev
