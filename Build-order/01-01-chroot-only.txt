@@ -28,7 +28,6 @@ dosfstools
 double-conversion
 dvd+rw-tools
 emoji
-enscript
 exfat-utils
 faac
 libfaad2
