@@ -1,5 +1,1 @@
 /etc/modprobe.conf
-/etc/modprobe.d/blacklistfb.conf
-/etc/modprobe.d/evbug.conf
-/etc/modprobe.d/fglrx.conf
-/etc/modprobe.d/parport.conf

@@ -1,5 +1,6 @@
 asciidoc
 bash-completion
+docbook-xml
 docbook-xsl
 kmod-dev
 libxslt-dev
