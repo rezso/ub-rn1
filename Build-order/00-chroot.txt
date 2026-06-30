@@ -183,7 +183,6 @@ gnutls
 apt
 pkgconfig
 cairo
-graphite2
 harfbuzz
 re2c
 asciidoc

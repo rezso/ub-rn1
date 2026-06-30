@@ -22,7 +22,6 @@ cd build
 	--with-system-freetype2 \
 	--with-system-gd \
 	--with-system-gmp \
-	--with-system-graphite2 \
 	--with-system-harfbuzz \
 	--with-system-icu \
 	--with-system-libgs \

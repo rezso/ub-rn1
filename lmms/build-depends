@@ -14,6 +14,6 @@ perl-list-moreutils
 perl-xml-parser
 portaudio-dev
 pulseaudio-dev
-qt5-dev
+qt6-dev
 sdl-dev
 xcb-util-dev

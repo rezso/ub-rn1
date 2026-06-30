@@ -3,7 +3,6 @@ fontconfig-dev
 freetype2-dev
 gd
 gmp-dev
-graphite2-dev
 harfbuzz-dev
 icu-dev
 libgd-dev

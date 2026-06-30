@@ -1,7 +1,6 @@
 #!/bin/sh -eux
 
 ub_compile \
-    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
     -DCMAKE_SKIP_BUILD_RPATH=ON \
     -DEXAMPLES=OFF \
     -DFTDI_EEPROM=OFF \

@@ -1,13 +1,10 @@
 #!/bin/sh -eux
 
-git clone https://github.com/Lukas-W/qt5-x11embed.git src/3rdparty/qt5-x11embed
-git clone https://github.com/KDE/extra-cmake-modules.git src/3rdparty/qt5-x11embed/3rdparty/ECM
 git clone https://github.com/rampantpixels/rpmalloc.git src/3rdparty/rpmalloc/rpmalloc
 cd src/3rdparty/rpmalloc/rpmalloc
 git checkout e8b3be9
 cd -
 
 ub_compile \
-    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-	-DWANT_QT5=ON \
+	-DWANT_QT6=ON \
 	-DWANT_CARLA=OFF

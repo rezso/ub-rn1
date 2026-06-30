@@ -3,5 +3,5 @@
 #v${UB_VERSION}.tar.gz lmms-${UB_VERSION}/
 #	https://github.com/LMMS/lmms/archive/
 
-v${UB_VERSION}.tar.gz lmms-cb84fce/
-	git+https://github.com/LMMS/lmms.git@cb84fce
+v${UB_VERSION}.tar.gz lmms-4597056/
+	git+https://github.com/LMMS/lmms.git@4597056
