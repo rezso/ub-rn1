@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-qshutdown_${UB_VERSION}.orig.tar.gz qshutdown-${UB_VERSION}/
-	https://launchpad.net/~hakaishi/+archive/ubuntu/qshutdown/+files/
+v${UB_VERSION}.tar.gz shutdown-qapps-${UB_VERSION}/
+	https://github.com/hakaishi/shutdown-qapps/archive/refs/tags/
