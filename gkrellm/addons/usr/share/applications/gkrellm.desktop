@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=GKrellM
-Comment=System Monitor
-Comment[hu]=Rendszermonitorozó
-Exec=gkrellm
-Icon=gkrellm
-Categories=System;Monitor;

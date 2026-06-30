@@ -1,6 +1,5 @@
 ansifilter
 keepassxc
-gkrellm-themes
 multitail
 nload
 qshutdown
@@ -23,7 +22,6 @@ hardinfo
 xchm
 rdiff-backup
 cifs-utils
-gkrellm
 gammu
 encfs
 sirikali
