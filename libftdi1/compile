@@ -2,6 +2,7 @@
 
 ub_compile \
     -DCMAKE_SKIP_BUILD_RPATH=ON \
+    -DSTATICLIBS=OFF \
     -DEXAMPLES=OFF \
     -DFTDI_EEPROM=OFF \
     -DBUILD_TESTS=OFF \

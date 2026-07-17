@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-lensfun-${UB_VERSION}.tar.gz lensfun-${UB_VERSION}/
-	https://sourceforge.net/projects/lensfun/files/${UB_VERSION}/
+v${UB_VERSION}.tar.gz lensfun-${UB_VERSION}/
+	https://github.com/lensfun/lensfun/archive/refs/tags/

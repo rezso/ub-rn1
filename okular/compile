@@ -1,5 +1,5 @@
 #!/bin/sh -eux
 
 ub_compile \
-	-DFORCE_NOT_REQUIRED_DEPENDENCIES="KExiv2Qt6;QMobipocket;Discount;" \
+	-DFORCE_NOT_REQUIRED_DEPENDENCIES="KExiv2Qt6;QMobipocket;EPub;Discount;" \
 	-DBUILD_TESTING=OFF

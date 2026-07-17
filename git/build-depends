@@ -2,3 +2,4 @@ curl-dev
 expat-dev
 openssl-dev
 perl-error
+rust

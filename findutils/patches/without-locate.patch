@@ -1,7 +1,7 @@
 diff -Naur a/configure b/configure
---- a/configure	2022-02-02 01:17:29.000000000 +0100
-+++ b/configure	2023-12-31 17:21:24.573606674 +0100
-@@ -64080,7 +64080,7 @@
+--- a/configure	2026-07-11 11:03:22.000000000 +0200
++++ b/configure	2026-07-17 03:43:57.400817025 +0200
+@@ -75701,7 +75701,7 @@
  # Note that in the list below, po/Makefile.in should appear before
  # po/Makefile, so that po/Makefile can be created even if po/Makefile.in
  # starts off missing.
@@ -10,7 +10,7 @@ diff -Naur a/configure b/configure
  
  cat >confcache <<\_ACEOF
  # This file is a shell script that caches the results of configure
-@@ -64911,8 +64911,6 @@
+@@ -76576,8 +76576,6 @@
      "gl/Makefile") CONFIG_FILES="$CONFIG_FILES gl/Makefile" ;;
      "gl/lib/Makefile") CONFIG_FILES="$CONFIG_FILES gl/lib/Makefile" ;;
      "lib/Makefile") CONFIG_FILES="$CONFIG_FILES lib/Makefile" ;;
@@ -20,9 +20,9 @@ diff -Naur a/configure b/configure
      "po/Makefile.in") CONFIG_FILES="$CONFIG_FILES po/Makefile.in" ;;
      "po/Makefile") CONFIG_FILES="$CONFIG_FILES po/Makefile" ;;
 diff -Naur a/configure.ac b/configure.ac
---- a/configure.ac	2022-01-03 00:34:22.000000000 +0100
-+++ b/configure.ac	2023-12-31 17:20:33.501428217 +0100
-@@ -309,8 +309,6 @@
+--- a/configure.ac	2026-06-27 19:18:09.000000000 +0200
++++ b/configure.ac	2026-07-17 03:43:57.406119291 +0200
+@@ -320,8 +320,6 @@
  gl/Makefile
  gl/lib/Makefile
  lib/Makefile
@@ -32,8 +32,8 @@ diff -Naur a/configure.ac b/configure.ac
  po/Makefile.in
  po/Makefile
 diff -Naur a/doc/Makefile.am b/doc/Makefile.am
---- a/doc/Makefile.am	2022-02-02 00:27:31.000000000 +0100
-+++ b/doc/Makefile.am	2023-12-31 17:44:33.910436693 +0100
+--- a/doc/Makefile.am	2026-06-27 13:38:59.000000000 +0200
++++ b/doc/Makefile.am	2026-07-17 03:43:57.406524853 +0200
 @@ -16,11 +16,11 @@
  
  info_TEXINFOS = find.texi find-maint.texi
@@ -49,7 +49,7 @@ diff -Naur a/doc/Makefile.am b/doc/Makefile.am
  	find_mono.html findutils.texi_html_node.tar.gz \
  	find-info.tar.gz find.texi.tar.gz \
  	find.txt  tmp-doc-install find_mono.html.gz
-@@ -73,9 +73,6 @@
+@@ -81,9 +81,6 @@
  	tar zcf $@ find.html
  
  
@@ -59,7 +59,7 @@ diff -Naur a/doc/Makefile.am b/doc/Makefile.am
  find-info.tar.gz:
  	$(MKDIR_P) tmp-doc-install/info
  	$(MAKE) $(AM_MAKEFLAGS) \
-@@ -88,7 +85,7 @@
+@@ -96,7 +93,7 @@
  find.texi.tar.gz: $(TEXINFOS) $(find_TEXINFOS) $(nodist_find_TEXINFOS) $(info_TEXINFOS) $(find_maint_TEXINFOS)  $(srcdir)/version.texi $(srcdir)/versionmaint.texi Makefile
  	$(MKDIR_P) tmp-doc-install/texi
  	for f in $(TEXINFOS) $(find_TEXINFOS) $(info_TEXINFOS) $(find_maint_TEXINFOS)  version.texi versionmaint.texi ; \
@@ -69,9 +69,9 @@ diff -Naur a/doc/Makefile.am b/doc/Makefile.am
  	rm -rf tmp-doc-install/texi
  	rmdir tmp-doc-install
 diff -Naur a/doc/Makefile.in b/doc/Makefile.in
---- a/doc/Makefile.in	2022-02-02 01:17:32.000000000 +0100
-+++ b/doc/Makefile.in	2023-12-31 17:44:14.302368821 +0100
-@@ -2023,11 +2023,11 @@
+--- a/doc/Makefile.in	2026-07-11 11:03:24.000000000 +0200
++++ b/doc/Makefile.in	2026-07-17 03:43:57.407072050 +0200
+@@ -2544,11 +2544,11 @@
  AM_CFLAGS = $(WARN_CFLAGS)
  info_TEXINFOS = find.texi find-maint.texi
  find_TEXINFOS = perm.texi parse-datetime.texi regexprops.texi fdl.texi
@@ -86,7 +86,7 @@ diff -Naur a/doc/Makefile.in b/doc/Makefile.in
  	find_mono.html findutils.texi_html_node.tar.gz \
  	find-info.tar.gz find.texi.tar.gz \
  	find.txt  tmp-doc-install find_mono.html.gz
-@@ -2564,9 +2564,6 @@
+@@ -3096,9 +3096,6 @@
  findutils.texi_html_node.tar.gz: find.html
  	tar zcf $@ find.html
  
@@ -96,7 +96,7 @@ diff -Naur a/doc/Makefile.in b/doc/Makefile.in
  find-info.tar.gz:
  	$(MKDIR_P) tmp-doc-install/info
  	$(MAKE) $(AM_MAKEFLAGS) \
-@@ -2579,7 +2576,7 @@
+@@ -3111,7 +3108,7 @@
  find.texi.tar.gz: $(TEXINFOS) $(find_TEXINFOS) $(nodist_find_TEXINFOS) $(info_TEXINFOS) $(find_maint_TEXINFOS)  $(srcdir)/version.texi $(srcdir)/versionmaint.texi Makefile
  	$(MKDIR_P) tmp-doc-install/texi
  	for f in $(TEXINFOS) $(find_TEXINFOS) $(info_TEXINFOS) $(find_maint_TEXINFOS)  version.texi versionmaint.texi ; \
@@ -106,8 +106,8 @@ diff -Naur a/doc/Makefile.in b/doc/Makefile.in
  	rm -rf tmp-doc-install/texi
  	rmdir tmp-doc-install
 diff -Naur a/Makefile.am b/Makefile.am
---- a/Makefile.am	2022-01-03 00:34:22.000000000 +0100
-+++ b/Makefile.am	2023-12-31 17:34:39.396375304 +0100
+--- a/Makefile.am	2026-06-27 15:05:09.000000000 +0200
++++ b/Makefile.am	2026-07-17 03:43:57.409995408 +0200
 @@ -35,7 +35,7 @@
  
  
@@ -118,9 +118,9 @@ diff -Naur a/Makefile.am b/Makefile.am
  ALL_RECURSIVE_TARGETS =
  
 diff -Naur a/Makefile.in b/Makefile.in
---- a/Makefile.in	2022-02-02 01:17:32.000000000 +0100
-+++ b/Makefile.in	2023-12-31 17:36:06.344677255 +0100
-@@ -2247,11 +2247,11 @@
+--- a/Makefile.in	2026-07-11 11:03:23.000000000 +0200
++++ b/Makefile.in	2026-07-17 03:45:38.489226466 +0200
+@@ -2810,11 +2810,11 @@
  DISTCLEANFILES = tool-versions.txt
  
  # "gnulib-tests" is the gnulib unit test dir.
@@ -130,11 +130,11 @@ diff -Naur a/Makefile.in b/Makefile.in
  ACLOCAL_AMFLAGS = -I gl/m4 -I m4
  TESTFILE_SUFFIXES = .exp .xo .xe .xi
 -built_programs = find xargs frcode locate updatedb
-+built_programs = find xargs frcode
++built_programs = find xargs frcode updatedb
+ AM_CPPFLAGS = -I$(top_srcdir)/gl/lib
+ LDADD = $(top_builddir)/gl/lib/libgnulib.a
  
- # Indirections required so that we'll still be able to know the
- # complete list of our tests even if the user overrides TESTS
-@@ -2297,7 +2297,7 @@
+@@ -2863,7 +2863,7 @@
    PERL='$(PERL)'				\
    SHELL='$(PREFERABLY_POSIX_SHELL)'		\
    ; test -d /usr/xpg4/bin && PATH='/usr/xpg4/bin$(PATH_SEPARATOR)'"$$PATH"; \

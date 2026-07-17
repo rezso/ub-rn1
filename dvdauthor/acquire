@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-dvdauthor-${UB_VERSION}.tar.gz dvdauthor/
-	https://download.sourceforge.net/dvdauthor/

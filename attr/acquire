@@ -2,3 +2,4 @@
 
 attr-${UB_VERSION}.tar.xz attr-${UB_VERSION}/
 	https://download.savannah.nongnu.org/releases/attr/
+	https://download-mirror.savannah.gnu.org/releases/attr/

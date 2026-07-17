@@ -1,4 +1,7 @@
 #!/usr/bin/env dl
 
-${UB_VERSION}.tar.gz ssr-${UB_VERSION}/
-	https://github.com/MaartenBaert/ssr/archive/
+#${UB_VERSION}.tar.gz ssr-${UB_VERSION}/
+#	https://github.com/MaartenBaert/ssr/archive/
+
+${UB_VERSION}.tar.gz ssr-ad99c7e/
+	git+https://github.com/MaartenBaert/ssr.git@ad99c7e

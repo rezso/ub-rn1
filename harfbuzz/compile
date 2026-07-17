@@ -3,6 +3,5 @@
 rm -f CMakeLists.txt
 ub_compile \
 	-Dgobject=enabled \
-	-Dgraphite=enabled \
 	-Dintrospection=enabled \
 	-Ddocs=disabled

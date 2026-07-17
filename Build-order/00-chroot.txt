@@ -193,6 +193,7 @@ quota
 python3-markupsafe
 python3-jinja2
 libssh
+json-c
 cryptsetup
 python3-lxml
 systemd
@@ -316,7 +317,6 @@ cups
 icon-theme-hicolor
 shared-mime-info
 unixodbc
-json-c
 python3-pyyaml
 python3-ply
 nasm
@@ -338,7 +338,6 @@ pcre2
 groff
 rrdtool
 lmsensors
-libva
 libglvnd
 python3-six
 python3-beaker

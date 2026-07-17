@@ -122,7 +122,6 @@ sipcalc
 sleuthkit
 smartmontools
 soundtouch
-supercat
 symlinks
 sysklogd
 taglib

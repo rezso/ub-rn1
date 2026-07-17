@@ -3,4 +3,5 @@ glu-dev
 jack-dev
 libxi-dev
 libxinerama-dev
+pipewire-dev
 qt6-dev

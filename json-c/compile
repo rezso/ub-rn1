@@ -1,5 +1,5 @@
 #!/bin/sh -eux
 
+rm -f meson.*
 ub_compile \
-    -DDISABLE_WERROR=ON \
-    -DBUILD_APPS=OFF
+    -DBUILD_STATIC_LIBS=OFF

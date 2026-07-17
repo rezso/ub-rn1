@@ -3,6 +3,7 @@ libgsf
 libwpd
 libwpg
 libwps
+libva
 pcsc-lite
 cairomm1.0
 cairomm
@@ -29,7 +30,6 @@ usbredir
 xauth
 yaml-cpp
 debhelper
-ebook-tools
 exempi
 xmessage
 opusfile

@@ -2,3 +2,4 @@
 	/usr/lib/*.a
 	/usr/lib/cmake
 	/usr/lib/pkgconfig
+@	/usr/lib/*.so

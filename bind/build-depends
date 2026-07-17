@@ -3,6 +3,7 @@ libidn2-dev
 libnghttp2-dev
 liburcu-dev
 libuv-dev
+lmdb-dev
 ncurses-dev
 openssl-dev
 readline-dev

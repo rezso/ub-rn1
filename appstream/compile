@@ -2,5 +2,7 @@
 
 ub_compile \
     -Dvapi=true \
+    -Ddocs=false \
     -Dapidocs=false \
+    -Dman=false \
     -Dstemming=false

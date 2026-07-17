@@ -3,5 +3,5 @@
 grub-${UB_VERSION}.tar.xz grub-${UB_VERSION}/ :grub
 	https://ftp.gnu.org/gnu/grub/
 
-unifont-17.0.03.bdf.gz .
-	https://ftp.gnu.org/gnu/unifont/unifont-17.0.03/
+unifont-17.0.05.bdf.gz .
+	https://ftp.gnu.org/gnu/unifont/unifont-17.0.05/

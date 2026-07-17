@@ -7,7 +7,6 @@ open-isns
 open-iscsi
 tcpdump
 vde
-xcalib
 blktrace
 freeipmi
 powertop

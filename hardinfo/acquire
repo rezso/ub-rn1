@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-hardinfo-${UB_VERSION}.tar.gz hardinfo-00fda0f/
-	git+https://github.com/lpereira/hardinfo.git@00fda0f
+hardinfo-${UB_VERSION}.tar.gz hardinfo-6d7bd89/
+	git+https://github.com/lpereira/hardinfo.git@6d7bd89

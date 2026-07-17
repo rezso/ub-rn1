@@ -1,6 +1,5 @@
 nnn
 vifm
-doublecmd
 eaglemode
 avfs
 worker

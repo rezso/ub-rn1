@@ -1,0 +1,9 @@
+diff -Naur a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2020-09-28 07:42:00.000000000 +0200
++++ b/CMakeLists.txt	2026-06-30 22:24:53.240691236 +0200
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 3.1.0)
++cmake_minimum_required(VERSION 3.5...3.24)
+ 
+ project(QRencode VERSION 4.1.1 LANGUAGES C)
+ 

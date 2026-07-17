@@ -12,6 +12,5 @@ ub_compile \
     -DJPEGXL_ENABLE_SKCMS='false' \
     -DJPEGXL_ENABLE_SJPEG='false' \
     -DJPEGXL_ENABLE_PLUGINS='true' \
-    -DJPEGXL_ENABLE_PLUGIN_GIMP210='false' \
     -DJPEGXL_FORCE_SYSTEM_GTEST='false' \
     -DJPEGXL_FORCE_SYSTEM_HWY='false'

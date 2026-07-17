@@ -10,9 +10,7 @@ grimripper
 wxsvg
 cdw
 xdg-user-dirs-gtk
-dvdauthor
 paprefs
-dvdstyler
 vorbis-tools
 lilypond
 easytag

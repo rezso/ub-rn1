@@ -43,6 +43,8 @@ export CPPFLAGS=' -DU_USING_ICU_NAMESPACE=1'
     --without-system-dragonbox \
     --without-system-fast_float \
     --without-system-frozen \
+    --without-system-graphite \
+    --without-system-harfbuzz \
     --without-system-libabw \
     --without-system-libcdr \
     --without-system-libcmis \

@@ -4,5 +4,5 @@
 #	https://sourceforge.net/projects/scribus/files/scribus/${UB_VERSION}/
 #	https://sourceforge.net/projects/scribus/files/scribus-devel/${UB_VERSION}/
 
-scribus-${UB_VERSION}.tar.gz scribus-9f07a6e/
-    git+https://github.com/scribusproject/scribus.git@9f07a6e
+scribus-${UB_VERSION}.tar.gz scribus-0e169b6/
+    git+https://github.com/scribusproject/scribus.git@0e169b6

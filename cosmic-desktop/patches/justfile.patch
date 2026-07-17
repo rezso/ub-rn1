@@ -1,12 +1,30 @@
 diff -Naur a/justfile b/justfile
---- a/justfile	2026-02-03 21:07:36.000000000 +0100
-+++ b/justfile	2026-02-04 02:44:19.694226506 +0100
-@@ -30,7 +30,7 @@
+--- a/justfile	2026-07-10 03:12:10.000000000 +0200
++++ b/justfile	2026-07-10 22:33:04.411122930 +0200
+@@ -29,9 +29,9 @@
+     {{ make }} -C cosmic-wallpapers all
+     {{ make }} -C cosmic-workspaces-epoch all
      {{ just }} pop-launcher/build-release
-     {{ make }} -C xdg-desktop-portal-cosmic all
+-    {{ make }} -C xdg-desktop-portal-cosmic all
++    {{ just }} xdg-desktop-portal-cosmic/build
  
 -install rootdir="" prefix="/usr/local": build
 +install rootdir="/var/uhubuild/work/install" prefix="/usr": build
      {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-applets/install
      {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-applibrary/install
      {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-bg/install
+@@ -58,7 +58,7 @@
+     {{ make }} -C cosmic-wallpapers install DESTDIR={{rootdir}} prefix={{prefix}}
+     {{ make }} -C cosmic-workspaces-epoch install DESTDIR={{rootdir}} prefix={{prefix}}
+     {{ just }} rootdir={{rootdir}} pop-launcher/install
+-    {{ make }} -C xdg-desktop-portal-cosmic install DESTDIR={{rootdir}} prefix={{prefix}}
++    {{ just }} rootdir={{rootdir}} prefix={{prefix}} xdg-desktop-portal-cosmic/install
+ 
+ _mkdir dir:
+    mkdir -p dir
+@@ -101,4 +101,4 @@
+     {{ make }} -C cosmic-wallpapers clean
+     rm -rf cosmic-workspaces-epoch/target
+     {{ just }} pop-launcher/clean
+-    rm -rf xdg-desktop-portal-cosmic/target
++    {{ just }} xdg-desktop-portal-cosmic/clean

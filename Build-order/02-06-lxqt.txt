@@ -5,7 +5,6 @@ libfm # +menu-cache
 menu-cache
 #
 openbox
-obconf-qt
 #
 libdbusmenu-lxqt
 lxqt-build-tools
@@ -31,6 +30,7 @@ lxqt-powermanagement
 lxqt-qtplugin
 lxqt-session
 lxqt-sudo
+obconf-qt
 pcmanfm-qt
 qterminal
 lxqt-runner

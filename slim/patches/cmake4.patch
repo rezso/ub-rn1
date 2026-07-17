@@ -1,0 +1,9 @@
+diff -Naur a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2024-01-12 18:07:53.000000000 +0100
++++ b/CMakeLists.txt	2026-07-04 22:00:57.962025145 +0200
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
++cmake_minimum_required(VERSION 3.5...3.24 FATAL_ERROR)
+ 
+ set(PROJECT_NAME slim)
+ project(${PROJECT_NAME})

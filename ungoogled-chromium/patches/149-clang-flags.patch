@@ -67,17 +67,3 @@ diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
      ]
  
      cflags_cc += [
-diff -Naur a/v8/BUILD.gn b/v8/BUILD.gn
---- a/v8/BUILD.gn	2026-06-05 23:05:02.571341952 +0200
-+++ b/v8/BUILD.gn	2026-06-05 22:56:23.262440905 +0200
-@@ -1796,10 +1796,6 @@
- 
-   if (is_clang) {
-     cflags += [ "-Wunreachable-code" ]
--    if (v8_current_cpu != "ppc64" && v8_current_cpu != "s390x") {
--      cflags += [ "-Wlifetime-safety-permissive" ]
--    }
--
-     if ((v8_current_cpu != "x64" && v8_current_cpu != "ia32") ||
-         target_os == "chromeos") {
-       # On arm/arm64, `pc` and `sp` are register names but are also very often

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-ebook-tools-${UB_VERSION}.tar.gz ebook-tools-${UB_VERSION}/
-	https://downloads.sourceforge.net/ebook-tools/
