@@ -18,6 +18,7 @@ mesa-dev
 nettle-dev
 openssl-dev
 pixman-dev
+setxkbmap
 systemd-dev
 wayland-dev
 wayland-protocols
@@ -27,5 +28,9 @@ xcb-util-keysyms-dev
 xcb-util-renderutil-dev
 xcb-util-wm-dev
 xkbcomp-dev
+xkbutils
+xkeyboard-config
+x.org-input-libinput
 x.org-proto-dev
+x.org-server-utils
 x.org-xtrans-dev

@@ -1,3 +1,6 @@
 setxkbmap
 xkbcomp
+xkbutils
 xkeyboard-config
+x.org-input-libinput
+x.org-server-utils
