@@ -96,7 +96,6 @@ leptonica
 tesseract
 libplist
 libdv
-raptor2
 zvbi
 libbluray
 libofa

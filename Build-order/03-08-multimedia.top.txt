@@ -7,7 +7,6 @@ smplayer
 youtube-dl
 mp3wrap
 grimripper
-wxsvg
 cdw
 xdg-user-dirs-gtk
 paprefs

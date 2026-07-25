@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz unixODBC-${UB_VERSION}/
-	https://github.com/lurcher/unixODBC/archive/refs/tags/

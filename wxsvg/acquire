@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-wxsvg-${UB_VERSION}.tar.bz2 wxsvg-${UB_VERSION}/
-	https://sourceforge.net/projects/wxsvg/files/wxsvg/${UB_VERSION}/wxsvg-${UB_VERSION}.tar.bz2/download
