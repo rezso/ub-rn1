@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-HTTP-Cookies-${UB_VERSION}.tar.gz HTTP-Cookies-${UB_VERSION}/
-	https://cpan.metacpan.org/modules/by-module/HTTP/
+v${UB_VERSION}.tar.gz HTTP-Cookies-${UB_VERSION}/
+	https://github.com/libwww-perl/HTTP-Cookies/archive/refs/tags/
