@@ -24,6 +24,7 @@ libetpan
 libxklavier
 rpm-sequoia
 rpm
+cyrus-sasl2
 postfix
 apache
 aspell

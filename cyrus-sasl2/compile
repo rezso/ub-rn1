@@ -1,0 +1,26 @@
+#!/bin/sh -eux
+
+ub_compile \
+    --disable-krb4 \
+    --disable-macos-framework \
+    --disable-otp \
+    --disable-passdss \
+    --disable-srp \
+    --disable-srp-setpass \
+    --enable-alwaystrue \
+    --enable-anon \
+    --enable-auth-sasldb \
+    --enable-checkapop \
+    --enable-cram \
+    --enable-digest \
+    --enable-gssapi \
+    --enable-login \
+    --enable-ntlm \
+    --enable-plain \
+    --sbin=/usr/bin \
+    --with-dblib=gdbm \
+    --with-devrandom=/dev/urandom \
+    --with-configdir=/etc/sasl2:/etc/sasl:/usr/lib/sasl2 \
+    --with-pam \
+    --with-saslauthd=/run/saslauthd \
+    --with-sqlite3=/usr/lib
