@@ -7,7 +7,7 @@ mv AAAREADME README
 
 make tidy
 make makefiles \
-	CCARGS="-DHAS_PCRE=2 -DUSE_TLS -DMAX_DYNAMIC_MAPS -I/usr/include/openssl" \
+	CCARGS="-DMAX_DYNAMIC_MAPS -DHAS_PCRE=2 -DUSE_TLS -DUSE_SASL_AUTH -DUSE_CYRUS_SASL -I/usr/include/sasl -I/usr/include/openssl" \
 	OPT="-O2" \
-	AUXLIBS="-lgdbm -lz -lm -lssl -lcrypto -lpcre2-8"
+	AUXLIBS="-lgdbm -lz -lm -lssl -lcrypto -lpcre2-8 -lsasl2"
 make
