@@ -5,7 +5,7 @@ libgcrypt-dev
 libxkbfile-dev
 libxklavier-dev
 pam-dev
-qt5-dev
+qt6-dev
 systemd-dev
 vala
 yelp-tools

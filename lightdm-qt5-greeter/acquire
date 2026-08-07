@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz lightdm-qt5-greeter-${UB_VERSION}/
-	https://github.com/rezso/lightdm-qt5-greeter/archive/

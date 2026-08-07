@@ -3,5 +3,5 @@
 #frontends-${UB_VERSION}.tar.gz frontends-${UB_VERSION}/
 #   https://gitlab.com/sane-project/frontends/-/archive/${UB_VERSION}/
 
-${UB_VERSION}.tar.gz frontends-5c148771/
-    git+https://gitlab.com/sane-project/frontends.git@5c148771
+${UB_VERSION}.tar.gz frontends-b330f79c/
+    git+https://gitlab.com/sane-project/frontends.git@b330f79c

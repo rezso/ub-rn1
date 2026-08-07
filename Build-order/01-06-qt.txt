@@ -85,7 +85,7 @@ packagekit
 qt5
 qt6
 lightdm
-lightdm-qt5-greeter
+lightdm-qt6-greeter
 extra-cmake-modules
 poppler
 sane-backends

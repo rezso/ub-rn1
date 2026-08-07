@@ -65,6 +65,7 @@ export CPPFLAGS=' -DU_USING_ICU_NAMESPACE=1'
     --without-system-md4c \
     --without-system-mdds \
     --without-system-mythes \
+    --without-system-odbc \
     --without-system-orcus \
     --without-system-poppler \
     --without-system-redland \
