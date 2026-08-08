@@ -148,6 +148,7 @@ plasma-systemmonitor
 plasma-browser-integration
 plasma-disks
 plasma-login-manager
+kde
 
 # apps
 
@@ -189,7 +190,6 @@ skanlite
 kdiff3
 kdeconnect
 kde-apps
-kde
 #
 tellico
 digikam
