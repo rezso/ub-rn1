@@ -1,3 +1,4 @@
 libnl-dev
+libtracefs-dev
 ncurses-dev
 pciutils-dev

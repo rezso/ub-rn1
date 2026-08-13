@@ -1,3 +1,6 @@
+libtraceevent
+libtracefs
+powertop
 conky
 ethtool
 minicom
@@ -9,7 +12,6 @@ tcpdump
 vde
 blktrace
 freeipmi
-powertop
 gptfdisk
 drbd-utils
 gsmartcontrol
