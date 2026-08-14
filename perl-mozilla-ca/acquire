@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 Mozilla-CA-${UB_VERSION}.tar.gz Mozilla-CA-${UB_VERSION}/
-	https://cpan.metacpan.org/modules/by-module/Mozilla/
+	https://github.com/libwww-perl/Mozilla-CA/releases/download/v${UB_VERSION}/
