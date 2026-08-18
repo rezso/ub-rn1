@@ -1,6 +1,6 @@
 --- b/skia/BUILD.gn
 +++ a/skia/BUILD.gn
-@@ -884,8 +884,11 @@
+@@ -886,8 +886,11 @@
      cflags = [ "/arch:AVX512" ]
    } else {
      cflags = [

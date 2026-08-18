@@ -31,6 +31,8 @@ export CCACHE_SLOPPINESS=time_macros
 _clang_version=$(clang --version | grep -m1 version | sed 's/.* \([0-9]\+\).*/\1/')
 # enable rust nightly features
 export RUSTC_BOOTSTRAP=1
+# set GOROOT
+export GOROOT=/usr/lib/go
 
 _flags=("
 custom_toolchain=\"//build/toolchain/linux/unbundle:default\"
@@ -109,9 +111,13 @@ fi
 if [ ! -d third_party/rust-toolchain/bin ]; then
     mkdir -p third_party/rust-toolchain/bin
 fi
+if [ ! -d third_party/dawn/tools/golang/linux-amd64/bin ]; then
+    mkdir -p third_party/dawn/tools/golang/linux-amd64/bin
+fi
 ln -sf /usr/bin/gperf third_party/gperf/cipd/bin/gperf
 ln -sf /usr/bin/node third_party/node/linux/node-linux-x64/bin/node
 ln -sf /usr/bin/rustc third_party/rust-toolchain/bin/rustc
+ln -sf /usr/bin/go third_party/dawn/tools/golang/linux-amd64/bin/
 
 # gn a buildhoz
 # tools/gn/bootstrap/bootstrap.py --build-path=$outdir --gn-gen-args=" ${_flags[@]} "

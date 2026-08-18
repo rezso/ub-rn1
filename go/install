@@ -1,0 +1,12 @@
+#!/bin/sh -eux
+
+cp -a go ${UB_INSTALLDIR}/usr/lib/go
+
+for tool in go gofmt; do
+    ln -s ../lib/go/bin/${tool} ${UB_INSTALLDIR}/usr/bin/${tool}
+done
+
+rm -f ${UB_INSTALLDIR}/usr/lib/go/src/*.rc
+
+# patchelf
+# find ${UB_INSTALLDIR}/usr/bin -type f -exec patchelf --set-interpreter /usr/lib/ld-linux-x86-64.so.2 &> /dev/null {} \;
