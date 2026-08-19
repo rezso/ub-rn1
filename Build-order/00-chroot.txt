@@ -137,6 +137,7 @@ python3-wheel
 python3-pyproject-hooks
 python3-build
 python3-packaging
+python3-tomlkit
 python3-tomli
 python3-toml
 python3-setuptools-scm

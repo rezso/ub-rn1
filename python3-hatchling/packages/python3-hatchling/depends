@@ -1,4 +1,5 @@
 python3-editables
 python3-pathspec
 python3-pluggy
+python3-tomlkit
 python3-trove-classifiers

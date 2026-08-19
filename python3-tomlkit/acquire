@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz tomlkit-${UB_VERSION}/
+    https://github.com/python-poetry/tomlkit/archive/refs/tags/
