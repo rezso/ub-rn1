@@ -1,11 +1,15 @@
 #!/bin/sh -eux
 
 mkdir -p ${UB_INSTALLDIR}/usr/lib/master-pdf-editor-5
-mv usr/share/* ${UB_INSTALLDIR}/usr/share/
+mkdir -p ${UB_INSTALLDIR}/usr/share/icons
+rm -Rf usr/share/applications
+
 mv masterpdfeditor5 ${UB_INSTALLDIR}/usr/bin/masterpdfeditor5
+mv masterpdfeditor5.desktop ${UB_INSTALLDIR}/usr/share/applications/masterpdfeditor5.desktop
 mv masterpdfeditor5.png ${UB_INSTALLDIR}/usr/share/pixmaps/masterpdfeditor5.png
+mv usr/share/icons/* ${UB_INSTALLDIR}/usr/share/icons/
+rm -Rf usr
 cp -r * ${UB_INSTALLDIR}/usr/lib/master-pdf-editor-5/
-rm -Rf ${UB_INSTALLDIR}/usr/lib/master-pdf-editor-5/usr
 
 # patchelf
 find "${UB_INSTALLDIR}"/usr/lib -type f -exec patchelf --set-interpreter /usr/lib/ld-linux-x86-64.so.2 &> /dev/null {} \;
