@@ -1,8 +1,10 @@
+dbus-dev
 gobject-introspection-dev
-gtk3-dev
+gtk4-dev
 intltool
 json-glib-dev
+libadwaita-dev
 libnotify-dev
 libpeas2-dev
 libxml2-dev
-webkit2gtk-4.1-dev
+webkitgtk-6.0-dev

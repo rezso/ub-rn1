@@ -1,11 +1,11 @@
-diff -Naur a/net.sf.liferea.gschema.xml.in b/net.sf.liferea.gschema.xml.in
---- a/net.sf.liferea.gschema.xml.in	2023-01-10 21:12:42.000000000 +0100
-+++ b/net.sf.liferea.gschema.xml.in	2023-01-30 23:59:50.065183924 +0100
-@@ -18,7 +18,7 @@
+diff -Naur a/data/net.sf.liferea.gschema.xml b/data/net.sf.liferea.gschema.xml
+--- a/data/net.sf.liferea.gschema.xml	2026-08-19 17:56:30.000000000 +0200
++++ b/data/net.sf.liferea.gschema.xml	2026-08-21 23:26:16.313008436 +0200
+@@ -23,7 +23,7 @@
        <description>Selects the browser command to use when browser_module is set to manual.</description>
      </key>
      <key name="browser-id" type="s">
--      <default>'gnome'</default>
+-      <default>'default'</default>
 +      <default>'manual'</default>
        <summary>Selects which browser to use to open external links</summary>
        <description>Selects which browser to use to open external links. The choices include "default" and "manual".</description>
