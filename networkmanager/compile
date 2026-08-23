@@ -7,8 +7,8 @@ ub_compile \
 	-Dsession_tracking_consolekit=false \
 	-Dsession_tracking=systemd \
 	-Dpolkit=true \
-	-Dmodify_system=true \
 	-Dselinux=false \
+	-Dclat=false \
 	-Dconfig_wifi_backend_default=wpa_supplicant \
 	-Dlibaudit=no \
 	-Dwext=false \
