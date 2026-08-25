@@ -41,7 +41,6 @@ yelp-xsl
 yelp-tools
 alsa-utils
 gtkspell
-sdl2-net
 sdl2-ttf
 slim
 accountsservice

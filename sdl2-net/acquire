@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-release-${UB_VERSION}.tar.gz SDL_net-release-${UB_VERSION}/
-	https://github.com/libsdl-org/SDL_net/archive/refs/tags/

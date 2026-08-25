@@ -7,7 +7,6 @@ q4wine
 bochs
 hatari
 tigervnc
-dosbox
 plus4emu
 ep128emu
 vice

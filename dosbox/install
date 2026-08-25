@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_install
-
-# remove libiir development files
-rm -Rf ${UB_INSTALLDIR}/usr/{include,lib}
-rm -Rf ${UB_INSTALLDIR}/usr/share/doc/dosbox-staging

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-v${UB_VERSION}.tar.gz dosbox-staging-${UB_VERSION}/
-	https://github.com/dosbox-staging/dosbox-staging/archive/refs/tags/
