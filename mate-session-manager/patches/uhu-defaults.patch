@@ -1,6 +1,15 @@
 diff -Naur a/data/org.mate.session.gschema.xml.in b/data/org.mate.session.gschema.xml.in
---- a/data/org.mate.session.gschema.xml.in	2022-11-11 21:03:15.000000000 +0100
-+++ b/data/org.mate.session.gschema.xml.in	2022-11-26 21:29:52.029975507 +0100
+--- a/data/org.mate.session.gschema.xml.in	2024-02-16 18:25:07.000000000 +0100
++++ b/data/org.mate.session.gschema.xml.in	2026-08-25 13:39:22.139687203 +0200
+@@ -27,7 +27,7 @@
+       <description>If logout prompt is enabled, this set the timeout in seconds before logout automatically. If 0, automatic logout is disabled.</description>
+     </key>
+     <key name="idle-delay" type="i">
+-      <default>5</default>
++      <default>60</default>
+       <summary>Time before session is considered idle</summary>
+       <description>The number of minutes of inactivity before the session is considered idle.</description>
+     </key>
 @@ -37,7 +37,7 @@
        <description>List of applications that are part of the default session.</description>
      </key>
