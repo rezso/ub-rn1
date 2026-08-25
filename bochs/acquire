@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-bochs-${UB_VERSION}.tar.gz bochs-${UB_VERSION}/
+bochs-${UB_VERSION}.tar.gz bochs/
 	https://downloads.sourceforge.net/bochs/

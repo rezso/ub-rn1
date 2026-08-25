@@ -1,9 +1,0 @@
-diff -Naur a/CMakeLists.txt b/CMakeLists.txt
---- a/CMakeLists.txt	2022-10-08 11:49:10.000000000 +0200
-+++ b/CMakeLists.txt	2025-04-22 07:15:45.037670451 +0200
-@@ -1,4 +1,4 @@
--cmake_minimum_required(VERSION 3.1.2)
-+cmake_minimum_required(VERSION 3.5)
- 
- project(matroska VERSION 1.7.1)
- 
