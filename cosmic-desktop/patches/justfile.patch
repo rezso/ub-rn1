@@ -1,7 +1,31 @@
 diff -Naur a/justfile b/justfile
---- a/justfile	2026-07-10 03:12:10.000000000 +0200
-+++ b/justfile	2026-07-10 22:33:04.411122930 +0200
-@@ -29,9 +29,9 @@
+--- a/justfile	2026-08-27 02:07:56.000000000 +0200
++++ b/justfile	2026-08-28 22:07:44.462708498 +0200
+@@ -5,7 +5,6 @@
+ build:
+     mkdir -p build
+     {{ just }} cosmic-applets/build-release
+-    {{ just }} cosmic-applibrary/build-release
+     {{ just }} cosmic-bg/build-release
+     {{ make }} -C cosmic-comp all
+     {{ just }} cosmic-edit/build-release
+@@ -13,7 +12,6 @@
+     {{ just }} cosmic-greeter/build-release
+     {{ just }} cosmic-idle/build-release
+     {{ just }} cosmic-initial-setup/build-release
+-    {{ just }} cosmic-launcher/build-release
+     {{ just }} cosmic-monitor/build-release
+     {{ just }} cosmic-notifications/build-release
+     {{ just }} cosmic-osd/build-release
+@@ -21,7 +19,6 @@
+     {{ just }} cosmic-player/build-release
+     {{ just }} cosmic-randr/build-release
+     {{ just }} cosmic-screenshot/build-release
+-    {{ just }} cosmic-settings/build-release
+     {{ make }} -C cosmic-settings-daemon all
+     {{ just }} cosmic-session/build-release
+     {{ just }} cosmic-store/build-release
+@@ -29,9 +26,9 @@
      {{ make }} -C cosmic-wallpapers all
      {{ make }} -C cosmic-workspaces-epoch all
      {{ just }} pop-launcher/build-release
@@ -13,7 +37,7 @@ diff -Naur a/justfile b/justfile
      {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-applets/install
      {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-applibrary/install
      {{ just }} rootdir={{rootdir}} prefix={{prefix}} cosmic-bg/install
-@@ -58,7 +58,7 @@
+@@ -58,7 +55,7 @@
      {{ make }} -C cosmic-wallpapers install DESTDIR={{rootdir}} prefix={{prefix}}
      {{ make }} -C cosmic-workspaces-epoch install DESTDIR={{rootdir}} prefix={{prefix}}
      {{ just }} rootdir={{rootdir}} pop-launcher/install
@@ -22,7 +46,7 @@ diff -Naur a/justfile b/justfile
  
  _mkdir dir:
     mkdir -p dir
-@@ -101,4 +101,4 @@
+@@ -101,4 +98,4 @@
      {{ make }} -C cosmic-wallpapers clean
      rm -rf cosmic-workspaces-epoch/target
      {{ just }} pop-launcher/clean

@@ -8,4 +8,23 @@ ln -s /usr/share/doc/Licenses/GPL-3 LICENSE
 sed -i '/cosmic-greeter/d' justfile
 rm -Rf cosmic-greeter
 
+cd cosmic-applibrary
+sed -i 's/^name = "generate"$/name = "xdgen-generate"/' scripts/xdgen/Cargo.lock
+cargo fetch --locked
+cargo fetch --locked --manifest-path scripts/xdgen/Cargo.toml
+just xdgen
+just build-release
+cd -
+
+cd cosmic-launcher
+cargo fetch --locked
+cargo fetch --locked --manifest-path scripts/xdgen/Cargo.toml
+just xdgen
+just build-release
+cd -
+
+cd cosmic-settings
+just build-release
+cd -
+
 just build
