@@ -119,9 +119,6 @@ ln -sf /usr/bin/node third_party/node/linux/node-linux-x64/bin/node
 ln -sf /usr/bin/rustc third_party/rust-toolchain/bin/rustc
 ln -sf /usr/bin/go third_party/dawn/tools/golang/linux-amd64/bin/
 
-# gn a buildhoz
-# tools/gn/bootstrap/bootstrap.py --build-path=$outdir --gn-gen-args=" ${_flags[@]} "
-
 # extra flags
 export LDFLAGS+="-Wl,-rpath,/usr/lib/chromium/ -Wl,--no-keep-memory"
 

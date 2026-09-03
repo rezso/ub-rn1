@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-gn-${UB_VERSION}.tar.gz gn-068dd89/
-	git+https://gn.googlesource.com/gn.git@068dd89
+gn-${UB_VERSION}.tar.gz gn-d71c4a7/
+	git+https://gn.googlesource.com/gn.git@d71c4a7

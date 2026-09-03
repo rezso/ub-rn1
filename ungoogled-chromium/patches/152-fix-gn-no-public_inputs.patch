@@ -1,0 +1,56 @@
+diff -Naur a/third_party/devtools-frontend/src/scripts/build/ninja/copy.gni b/third_party/devtools-frontend/src/scripts/build/ninja/copy.gni
+--- a/third_party/devtools-frontend/src/scripts/build/ninja/copy.gni	2026-08-24 21:15:37.000000000 +0200
++++ b/third_party/devtools-frontend/src/scripts/build/ninja/copy.gni	2026-08-30 20:03:08.230890636 +0200
+@@ -25,9 +25,6 @@
+       string_join(",", sources),
+     ]
+ 
+-    # Expose ts files to dependent targets.
+-    public_inputs = filter_include(sources, [ "*.ts" ])
+-
+     outputs = []
+     foreach(_input, sources) {
+       outputs += [ "$target_gen_dir/$_input" ]
+diff -Naur a/third_party/devtools-frontend/src/scripts/build/ninja/devtools_entrypoint.gni b/third_party/devtools-frontend/src/scripts/build/ninja/devtools_entrypoint.gni
+--- a/third_party/devtools-frontend/src/scripts/build/ninja/devtools_entrypoint.gni	2026-08-24 21:15:37.000000000 +0200
++++ b/third_party/devtools-frontend/src/scripts/build/ninja/devtools_entrypoint.gni	2026-08-30 20:05:53.903393342 +0200
+@@ -35,13 +35,7 @@
+     _ts_library_target_name = _entrypoint_target_name + "-typescript"
+ 
+     ts_library(_ts_library_target_name) {
+-      forward_variables_from(invoker,
+-                             [
+-                               "deps",
+-                               "es_target",
+-                               "es_libs",
+-                               "inputs",
+-                             ])
++      forward_variables_from(invoker, ["deps", "es_target", "es_libs", "inputs"])
+ 
+       sources = [ invoker.entrypoint ]
+     }
+@@ -110,13 +104,7 @@
+     }
+ 
+     ts_library(_prebundle_target_name) {
+-      forward_variables_from(invoker,
+-                             [
+-                               "deps",
+-                               "es_target",
+-                               "es_libs",
+-                               "inputs",
+-                             ])
++      forward_variables_from(invoker, ["deps", "es_target", "es_libs", "inputs"])
+ 
+       sources = [ _copy_output_file_name ]
+ 
+@@ -197,9 +185,6 @@
+   node_action(target_name) {
+     script = "scripts/build/ninja/generate-tsconfig.js"
+ 
+-    # Expose ts files to dependent targets.
+-    public_inputs = [ invoker.entrypoint ]
+-
+     args = [
+              rebase_path(_generated_tsconfig_location, root_build_dir),
+              rebase_path(invoker.entrypoint, root_build_dir),
