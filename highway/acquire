@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz highway-${UB_VERSION}/
+	https://github.com/google/highway/archive/refs/tags/

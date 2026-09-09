@@ -1,5 +1,6 @@
 libqalculate
 libdmtx
+highway # kquickimageeditor
 phonon
 qca
 qcoro
