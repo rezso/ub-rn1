@@ -1,7 +1,7 @@
-gcr-dev
+gcr4-dev
 gexiv2-dev
 gstreamer-dev
-gtk3-dev
+gtk4-dev
 itstool
 json-glib-dev
 libgee-dev
@@ -11,4 +11,3 @@ libportal-dev
 libraw-dev
 sqlite-dev
 vala
-webkit2gtk-4.1-dev

@@ -1,5 +1,7 @@
 #!/bin/sh -eux
 
+rm -f meson.*
+
 ub_compile \
     -DEXIV2_ENABLE_NLS=ON \
     -DEXIV2_ENABLE_VIDEO=ON \
