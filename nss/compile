@@ -1,7 +1,6 @@
 #!/bin/sh -eux
 
 ./build.sh \
-    --target x64 \
     --opt \
     --system-sqlite \
     --system-nspr \
