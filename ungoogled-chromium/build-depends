@@ -40,5 +40,6 @@ qt6-dev
 rust
 rust-bindgen
 systemd-dev
+typescript
 xcb-proto
 yasm

@@ -1,5 +1,6 @@
 gn
 go # chomium 151, dawn
+typescript # chromium 153
 trurl
 claws-mail-themes
 ncftp

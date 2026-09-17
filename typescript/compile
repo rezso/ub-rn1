@@ -1,0 +1,4 @@
+#!/bin/sh -eux
+
+# npm ci
+# npx hereby LKG
