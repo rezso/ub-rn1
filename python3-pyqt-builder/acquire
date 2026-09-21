@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-PyQt-builder-${UB_VERSION}.tar.gz PyQt-builder-${UB_VERSION}/
-    git+https://github.com/Python-PyQt/PyQt-builder@tag:${UB_VERSION}

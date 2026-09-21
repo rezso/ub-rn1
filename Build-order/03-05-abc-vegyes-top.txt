@@ -29,7 +29,6 @@ nfs-utils
 syslog-ng
 system-config-printer
 synaptic
-hplip
 libcupsfilters
 libppd
 cups-filters
