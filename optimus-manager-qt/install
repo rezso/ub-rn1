@@ -1,3 +1,0 @@
-#!/bin/sh -xeu
-
-ub_install

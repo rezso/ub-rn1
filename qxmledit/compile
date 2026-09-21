@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-export QXMLEDIT_INST_AVOID_PRECOMP_HEADERS=Y
-qmake-qt5 "CONFIG+=release"
-ub_compile
