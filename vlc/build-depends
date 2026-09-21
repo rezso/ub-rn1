@@ -3,7 +3,7 @@ aom-dev
 bison
 dav1d-dev
 dbus-dev
-ffmpeg4.4-dev
+ffmpeg-dev
 flac-dev
 flex
 fluidsynth-dev
@@ -30,7 +30,7 @@ libmtp-dev
 libnfs-dev
 libnotify-dev
 libogg-dev
--libplacebo-dev
+libplacebo-dev
 librsvg-dev
 libsamplerate-dev
 libsecret-dev
@@ -39,13 +39,14 @@ libssh2-dev
 libtheora-dev
 libvdpau-dev
 libvpx-dev
+libxinerama-dev
 libxpm-dev
 lua-dev
 mpg123-dev
 ncurses-dev
 opus-dev
 pulseaudio-dev
-qt5-dev
+qt6-dev
 samba-dev
 srt-dev
 taglib-dev

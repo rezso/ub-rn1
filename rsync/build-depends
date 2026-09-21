@@ -1,4 +1,5 @@
 acl-dev
+libidn2-dev
 liblz4-dev
 openssl-dev
 popt-dev
