@@ -1,4 +1,7 @@
 #!/usr/bin/env dl
 
-keepassxc-${UB_VERSION}-src.tar.xz keepassxc-${UB_VERSION}/
-    https://github.com/keepassxreboot/keepassxc/releases/download/${UB_VERSION}/
+#keepassxc-${UB_VERSION}-src.tar.xz keepassxc-${UB_VERSION}/
+#    https://github.com/keepassxreboot/keepassxc/releases/download/${UB_VERSION}/
+
+keepassxc-${UB_VERSION}.tar.gz keepassxc-dfdd561/
+    git+https://github.com/keepassxreboot/keepassxc.git@dfdd561
