@@ -2,3 +2,4 @@ nano
 tcsh
 vim
 yudit
+notepadnext

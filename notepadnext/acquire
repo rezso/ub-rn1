@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz NotepadNext-${UB_VERSION}/
+	https://github.com/dail8859/NotepadNext/archive/refs/tags/

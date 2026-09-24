@@ -1,0 +1,4 @@
+#!/bin/sh -eux
+
+export QMAKE=/usr/bin/qmake6
+ub_compile
