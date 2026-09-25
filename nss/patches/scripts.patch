@@ -1,6 +1,6 @@
-diff -Naur orig/certdata2pem.py patched/certdata2pem.py
---- orig/certdata2pem.py	1970-01-01 01:00:00.000000000 +0100
-+++ patched/certdata2pem.py	2016-11-03 08:40:01.000000000 +0100
+diff -Naur a/certdata2pem.py b/certdata2pem.py
+--- a/certdata2pem.py	1970-01-01 01:00:00.000000000 +0100
++++ b/certdata2pem.py	2016-11-03 08:40:01.000000000 +0100
 @@ -0,0 +1,155 @@
 +#!/usr/bin/python
 +# vim:set et sw=4:
@@ -157,9 +157,9 @@ diff -Naur orig/certdata2pem.py patched/certdata2pem.py
 +        f.write("\n".join(textwrap.wrap(encoded, 64)))
 +        f.write("\n-----END CERTIFICATE-----\n")
 +
-diff -Naur orig/update-ca-certificates patched/update-ca-certificates
---- orig/update-ca-certificates	1970-01-01 01:00:00.000000000 +0100
-+++ patched/update-ca-certificates	2017-01-03 07:15:24.310587608 +0100
+diff -Naur a/update-ca-certificates patched/update-ca-certificates
+--- a/update-ca-certificates	1970-01-01 01:00:00.000000000 +0100
++++ b/update-ca-certificates	2017-01-03 07:15:24.310587608 +0100
 @@ -0,0 +1,219 @@
 +#!/bin/sh -e
 +#

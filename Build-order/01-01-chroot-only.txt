@@ -98,7 +98,6 @@ luajit
 man-pages
 memtest86+
 muparser
-nspr
 opencore-amr
 opus
 os-prober

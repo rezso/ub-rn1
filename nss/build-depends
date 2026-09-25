@@ -1,4 +1,5 @@
 curl
+debianutils
 gyp
 nspr-dev
 sqlite-dev

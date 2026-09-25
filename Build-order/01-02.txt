@@ -18,8 +18,6 @@ xcb-util-cursor
 xdpyinfo
 xdriinfo
 xsetroot
-gyp
-nss
 libetpan
 libxklavier
 rpm-sequoia

@@ -222,7 +222,9 @@ hunspell-hu
 hunspell
 uhubuild
 debianutils
-ca-certificates
+nspr
+gyp
+nss
 x.org-util-macros
 x.org-proto-dev
 libxau
