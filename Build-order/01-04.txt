@@ -15,7 +15,6 @@ libpwquality
 libraw
 libpano13
 libva-intel-driver
-libva-vdpau-driver
 glibmm2.4
 glibmm
 pangomm1.4

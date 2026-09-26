@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 ${UB_VERSION}.tar.gz intel-vaapi-driver-${UB_VERSION}/
-	https://github.com/intel/intel-vaapi-driver/archive/
+	https://github.com/irql-notlessorequal/intel-vaapi-driver/archive/refs/tags/
