@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-yudit-${UB_VERSION}.tar.gz yudit-${UB_VERSION}/
-	https://www.yudit.org/download/

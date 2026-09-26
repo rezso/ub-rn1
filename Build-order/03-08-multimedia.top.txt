@@ -14,8 +14,6 @@ vorbis-tools
 lilypond
 easytag
 shotwell
-python3-netifaces
-pyradio
 subtitleeditor
 lmms
 qmmp

@@ -7,7 +7,6 @@ gnuplot
 ncdu
 renameutils
 ocrad
-lrzip
 qt6ct
 pdfminer
 qpdf

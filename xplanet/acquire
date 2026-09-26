@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-xplanet-${UB_VERSION}.tar.gz xplanet-${UB_VERSION}/
-	https://downloads.sourceforge.net/xplanet/

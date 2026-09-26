@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-xman-$UB_VERSION.tar.gz xman-$UB_VERSION/
-	https://www.x.org/releases/individual/app/

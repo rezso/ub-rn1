@@ -1,9 +1,0 @@
-gobject-introspection-dev
-libgif-dev
-libjpeg-turbo-dev
-libtiff-dev
-libx11-dev
-libxi-dev
-libxslt-dev
-libxt-dev
-pango-dev

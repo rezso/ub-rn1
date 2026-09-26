@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_install
-mkdir -p $UB_INSTALLDIR/usr/share/{applications,pixmaps}
-cp devel/pyradio.desktop $UB_INSTALLDIR/usr/share/applications/
-cp devel/pyradio.png $UB_INSTALLDIR/usr/share/pixmaps/
-cp docs/pyradio{,_rb,_server}.1 "$UB_INSTALLDIR/usr/share/man/man1"

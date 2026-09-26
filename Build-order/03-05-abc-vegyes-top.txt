@@ -16,7 +16,6 @@ xfsdump
 linuxconsole
 wvstreams
 wvdial
-xman
 paps
 python3-fonttools
 fonts-liberation

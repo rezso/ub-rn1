@@ -11,7 +11,6 @@ open-iscsi
 tcpdump
 vde
 blktrace
-freeipmi
 gptfdisk
 drbd-utils
 gsmartcontrol

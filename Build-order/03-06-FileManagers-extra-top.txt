@@ -1,7 +1,2 @@
-nnn
-vifm
 eaglemode
-avfs
-worker
 mc
-ytree
