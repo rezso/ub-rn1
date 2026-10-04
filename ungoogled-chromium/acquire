@@ -5,4 +5,3 @@ ${UB_VERSION}-1.tar.gz ungoogled-chromium-${UB_VERSION}-1/ :ungoogle
 
 chromium-${UB_VERSION}-lite.tar.xz chromium-${UB_VERSION}/
 	https://commondatastorage.googleapis.com/chromium-browser-official/
-	https://gsdview.appspot.com/chromium-browser-official/

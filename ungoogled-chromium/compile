@@ -90,8 +90,8 @@ sed "s|//third_party/usb_ids/usb.ids|/usr/share/hwdata/usb.ids|g" -i services/de
 # Ungoogled Chromium changes
 _ungoogled_repo="ungoogle"
 _utils="${_ungoogled_repo}/utils"
-echo 'Pruning binaries'
-python "$_utils/prune_binaries.py" ./ "$_ungoogled_repo/pruning.list" || echo "some errors"
+# echo 'Pruning binaries'
+# python "$_utils/prune_binaries.py" ./ "$_ungoogled_repo/pruning.list" || echo "some errors"
 echo 'Applying patches'
 python "$_utils/patches.py" apply ./ "$_ungoogled_repo/patches"
 echo 'Applying domain substitution'
@@ -114,10 +114,14 @@ fi
 if [ ! -d third_party/dawn/tools/golang/linux-amd64/bin ]; then
     mkdir -p third_party/dawn/tools/golang/linux-amd64/bin
 fi
+if [ ! -d third_party/typescript/linux-amd64/src/lib ]; then
+    mkdir -p third_party/typescript/linux-amd64/src/lib
+fi
 ln -sf /usr/bin/gperf third_party/gperf/cipd/bin/gperf
 ln -sf /usr/bin/node third_party/node/linux/node-linux-x64/bin/node
 ln -sf /usr/bin/rustc third_party/rust-toolchain/bin/rustc
 ln -sf /usr/bin/go third_party/dawn/tools/golang/linux-amd64/bin/
+ln -sf /usr/bin/tsc third_party/typescript/linux-amd64/src/lib/tsc
 
 # extra flags
 export LDFLAGS+="-Wl,-rpath,/usr/lib/chromium/ -Wl,--no-keep-memory"
