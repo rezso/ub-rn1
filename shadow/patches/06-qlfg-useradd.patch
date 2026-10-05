@@ -1,6 +1,6 @@
 diff -Naur a/src/useradd.c b/src/useradd.c
---- a/src/useradd.c	2026-10-05 10:17:06.680063841 +0200
-+++ b/src/useradd.c	2026-10-05 10:23:00.598490410 +0200
+--- a/src/useradd.c	2026-10-05 20:42:17.212848431 +0200
++++ b/src/useradd.c	2026-10-05 20:45:23.101249222 +0200
 @@ -181,6 +181,7 @@
      Mflg = false,		/* do not create user's home directory even if CREATE_HOME is set */
      Nflg = true,		/* do not create a group having the same name as the user, but add the user to def_group (or the group specified with -g) */
@@ -74,16 +74,16 @@ diff -Naur a/src/useradd.c b/src/useradd.c
  		eprintf(_("%s: user '%s' already exists\n"), Prog, user_name);
  		fail_exit (E_NAME_IN_USE, process_selinux);
  	}
-@@ -2529,6 +2538,9 @@
- 	 */
+@@ -2530,6 +2539,9 @@
  	if (Uflg) {
  		/* local, no need for xgetgrnam */
-+		if (qflg) {
-+			exit (E_SUCCESS);
-+		}
  		if (prefix_getgrnam (user_name) != NULL) {
++		    if (qflg) {
++			    exit (E_SUCCESS);
++		    }
  			eprintf(_("%s: group %s exists - if you want to add this user to that group, use -g.\n"),
  			         Prog, user_name);
+ 			fail_exit (E_NAME_IN_USE, process_selinux);
 @@ -2654,11 +2666,12 @@
  			copy_tree (def_usrtemplate, prefix_user_home, false,
  			           (uid_t)-1, user_id, (gid_t)-1, user_gid);
