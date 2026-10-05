@@ -1,14 +1,11 @@
 #!/bin/sh -eux
 
-# --without-su: su comes from util-linux
-
 ub_configure \
 	--bindir=/usr/bin \
 	--sbindir=/usr/sbin \
 	--libdir=/usr/lib \
 	--with-group-name-max-length=32 \
 	--with-gnu-ld \
-	--disable-account-tools-setuid \
 	--disable-logind \
 	--disable-man \
 	--without-audit \

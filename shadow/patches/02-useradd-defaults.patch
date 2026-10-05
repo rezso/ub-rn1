@@ -1,7 +1,7 @@
 diff -Naur a/etc/login.defs b/etc/login.defs
---- a/etc/login.defs	2026-02-05 05:13:16.472970494 +0100
-+++ b/etc/login.defs	2026-02-05 05:13:59.277134215 +0100
-@@ -233,7 +233,7 @@
+--- a/etc/login.defs	2026-10-05 10:12:11.141197219 +0200
++++ b/etc/login.defs	2026-10-05 10:13:49.803054806 +0200
+@@ -220,7 +220,7 @@
  UID_MIN			 1000
  UID_MAX			60000
  # System accounts
@@ -10,7 +10,7 @@ diff -Naur a/etc/login.defs b/etc/login.defs
  SYS_UID_MAX		  999
  # Extra per user uids
  SUB_UID_MIN		   100000
-@@ -246,7 +246,7 @@
+@@ -268,7 +268,7 @@
  GID_MIN			 1000
  GID_MAX			60000
  # System accounts
@@ -20,9 +20,9 @@ diff -Naur a/etc/login.defs b/etc/login.defs
  # Extra per user group ids
  SUB_GID_MIN		   100000
 diff -Naur a/lib/find_new_gid.c b/lib/find_new_gid.c
---- a/lib/find_new_gid.c	2025-12-31 03:20:10.000000000 +0100
-+++ b/lib/find_new_gid.c	2026-02-05 05:13:59.277134215 +0100
-@@ -44,7 +44,7 @@
+--- a/lib/find_new_gid.c	2026-09-23 19:44:42.000000000 +0200
++++ b/lib/find_new_gid.c	2026-10-05 10:13:49.803383661 +0200
+@@ -47,7 +47,7 @@
  		*preferred_min = (gid_t) 1;
  
  		/* Get the minimum ID range from login.defs or default to 101 */
@@ -32,9 +32,9 @@ diff -Naur a/lib/find_new_gid.c b/lib/find_new_gid.c
  		/*
  		 * If SYS_GID_MAX is unspecified, we should assume it to be one
 diff -Naur a/lib/find_new_uid.c b/lib/find_new_uid.c
---- a/lib/find_new_uid.c	2025-12-31 03:20:10.000000000 +0100
-+++ b/lib/find_new_uid.c	2026-02-05 05:13:59.277134215 +0100
-@@ -43,7 +43,7 @@
+--- a/lib/find_new_uid.c	2026-09-23 19:44:42.000000000 +0200
++++ b/lib/find_new_uid.c	2026-10-05 10:13:49.803715354 +0200
+@@ -46,7 +46,7 @@
  		*preferred_min = (uid_t) 1;
  
  		/* Get the minimum ID range from login.defs or default to 101 */
@@ -44,9 +44,9 @@ diff -Naur a/lib/find_new_uid.c b/lib/find_new_uid.c
  		/*
  		 * If SYS_UID_MAX is unspecified, we should assume it to be one
 diff -Naur a/src/pwck.c b/src/pwck.c
---- a/src/pwck.c	2026-01-28 16:18:11.000000000 +0100
-+++ b/src/pwck.c	2026-02-05 05:13:59.281134231 +0100
-@@ -386,7 +386,7 @@
+--- a/src/pwck.c	2026-09-23 19:44:42.000000000 +0200
++++ b/src/pwck.c	2026-10-05 10:13:49.804062108 +0200
+@@ -373,7 +373,7 @@
  	struct commonio_entry *pfe, *tpfe;
  	struct passwd *pwd;
  	const struct spwd *spw;
@@ -56,8 +56,8 @@ diff -Naur a/src/pwck.c b/src/pwck.c
  	bool process_selinux;
  
 diff -Naur a/src/useradd.c b/src/useradd.c
---- a/src/useradd.c	2026-02-01 22:24:28.000000000 +0100
-+++ b/src/useradd.c	2026-02-05 05:13:59.281134231 +0100
+--- a/src/useradd.c	2026-09-23 20:15:42.000000000 +0200
++++ b/src/useradd.c	2026-10-05 10:13:49.804526979 +0200
 @@ -106,9 +106,9 @@
  /*
   * These defaults are used if there is no defaults file.
