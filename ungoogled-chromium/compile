@@ -125,6 +125,7 @@ ln -sf /usr/bin/tsc third_party/typescript/linux-amd64/src/lib/tsc
 
 # extra flags
 export LDFLAGS+="-Wl,-rpath,/usr/lib/chromium/ -Wl,--no-keep-memory"
+export RUSTFLAGS="-Cdebuginfo=0"
 
 # build options: az --args utáni sorok nem kezdődhetnek tab karakterrel!
 # $outdir/gn gen $outdir -v --args=" ${_flags[@]} " --script-executable=/usr/bin/python3
