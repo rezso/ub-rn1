@@ -1,8 +1,8 @@
 diff -Naur a/common/sections_trans.cc b/common/sections_trans.cc
---- a/common/sections_trans.cc	2025-04-06 21:13:35.000000000 +0200
-+++ b/common/sections_trans.cc	2026-02-17 15:06:09.373344079 +0100
-@@ -8,130 +8,103 @@
- #include "sections_trans.h"
+--- a/common/sections_trans.cc	2026-10-05 20:32:41.000000000 +0200
++++ b/common/sections_trans.cc	2026-10-07 08:01:06.186041012 +0200
+@@ -17,130 +17,103 @@
+ using namespace std;
  
  const char *transtable[][2] = {
 -   // TRANSLATORS: Alias for the Debian package section "admin"
@@ -230,8 +230,8 @@ diff -Naur a/common/sections_trans.cc b/common/sections_trans.cc
     // TRANSLATORS: Alias for the Debian package section "non free"
     {"non-free", _("non free")},
 diff -Naur a/po/hu.po b/po/hu.po
---- a/po/hu.po	2025-04-06 21:13:35.000000000 +0200
-+++ b/po/hu.po	2026-02-17 15:09:29.357631912 +0100
+--- a/po/hu.po	2026-10-05 20:32:41.000000000 +0200
++++ b/po/hu.po	2026-10-07 08:01:06.186796660 +0200
 @@ -7,9 +7,9 @@
  msgstr ""
  "Project-Id-Version: synaptic\n"
