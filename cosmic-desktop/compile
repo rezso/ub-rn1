@@ -8,16 +8,4 @@ ln -s /usr/share/doc/Licenses/GPL-3 LICENSE
 sed -i '/cosmic-greeter/d' justfile
 rm -Rf cosmic-greeter
 
-cd cosmic-applibrary
-just build-release
-cd -
-
-cd cosmic-launcher
-just build-release
-cd -
-
-cd cosmic-settings
-just build-release
-cd -
-
 just build
